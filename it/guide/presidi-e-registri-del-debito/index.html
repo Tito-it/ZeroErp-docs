@@ -1,0 +1,7698 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="prev" href="../automazione-db/">
+      
+      
+        <link rel="next" href="../sorgente-polimorfa/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Presidi e registri del debito - Zero ERP Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Vai al contenuto
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../.." title="Zero ERP Documentation" class="md-header__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigazione</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Presidi e registri del debito
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Cerca</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Cerca">
+  <button type="button" class="md-search__button">
+    Cerca
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manifesto/" class="md-tabs__link">
+          
+  
+  Visione e Filosofia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installazione/" class="md-tabs__link">
+          
+  
+  Installazione
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architettura/" class="md-tabs__link">
+          
+  
+  Architettura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/" class="md-tabs__link">
+          
+  
+  DB Zero
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../backend/" class="md-tabs__link">
+          
+  
+  Backend (Django)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../soggetti-e-ruoli-anagrafici/" class="md-tabs__link">
+          
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/framework-automazione-db/" class="md-tabs__link">
+          
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/tools/gen_db_docs/" class="md-tabs__link">
+          
+  
+  Strumenti
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/sicurezza-e-qualita-statica/" class="md-tabs__link">
+          
+  
+  Qualità
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/api/" class="md-tabs__link">
+          
+  
+  Sviluppatori
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossario/glossario-utility/" class="md-tabs__link">
+          
+  
+  Glossario
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zero ERP Documentation" class="md-nav__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Zero ERP Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visione e Filosofia
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Visione e Filosofia
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manifesto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sviluppo-concentrico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppo Concentrico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduzione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cos’è Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perche-zeroerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Perchè Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Installazione
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Installazione
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Prerequisiti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurazione-iniziale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Preparare ZeroERP all'uso
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE-AGPL3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Licenza
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Architettura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architettura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura a colpo d'occhio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../liquibase-setup-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liquibase Setup & Workflow
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida SQL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida Trigger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Db PostgresSQL
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Db PostgresSQL
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Panoramica
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/aggiornamento-versione-postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aggiornamento versione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/parametri-personalizzati-(GUC)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Parametri personalizzati (GUC)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4_4" id="__nav_4_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estensioni
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Estensioni
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/estensioni-utilizzate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Utilizzate
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/dblink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  dblink
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgAgent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgAgent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgcrypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgcrypto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DB Zero
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  DB Zero
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Schemi
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Schemi
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/dbops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dbops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/public/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Public
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend (Django)
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend (Django)
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aree
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Aree
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ai-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ai Assistant
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/amm-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Amm. Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/contabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contabilita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guide
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guide
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Come funziona ZeroErp
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Come funziona ZeroErp
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soggetti-e-ruoli-anagrafici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Soggetti e ruoli anagrafici
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generazione-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generazione di un cliente
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-degli-indirizzi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione degli indirizzi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-contatti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei contatti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-conti-bancari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione conti bancari
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche-configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche — Configurazione e opzioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-commesse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione commesse
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-delle-istanze-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione delle Istanze Utility
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-listini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione listini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-preventivi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione preventivi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-offerte-commerciali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione offerte commerciali
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-contratti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione contratti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ordini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ordini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ddt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ddt
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fatturazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cruscotti-fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cruscotti fatturazione (le tre lenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../termini-di-pagamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Termini di pagamento
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenti-e-stampe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti e stampe
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-mail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione mail
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrazione-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Integrazione Ai
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risorse-umane-e-accessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Risorse Umane e Accessi al Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-liste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e responsività delle liste
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numerazione-documenti-e-codici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sistema numerazione generico per codici e documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iva-risolutore-di-riga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il risolutore IVA di riga
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modello-documento-di-vendita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il modello del documento di vendita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sicurezza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza di ZeroErp
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Approfondimenti tecnici
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Approfondimenti tecnici
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-permessi-e-autorizzazioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura Permessi e Autorizzazioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-multi-face-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura multi face auth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contratto-guc-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contratto GUC APP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tx_id_implementation_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Implementazione Transaction ID
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storicizzazione-tabelle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storicizzazione Tabelle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit-e-tracciabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit e tracciabilità
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operazioni-che-non-si-ripetono/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Le operazioni che non si ripetono (Idempotency-Key)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Presidi e registri del debito
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Presidi e registri del debito
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#in-una-frase" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        In una frase
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-un-promemoria-non-e-un-presidio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Un promemoria non è un presidio
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-forma-comune" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. La forma comune
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. La forma comune">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-la-misura-e-il-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1 La misura e il registro
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-il-terzo-pezzo-chi-legge" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2 Il terzo pezzo: chi legge
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Il terzo pezzo: chi legge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-dice-il-catalogo-per-ogni-vista" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Che cosa dice il catalogo, per ogni vista
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-regole-che-tengono-onesto-il-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Le regole che tengono onesto il catalogo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-i-presidi-del-database-e-degli-errori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. I presidi del database e degli errori
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. I presidi del database e degli errori">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-riferimenti-morti-nelle-funzioni-del-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1 Riferimenti morti nelle funzioni del database
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-baseline-dei-test-rossi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.2 Baseline dei test rossi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-il-codice-errore-che-arriva-al-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.3 Il codice errore che arriva al backend
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Il codice errore che arriva al backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perche-un-codice-non-si-cancella-si-ritira" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Perché un codice non si cancella, si ritira
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-il-tipo-di-risposta-il-terzo-lato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.4 Il tipo di risposta — il terzo lato
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-il-significato-di-un-codice-che-si-allarga-da-solo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.5 Il significato di un codice, che si allarga da solo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-uno-stato-previsto-dal-modello-e-mai-scritto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.6 Uno stato previsto dal modello e mai scritto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dove-gira-ogni-presidio-e-perche" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Dove gira ogni presidio, e perché
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Dove gira ogni presidio, e perché">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosa-da-davvero-il-cancello-in-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa dà davvero il cancello in CI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#due-database-due-popolazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Due database, due popolazioni
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-il-punto-cieco-peggiore-una-regola-che-mente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. ⚠️ Il punto cieco peggiore: una regola che mente
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-se-un-cancello-della-ci-diventa-rosso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Se un cancello della CI diventa rosso
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-aggiungere-un-presidio-nuovo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Aggiungere un presidio nuovo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-limiti-noti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8. Limiti noti
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Limiti noti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-difetto-che-non-si-presidia-con-un-cancello" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Un difetto che non si presidia con un cancello
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-tecnica-esempi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Area tecnica — esempi
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riferimenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Riferimenti
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sorgente-polimorfa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sorgente polimorfa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riclassificazione-vie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Riclassificazione vie
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-di-obsoleto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Mandare in pensione una voce di catalogo (obsoleto_dal)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-e-gestione-parametri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e gestione parametri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-automatici-classe-e-identita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  I lavori automatici (natura e identità)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-code-di-lavoro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione code di lavoro
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-pgagent-funzionali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi-pgagent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistiche-del-planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Statistiche del planner
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-che-resta-veloce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Un database che resta veloce
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_19" id="__nav_7_2_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Log
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_19_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Log
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messaggi-di-Errore-e-Generazione-Log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Errore
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaggi-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Audit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analisi-tracciamento-processi-e-job/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi e Job
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tutorial
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tutorial
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/framework-automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Framework automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Strumenti
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Strumenti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/tools/gen_db_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generatore Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Qualità
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/sicurezza-e-qualita-statica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza e qualità statica (gli strumenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-be-fe-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità BE/FE (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-db-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità del database (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppatori
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Sviluppatori
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ricette-dove-intervenire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ricette (dove intervenire)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/trappole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Trappole (cosa non fare)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/Policy-ricerca-e-paginazione(API-DB)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy ricerca e paginazione (API/DB)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/standard-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard delle guide (come si scrive)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_6" id="__nav_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Frontend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Frontend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard frontend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/catalogo-building-block-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block FE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7" id="__nav_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Server
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Server
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_1" id="__nav_11_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/backend-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guida backend-dev
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/play-book-operativo-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Playbook operativo backend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/servizi-zeroerp-comandi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Servizi ZeroERP (comandi)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/catalogo-building-block-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block BE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/piano-solidita-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Piano solidità Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/provisioning-db-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Provisioning ruoli DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/gunicorn-dev-autoreload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gunicorn dev autoreload
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/checklist-post-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Checklist post upgrade
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/configurazione-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_2" id="__nav_11_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/db/dbdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VM dbdev (PostgreSQL)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_3" id="__nav_11_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Infrastruttura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Infrastruttura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/infra/proxmox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Proxmox
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_4" id="__nav_11_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workstation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Workstation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/workstation-dev/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vm wrk1-dev (ubuntu)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GitHub
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  GitHub
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/github/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Glossario
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/glossario-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario di dominio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/devops%26db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dev&Ops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/process-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Process Analysis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#in-una-frase" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        In una frase
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-un-promemoria-non-e-un-presidio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Un promemoria non è un presidio
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-la-forma-comune" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. La forma comune
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. La forma comune">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-la-misura-e-il-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1 La misura e il registro
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-il-terzo-pezzo-chi-legge" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2 Il terzo pezzo: chi legge
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Il terzo pezzo: chi legge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-dice-il-catalogo-per-ogni-vista" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Che cosa dice il catalogo, per ogni vista
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-regole-che-tengono-onesto-il-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Le regole che tengono onesto il catalogo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-i-presidi-del-database-e-degli-errori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. I presidi del database e degli errori
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. I presidi del database e degli errori">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-riferimenti-morti-nelle-funzioni-del-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.1 Riferimenti morti nelle funzioni del database
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-baseline-dei-test-rossi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.2 Baseline dei test rossi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-il-codice-errore-che-arriva-al-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.3 Il codice errore che arriva al backend
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Il codice errore che arriva al backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perche-un-codice-non-si-cancella-si-ritira" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Perché un codice non si cancella, si ritira
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-il-tipo-di-risposta-il-terzo-lato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.4 Il tipo di risposta — il terzo lato
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-il-significato-di-un-codice-che-si-allarga-da-solo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.5 Il significato di un codice, che si allarga da solo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-uno-stato-previsto-dal-modello-e-mai-scritto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3.6 Uno stato previsto dal modello e mai scritto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dove-gira-ogni-presidio-e-perche" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Dove gira ogni presidio, e perché
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Dove gira ogni presidio, e perché">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosa-da-davvero-il-cancello-in-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa dà davvero il cancello in CI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#due-database-due-popolazioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Due database, due popolazioni
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-il-punto-cieco-peggiore-una-regola-che-mente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. ⚠️ Il punto cieco peggiore: una regola che mente
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-se-un-cancello-della-ci-diventa-rosso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Se un cancello della CI diventa rosso
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-aggiungere-un-presidio-nuovo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Aggiungere un presidio nuovo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-limiti-noti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8. Limiti noti
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Limiti noti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-difetto-che-non-si-presidia-con-un-cancello" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Un difetto che non si presidia con un cancello
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-tecnica-esempi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Area tecnica — esempi
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riferimenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Riferimenti
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="guida-presidi-e-registri-del-debito">Guida — Presidi e registri del debito<a class="headerlink" href="#guida-presidi-e-registri-del-debito" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Ultimo aggiornamento</strong>: 26 ottobre 2026</p>
+<p><strong>Destinatari</strong>: sviluppatori database e backend, e chi costruisce o mantiene un
+controllo automatico (un guardrail, un pgTAP di presidio, una vista di controllo)</p>
+<p><strong>Vedi anche</strong> — schemi DB:</p>
+<ul>
+<li><a href="../../dbzero/dbops/manual/presidi/">dbops.presidi</a> — il catalogo delle viste di controllo: che cosa significa una riga, con che cadenza si guarda, a chi tocca</li>
+<li><a href="../../dbzero/dbops/manual/presidi_testi/">dbops.presidi_testi</a> — cosa vuol dire una riga e cosa fare, per chi deve agire</li>
+<li><a href="../../dbzero/dbops/manual/presidi_cause/">dbops.presidi_cause</a> — a chi tocca, causa per causa, sui presidi che elencano guasti diversi</li>
+<li><a href="../../dbzero/dbops/manual/riferimenti_morti_esenzioni/">dbops.riferimenti_morti_esenzioni</a> — il registro dei riferimenti morti</li>
+<li><a href="../../dbzero/dbops/manual/messaggi_errore_codici_legacy/">dbops.messaggi_errore_codici_legacy</a> — il registro dei nomi di codice fuori convenzione</li>
+<li><a href="../../dbzero/dbops/manual/codici_errore_senza_policy/">dbops.codici_errore_senza_policy</a> — il registro dei codici senza tipo di risposta</li>
+<li><a href="../../dbzero/dbops/manual/stati_check_dichiarazioni/">dbops.stati_check_dichiarazioni</a> — il registro degli stati ammessi che nessuna funzione scrive</li>
+</ul>
+<p><strong>Vedi anche</strong> — funzioni e viste DB:</p>
+<ul>
+<li><a href="../../dbzero/dbops/manual/fn_check_funzioni_riferimenti_morti/">dbops.fn_check_funzioni_riferimenti_morti</a> — la misura dei riferimenti morti</li>
+<li><a href="../../dbzero/dbops/manual/vw_codici_errore_da_dichiarare/">dbops.vw_codici_errore_da_dichiarare</a> — la misura del tipo di risposta</li>
+<li><a href="../../dbzero/dbops/manual/vw_codici_errore_forme_condizione/">dbops.vw_codici_errore_forme_condizione</a> — la misura delle famiglie di condizione</li>
+<li><a href="../../dbzero/dbops/manual/vw_stati_check_scrittori/">dbops.vw_stati_check_scrittori</a> — chi scrive ogni stato ammesso</li>
+<li><a href="../../dbzero/dbops/manual/fn_conta_presidio/">dbops.fn_conta_presidio</a> — il conteggio onesto di un presidio letto senza utente</li>
+<li><a href="../../dbzero/script/funzioni/fn_log_and_raise_error/">script.fn_log_and_raise_error</a> — la sede unica che solleva un errore</li>
+</ul>
+<p><strong>Vedi anche</strong> — guide correlate:</p>
+<ul>
+<li><a href=".././processi-automatici-classe-e-identita/">I lavori automatici</a> — i controlli sui lavori automatici (capitolo 6), il digest e chi lo sorveglia</li>
+<li><a href=".././pgtap-come-si-scrive-un-test/">Come si scrive un test pgTAP</a> — l'uso quotidiano della baseline, in sviluppo e in CI</li>
+<li><a href=".././Messaggi-di-Errore-e-Generazione-Log/">Messaggi di errore e generazione log</a> — il catalogo dei codici, la classe e i canali, dal lato del dominio</li>
+<li><a href=".././automazione-db/">Automazione DB</a> — il framework che applica le regole strutturali</li>
+<li><a href="../../dev/api/">Linee guida API</a> §Tassonomia errori — il contratto dell'errore visto dal backend</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="in-una-frase">In una frase<a class="headerlink" href="#in-una-frase" title="Permanent link">&para;</a></h2>
+<p>Un <strong>presidio</strong> è un controllo che si accorge da solo che qualcosa si è rotto in
+silenzio. È fatto di una <strong>misura</strong>, di un <strong>registro del debito</strong> e di qualcuno
+che <strong>legge</strong> il risultato al momento giusto: senza uno dei tre pezzi non presidia
+niente.</p>
+<p>Questa guida descrive la forma comune (§1–§2), i presidi del database e del
+trasporto degli errori (§3), dove gira ognuno e perché (§4), e come se ne
+costruisce uno nuovo (§6). I controlli sui <strong>lavori automatici</strong> hanno la stessa
+forma e un pezzo in più — il debito dichiarato, che zittisce di proposito un caso
+noto —: stanno nella guida <a href=".././processi-automatici-classe-e-identita/">I lavori automatici</a>,
+capitolo 6.</p>
+<hr />
+<h2 id="1-un-promemoria-non-e-un-presidio">1. Un promemoria non è un presidio<a class="headerlink" href="#1-un-promemoria-non-e-un-presidio" title="Permanent link">&para;</a></h2>
+<p>Una segnalazione lasciata in un commento — <em>«da verificare se la funzione va
+rimossa»</em> — non presidia niente. È un promemoria, e i promemoria non si rileggono:
+la verifica non viene fatta, e il difetto si ripresenta quando qualcuno esegue
+quel codice, cioè nel momento peggiore.</p>
+<p>Perché una cosa sia davvero presidiata serve qualcosa che <strong>protesti da solo</strong>,
+al momento giusto, senza che nessuno debba ricordarsene. I controlli descritti
+sotto non sono strumenti presi a caso: hanno tutti la stessa forma, e conviene
+conoscerla prima dei dettagli.</p>
+<hr />
+<h2 id="2-la-forma-comune">2. La forma comune<a class="headerlink" href="#2-la-forma-comune" title="Permanent link">&para;</a></h2>
+<h3 id="21-la-misura-e-il-registro">2.1 La misura e il registro<a class="headerlink" href="#21-la-misura-e-il-registro" title="Permanent link">&para;</a></h3>
+<p><strong>La misura</strong> dice qual è la situazione adesso. Deve essere ripetibile e non
+opinabile: lanciata oggi e domani, se nulla è cambiato, dà la stessa risposta.</p>
+<p><strong>Il registro del debito</strong> dice quali problemi sappiamo già di avere e perché
+sono ancora lì. Serve perché la realtà non è mai a zero: c'è sempre qualcosa di
+rotto che si è deciso consapevolmente di non sistemare subito.</p>
+<p>⚠️ <strong>Il registro è un debito, non un elenco di eccezioni.</strong> È la differenza che
+tiene questi controlli utili invece di farli diventare rumore di fondo:</p>
+<ul>
+<li>un <strong>elenco di eccezioni</strong> può solo allungarsi: ogni volta che qualcosa dà
+  fastidio lo si aggiunge, e dopo un po' nessuno lo legge più e i problemi veri
+  ci si nascondono dentro;</li>
+<li>un <strong>registro del debito</strong> deve <strong>calare</strong>: ogni voce ha una data, e dice perché
+  è ancora aperta e cosa la chiuderebbe.</li>
+</ul>
+<p>Per tenerlo onesto servono due regole, e stanno in due posti diversi apposta:</p>
+<table>
+<thead>
+<tr>
+<th>Regola</th>
+<th>Dove vive</th>
+<th>Perché lì</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Senza un motivo scritto la voce non si aggiunge</td>
+<td>vincolo del database</td>
+<td>non è un controllo che si può dimenticare di lanciare: è il database che rifiuta la riga</td>
+</tr>
+<tr>
+<td>Una voce che non serve più va tolta</td>
+<td>test o cancello</td>
+<td>per saperlo bisogna ri-misurare, e una misura non può essere un vincolo</td>
+</tr>
+</tbody>
+</table>
+<p>Senza la seconda regola il registro può solo crescere, e torna a essere un elenco
+di eccezioni.</p>
+<p>⭐ <strong>Un registro a zero non si toglie.</strong> Due dei registri di questa guida sono
+oggi vuoti (§3.3, §3.4) e restano: un registro vuoto è un registro <strong>in pari</strong>, ed
+è l'unico modo per distinguere «nessun debito» da «nessuno lo sta più misurando».
+Toglierlo costringerebbe a toccare il cancello che lo legge mentre è verde, e
+toglierebbe il posto pronto per la prossima eredità.</p>
+<p>⚠️ <strong>Il debito si tiene con un registro, non con una soglia.</strong> La tentazione è
+una colonna «oggi sono 508, l'allarme scatta a 509». Un numero vede solo il
+totale ed è cieco sullo <strong>scambio</strong>: un debito saldato e un difetto nuovo comparsi
+lo stesso giorno lasciano il conteggio fermo, e il controllo tace.</p>
+<h3 id="22-il-terzo-pezzo-chi-legge">2.2 Il terzo pezzo: chi legge<a class="headerlink" href="#22-il-terzo-pezzo-chi-legge" title="Permanent link">&para;</a></h3>
+<p>La misura e il registro rispondono a <em>«com'è messa adesso»</em> e <em>«che cosa sappiamo
+già»</em>. Resta la domanda che viene dopo: <strong>chi va a leggerli, e quando?</strong></p>
+<p>Per i presidi del §3 la risposta è un <strong>cancello</strong>: girano in CI e bloccano
+l'integrazione. Per le <strong>viste di controllo</strong> del database — qualche decina, e
+crescono — la risposta è il catalogo <a href="../../dbzero/dbops/manual/presidi/"><code>dbops.presidi</code></a>,
+letto da due consumatori:</p>
+<ul>
+<li>il <strong>digest</strong> dei presidi, un comando del backend lanciato da due timer systemd
+  (giornaliero e settimanale), che manda per posta le viste da guardare a quella
+  cadenza;</li>
+<li>il <strong>pannello Processi automatici</strong> dell'area Amministrazione, che mostra lo
+  stesso quadro a chi è collegato.</li>
+</ul>
+<p>⭐ Il programma non contiene nessun elenco di viste né di soglie: che cosa si
+guarda, con che cadenza e che cosa significa una riga lo dice il catalogo. Un
+elenco scritto nel programma sarebbe una seconda sorgente di verità, e una vista
+nuova nascerebbe <strong>fuori</strong> dal giro, in silenzio.</p>
+<h4 id="che-cosa-dice-il-catalogo-per-ogni-vista">Che cosa dice il catalogo, per ogni vista<a class="headerlink" href="#che-cosa-dice-il-catalogo-per-ogni-vista" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Colonna</th>
+<th>Che cosa dice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>natura</code></td>
+<td>che cosa significa una riga: un guasto adesso (<code>ZERO</code>), un debito noto (<code>REGISTRO</code>), una coda o una tendenza (<code>LAVORAZIONE</code>), un controllo già fatto da un cancello (<code>CANCELLO</code>), un panorama che elenca anche i sani (<code>INVENTARIO</code>)</td>
+</tr>
+<tr>
+<td><code>colonna_stato</code>, <code>stato_atteso</code></td>
+<td>per le viste con una colonna di stato, l'<strong>unico</strong> stato atteso: l'allarme è tutto il resto</td>
+</tr>
+<tr>
+<td><code>registro</code></td>
+<td>la tabella che tiene le voci note, sui presidi di natura <code>REGISTRO</code></td>
+</tr>
+<tr>
+<td><code>cadenza</code></td>
+<td>ogni quanto si guarda; <code>MAI</code> per inventari e cancelli, che non vanno nel digest</td>
+</tr>
+<tr>
+<td><code>perimetro</code></td>
+<td>se il conteggio è onesto letto da un programma senza utente, o se va fatto con <a href="../../dbzero/dbops/manual/fn_conta_presidio/"><code>fn_conta_presidio</code></a></td>
+</tr>
+<tr>
+<td><code>chi_agisce</code></td>
+<td>a chi tocca spegnerlo: <code>AMMINISTRATORE</code>, <code>SISTEMISTA</code> o <code>SVILUPPO</code></td>
+</tr>
+<tr>
+<td><code>colonna_variante</code></td>
+<td>sui presidi che elencano guasti <strong>diversi</strong>, la colonna da cui si legge la causa di ogni riga; testo e destinatario si scelgono causa per causa (<a href="../../dbzero/dbops/manual/presidi_cause/"><code>presidi_cause</code></a>)</td>
+</tr>
+</tbody>
+</table>
+<p>Il dettaglio di ogni colonna è nella scheda della tabella. Qui conta la ragione
+di tre scelte:</p>
+<ul>
+<li>⛔ <strong>Le nature non si deducono dal nome.</strong> Su una vista una riga è un guasto di
+  adesso, su un'altra è un debito noto e l'allarme è la voce che il registro non
+  conosce, su una terza ci sono duemila righe ed è la condizione normale. Un
+  avviso che non distingue i tre casi si apre con l'inventario, e un avviso
+  rumoroso viene ignorato al secondo invio.</li>
+<li>⛔ <strong>Si dichiara lo stato atteso, non quelli di allarme.</strong> Con un elenco degli
+  stati di allarme, uno stato <em>nuovo</em> aggiunto domani non sarebbe nell'elenco e
+  cadrebbe nel <strong>silenzio</strong>: è l'unico verso in cui un presidio marcisce senza che
+  nessuno se ne accorga.</li>
+<li>⭐ <strong>Il catalogo parla a due lettori.</strong> La <code>nota</code> e il commento della vista sono
+  scritti per chi <strong>mantiene</strong> il presidio; chi lo legge nel pannello o nel digest
+  deve <strong>agire</strong>, e ha due domande sole — cosa vuol dire, cosa devo fare — a cui
+  rispondono <code>significato</code> e <code>azione</code> di
+  <a href="../../dbzero/dbops/manual/presidi_testi/"><code>presidi_testi</code></a>. I due testi non si
+  sostituiscono.</li>
+</ul>
+<h4 id="le-regole-che-tengono-onesto-il-catalogo">Le regole che tengono onesto il catalogo<a class="headerlink" href="#le-regole-che-tengono-onesto-il-catalogo" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Regola</th>
+<th>Dove vive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Senza un motivo scritto la riga non si aggiunge</td>
+<td><strong>vincolo del database</strong> (<code>nota</code> non vuota)</td>
+</tr>
+<tr>
+<td>Un presidio che può accendersi dice a chi tocca spegnerlo</td>
+<td><strong>vincolo del database</strong> (<code>chi_agisce</code>, obbligatoria tranne su <code>INVENTARIO</code>)</td>
+</tr>
+<tr>
+<td>Inventari e cancelli non vanno nel digest</td>
+<td><strong>vincolo del database</strong> (cadenza <code>MAI</code>)</td>
+</tr>
+<tr>
+<td>Una vista di controllo nuova non può nascere fuori dal catalogo</td>
+<td><strong>test</strong> <code>db/pgtap/dbops/test-catalogo-presidi-v1.sql</code>, primo verso</td>
+</tr>
+<tr>
+<td>Una riga che non trova più la sua vista va tolta</td>
+<td><strong>test</strong>, stesso file, verso opposto</td>
+</tr>
+<tr>
+<td>Ogni presidio che può accendersi ha le sue parole, e ogni causa le sue</td>
+<td><strong>test</strong> <code>db/pgtap/dbops/test-presidi-testi-v1.sql</code></td>
+</tr>
+</tbody>
+</table>
+<p>Chi sorveglia il digest stesso — se muore lui nessuno manda il messaggio che lo
+dice — è nella guida <a href=".././processi-automatici-classe-e-identita/">I lavori automatici</a>.</p>
+<hr />
+<h2 id="3-i-presidi-del-database-e-degli-errori">3. I presidi del database e degli errori<a class="headerlink" href="#3-i-presidi-del-database-e-degli-errori" title="Permanent link">&para;</a></h2>
+<h3 id="31-riferimenti-morti-nelle-funzioni-del-database">3.1 Riferimenti morti nelle funzioni del database<a class="headerlink" href="#31-riferimenti-morti-nelle-funzioni-del-database" title="Permanent link">&para;</a></h3>
+<p><strong>Cosa sorveglia.</strong> PostgreSQL non tiene traccia di cosa c'è scritto dentro una
+funzione. Se si cancella una tabella o si rinomina una colonna, le funzioni che le
+nominavano restano lì, apparentemente sane, e <strong>non vengono più ricontrollate</strong>.
+Si scoprono rotte solo quando qualcuno le esegue.</p>
+<p><strong>Come funziona.</strong> L'estensione <code>plpgsql_check</code> <strong>compila davvero</strong> il corpo di
+ogni funzione, come farebbe la prima esecuzione: vede tabelle e colonne, e vede
+anche i rami di codice che nessuno ha mai eseguito. Una seconda misura guarda i
+nomi di oggetti scritti come <strong>dato</strong> nelle tabelle di configurazione, che il
+compilatore non vede.</p>
+<table>
+<thead>
+<tr>
+<th>Pezzo</th>
+<th>Dove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La misura</td>
+<td><a href="../../dbzero/dbops/manual/fn_check_funzioni_riferimenti_morti/"><code>dbops.fn_check_funzioni_riferimenti_morti</code></a></td>
+</tr>
+<tr>
+<td>Il registro</td>
+<td><a href="../../dbzero/dbops/manual/riferimenti_morti_esenzioni/"><code>dbops.riferimenti_morti_esenzioni</code></a></td>
+</tr>
+<tr>
+<td>Le due viste</td>
+<td><a href="../../dbzero/dbops/manual/vw_riferimenti_morti_da_sanare/"><code>vw_riferimenti_morti_da_sanare</code></a> · <a href="../../dbzero/dbops/manual/vw_riferimenti_morti_rientrati/"><code>vw_riferimenti_morti_rientrati</code></a></td>
+</tr>
+<tr>
+<td>Strumento a mano</td>
+<td><code>scripts/sql/check_funzioni_riferimenti_morti.sql</code></td>
+</tr>
+<tr>
+<td>Cancello automatico</td>
+<td><code>scripts/sql/guardrail_riferimenti_morti.sql</code> (passo CI)</td>
+</tr>
+<tr>
+<td>Test della suite</td>
+<td><code>db/pgtap/dbops/test-riferimenti-morti-v1.sql</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quando diventa rosso</strong> le strade sono due, e nessuna è ignorarlo: ripararlo —
+quasi sempre è una riga — oppure registrarlo nel debito <strong>con un motivo scritto</strong>.</p>
+<p>⚠️ La misura ricompila centinaia di funzioni a ogni lettura: non è una vista da
+interrogare per abitudine, e infatti il catalogo dei presidi le dà una cadenza
+lunga.</p>
+<h3 id="32-baseline-dei-test-rossi">3.2 Baseline dei test rossi<a class="headerlink" href="#32-baseline-dei-test-rossi" title="Permanent link">&para;</a></h3>
+<p><strong>Cosa sorveglia.</strong> Una parte della suite pgTAP è rossa da tempo, quasi sempre
+perché le fixture sono rimaste indietro rispetto a controlli entrati dopo. In
+quella situazione un test rosso non dice più niente: è normale che ce ne siano,
+quindi nessuno guarda.</p>
+<p>La baseline separa i <strong>rossi già noti</strong> dai <strong>rossi nuovi</strong>, e solo i secondi sono
+una notizia. Lo script <code>scripts/pgtap-baseline.sh</code> riesegue la suite (tutta, per
+schema o solo i file modificati) e segnala tre cose: le <strong>regressioni</strong> (rosso
+nuovo, esce con errore), i <strong>rientrati</strong> (ora verdi: la riga va tolta) e il
+silenzio sui rossi già noti. I comandi sono nell'<a href="#area-tecnica-esempi">area tecnica</a>.</p>
+<p>Le baseline sono <strong>due</strong>, perché le popolazioni sono due:</p>
+<table>
+<thead>
+<tr>
+<th>Baseline</th>
+<th>Dove si misura</th>
+<th>Chi la aggiorna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db/pgtap/baseline-rossi.tsv</code></td>
+<td>il database di sviluppo, con dati veri</td>
+<td>chi lavora, con <code>--update</code> dopo aver sanato</td>
+</tr>
+<tr>
+<td><code>db/pgtap/baseline-rossi-ci.tsv</code></td>
+<td>il database della CI, ricostruito da zero</td>
+<td><strong>solo la CI</strong>: in locale <code>--update</code> su questo file è rifiutato</td>
+</tr>
+</tbody>
+</table>
+<p>Confrontare una corsa con la baseline dell'altra popolazione produce decine di
+finte regressioni. Per lo stesso motivo una baseline vale solo se è stata presa
+<strong>con lo stesso ruolo di connessione</strong> (owner o utente applicativo): la prima
+riga del file lo dichiara, e lo script rifiuta il confronto fra corse
+disomogenee. Il dettaglio d'uso è nella guida
+<a href=".././pgtap-come-si-scrive-un-test/">Come si scrive un test pgTAP</a>.</p>
+<p>⚠️ <strong>Una classificazione sbagliata nasconde un problema vero.</strong> Un test
+registrato come «errore di fixture» può coprire una funzione che non parte
+proprio. Quando si aggiunge una riga alla baseline vale la pena capire <em>perché</em> è
+rossa, invece di catalogarla per somiglianza.</p>
+<p>⚠️ <strong>Un file che fallisce nella fixture non esegue nessuna verifica.</strong> La sua
+copertura vale <strong>zero</strong>, non «parziale» — ed è peggio di un'area scoperta, perché
+sembra coperta.</p>
+<h3 id="33-il-codice-errore-che-arriva-al-backend">3.3 Il codice errore che arriva al backend<a class="headerlink" href="#33-il-codice-errore-che-arriva-al-backend" title="Permanent link">&para;</a></h3>
+<p><strong>Cosa sorveglia.</strong> Quando il database rifiuta un'operazione manda al backend un
+<strong>codice</strong>, ed è da quel codice che dipendono la risposta HTTP (409 sul duplicato,
+404 sul non trovato, 403 sul vietato) e il messaggio che l'operatore legge a
+video. L'errore lo solleva una sede unica,
+<a href="../../dbzero/script/funzioni/fn_log_and_raise_error/"><code>script.fn_log_and_raise_error</code></a>,
+che riempie tre campi dell'eccezione:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Che cosa porta</th>
+<th>Che cosa ne fa il frontend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CONSTRAINT</code></td>
+<td>il <strong>codice</strong></td>
+<td>sceglie il tipo di risposta e la frase</td>
+</tr>
+<tr>
+<td><code>COLUMN</code></td>
+<td>il <strong>campo</strong> che l'operatore deve correggere</td>
+<td>accende un bordo rosso sul campo</td>
+</tr>
+<tr>
+<td><code>DATATYPE</code></td>
+<td>il <strong>bersaglio</strong>: su quali entità si riferisce l'errore</td>
+<td>propone un pulsante «vai al documento»</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Come si rompe</strong>, senza fare rumore:</p>
+<ul>
+<li><strong>qualcun altro scrive nello stesso campo.</strong> Sollevare un errore a mano è
+  possibile ovunque. Un mittente abusivo non fa fallire niente: fa <strong>rispondere la
+  cosa sbagliata</strong>, che è peggio, perché nessuno se ne accorge. E il danno cresce
+  col canale: un codice sbagliato fa decidere male una risposta, un campo
+  sbagliato manda l'operatore a correggere un dato giusto, un bersaglio sbagliato
+  gli apre un documento che non c'entra;</li>
+<li><strong>nasce un codice con un nome fuori convenzione.</strong> I codici si chiamano
+  <code>E_MODULO_TIPO</code> (i warning <code>W_…</code>). Le risposte del backend sono <strong>generate dal
+  catalogo</strong>, quindi un codice a catalogo la sua risposta ce l'ha; ma nella
+  finestra fra il migrate che crea un codice e il commit con cui il backend
+  rigenera, a decidere fra un errore dell'utente e un errore di server resta il
+  prefisso;</li>
+<li><strong>si usa un codice ritirato</strong>, che l'operatore leggerebbe come un messaggio vuoto
+  o superato.</li>
+</ul>
+<p>Il cancello è <code>scripts/sql/guardrail_codice_errore_strutturato.sql</code> (passo CI).
+Fallisce se trova:</p>
+<table>
+<thead>
+<tr>
+<th>Controllo</th>
+<th>Che cosa vieta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(A)</td>
+<td>un mittente diverso dalla sede unica sul canale <code>CONSTRAINT</code></td>
+</tr>
+<tr>
+<td>(B)</td>
+<td>un codice nuovo fuori convenzione e non registrato nel debito</td>
+</tr>
+<tr>
+<td>(C)</td>
+<td>una voce del registro che non serve più (il debito è pagato: la riga va tolta)</td>
+</tr>
+<tr>
+<td>(D)</td>
+<td>una funzione viva che solleva un codice ritirato</td>
+</tr>
+<tr>
+<td>(E)</td>
+<td>un codice di warning sollevato invece che scritto nel diario</td>
+</tr>
+<tr>
+<td>(F)</td>
+<td>un mittente diverso dalla sede unica sul canale <code>COLUMN</code></td>
+</tr>
+<tr>
+<td>(G)</td>
+<td>un mittente diverso dalla sede unica sul canale <code>DATATYPE</code></td>
+</tr>
+<tr>
+<td>(H)</td>
+<td>una regola di blocco delle colonne che nomina un codice non vivo</td>
+</tr>
+</tbody>
+</table>
+<p>⭐ <strong>I controlli (F) e (G) sono nati insieme ai loro canali</strong>, a zero mittenti
+abusivi: un presidio che parte da zero non chiede mai a nessuno di sanare un
+arretrato. È la forma da preferire ogni volta che si apre un canale nuovo.</p>
+<p>⭐ <strong>Il controllo (H) guarda un punto che solleverà in futuro.</strong> Una riga di
+<a href="../../dbzero/dbops/manual/automation_lock_columns/"><code>dbops.automation_lock_columns</code></a>
+non solleva niente finché l'automazione non genera il trigger, e da quel momento
+lo solleva per sempre: un codice sbagliato lì nasce in silenzio e si manifesta
+alla prima rigenerazione, quando nessuno lo sta più guardando.</p>
+<table>
+<thead>
+<tr>
+<th>Pezzo</th>
+<th>Dove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La sede unica che scrive i campi</td>
+<td><code>script.fn_log_and_raise_error</code></td>
+</tr>
+<tr>
+<td>Il registro dei nomi ereditati</td>
+<td><a href="../../dbzero/dbops/manual/messaggi_errore_codici_legacy/"><code>dbops.messaggi_errore_codici_legacy</code></a> — <strong>a zero, e non si toglie</strong> (§2.1)</td>
+</tr>
+<tr>
+<td>Il ritiro di un codice</td>
+<td><code>config.codici_errore.obsoleto_dal</code></td>
+</tr>
+<tr>
+<td>Cancello automatico</td>
+<td><code>scripts/sql/guardrail_codice_errore_strutturato.sql</code> (passo CI) — controlli (A)…(H)</td>
+</tr>
+<tr>
+<td>Test della suite</td>
+<td><code>db/pgtap/script/test-fn-log-and-raise-error-constraint-codice.sql</code> · <code>db/pgtap/config/test-codici-errore-obsoleto-dal.sql</code> · <code>db/pgtap/vendite/test-ordini-guard-transizione-v1.sql</code></td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>Il registro dei nomi non chiede un motivo per riga</strong>, al contrario di quello
+dei riferimenti morti. Là ogni voce è una decisione a sé; qui tutte le voci
+sarebbero <strong>una sola decisione</strong> — l'eredità di un periodo in cui la convenzione
+non era presidiata — e un motivo obbligatorio produrrebbe tante copie della stessa
+frase. La ragione sta scritta una volta, sulla tabella. E una famiglia nuova con
+una semantica sua (come i warning <code>W_</code>) non si registra: si allarga la
+convenzione.</p>
+<h4 id="perche-un-codice-non-si-cancella-si-ritira">Perché un codice non si cancella, si ritira<a class="headerlink" href="#perche-un-codice-non-si-cancella-si-ritira" title="Permanent link">&para;</a></h4>
+<p>Quando un codice viene sostituito, verrebbe voglia di cancellare la voce vecchia.
+<strong>Quasi mai si può</strong>: ogni errore registrato lascia una riga di diario che <em>punta</em>
+alla voce del catalogo, e finché quel diario esiste la voce non si tocca.
+Cancellare il diario per riordinare il catalogo sarebbe distruggere una prova per
+sistemare un'etichetta — e una cancellazione del genere <strong>riesce sulle
+installazioni nuove e fallisce su quelle che hanno una storia</strong>: la prova
+automatica direbbe che va tutto bene proprio dove non c'è niente da rompere.</p>
+<p>Perciò un codice si <strong>ritira</strong>, scrivendo la data accanto alla voce
+(<code>config.codici_errore.obsoleto_dal</code>, una riga per codice: il ritiro appartiene al
+codice, non alla frase in una lingua). La voce resta, il diario resta agganciato,
+e chi dovesse ancora incontrare quell'errore continua a leggere la spiegazione di
+sempre.</p>
+<p>⚠️ Una data di ritiro, da sola, è una dichiarazione di intenti: qualcuno può
+sempre tornare a usare il codice. Per questo il controllo (D) verifica che
+<strong>nessuna funzione viva sollevi un codice ritirato</strong>: senza, la data sarebbe
+l'etichetta rassicurante di cui parla il §5.</p>
+<p>⚠️ Prima di togliere dal catalogo un codice che nessuno solleva, va distinto se è
+<strong>superato</strong> o <strong>non ancora agganciato</strong>: può essere un residuo, oppure un pezzo
+di lavoro in corso a cui manca il collegamento. Cancellare il secondo tipo rompe
+il lavoro di qualcun altro.</p>
+<h3 id="34-il-tipo-di-risposta-il-terzo-lato">3.4 Il tipo di risposta — il terzo lato<a class="headerlink" href="#34-il-tipo-di-risposta-il-terzo-lato" title="Permanent link">&para;</a></h3>
+<p><strong>Cosa sorveglia.</strong> Il §3.3 garantisce che il codice <strong>arrivi</strong> al backend e che
+l'operatore legga la frase giusta. Ma sullo stesso codice deve andare d'accordo un
+terzo elenco: le policy del backend che dicono, per ogni codice, <strong>che tipo di
+risposta</strong> dare — «non esiste», «non ti è permesso», «è in conflitto con lo stato
+attuale», «hai sbagliato a compilare» (<code>backend/apps/core/services/error_policies.py</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Direzione</th>
+<th>Presidiata da</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>le parole usate dal codice applicativo sono dichiarate</td>
+<td><code>backend/apps/core/tests/test_error_codes_declared_guardrail.py</code></td>
+</tr>
+<tr>
+<td>le parole che dice il database sono a catalogo</td>
+<td>guardrail SQL del §3.3</td>
+</tr>
+<tr>
+<td>le parole che dice il database hanno un tipo di risposta</td>
+<td><code>backend/apps/core/tests/test_error_codes_db_policy_guardrail.py</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cosa succede senza.</strong> L'operatore legge comunque la frase giusta — viene dal
+catalogo — ma il tipo di risposta resta appiattito su «hai sbagliato a compilare»
+anche quando la verità è «non esiste» o «non ti è permesso». Chi legge capisce lo
+stesso; chi deve <strong>reagire</strong> — la pagina che decide se mostrare un avviso o
+riportarti indietro, un allarme, un tentativo automatico — no.</p>
+<table>
+<thead>
+<tr>
+<th>Pezzo</th>
+<th>Dove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La misura</td>
+<td><a href="../../dbzero/dbops/manual/vw_codici_errore_da_dichiarare/"><code>dbops.vw_codici_errore_da_dichiarare</code></a></td>
+</tr>
+<tr>
+<td>Il registro</td>
+<td><a href="../../dbzero/dbops/manual/codici_errore_senza_policy/"><code>dbops.codici_errore_senza_policy</code></a> — <strong>a zero, e non si toglie</strong> (§2.1)</td>
+</tr>
+<tr>
+<td>Cancello automatico</td>
+<td><code>backend/apps/core/tests/test_error_codes_db_policy_guardrail.py</code> (suite Django, in CI)</td>
+</tr>
+</tbody>
+</table>
+<p>⭐ <strong>Un registro fatto bene fa emergere i difetti di modellazione.</strong> Assegnare il
+tipo di risposta si fa leggendo il punto che solleva, non il nome del codice — e
+così si scopre il codice che dice <strong>due cose</strong> (un «non esiste» e un «correggi
+questo campo» sotto la stessa parola): non va classificato, va <strong>spezzato</strong>.</p>
+<p>⚠️ <strong>Il cancello sta lato backend, e non è un dettaglio organizzativo.</strong> Il
+confronto è contro un dizionario Python: da SQL si potrebbe fare solo leggendo il
+<em>testo</em> di quel sorgente, legando un guardrail SQL alla forma di un file che non è
+suo. Il prezzo è che ha bisogno di un <strong>database provvisto</strong> per girare: in CI ce
+l'ha, in locale si accende con <code>ZEROERP_TEST_DB_E2E=1</code>.</p>
+<p>⚠️ <strong>La misura è volutamente larga.</strong> Raccoglie ogni letterale <code>E_*</code> che compare
+in un corpo PL/pgSQL vivo, non solo quelli dentro la chiamata che solleva:
+restringerla perderebbe i codici che arrivano da un'espressione. Fra i due errori
+possibili si sceglie quello che si corregge guardando i falsi positivi (una policy
+di troppo costa una riga), non quello che non si vede: <strong>un setaccio, non una
+lista</strong>.</p>
+<p>⚠️ <strong>La misura è una vista sola</strong>, e il cancello la interroga invece di riscrivere
+la regola. Due sponde che si scrivono ognuna la propria query danno numeri diversi
+per lo stesso fatto: <em>anche la misura di un difetto è un programma, e può avere il
+suo difetto.</em></p>
+<h3 id="35-il-significato-di-un-codice-che-si-allarga-da-solo">3.5 Il significato di un codice, che si allarga da solo<a class="headerlink" href="#35-il-significato-di-un-codice-che-si-allarga-da-solo" title="Permanent link">&para;</a></h3>
+<p><strong>Cosa sorveglia.</strong> Un codice errore nasce per dire <em>una</em> cosa. Poi qualcuno lo
+usa «anche per questo caso qui», una volta, e sembra ragionevole; alla lunga
+diventa un'etichetta che copre problemi diversi, che chiedono reazioni diverse, e
+che a video diventano tutti lo stesso messaggio.</p>
+<p>⭐ <strong>Nessuno crea un codice generico di proposito.</strong> Per questo il presidio non
+guarda lo stato, ma il <strong>cambiamento</strong>.</p>
+<p><strong>Perché non è un cancello sullo stato.</strong> Dire «questo codice è generico?»
+richiede di leggere, per ogni punto che lo solleva, la condizione che lo precede —
+e di capirla. La misura che lo fa
+(<a href="../../dbzero/dbops/manual/vw_codici_errore_forme_condizione/"><code>dbops.vw_codici_errore_forme_condizione</code></a>)
+ci riesce per una parte dei codici, e per gli altri <strong>dichiara di non sapere</strong>.
+Un cancello che capisce solo una parte dei casi boccia a caso e passa a caso, e
+boccerebbe anche i codici trasversali per costruzione (<code>E_PERMESSO_NEGATO</code> è
+ovunque, e non è un difetto). Dopo due blocchi sbagliati qualcuno lo spegne — e
+<strong>un presidio spento è peggio di uno assente</strong>, perché ha convinto tutti di
+esserci.</p>
+<p><strong>La forma che funziona.</strong> Non «questo codice è generico?», ma <strong>«questo codice ha
+acquistato una condizione che non aveva?»</strong>, a cui la misura sa rispondere con
+certezza sui codici che legge. È lo schema della baseline dei test rossi: un file
+committato con lo stato noto, e la CI che fallisce sul <strong>delta</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Situazione</th>
+<th>Esito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>un codice <strong>acquista</strong> una famiglia di condizione</td>
+<td>🔴 rosso, la CI si ferma</td>
+</tr>
+<tr>
+<td>un codice <strong>nuovo</strong> nasce già con due famiglie</td>
+<td>🔴 rosso — nasce storto</td>
+</tr>
+<tr>
+<td>un codice <strong>perde</strong> una famiglia (si restringe)</td>
+<td>🔵 non è un difetto, <strong>ma la baseline va stretta subito</strong></td>
+</tr>
+<tr>
+<td>un codice sparisce dalla misura</td>
+<td>🔵 si allinea</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Pezzo</th>
+<th>Dove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lo scatto</td>
+<td><code>scripts/sql/codici_errore_famiglie_snapshot.sql</code></td>
+</tr>
+<tr>
+<td>Il confronto e il <code>--update</code></td>
+<td><code>scripts/codici-errore-baseline.sh</code></td>
+</tr>
+<tr>
+<td>La baseline committata</td>
+<td><code>db/baseline-codici-errore-famiglie.tsv</code> (un'altra si sceglie con <code>CODICI_BASELINE</code>)</td>
+</tr>
+<tr>
+<td>Cancello automatico</td>
+<td>passo CI, subito dopo il guardrail del §3.3</td>
+</tr>
+</tbody>
+</table>
+<p>⛔ <strong>Se diventa rosso, non si rigenera la baseline per far passare la CI.</strong> La riga
+rossa è la richiesta di una decisione: o serve un codice nuovo, o l'uso è
+legittimo e la baseline si aggiorna <strong>con la ragione nel messaggio di commit</strong>.</p>
+<p>⚠️ <strong>Un presidio va guardato anche nel verso in cui le cose migliorano.</strong> Se un
+codice si restringe e la baseline non viene stretta, la baseline continua a
+dichiarare ammessa la famiglia che il codice non ha più: il giorno in cui qualcuno
+ce la rimette, il confronto la trova già lì e tace. È il verso permissivo, l'unico
+in cui un presidio smette di sorvegliare senza diventare rosso — ed è per questo
+che anche il restringimento si segnala.</p>
+<h3 id="36-uno-stato-previsto-dal-modello-e-mai-scritto">3.6 Uno stato previsto dal modello e mai scritto<a class="headerlink" href="#36-uno-stato-previsto-dal-modello-e-mai-scritto" title="Permanent link">&para;</a></h3>
+<p><strong>Cosa sorveglia.</strong> Il <code>CHECK</code> di una colonna di stato è una promessa: ogni valore
+ammesso è uno stato che il sistema sa raggiungere. Se un valore è ammesso e
+<strong>nessuno lo scrive mai</strong>, la promessa è vuota, e il sistema è muto proprio sul
+caso che quel valore doveva raccontare. Di regola è il fallimento: un esito
+<code>ERRORE</code> ammesso, con il suo contatore, che nessuno scrive — e le corse chiudono
+«completate» con un documento rifiutato.</p>
+<p><strong>Come misura.</strong> Il perimetro non è un elenco: è ogni <code>CHECK</code> di appartenenza su
+una colonna il cui nome dice «stato», letto dal catalogo di PostgreSQL. Per ogni
+valore la misura (<a href="../../dbzero/dbops/manual/vw_stati_check_scrittori/"><code>dbops.vw_stati_check_scrittori</code></a>)
+cerca <strong>chi lo scrive</strong>: il default della colonna, una funzione che scrive la
+tabella col valore nel corpo, o una funzione che chiama uno scrittore passandogli
+il valore. Guarda la struttura, non il contenuto: non conta le righe.</p>
+<p><strong>Il registro</strong> (<a href="../../dbzero/dbops/manual/stati_check_dichiarazioni/"><code>dbops.stati_check_dichiarazioni</code></a>)
+porta un <strong>canale</strong>, perché il database non vede tutti gli scrittori: una parte
+dei valori li scrive l'applicazione. Il canale dice chi verifica la riga:</p>
+<table>
+<thead>
+<tr>
+<th><code>canale</code></th>
+<th>Che cosa dice la riga</th>
+<th>Chi la verifica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APPLICAZIONE</code></td>
+<td>«questo valore lo scrive un repository Python»</td>
+<td>il test del backend <code>backend/apps/core/tests/test_stati_check_scrittori_python.py</code>: il valore deve comparire in un file che scrive quella tabella, o che la scrive <strong>attraverso</strong> il suo repository; se sparisce, rosso. E nel verso opposto: un valore non dichiarato che Python scrive va dichiarato <code>APPLICAZIONE</code>, non sanato a database</td>
+</tr>
+<tr>
+<td><code>ESENTE</code></td>
+<td>«non lo scrive nessuno, o il criterio non lo vede — e sappiamo perché»</td>
+<td>il pgTAP, nel verso di ritiro: se uno scrittore compare a database, la riga va tolta</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <code>ESENTE</code> non vuol dire «non scritto»: vuol dire che il <strong>criterio</strong> non lo
+vede. Il caso tipico è un log che riceve lo stato <strong>copiandolo</strong> dal padre:
+scritto a ogni riga, e nessun valore compare in nessuna funzione. Stringere il
+<code>CHECK</code> romperebbe il log.</p>
+<p><strong>La lista di lavoro</strong> (<a href="../../dbzero/dbops/manual/vw_stati_check_da_sanare/"><code>dbops.vw_stati_check_da_sanare</code></a>)
+è un cancello: <code>db/pgtap/dbops/test-stati-check-scrittori-v1.sql</code> la fa rossa su
+un valore che nessuno scrive e nessuno ha dichiarato, e su una riga di registro
+che non serve più. Lo stesso pgTAP tiene l'elenco delle colonne di stato misurate,
+come prova che il perimetro non si restringe in silenzio.</p>
+<p><strong>Il limite, detto qui.</strong> Il criterio è <strong>testuale</strong>: nominare un valore in un
+<code>WHERE</code> dentro una funzione che scrive la tabella conta come scriverlo; un valore
+che passa per tre funzioni resta invisibile; una copia da un'altra colonna non si
+vede. E PostgreSQL stampa lo stesso <code>CHECK</code> in due forme diverse (colonna <code>text</code> o
+<code>varchar</code>): una misura che ne riconosce una sola si restringe senza dirlo. Ognuno
+di questi limiti è scritto nel commento della vista e ha un caso costruito nel
+pgTAP.</p>
+<hr />
+<h2 id="4-dove-gira-ogni-presidio-e-perche">4. Dove gira ogni presidio, e perché<a class="headerlink" href="#4-dove-gira-ogni-presidio-e-perche" title="Permanent link">&para;</a></h2>
+<p>Tutti i presidi del §3 sono <strong>passi della stessa CI</strong> e bloccano l'integrazione.
+Non sono però la stessa cosa messa in posti diversi: misurano su database diversi,
+e per questo alcuni hanno anche un giro a mano.</p>
+<table>
+<thead>
+<tr>
+<th>Presidio</th>
+<th>In CI</th>
+<th>A mano, in sviluppo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Riferimenti morti (§3.1)</td>
+<td>guardrail SQL</td>
+<td><code>check_funzioni_riferimenti_morti.sql</code></td>
+</tr>
+<tr>
+<td>Codice errore e canali (§3.3)</td>
+<td>guardrail SQL</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tipo di risposta (§3.4)</td>
+<td>suite Django, con database provvisto</td>
+<td><code>ZEROERP_TEST_DB_E2E=1</code></td>
+</tr>
+<tr>
+<td>Famiglie di condizione (§3.5)</td>
+<td><code>codici-errore-baseline.sh</code></td>
+<td>stesso script</td>
+</tr>
+<tr>
+<td>Baseline pgTAP, con i pgTAP di presidio (§2.2, §3.2, §3.6)</td>
+<td>suite pgTAP con <code>baseline-rossi-ci.tsv</code></td>
+<td><code>pgtap-baseline.sh</code> con <code>baseline-rossi.tsv</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cosa-da-davvero-il-cancello-in-ci">Cosa dà davvero il cancello in CI<a class="headerlink" href="#cosa-da-davvero-il-cancello-in-ci" title="Permanent link">&para;</a></h3>
+<p>Il vantaggio non è che «gira da solo»: è che <strong>non si può dimenticare</strong> e nessuno
+può decidere di saltarlo perché ha fretta.</p>
+<p>Va però saputo <strong>quando</strong> scatta. Il workflow di validazione parte sui <code>push</code> verso
+il branch di integrazione e sulle richieste di merge, e solo se sono stati toccati
+certi percorsi; la suite pgTAP, la più lunga, gira sulle richieste verso <code>main</code> e
+sui <code>push</code> di integrazione che toccano il database. Sul proprio branch di lavoro
+<strong>non parte</strong>: è una rete che si trova al momento del merge. Il giro a mano resta
+il ciclo veloce, quello che si usa mentre si lavora.</p>
+<p>⭐ <strong>Un cancello non deve poter zittire un altro cancello.</strong> La suite pgTAP parte
+anche se un passo precedente indipendente (per esempio i test Django) è rosso:
+sono due domande diverse e vogliono due risposte. Non parte, invece, se il
+database non è stato costruito per intero — una suite su un database a metà
+direbbe rosso per il motivo sbagliato.</p>
+<h3 id="due-database-due-popolazioni">Due database, due popolazioni<a class="headerlink" href="#due-database-due-popolazioni" title="Permanent link">&para;</a></h3>
+<p>Il database della CI è <strong>costruito da zero</strong> a ogni giro: ha la struttura e i dati
+di configurazione, ma <strong>nessun dato di lavoro</strong>. Molti test, invece, scelgono un
+caso reale fra i dati esistenti e ci lavorano sopra: su un database vuoto quei
+test <strong>non falliscono, si saltano</strong>, e un test saltato conta come verde.</p>
+<p>Per questo la baseline pgTAP è doppia (§3.2), e i due giri <strong>servono entrambi, per
+motivi opposti</strong>:</p>
+<ul>
+<li>il giro in CI verifica che <strong>le migrazioni sappiano ricostruire</strong> il database —
+  ed è la proprietà che conta il giorno in cui si prepara un ambiente nuovo;</li>
+<li>il giro in sviluppo verifica il comportamento <strong>su dati veri</strong>, che la CI non
+  ha.</li>
+</ul>
+<p>⚠️ Il database di sviluppo e un database ricostruito dai changelog <strong>non sono lo
+stesso oggetto</strong>, pur partendo dagli stessi file. Un comando che funziona solo su
+un database cresciuto nel tempo lascia sul database nuovo un oggetto che su quello
+di sviluppo non esiste più: lo vede solo la CI. Verificare su una sola macchina
+significa verificare lo stato di <strong>quella macchina</strong>.</p>
+<p>⭐ <strong>Un cancello costruito su una baseline sta in mezzo</strong> (§3.5): ha il rosso che
+ferma della CI e il file committato della baseline, e confronta il delta invece
+dello stato assoluto. Quando un difetto non si sa misurare in assoluto ma si sa
+riconoscere quando <strong>cambia</strong>, è questa la forma da copiare.</p>
+<hr />
+<h2 id="5-il-punto-cieco-peggiore-una-regola-che-mente">5. ⚠️ Il punto cieco peggiore: una regola che mente<a class="headerlink" href="#5-il-punto-cieco-peggiore-una-regola-che-mente" title="Permanent link">&para;</a></h2>
+<p>C'è un modo di sbagliare che un presidio non può intercettare da solo.</p>
+<p>Il controllo sui riferimenti morti classifica ogni segnalazione, e alcune le
+etichetta come <strong>rumore</strong>. Se un'etichetta poggia su un'affermazione tecnica
+<strong>sbagliata</strong> — «questa forma di chiamata è lecita, è lo strumento a non
+capirla» — i difetti veri che cadono in quella categoria vengono zittiti. E ogni
+giro di bonifica che restringe un po' la regola, trovando comunque qualche difetto
+vero, <strong>conferma</strong> l'assunto di partenza invece di metterlo in dubbio.</p>
+<p>Da qui tre cose che valgono per qualunque presidio:</p>
+<ul>
+<li><strong>Un'etichetta rassicurante è più pericolosa di un errore.</strong> Un errore lo si
+  guarda; un'etichetta la si legge una volta e poi ci si fida. È lo stesso
+  meccanismo del test rosso registrato in baseline con la causa sbagliata.</li>
+<li><strong>Chi scrive la regola non è la persona giusta per verificarla.</strong> Un difetto del
+  genere lo trova chi ha un motivo indipendente per guardare.</li>
+<li><strong>Le esenzioni si scrivono con la loro giustificazione tecnica</strong>, non solo con
+  il nome della categoria. Una frase che motiva può essere letta e contestata;
+  un'etichetta sola no.</li>
+</ul>
+<p>Quando la regola viene corretta, il registro fa comunque il suo mestiere: i
+difetti zittiti compaiono tutti insieme, con nome e posizione. Quello che un
+presidio <strong>non</strong> può fare è accorgersi da solo che una sua regola mente.</p>
+<hr />
+<h2 id="6-se-un-cancello-della-ci-diventa-rosso">6. Se un cancello della CI diventa rosso<a class="headerlink" href="#6-se-un-cancello-della-ci-diventa-rosso" title="Permanent link">&para;</a></h2>
+<p>Prima di considerarlo un problema della CI, l'ordine delle ipotesi:</p>
+<ol>
+<li><strong>il difetto è reale</strong> e la CI l'ha appena trovato — è il caso più frequente;</li>
+<li><strong>il controllo misura un database incompleto</strong>, perché è messo nel punto
+   sbagliato della sequenza;</li>
+<li><strong>il difetto esiste solo su un database costruito da zero</strong> — vedi §4.</li>
+</ol>
+<p>⚠️ La prima ipotesi che <em>non</em> va fatta è «la CI è rotta». Quando un controllo passa
+in locale e fallisce in CI, di solito è il locale che sta nascondendo qualcosa.</p>
+<p>⚠️ <strong>Lo schema del database non ha un solo proprietario.</strong> Liquibase costruisce
+quasi tutto, ma lo schema <code>django</code> lo crea Django. Un controllo che legge le
+definizioni dell'intero database deve girare <strong>dopo che entrambi hanno finito</strong>,
+altrimenti misura un database a metà e segnala problemi che non esistono. Un
+controllo che legge solo oggetti di Liquibase può girare prima, ed è meglio:
+risponde prima.</p>
+<hr />
+<h2 id="7-aggiungere-un-presidio-nuovo">7. Aggiungere un presidio nuovo<a class="headerlink" href="#7-aggiungere-un-presidio-nuovo" title="Permanent link">&para;</a></h2>
+<p>La ricetta, nell'ordine:</p>
+<ol>
+<li><strong>Scrivi la misura prima del rimedio.</strong> Serve a sapere quanto è grande il
+   problema, e spesso il difetto più grave non è nella lista di partenza.</li>
+<li><strong>Classifica il rumore, non filtrarlo.</strong> Un controllo che nasconde le righe che
+   crede innocue non è più verificabile. Meglio farle uscire tutte con
+   un'etichetta: se una è etichettata male, si vede.</li>
+<li><strong>Metti la misura in un posto solo.</strong> Se la usano in due (il cancello e il
+   test), devono leggere la stessa: due copie prima o poi divergono.</li>
+<li><strong>Il registro nasce piccolo.</strong> Meglio sanare prima e registrare solo ciò che è
+   davvero una decisione presa; un registro che parte lungo non lo legge nessuno.</li>
+<li><strong>Se apri un canale nuovo, presidialo subito</strong>, a zero violazioni: dopo, il
+   presidio dovrà rincorrere un arretrato.</li>
+<li><strong>Fai fallire il controllo quando non può misurare.</strong> Se manca un prerequisito
+   — una baseline sparita, una vista che non si legge — deve dirlo ad alta voce,
+   non saltare in silenzio. Un cancello che passa perché non ha misurato niente dà
+   la sensazione della copertura senza averla.</li>
+<li><strong>Scrivi i limiti accanto al controllo.</strong> Ogni misura ha punti ciechi; se non
+   sono scritti, chi legge un verde crede che copra tutto.</li>
+<li><strong>Motiva ogni esenzione con la sua ragione tecnica</strong>, non con la categoria
+   (§5).</li>
+<li><strong>Se è una vista di controllo, mettila nel catalogo</strong> <a href="../../dbzero/dbops/manual/presidi/"><code>dbops.presidi</code></a>
+   con le sue parole in <a href="../../dbzero/dbops/manual/presidi_testi/"><code>presidi_testi</code></a>: è
+   così che qualcuno la legge. Se ci si dimentica, il pgTAP del catalogo diventa
+   rosso. I passi sono nella scheda della tabella.</li>
+</ol>
+<hr />
+<h2 id="8-limiti-noti">8. Limiti noti<a class="headerlink" href="#8-limiti-noti" title="Permanent link">&para;</a></h2>
+<p>Nessuno di questi controlli vede tutto, e conviene saperlo prima di fidarsi di un
+risultato verde.</p>
+<p><strong>Il controllo sui riferimenti morti non vede:</strong></p>
+<ul>
+<li>i riferimenti che si risolvono verso la <strong>cosa sbagliata</strong>: una funzione che
+  scrive il dato giusto nella colonna sbagliata compila benissimo. Il significato
+  non si compila;</li>
+<li>i rami di codice che dipendono dai <strong>parametri</strong> con cui un controllo viene
+  agganciato a una tabella, invece che dalla tabella stessa;</li>
+<li>più di un difetto per volta nello stesso punto: si ferma al primo. Una bonifica
+  va <strong>ri-misurata dopo ogni passo</strong>, non eseguita come una lista scritta una volta.</li>
+</ul>
+<p><strong>La baseline pgTAP non vede</strong> ciò che i test non collaudano, e i test collaudano
+solo ciò che i dati presenti permettono di collaudare — in CI meno che in
+sviluppo (§4).</p>
+<p><strong>Nessun registro distingue</strong> un residuo da qualcosa lasciato lì di proposito.
+Quella differenza sta nell'intenzione di chi l'ha scritto, e nessuna misura la
+trova: è ciò per cui esiste il motivo scritto.</p>
+<p><strong>Il presidio delle famiglie di condizione (§3.5) non vede:</strong></p>
+<ul>
+<li>i codici di cui la misura non sa leggere la guardia: su quelli tace, ed è giusto
+  che taccia — un presidio che tira a indovinare si spegne da solo al secondo
+  falso allarme;</li>
+<li>un codice che nasce generico con due famiglie entrambe illeggibili: non c'è
+  delta da vedere;</li>
+<li>⚠️ e la sua baseline è misurata <strong>su un database</strong>: confrontare una corsa in CI
+  con una baseline presa in sviluppo produce finte regressioni, come per le
+  baseline pgTAP. Si sceglie la baseline giusta con <code>CODICI_BASELINE</code>.</li>
+</ul>
+<h3 id="un-difetto-che-non-si-presidia-con-un-cancello">⚠️ Un difetto che non si presidia con un cancello<a class="headerlink" href="#un-difetto-che-non-si-presidia-con-un-cancello" title="Permanent link">&para;</a></h3>
+<p>I lati del §3.3 e del §3.4 hanno una regola <strong>meccanica</strong>: il codice è a catalogo?
+è dichiarato nel codice applicativo? ha un tipo di risposta? Si risponde
+confrontando due elenchi.</p>
+<p>C'è una domanda che non funziona così: <strong>il messaggio descrive davvero la
+condizione che solleva l'errore?</strong> Un <code>IF NOT FOUND</code> che solleva un codice
+chiamato «parametro non valido» è un difetto vero — l'operatore legge una frase
+che non c'entra, e il tipo di risposta ne discende sbagliato — ma riconoscerlo
+richiede di capire <em>che cosa significa</em> quel ramo di codice. Un'euristica sul
+testo produce più falsi allarmi che difetti, e un cancello così verrebbe spento: il
+§5 in azione.</p>
+<p>Perciò resta una <strong>lente da rilanciare a mano</strong> quando si apre un lotto di
+lavoro, non un passo della CI. La convenzione dei nomi lo dice da sola:
+<code>scripts/sql/check_*</code> è uno strumento, <code>scripts/sql/guardrail_*</code> è un cancello.
+<strong>Sapere che una classe di difetti non è automatizzabile vale quanto
+automatizzarne un'altra</strong>: evita di costruire un presidio che mente.</p>
+<hr />
+<h2 id="area-tecnica-esempi">Area tecnica — esempi<a class="headerlink" href="#area-tecnica-esempi" title="Permanent link">&para;</a></h2>
+<p>Confrontare la suite pgTAP con la baseline di sviluppo, mentre si lavora:</p>
+<div class="highlight"><pre><span></span><code>scripts/pgtap-baseline.sh<span class="w"> </span>vendite<span class="w">            </span><span class="c1"># solo gli schemi toccati</span>
+scripts/pgtap-baseline.sh<span class="w"> </span>--modificati<span class="w">       </span><span class="c1"># solo i pgTAP modificati nell'albero</span>
+scripts/pgtap-baseline.sh<span class="w">                    </span><span class="c1"># tutta la suite</span>
+</code></pre></div>
+<p>Aggiornare la baseline di sviluppo dopo aver sanato qualcosa (togliere i rientrati):</p>
+<div class="highlight"><pre><span></span><code>scripts/pgtap-baseline.sh<span class="w"> </span>--update<span class="w"> </span>vendite
+</code></pre></div>
+<p>Togliere dalla baseline della CI i file rientrati, leggendoli dal log di una corsa:</p>
+<div class="highlight"><pre><span></span><code>scripts/pgtap-baseline-ci-rientrati.sh<span class="w">            </span><span class="c1"># ultima corsa utile su Tito-dev</span>
+scripts/pgtap-baseline-ci-rientrati.sh<span class="w"> </span>&lt;run-id&gt;<span class="w">   </span><span class="c1"># una corsa precisa</span>
+</code></pre></div>
+<p>Accendere in locale il cancello del tipo di risposta (§3.4), che ha bisogno del
+database:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>backend<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">ZEROERP_TEST_DB_E2E</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>./manage-env.sh<span class="w"> </span><span class="nb">test</span><span class="w"> </span>apps.core.tests.test_error_codes_db_policy_guardrail
+</code></pre></div>
+<hr />
+<h2 id="riferimenti">Riferimenti<a class="headerlink" href="#riferimenti" title="Permanent link">&para;</a></h2>
+<p>Le storie dei singoli cantieri — i casi che hanno insegnato le regole di questa
+guida, con date e numeri — stanno nei documenti di lavoro (solo nel repository,
+non nel sito pubblicato):</p>
+<ul>
+<li><code>docs/it/dev/work-done/brief-db-bonifica-riferimenti-morti.md</code> — il primo giro sui riferimenti morti</li>
+<li><code>docs/it/dev/work-done/brief-db-codice-errore-strutturato.md</code> — il codice errore nel campo dedicato, e le misure che lo presidiano</li>
+<li><code>docs/it/dev/work-done/brief-db-be-terzo-lato-presidio-codici.md</code> — il tipo di risposta e lo svuotamento del suo registro</li>
+<li><code>docs/it/dev/work-done/brief-db-be-classe-codici-errore.md</code> — la classe dei codici e il presidio delle famiglie di condizione</li>
+<li><code>docs/it/dev/work-done/brief-db-pgtap-runner-rls-baseline.md</code> — la baseline per ruolo di connessione</li>
+<li><code>docs/it/dev/work-done/brief-db-presidio-stati-mai-scritti.md</code> — gli stati ammessi e mai scritti</li>
+<li><code>docs/it/dev/work-done/brief-db-un-destinatario-per-i-presidi.md</code> — il catalogo dei presidi e il digest</li>
+<li><code>docs/it/dev/work-done/brief-db-presidi-cosa-significa-cosa-fare.md</code> — <code>chi_agisce</code> e i testi per chi agisce</li>
+<li><code>docs/it/dev/work-done/analisi-presidi-percorso-storto.md</code> — l'analisi trasversale sui presidi</li>
+</ul>
+<hr />
+<div style="text-align: center; margin-top: 2rem;">
+  <img src="/assets/images/zeroerp-logo.png" alt="Zero ERP" width="80">
+  <br>
+  <strong>&copy; 2025-2026 Zero ERP</strong> <em><strong>&bull; powered by Tid &bull;</strong></em>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.indexes"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiato","clipboard.copy":"Copia","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 altro in questa pagina","search.result.more.other":"# altri in questa pagina","search.result.none":"Nessun documento trovato","search.result.one":"1 documento trovato","search.result.other":"# documenti trovati","search.result.placeholder":"Scrivi per iniziare a cercare","search.result.term.missing":"Non presente","select.version":"Seleziona la versione"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

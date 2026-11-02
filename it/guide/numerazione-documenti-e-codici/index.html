@@ -1,0 +1,7866 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="prev" href="../configurazione-liste/">
+      
+      
+        <link rel="next" href="../iva-risolutore-di-riga/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Sistema numerazione generico per codici e documenti - Zero ERP Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Vai al contenuto
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../.." title="Zero ERP Documentation" class="md-header__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigazione</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sistema numerazione generico per codici e documenti
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Cerca</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Cerca">
+  <button type="button" class="md-search__button">
+    Cerca
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manifesto/" class="md-tabs__link">
+          
+  
+  Visione e Filosofia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installazione/" class="md-tabs__link">
+          
+  
+  Installazione
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architettura/" class="md-tabs__link">
+          
+  
+  Architettura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/" class="md-tabs__link">
+          
+  
+  DB Zero
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../backend/" class="md-tabs__link">
+          
+  
+  Backend (Django)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../soggetti-e-ruoli-anagrafici/" class="md-tabs__link">
+          
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/framework-automazione-db/" class="md-tabs__link">
+          
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/tools/gen_db_docs/" class="md-tabs__link">
+          
+  
+  Strumenti
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/sicurezza-e-qualita-statica/" class="md-tabs__link">
+          
+  
+  Qualità
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/api/" class="md-tabs__link">
+          
+  
+  Sviluppatori
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossario/glossario-utility/" class="md-tabs__link">
+          
+  
+  Glossario
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zero ERP Documentation" class="md-nav__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Zero ERP Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visione e Filosofia
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Visione e Filosofia
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manifesto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sviluppo-concentrico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppo Concentrico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduzione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cos’è Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perche-zeroerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Perchè Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Installazione
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Installazione
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Prerequisiti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurazione-iniziale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Preparare ZeroERP all'uso
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE-AGPL3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Licenza
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Architettura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architettura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura a colpo d'occhio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../liquibase-setup-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liquibase Setup & Workflow
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida SQL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida Trigger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Db PostgresSQL
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Db PostgresSQL
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Panoramica
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/aggiornamento-versione-postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aggiornamento versione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/parametri-personalizzati-(GUC)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Parametri personalizzati (GUC)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4_4" id="__nav_4_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estensioni
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Estensioni
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/estensioni-utilizzate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Utilizzate
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/dblink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  dblink
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgAgent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgAgent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgcrypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgcrypto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DB Zero
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  DB Zero
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Schemi
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Schemi
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/dbops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dbops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/public/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Public
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend (Django)
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend (Django)
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aree
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Aree
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ai-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ai Assistant
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/amm-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Amm. Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/contabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contabilita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guide
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guide
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Come funziona ZeroErp
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Come funziona ZeroErp
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soggetti-e-ruoli-anagrafici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Soggetti e ruoli anagrafici
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generazione-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generazione di un cliente
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-degli-indirizzi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione degli indirizzi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-contatti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei contatti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-conti-bancari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione conti bancari
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche-configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche — Configurazione e opzioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-commesse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione commesse
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-delle-istanze-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione delle Istanze Utility
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-listini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione listini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-preventivi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione preventivi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-offerte-commerciali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione offerte commerciali
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-contratti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione contratti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ordini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ordini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ddt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ddt
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fatturazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cruscotti-fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cruscotti fatturazione (le tre lenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../termini-di-pagamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Termini di pagamento
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenti-e-stampe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti e stampe
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-mail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione mail
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrazione-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Integrazione Ai
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risorse-umane-e-accessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Risorse Umane e Accessi al Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-liste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e responsività delle liste
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sistema numerazione generico per codici e documenti
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sistema numerazione generico per codici e documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-problema-in-una-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Il problema, in una pagina
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-due-aree" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Le due aree
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le due aree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-il-catalogo-dei-formati-configsistema_codici" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1 Il <strong>catalogo dei formati</strong> — <code>config.sistema_codici</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-il-motore-dei-registri-venditeregistri_fatturazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2 Il <strong>motore dei registri</strong> — <code>vendite.registri_fatturazione</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-le-tre-cose-che-un-numero-richiede-e-chi-le-fornisce" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Le tre cose che un numero richiede — e chi le fornisce
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Le tre cose che un numero richiede — e chi le fornisce">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-forma-ha-un-default-e-un-effettivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La forma ha un <strong>default</strong> e un <strong>effettivo</strong>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-come-nasce-oggi-ogni-identificativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Come nasce oggi ogni identificativo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Come nasce oggi ogni identificativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tre-modi-diversi-di-scrivere-lidentita-e-conviene-saperlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Tre modi diversi di <em>scrivere</em> l'identità, e conviene saperlo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-un-solo-posto-che-compone-il-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Un solo posto che compone il numero
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Un solo posto che compone il numero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-composizione-si-prova-in-una-riga" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ La composizione si prova in una riga
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-le-scelte-fatte-e-perche" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Le scelte fatte, e perché
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Le scelte fatte, e perché">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ogni-azienda-ha-la-sua-numerazione-e-la-garanzia-sta-nella-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.1 Ogni azienda ha la sua numerazione, e la garanzia sta nella chiave
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-lanno-viene-dalla-data-del-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.2 L'anno viene dalla data del documento
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-il-numero-non-torna-indietro-nel-tempo-solo-per-le-fatture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.3 Il numero non torna indietro nel tempo — <strong>solo per le fatture</strong>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Il numero non torna indietro nel tempo — solo per le fatture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-guarda-la-sequenza-non-il-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ E guarda la <strong>sequenza</strong>, non il registro
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-domanda-che-ne-nasce-e-la-risposta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La domanda che ne nasce, e la risposta
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-il-codice-della-commessa-contiene-la-sigla-dellazienda-e-quello-della-distinta-pure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4 Il codice della commessa contiene la sigla dell'azienda — e quello della distinta pure
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-il-separatore-non-e-un-campo-a-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.5 Il separatore non è un campo a sé
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-i-numeri-gia-assegnati-non-si-rifanno" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.6 I numeri già assegnati non si rifanno
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67-un-contatore-non-nasce-mai-sotto-il-massimo-gia-emesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.7 ⛔ Un contatore non nasce mai sotto il massimo già emesso
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quando-un-numeratore-deve-traslocare-sui-registri" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Quando un numeratore deve <strong>traslocare</strong> sui registri
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quando un numeratore deve traslocare sui registri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-il-trasloco-si-finisce-non-si-lascia-a-meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ E il trasloco si finisce, non si lascia a metà
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-unidea-valutata-e-scartata-la-colonna-che-rappresenta-lunicita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8. ⛔ Un'idea valutata e <strong>scartata</strong>: la colonna che rappresenta l'unicità
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bis-la-chiave-del-contatore-gli-assi-si-dichiarano-non-si-assumono" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8-bis. ⭐ La chiave del contatore: gli assi si <strong>dichiarano</strong>, non si assumono
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8-bis. ⭐ La chiave del contatore: gli assi si dichiarano, non si assumono">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-regola" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La regola
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-succede-quando-un-asse-non-e-dichiarato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ Che cosa succede quando un asse non è dichiarato
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-famiglia-dichiara-lasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La famiglia dichiara l'asse
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-chiave-del-contatore-non-ha-un-asse-mese-ed-e-voluto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La chiave del contatore non ha un asse <code>mese</code>, ed è voluto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset_policy-la-politica-del-contatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>reset_policy</code> — la politica del contatore
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="reset_policy — la politica del contatore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-cambiare-politica-su-un-registro-che-ha-gia-numerato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ E cambiare politica su un registro che ha già numerato
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-controllo-automatico-che-il-8-chiedeva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il controllo automatico che il §8 chiedeva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commessa-identita-a-stringa-assi-dichiarati-lo-stesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La commessa: identità a stringa, assi dichiarati lo stesso
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ter-lanno-dentro-il-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8-ter. ⭐ L'anno <strong>dentro</strong> il numero
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8-ter. ⭐ L&#x27;anno dentro il numero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perche-in-una-riga" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Perché, in una riga
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-cura-si-dichiara-non-si-assume" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La cura: si dichiara, non si assume
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-due-famiglie-che-non-lo-fanno-e-non-e-una-dimenticanza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ Le due famiglie che non lo fanno, e non è una dimenticanza
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-cosa-da-sapere-prima-di-chiederla-su-un-registro-vecchio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Una cosa da sapere prima di chiederla su un registro vecchio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-il-presidio-nessuna-funzione-di-vendite-legge-il-catalogo-dei-formati" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9. Il presidio: nessuna funzione di vendite legge il catalogo dei formati
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-dove-guardare" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10. Dove guardare
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iva-risolutore-di-riga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il risolutore IVA di riga
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modello-documento-di-vendita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il modello del documento di vendita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sicurezza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza di ZeroErp
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Approfondimenti tecnici
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Approfondimenti tecnici
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-permessi-e-autorizzazioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura Permessi e Autorizzazioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-multi-face-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura multi face auth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contratto-guc-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contratto GUC APP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tx_id_implementation_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Implementazione Transaction ID
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storicizzazione-tabelle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storicizzazione Tabelle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit-e-tracciabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit e tracciabilità
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operazioni-che-non-si-ripetono/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Le operazioni che non si ripetono (Idempotency-Key)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presidi-e-registri-del-debito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Presidi e registri del debito
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sorgente-polimorfa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sorgente polimorfa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riclassificazione-vie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Riclassificazione vie
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-di-obsoleto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Mandare in pensione una voce di catalogo (obsoleto_dal)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-e-gestione-parametri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e gestione parametri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-automatici-classe-e-identita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  I lavori automatici (natura e identità)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-code-di-lavoro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione code di lavoro
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-pgagent-funzionali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi-pgagent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistiche-del-planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Statistiche del planner
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-che-resta-veloce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Un database che resta veloce
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_19" id="__nav_7_2_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Log
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_19_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Log
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messaggi-di-Errore-e-Generazione-Log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Errore
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaggi-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Audit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analisi-tracciamento-processi-e-job/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi e Job
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tutorial
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tutorial
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/framework-automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Framework automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Strumenti
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Strumenti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/tools/gen_db_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generatore Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Qualità
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/sicurezza-e-qualita-statica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza e qualità statica (gli strumenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-be-fe-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità BE/FE (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-db-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità del database (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppatori
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Sviluppatori
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ricette-dove-intervenire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ricette (dove intervenire)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/trappole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Trappole (cosa non fare)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/Policy-ricerca-e-paginazione(API-DB)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy ricerca e paginazione (API/DB)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/standard-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard delle guide (come si scrive)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_6" id="__nav_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Frontend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Frontend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard frontend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/catalogo-building-block-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block FE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7" id="__nav_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Server
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Server
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_1" id="__nav_11_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/backend-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guida backend-dev
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/play-book-operativo-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Playbook operativo backend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/servizi-zeroerp-comandi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Servizi ZeroERP (comandi)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/catalogo-building-block-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block BE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/piano-solidita-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Piano solidità Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/provisioning-db-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Provisioning ruoli DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/gunicorn-dev-autoreload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gunicorn dev autoreload
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/checklist-post-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Checklist post upgrade
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/configurazione-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_2" id="__nav_11_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/db/dbdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VM dbdev (PostgreSQL)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_3" id="__nav_11_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Infrastruttura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Infrastruttura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/infra/proxmox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Proxmox
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_4" id="__nav_11_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workstation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Workstation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/workstation-dev/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vm wrk1-dev (ubuntu)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GitHub
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  GitHub
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/github/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Glossario
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/glossario-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario di dominio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/devops%26db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dev&Ops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/process-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Process Analysis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-il-problema-in-una-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Il problema, in una pagina
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-le-due-aree" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Le due aree
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Le due aree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-il-catalogo-dei-formati-configsistema_codici" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.1 Il <strong>catalogo dei formati</strong> — <code>config.sistema_codici</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-il-motore-dei-registri-venditeregistri_fatturazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2.2 Il <strong>motore dei registri</strong> — <code>vendite.registri_fatturazione</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-le-tre-cose-che-un-numero-richiede-e-chi-le-fornisce" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Le tre cose che un numero richiede — e chi le fornisce
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Le tre cose che un numero richiede — e chi le fornisce">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-forma-ha-un-default-e-un-effettivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La forma ha un <strong>default</strong> e un <strong>effettivo</strong>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-come-nasce-oggi-ogni-identificativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Come nasce oggi ogni identificativo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Come nasce oggi ogni identificativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tre-modi-diversi-di-scrivere-lidentita-e-conviene-saperlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Tre modi diversi di <em>scrivere</em> l'identità, e conviene saperlo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-un-solo-posto-che-compone-il-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Un solo posto che compone il numero
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Un solo posto che compone il numero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-composizione-si-prova-in-una-riga" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ La composizione si prova in una riga
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-le-scelte-fatte-e-perche" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. Le scelte fatte, e perché
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Le scelte fatte, e perché">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ogni-azienda-ha-la-sua-numerazione-e-la-garanzia-sta-nella-chiave" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.1 Ogni azienda ha la sua numerazione, e la garanzia sta nella chiave
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-lanno-viene-dalla-data-del-documento" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.2 L'anno viene dalla data del documento
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-il-numero-non-torna-indietro-nel-tempo-solo-per-le-fatture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.3 Il numero non torna indietro nel tempo — <strong>solo per le fatture</strong>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Il numero non torna indietro nel tempo — solo per le fatture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-guarda-la-sequenza-non-il-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ E guarda la <strong>sequenza</strong>, non il registro
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-domanda-che-ne-nasce-e-la-risposta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La domanda che ne nasce, e la risposta
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-il-codice-della-commessa-contiene-la-sigla-dellazienda-e-quello-della-distinta-pure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.4 Il codice della commessa contiene la sigla dell'azienda — e quello della distinta pure
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-il-separatore-non-e-un-campo-a-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.5 Il separatore non è un campo a sé
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-i-numeri-gia-assegnati-non-si-rifanno" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.6 I numeri già assegnati non si rifanno
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67-un-contatore-non-nasce-mai-sotto-il-massimo-gia-emesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6.7 ⛔ Un contatore non nasce mai sotto il massimo già emesso
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quando-un-numeratore-deve-traslocare-sui-registri" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Quando un numeratore deve <strong>traslocare</strong> sui registri
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quando un numeratore deve traslocare sui registri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-il-trasloco-si-finisce-non-si-lascia-a-meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ E il trasloco si finisce, non si lascia a metà
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-unidea-valutata-e-scartata-la-colonna-che-rappresenta-lunicita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8. ⛔ Un'idea valutata e <strong>scartata</strong>: la colonna che rappresenta l'unicità
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bis-la-chiave-del-contatore-gli-assi-si-dichiarano-non-si-assumono" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8-bis. ⭐ La chiave del contatore: gli assi si <strong>dichiarano</strong>, non si assumono
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8-bis. ⭐ La chiave del contatore: gli assi si dichiarano, non si assumono">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-regola" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La regola
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#che-cosa-succede-quando-un-asse-non-e-dichiarato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ Che cosa succede quando un asse non è dichiarato
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-famiglia-dichiara-lasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La famiglia dichiara l'asse
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-chiave-del-contatore-non-ha-un-asse-mese-ed-e-voluto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La chiave del contatore non ha un asse <code>mese</code>, ed è voluto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset_policy-la-politica-del-contatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>reset_policy</code> — la politica del contatore
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="reset_policy — la politica del contatore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-cambiare-politica-su-un-registro-che-ha-gia-numerato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ E cambiare politica su un registro che ha già numerato
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-controllo-automatico-che-il-8-chiedeva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il controllo automatico che il §8 chiedeva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commessa-identita-a-stringa-assi-dichiarati-lo-stesso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La commessa: identità a stringa, assi dichiarati lo stesso
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ter-lanno-dentro-il-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        8-ter. ⭐ L'anno <strong>dentro</strong> il numero
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8-ter. ⭐ L&#x27;anno dentro il numero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perche-in-una-riga" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Perché, in una riga
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-cura-si-dichiara-non-si-assume" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La cura: si dichiara, non si assume
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-due-famiglie-che-non-lo-fanno-e-non-e-una-dimenticanza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ Le due famiglie che non lo fanno, e non è una dimenticanza
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-cosa-da-sapere-prima-di-chiederla-su-un-registro-vecchio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Una cosa da sapere prima di chiederla su un registro vecchio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-il-presidio-nessuna-funzione-di-vendite-legge-il-catalogo-dei-formati" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        9. Il presidio: nessuna funzione di vendite legge il catalogo dei formati
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-dove-guardare" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        10. Dove guardare
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="guida-numerazione-dei-documenti-e-codici-automatici">Guida – Numerazione dei documenti e codici automatici<a class="headerlink" href="#guida-numerazione-dei-documenti-e-codici-automatici" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Ultimo aggiornamento:</strong> 14 settembre 2026</p>
+<p><strong>Destinatari:</strong> chiunque debba capire come nasce un numero o un codice in ZeroErp — sviluppatori database, backend, frontend e analisti funzionali</p>
+<p><strong>Prerequisiti:</strong> nessuno. Le parti tecniche stanno in fondo a ogni capitolo. La guida descrive <strong>come funziona oggi</strong>; il <em>perché</em>, con le misure e le strade scartate, sta nei brief elencati in fondo (§10).</p>
+</blockquote>
+<hr />
+<h2 id="1-il-problema-in-una-pagina">1. Il problema, in una pagina<a class="headerlink" href="#1-il-problema-in-una-pagina" title="Permanent link">&para;</a></h2>
+<p>Quasi tutto in un gestionale ha un identificativo: il cliente ha un codice, la
+fattura ha un numero, la commessa ha il suo. Sembrano tutti la stessa cosa, e
+invece si dividono in <strong>due famiglie molto diverse</strong>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Esempio</th>
+<th>Che cosa serve garantire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Un codice</strong></td>
+<td>Il cliente <code>BAC/0001234</code></td>
+<td>Che sia <strong>unico</strong>. Basta.</td>
+</tr>
+<tr>
+<td><strong>Un numero di documento</strong></td>
+<td>La fattura numero <code>123</code>, anno <code>2026</code>, serie <code>A</code></td>
+<td>Che sia unico <strong>e</strong> che segua una progressione <strong>per azienda e per anno</strong>, senza salti d'anno e senza mescolarsi con quella di un'altra azienda</td>
+</tr>
+</tbody>
+</table>
+<p>⭐ <strong>Il secondo caso è molto più esigente del primo</strong>, e non per pignoleria: la
+progressione dei numeri di un documento è ciò che, davanti a un controllo, dimostra
+che non ne sono stati nascosti. Un codice cliente non deve dimostrare niente a
+nessuno.</p>
+<p>Per questo in ZeroErp ci sono <strong>due meccanismi</strong>, non uno.</p>
+<hr />
+<h2 id="2-le-due-aree">2. Le due aree<a class="headerlink" href="#2-le-due-aree" title="Permanent link">&para;</a></h2>
+<h3 id="21-il-catalogo-dei-formati-configsistema_codici">2.1 Il <strong>catalogo dei formati</strong> — <code>config.sistema_codici</code><a class="headerlink" href="#21-il-catalogo-dei-formati-configsistema_codici" title="Permanent link">&para;</a></h3>
+<p>È una tabella di configurazione che dice, per ogni tipo di codice, <strong>che aspetto
+ha</strong> — prefisso, separatore, quante cifre — e che per ognuno <strong>fa anche il
+conteggio</strong>: tiene un contatore che avanza di uno a ogni riga nuova e assegna il
+codice <strong>nel momento in cui la riga viene creata</strong>.</p>
+<div class="highlight"><pre><span></span><code>prefisso = BAC     separatore = /     cifre = 7      →     BAC/0001234
+</code></pre></div>
+<p><strong>Chi lo usa, oggi</strong> — clienti, soggetti, fornitori, vettori, istanze di utility,
+pratiche, preventivi, contratti, offerte commerciali, lotti di fatturazione.
+Dieci voci, e nessun documento di vendita.</p>
+<p>⭐ <strong>Questa tabella descrive solo cose che genera davvero</strong>: nessuna riga per i
+documenti che si numerano sui registri. Una riga che non conta più niente
+resterebbe visibile nel pannello di configurazione con un prefisso che <strong>nessuno
+legge</strong>: un amministratore che lo cambia non ottiene alcun effetto, e non ha
+modo di accorgersene. Lo pretende un presidio (§9).</p>
+<h3 id="22-il-motore-dei-registri-venditeregistri_fatturazione">2.2 Il <strong>motore dei registri</strong> — <code>vendite.registri_fatturazione</code><a class="headerlink" href="#22-il-motore-dei-registri-venditeregistri_fatturazione" title="Permanent link">&para;</a></h3>
+<p>Un <strong>registro</strong> è un sezionale di numerazione: appartiene a <strong>una</strong> azienda
+emittente, tiene il proprio contatore, sa ripartire da 1 a ogni Capodanno e
+porta anche la <strong>forma</strong> del numero che produce: prefisso, suffisso, quante
+cifre, e se l'anno sta dentro il numero.</p>
+<p><strong>Chi lo usa, oggi</strong> — fatture, documenti di trasporto, ordini, commesse, resi
+e, dal 2026-09-15, le <strong>distinte contabili di incasso</strong> (la prima famiglia
+fuori da <code>vendite</code>).</p>
+<p>⚠️ <strong>Il nome della tabella dice meno di quello che fa.</strong> Si chiama
+<code>registri_fatturazione</code> perché all'inizio numerava solo le fatture; oggi numera
+sei famiglie di documento. Il nome non è stato cambiato di proposito: cambiarlo
+significherebbe toccare decine di oggetti collegati senza modificare <strong>nessun</strong>
+comportamento, e non è un lavoro da infilare dentro un altro. Il debito è
+dichiarato, non dimenticato.</p>
+<hr />
+<h2 id="3-le-tre-cose-che-un-numero-richiede-e-chi-le-fornisce">3. Le tre cose che un numero richiede — e chi le fornisce<a class="headerlink" href="#3-le-tre-cose-che-un-numero-richiede-e-chi-le-fornisce" title="Permanent link">&para;</a></h2>
+<p>Qui sta il punto che chiarisce tutto il resto. Assegnare un numero vuol dire
+mettere insieme <strong>tre</strong> cose diverse, e non è detto che vengano dallo stesso posto.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Che cos'è</th>
+<th>Chi la fornisce</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Il formato</strong></td>
+<td>prefisso, suffisso, quante cifre</td>
+<td>il <strong>registro</strong>, per i cinque documenti; il catalogo dei formati per tutto il resto</td>
+</tr>
+<tr>
+<td><strong>Il contatore</strong></td>
+<td>chi tiene il conto e fino a quanto è arrivato</td>
+<td>il registro <strong>oppure</strong> il catalogo dei formati</td>
+</tr>
+<tr>
+<td><strong>Il momento</strong></td>
+<td>quando il numero viene consegnato</td>
+<td>dipende dal documento, e non si centralizza</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>Formato e contatore stanno nello stesso posto</strong>, per ogni documento: un
+numeratore che tenesse il contatore sul registro e la forma nel catalogo dei
+formati lascerebbe di là una riga <strong>monca</strong>, che non dà errore ma confusione —
+ed è il motivo della regola del §7.</p>
+<h3 id="la-forma-ha-un-default-e-un-effettivo">La forma ha un <strong>default</strong> e un <strong>effettivo</strong><a class="headerlink" href="#la-forma-ha-un-default-e-un-effettivo" title="Permanent link">&para;</a></h3>
+<p>È la distinzione che regge tutto il capitolo, e vale la pena tenerla a mente:</p>
+<div class="highlight"><pre><span></span><code>famiglie_documento     →  il DEFAULT   (com'è fatto quel TIPO di documento)
+registri_fatturazione  →  l'EFFETTIVO  (com'è fatto QUESTO sezionale)
+</code></pre></div>
+<p>Tutti i documenti di trasporto hanno 7 cifre: questa è una proprietà del <strong>tipo di
+documento</strong>, e sta nel catalogo delle famiglie. Un singolo sezionale può però
+volere un prefisso suo — è per quello che esistono i sezionali — e allora il
+valore che conta è quello scritto sul <strong>registro</strong>.</p>
+<p>⭐ Un registro nuovo <strong>nasce copiando il default della sua famiglia</strong>, e da quel
+momento vive di vita propria. Nessuno deve ricordarsi di riempirlo.</p>
+<hr />
+<h2 id="4-come-nasce-oggi-ogni-identificativo">4. Come nasce oggi ogni identificativo<a class="headerlink" href="#4-come-nasce-oggi-ogni-identificativo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Documento / entità</th>
+<th>Formato</th>
+<th>Contatore</th>
+<th>Quando riceve il numero</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fattura</strong></td>
+<td><em>nessuno</em> (vedi sotto)</td>
+<td><strong>registro</strong></td>
+<td>all'emissione</td>
+</tr>
+<tr>
+<td><strong>DDT</strong></td>
+<td><strong>registro</strong></td>
+<td><strong>registro</strong></td>
+<td>quando passa a <em>emesso</em></td>
+</tr>
+<tr>
+<td><strong>Ordine</strong></td>
+<td><strong>registro</strong></td>
+<td><strong>registro</strong></td>
+<td>alla creazione</td>
+</tr>
+<tr>
+<td><strong>Reso</strong></td>
+<td><strong>registro</strong></td>
+<td><strong>registro</strong></td>
+<td>quando passa a <em>confermato</em></td>
+</tr>
+<tr>
+<td><strong>Commessa</strong></td>
+<td><strong>registro</strong></td>
+<td><strong>registro</strong></td>
+<td>alla creazione</td>
+</tr>
+<tr>
+<td><strong>Distinta contabile</strong> <em>(dal 2026-09-15)</em></td>
+<td><strong>registro</strong></td>
+<td><strong>registro</strong></td>
+<td>alla creazione</td>
+</tr>
+<tr>
+<td>Preventivo, contratto, offerta</td>
+<td>catalogo formati</td>
+<td>catalogo formati</td>
+<td>alla creazione</td>
+</tr>
+<tr>
+<td>Lotto di fatturazione</td>
+<td>catalogo formati</td>
+<td>catalogo formati</td>
+<td>alla creazione</td>
+</tr>
+<tr>
+<td>Cliente, soggetto, fornitore, vettore, istanza, pratica</td>
+<td>catalogo formati</td>
+<td>catalogo formati</td>
+<td>alla creazione</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tre-modi-diversi-di-scrivere-lidentita-e-conviene-saperlo">⚠️ Tre modi diversi di <em>scrivere</em> l'identità, e conviene saperlo<a class="headerlink" href="#tre-modi-diversi-di-scrivere-lidentita-e-conviene-saperlo" title="Permanent link">&para;</a></h3>
+<p>Non tutti i documenti scrivono la propria identità allo stesso modo, e la differenza
+si vede solo guardando le colonne:</p>
+<ul>
+<li><strong>la fattura la tiene in tre campi separati</strong> — numero, anno, serie — e il campo
+  «numero» contiene il progressivo <strong>nudo</strong>, senza prefissi. La stringa che si legge
+  su un documento stampato la compone chi stampa, non il database;</li>
+<li><strong>DDT, ordini e resi</strong> tengono anno e serie in campi propri, ma nel campo «numero»
+  scrivono una stringa <strong>già formattata</strong> con prefisso e cifre di riempimento (per
+  esempio <code>DDT0000123</code>), presa dal registro;</li>
+<li><strong>la commessa tiene la stringa in un campo solo</strong>, il codice —
+  <code>CMM-ACME-2026-000000001</code> — e non ha un campo «numero» a parte: quella stringa
+  <em>è</em> il suo numero. ⭐ Porta però anche l'anno e il registro in <strong>due colonne
+  proprie</strong>, come gli altri, e un controllo automatico pretende che il codice e
+  le colonne dicano la stessa cosa (§8-bis). <strong>La distinta contabile fa lo
+  stesso</strong> (<code>DIS-ACME-2026-0000001</code>, sette cifre): è il secondo documento con
+  l'identità a stringa, e la ragione è la stessa (§6.4).</li>
+</ul>
+<p>⚠️ Ne discende una cosa pratica: <strong>chi scrive codice che confronta o ordina i numeri
+non può trattarli tutti allo stesso modo.</strong> Ed è la ragione per cui il controllo
+automatico descritto al §8 non elenca i documenti ma li legge da un catalogo: le
+regole sono tre, non una.</p>
+<p>⚠️ <strong>Il momento non è un dettaglio.</strong> Un documento che riceve il numero <em>alla
+creazione</em> consuma un numero anche se poi viene abbandonato: nella progressione
+restano dei buchi. È accettato e dichiarato — un ordine annullato non obbliga a
+rinumerare gli altri — ma per una fattura sarebbe un problema, ed è il motivo per
+cui la fattura si numera solo all'emissione.</p>
+<hr />
+<h2 id="5-un-solo-posto-che-compone-il-numero">5. Un solo posto che compone il numero<a class="headerlink" href="#5-un-solo-posto-che-compone-il-numero" title="Permanent link">&para;</a></h2>
+<p>Assegnare un numero sono <strong>sei passi</strong>: trovare il registro, ricavare l'anno
+dalla data, chiedere il progressivo, leggere il formato, comporre la stringa,
+scrivere le colonne. Stanno in <strong>una funzione sola</strong>
+(<code>vendite.fn_assegna_numero_documento</code>), e i generatori dei singoli documenti
+conservano l'unica cosa che li distingue davvero: <strong>il momento</strong>. Il documento
+di trasporto numera all'emissione, il reso alla conferma, ordine e commessa alla
+creazione — quello resta scritto ciascuno a casa propria, perché è la sola cosa
+che non hanno in comune.</p>
+<p>⛔ <strong>Perché una sede sola, e non una copia per documento</strong>: di quattro copie se
+ne possono correggere tre. Una modifica al modo di comporre il numero fatta in
+tre posti su quattro produce un documento formattato diversamente dagli altri —
+che <strong>nessun controllo respinge</strong>, perché è un numero valido, solo diverso.</p>
+<h3 id="la-composizione-si-prova-in-una-riga">⭐ La composizione si prova in una riga<a class="headerlink" href="#la-composizione-si-prova-in-una-riga" title="Permanent link">&para;</a></h3>
+<p>La parte che compone la stringa (<code>vendite.fn_componi_numero_documento</code>) è una
+funzione <strong>pura</strong>: riceve dei valori e restituisce una stringa, senza leggere
+niente. Per verificare che un numero venga formattato bene non serve fabbricare
+un documento intero — con le sue righe, l'indirizzo, la causale e la transizione
+di stato — basta una riga di prova con i valori che si vogliono.</p>
+<hr />
+<h2 id="6-le-scelte-fatte-e-perche">6. Le scelte fatte, e perché<a class="headerlink" href="#6-le-scelte-fatte-e-perche" title="Permanent link">&para;</a></h2>
+<h3 id="61-ogni-azienda-ha-la-sua-numerazione-e-la-garanzia-sta-nella-chiave">6.1 Ogni azienda ha la sua numerazione, e la garanzia sta nella chiave<a class="headerlink" href="#61-ogni-azienda-ha-la-sua-numerazione-e-la-garanzia-sta-nella-chiave" title="Permanent link">&para;</a></h3>
+<p>Se due aziende emittenti condividessero lo stesso registro, succederebbe una cosa
+che <strong>non dà nessun errore</strong>: il contatore è uno solo, quindi i numeri escono tutti
+diversi e nessun controllo protesta. A saltare non è l'unicità — è
+l'<strong>attribuzione</strong>: nessuna delle due aziende ha più una propria progressione, e
+questo è esattamente ciò che un controllo fiscale guarda.</p>
+<p>⭐ La soluzione: <strong>un registro appartiene a una sola azienda</strong>, obbligatoriamente, e
+il registro entra nella chiave di identità del documento. Così due aziende possono
+avere entrambe il documento numero 1 dello stesso anno, senza pestarsi i piedi.</p>
+<h3 id="62-lanno-viene-dalla-data-del-documento">6.2 L'anno viene dalla data del documento<a class="headerlink" href="#62-lanno-viene-dalla-data-del-documento" title="Permanent link">&para;</a></h3>
+<p>Non dalla data in cui qualcuno preme il pulsante. Un documento <strong>datato</strong> dicembre
+prende un numero del contatore di dicembre anche se viene emesso a gennaio.</p>
+<p>⚠️ La colonna <code>anno</code> del documento e l'anno del contatore vengono dalla <strong>stessa
+data</strong>. Un automatismo che scrivesse l'anno alla creazione leggendo la data di
+quel giorno, mentre il contatore usa la data del documento, metterebbe due
+nozioni di «anno» sulla stessa riga — e il controllo di unicità userebbe la
+prima.</p>
+<h3 id="63-il-numero-non-torna-indietro-nel-tempo-solo-per-le-fatture">6.3 Il numero non torna indietro nel tempo — <strong>solo per le fatture</strong><a class="headerlink" href="#63-il-numero-non-torna-indietro-nel-tempo-solo-per-le-fatture" title="Permanent link">&para;</a></h3>
+<p>Sulle fatture c'è un cancello: non si dà un numero a un documento con data
+anteriore all'ultimo già numerato sullo stesso sezionale. È una regola fiscale, e
+vive dove c'è il sezionale fiscale.</p>
+<p>⛔ Sugli altri documenti <strong>non</strong> si applica, e la ragione è concreta: un documento di
+trasporto per la spedizione di ieri, inserito stamattina dopo che ne è già uscito
+uno con la data di oggi, è un caso d'uso normale. Applicare lì lo stesso cancello lo
+avrebbe reso impossibile.</p>
+<h4 id="e-guarda-la-sequenza-non-il-registro">⭐ E guarda la <strong>sequenza</strong>, non il registro<a class="headerlink" href="#e-guarda-la-sequenza-non-il-registro" title="Permanent link">&para;</a></h4>
+<p>Il cancello confronta la data con l'ultima numerata <strong>sulla stessa sequenza</strong>,
+dove una sequenza è la coppia <em>registro + serie</em>. Su un registro che emette su
+due serie diverse, ciascuna ha il suo calendario e non blocca l'altra.</p>
+<p><strong>Sembra un dettaglio e non lo è.</strong> Se il cancello guardasse il registro intero,
+due serie che vanno avanti in parallelo si bloccherebbero a vicenda: emetti sulla
+prima con la data di oggi e la seconda — che sta a una data più indietro perché è
+un'altra sequenza — non riuscirebbe più a numerare.</p>
+<p>⚠️ <strong>Non è teoria</strong>: il registro <em>Front-office</em> emette <strong>già</strong> su due serie,
+<code>VX2</code> e <code>R2</code>. E i documenti di trasporto e gli ordini possono portare una serie
+<strong>propria</strong>, diversa da quella predefinita del registro: due sequenze parallele
+sono una cosa che il modello prevede, non un incidente.</p>
+<h4 id="la-domanda-che-ne-nasce-e-la-risposta">La domanda che ne nasce, e la risposta<a class="headerlink" href="#la-domanda-che-ne-nasce-e-la-risposta" title="Permanent link">&para;</a></h4>
+<p><em>«Se cambio la serie predefinita di un registro, riparto senza calendario: non è
+un modo per retrodatare un documento?»</em></p>
+<p>⭐ <strong>No, ed è coperto da un altro cancello.</strong> Cambiare la serie predefinita
+significa <strong>aprire una sequenza nuova</strong>, e una sequenza nuova non ha passato: che
+riparta anche il calendario è coerente, non è un varco. Contro la retrodatazione
+vera esiste il <strong>limite di emissione</strong> (§6.3 sopra e la guida dei limiti), che
+guarda il <strong>registro</strong> e la competenza — e che una serie nuova <strong>non azzera</strong>.</p>
+<p>⇒ I due cancelli rispondono a due domande diverse, e vanno tenuti distinti:</p>
+<table>
+<thead>
+<tr>
+<th>Domanda</th>
+<th>Chi risponde</th>
+<th>Perimetro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«questa sequenza va avanti?»</td>
+<td>il cancello di cronologia</td>
+<td>registro <strong>+ serie</strong></td>
+</tr>
+<tr>
+<td>«questo documento è ancora emettibile?»</td>
+<td>il limite di emissione</td>
+<td><strong>registro</strong> + competenza</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-il-codice-della-commessa-contiene-la-sigla-dellazienda-e-quello-della-distinta-pure">6.4 Il codice della commessa contiene la sigla dell'azienda — e quello della distinta pure<a class="headerlink" href="#64-il-codice-della-commessa-contiene-la-sigla-dellazienda-e-quello-della-distinta-pure" title="Permanent link">&para;</a></h3>
+<p>La <strong>identità</strong> della commessa è la stringa stessa: è il codice a essere unico,
+non la coppia registro-numero come negli altri documenti. Quindi la stringa deve
+bastare a distinguere due aziende, e la sigla ci entra dentro:</p>
+<div class="highlight"><pre><span></span><code>CMM-ACME-2026-000000001
+ │    │     │      │
+ │    │     │      └─ progressivo, riparte da 1 ogni anno — NOVE cifre
+ │    │     └──────── anno
+ │    └────────────── sigla dell'azienda emittente
+ └─────────────────── prefisso, che arriva dal registro
+</code></pre></div>
+<p>⚠️ Ne discende un vincolo sulla <strong>sigla</strong>: solo lettere maiuscole e cifre, da 2 a 10
+caratteri, <strong>niente trattino</strong>. Il trattino è il separatore: se comparisse dentro la
+sigla, il codice smetterebbe di essere leggibile e nessuno saprebbe più dove finisce
+l'azienda e dove comincia l'anno.</p>
+<p>⭐ <strong>La commessa è l'unica a usare nove cifre</strong>, ed è per questo che è stata la
+sola a rivelare un difetto altrimenti invisibile — se ne parla al §9.</p>
+<p>⭐ <strong>Dal 2026-09-15 vale anche per la distinta contabile di incasso</strong>
+(<code>DIS-ACME-2026-0000001</code>, sette cifre): la stessa forma, per la stessa ragione.
+Il suo codice era un'etichetta da DEFAULT (<code>VC_…</code>) e la distinta era l'unico
+documento numerabile che non dichiarava il proprio emittente; oggi lo porta in
+colonna, e un registro <code>DIS-</code> per azienda le dà il numero alla creazione, come
+all'ordine. Come e da chi l'emittente si ricava — dato, canale di incasso,
+operatore in sessione, o rifiuto — sta nella scheda di
+<a href="../../dbzero/pagamenti/manual/vendite_contabili/">pagamenti.vendite_contabili</a>.</p>
+<blockquote>
+<p>⭐ Che la sigla e l'anno stiano <em>dentro</em> la stringa non è solo una convenzione
+di chi la compone: la commessa porta l'anno e il registro anche in <strong>due
+colonne</strong>, e un controllo automatico confronta le due cose — se qualcuno
+cambiasse la composizione senza toccare le colonne, o viceversa, se ne accorge
+un test invece di un cliente. ⚠️ L'identità resta il codice, unico da solo.</p>
+</blockquote>
+<h3 id="65-il-separatore-non-e-un-campo-a-se">6.5 Il separatore non è un campo a sé<a class="headerlink" href="#65-il-separatore-non-e-un-campo-a-se" title="Permanent link">&para;</a></h3>
+<p>La forma sul registro non ha un campo «separatore» accanto al prefisso: <strong>se
+serve un separatore, si scrive dentro il prefisso</strong> (<code>CMM-</code>).</p>
+<p>⭐ Non è una semplificazione estetica. Con due campi distinti, un prefisso vuoto
+lascerebbe il separatore <strong>orfano in testa</strong> — <code>-ACME-2026-000000001</code> — e chi
+spezza quel codice sul trattino si ritroverebbe un primo pezzo vuoto.</p>
+<h3 id="66-i-numeri-gia-assegnati-non-si-rifanno">6.6 I numeri già assegnati non si rifanno<a class="headerlink" href="#66-i-numeri-gia-assegnati-non-si-rifanno" title="Permanent link">&para;</a></h3>
+<p>Nessuna rinumerazione del pregresso, per nessun documento. I documenti numerati
+<strong>prima</strong> che la loro famiglia passasse sui registri non hanno il registro e in
+alcuni casi nemmeno l'anno: <strong>è storia</strong>, e resta com'è. Non collidono con i nuovi
+perché <strong>la forma è diversa</strong> — ed è l'unica cosa che li separa, quindi chi cambia
+il formato dei numeri nuovi sta toccando anche la ragione per cui non collidono
+con i vecchi.</p>
+<h3 id="67-un-contatore-non-nasce-mai-sotto-il-massimo-gia-emesso">6.7 ⛔ Un contatore non nasce mai sotto il massimo già emesso<a class="headerlink" href="#67-un-contatore-non-nasce-mai-sotto-il-massimo-gia-emesso" title="Permanent link">&para;</a></h3>
+<p>Un contatore che partisse da zero su una famiglia che ha già documenti
+consegnerebbe un numero <strong>già usato</strong>, con la stessa identica forma (<code>ORD0000001</code>
+dopo un <code>ORD0040688</code>). ⛔ E il controllo di unicità non se ne accorgerebbe: le
+righe vecchie non hanno un registro, le nuove sì, e <strong>due righe che differiscono
+per un campo vuoto contro un campo pieno non collidono mai</strong>. Il vincolo c'è, e
+tace.</p>
+<p>⭐ Per questo ogni contatore nasce <strong>almeno</strong> al massimo progressivo già emesso
+dalla stessa azienda in quell'anno — scritto come <strong>regola</strong> e non come elenco:
+vale per un registro nuovo, per un contatore rimasto indietro, e per il secchio
+nuovo che nasce cambiando politica di azzeramento (§8-bis).</p>
+<p>⚠️ <strong>Ne discende una conseguenza da conoscere:</strong> un contatore non torna mai
+indietro, quindi allinearlo lascia dei buchi nella progressione — i numeri fra
+l'ultimo davvero emesso e il massimo storico. È il prezzo accettato, ed è molto
+più basso di un numero doppio.</p>
+<hr />
+<h2 id="7-quando-un-numeratore-deve-traslocare-sui-registri">7. Quando un numeratore deve <strong>traslocare</strong> sui registri<a class="headerlink" href="#7-quando-un-numeratore-deve-traslocare-sui-registri" title="Permanent link">&para;</a></h2>
+<p>Il criterio in una frase:</p>
+<blockquote>
+<p><strong>Il periodo il generatore se lo calcola da sé; l'azienda, la serie e un momento
+diverso dalla creazione arrivano dalla riga.</strong></p>
+</blockquote>
+<p>Chi ha bisogno di una di queste tre cose sta chiedendo i <strong>registri</strong>, non un
+allargamento del catalogo dei formati. In pratica, <strong>se anche uno solo di questi
+campanelli suona</strong>, il numeratore è nel posto sbagliato:</p>
+<ol>
+<li><em>«Ogni azienda deve avere la sua numerazione.»</em> Il catalogo dei formati non può
+   saperlo: il meccanismo che assegna il codice è <strong>uno per tabella</strong> e non riceve la
+   riga, quindi non sa di chi sia il documento.</li>
+<li><em>«Il numero deve ripartire da 1 a Capodanno.»</em> Il contatore del catalogo dei
+   formati <strong>non sa cosa sia un anno</strong>. Non è una configurazione mancante: è il
+   meccanismo a non prevederlo.</li>
+<li><em>«Il numero non deve uscire alla creazione, ma alla conferma.»</em> Il catalogo dei
+   formati assegna sempre alla creazione.</li>
+</ol>
+<p>⚠️ Un quarto campanello, più sottile: se lo stesso documento deve poter girare su
+<strong>più serie</strong>, la serie è una dimensione del contatore e nel catalogo dei formati
+non c'è.</p>
+<h3 id="e-il-trasloco-si-finisce-non-si-lascia-a-meta">⛔ E il trasloco si finisce, non si lascia a metà<a class="headerlink" href="#e-il-trasloco-si-finisce-non-si-lascia-a-meta" title="Permanent link">&para;</a></h3>
+<p><strong>Spostare un numeratore vuol dire spostare il contatore E la forma.</strong> Fermarsi
+al contatore lascia una riga monca in una tabella di configurazione, con dei
+campi che nessuno legge più e che qualcuno prima o poi proverà a cambiare.</p>
+<p>La checklist operativa aggiornata sta nella scheda tecnica di
+<a href="../../dbzero/config/manual/sistema_codici/"><code>config.sistema_codici</code></a>.</p>
+<hr />
+<h2 id="8-unidea-valutata-e-scartata-la-colonna-che-rappresenta-lunicita">8. ⛔ Un'idea valutata e <strong>scartata</strong>: la colonna che rappresenta l'unicità<a class="headerlink" href="#8-unidea-valutata-e-scartata-la-colonna-che-rappresenta-lunicita" title="Permanent link">&para;</a></h2>
+<p><strong>L'idea.</strong> Aggiungere a ogni documento una colonna che rappresenti la sua identità,
+composta automaticamente dai valori delle altre colonne — qualcosa come
+<code>2581/2026/A/DDT0000123</code> — così che l'unicità stia in <strong>un posto solo, uguale
+ovunque</strong>, e ogni azienda possa eventualmente definirsela a modo proprio.</p>
+<p>L'idea nasceva da un'osservazione <strong>giusta</strong>: le forme di identità sono tre
+diverse su sette documenti, e una forma che smette di funzionare <strong>non dà nessun
+errore</strong>.</p>
+<p><strong>Perché è stata scartata.</strong> Tre ragioni, in ordine di peso.</p>
+<p><strong>1. L'unicità non può essere una preferenza dell'azienda.</strong> Se due aziende nella
+stessa installazione avessero regole di identità diverse sulla stessa tabella, il
+controllo dovrebbe valere su entrambe insieme — e un controllo che dipende da <em>chi
+ha scritto la riga</em> non è più un controllo del database, ma una regola nel
+programma, con tutte le fragilità che si era appena finito di togliere.
+⭐ E soprattutto: <strong>l'unicità per azienda esiste già</strong>. È il registro. «La mia
+azienda vuole la sua numerazione» oggi si traduce in: il mio registro, il mio
+contatore, il mio anno, la mia serie, il mio prefisso e il mio suffisso.</p>
+<p><strong>2. L'uniformità sarebbe stata solo nel nome.</strong> Le tabelle non hanno le stesse
+colonne — i resi non hanno la serie, la commessa non ha un campo «numero» perché
+il suo numero è il codice. Sotto un nome
+uguale ovunque ci sarebbero state <strong>sette formule diverse</strong>. È il tipo di uniformità
+che fa più danno di nessuna uniformità: chi legge un nome uguale smette di chiedersi
+cosa c'è sotto, e trova una regola sola dove ce ne sono sette.</p>
+<p><strong>3. Il costo era reale e il guadagno indiretto.</strong> Aggiungere una colonna calcolata
+comporta la <strong>riscrittura completa</strong> di ogni tabella coinvolta; e ogni documento
+nuovo avrebbe dovuto <em>ricordarsi</em> di averla — cioè un elenco parallelo da tenere
+allineato, esattamente ciò che si era appena finito di eliminare.</p>
+<p><strong>Che cosa si è fatto al posto suo.</strong> Il bisogno vero dietro l'idea era <strong>accorgersi
+quando una regola di identità smette di funzionare</strong>. Per quello non serve una
+colonna: serve un <strong>controllo automatico</strong> che, per ogni famiglia di documento
+registrata a catalogo, verifichi che l'identità distingua l'azienda e che l'anno sia
+davvero in chiave.</p>
+<p>⭐ Esiste (§8-bis), e ha una proprietà che la colonna non avrebbe avuto: <strong>non
+elenca i documenti, li legge dal catalogo</strong>. Il giorno in cui si registra una famiglia
+nuova, il controllo la copre da solo.</p>
+<p>ℹ️ Resta possibile, se un domani servisse <strong>leggere</strong> l'identità completa in un
+export o in una ricerca trasversale, esporla con una vista — senza toccare nessuna
+tabella. La colonna tornerebbe sul tavolo solo se quell'identità dovesse essere
+<strong>indicizzata</strong>, ed è una ragione che oggi non esiste.</p>
+<hr />
+<h2 id="8-bis-la-chiave-del-contatore-gli-assi-si-dichiarano-non-si-assumono">8-bis. ⭐ La chiave del contatore: gli assi si <strong>dichiarano</strong>, non si assumono<a class="headerlink" href="#8-bis-la-chiave-del-contatore-gli-assi-si-dichiarano-non-si-assumono" title="Permanent link">&para;</a></h2>
+<p>Il §8 qui sopra chiede <em>«un controllo automatico che, per ogni famiglia di
+documento registrata a catalogo, verifichi che l'identità distingua l'azienda e
+che l'anno sia davvero in chiave»</em>. ⭐ <strong>Quel controllo esiste</strong>, e questa è la
+regola che lo governa.</p>
+<h3 id="la-regola">La regola<a class="headerlink" href="#la-regola" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Tutto ciò che discrimina il CONTATORE deve poter discriminare anche il
+DOCUMENTO.</strong></p>
+</blockquote>
+<p>Il contatore vive su una chiave — oggi <code>(registro, anno, serie)</code> — e ogni
+combinazione è un <strong>secchio</strong> che riparte da 1. Se il documento non porta uno di
+quegli assi nel proprio vincolo di unicità, il contatore gli consegna un numero
+che per lui <strong>è già usato</strong>.</p>
+<p>⭐ <strong>E i due versi non sono simmetrici</strong> — è questo che dice quale asse va
+dichiarato:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Effetto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>il <strong>contatore</strong> ha un asse che il <strong>documento</strong> non ha</td>
+<td>⛔ <strong>collisione</strong></td>
+</tr>
+<tr>
+<td>il <strong>documento</strong> ha un asse che il <strong>contatore</strong> non ha</td>
+<td>✅ innocuo — il documento è solo più specifico</td>
+</tr>
+</tbody>
+</table>
+<h3 id="che-cosa-succede-quando-un-asse-non-e-dichiarato">⛔ Che cosa succede quando un asse non è dichiarato<a class="headerlink" href="#che-cosa-succede-quando-un-asse-non-e-dichiarato" title="Permanent link">&para;</a></h3>
+<p>L'esempio è la <strong>serie sui resi</strong>. La serie entra nella chiave del contatore: se
+il vincolo di unicità del reso non la porta, cambiare il <code>serie_default</code> del
+registro <code>RESO</code> fa ripartire il progressivo da 1 su numeri già emessi — il
+vincolo rifiuta, col rollback torna indietro anche l'incremento del contatore, e
+<strong>il reso non si numera più</strong>.</p>
+<p>⛔ Dare la colonna <code>serie</code> ai resi sistemerebbe il <strong>sintomo su una tabella</strong>: il
+sesto documento che entra domani avrebbe lo stesso problema senza che nessuno
+gliel'abbia chiesto.</p>
+<h3 id="la-famiglia-dichiara-lasse">La famiglia dichiara l'asse<a class="headerlink" href="#la-famiglia-dichiara-lasse" title="Permanent link">&para;</a></h3>
+<p>⭐ La domanda si fa <strong>dove una famiglia entra nei registri</strong>:
+<code>vendite.famiglie_documento</code> dichiara, per ogni famiglia, il <strong>nome</strong> della
+colonna con cui il documento esprime ciascun asse — <code>NULL</code> se quel documento non
+ce l'ha:</p>
+<table>
+<thead>
+<tr>
+<th>Cosa</th>
+<th>Dove sta</th>
+<th>Che natura ha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>serie</code> sul documento</td>
+<td><code>fatture.serie</code>, <code>ddt.serie</code>, <code>ordini.serie</code></td>
+<td><strong>il fatto</strong></td>
+</tr>
+<tr>
+<td><code>serie_default</code></td>
+<td><code>registri_fatturazione</code></td>
+<td><strong>la scelta</strong> del sezionale</td>
+</tr>
+<tr>
+<td><code>colonna_serie</code></td>
+<td><code>famiglie_documento</code></td>
+<td><strong>la capacità</strong> della famiglia: <code>NULL</code> per resi e commesse</td>
+</tr>
+<tr>
+<td><code>colonna_billing_account</code></td>
+<td><code>famiglie_documento</code></td>
+<td><strong>la capacità</strong> di portare un cliente: <code>NULL</code> per una famiglia la cui controparte non è un billing account (l'ordine di acquisto, che ha un fornitore)</td>
+</tr>
+<tr>
+<td><code>colonna_numero</code></td>
+<td><code>famiglie_documento</code></td>
+<td>dove il documento scrive il numero — sempre dichiarata</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Sulla FAMIGLIA si dichiara ciò che il documento PUÒ esprimere. Sul REGISTRO
+si sceglie ciò che quel sezionale FA.</strong></p>
+</blockquote>
+<p>⭐ <strong>Il nome e non un booleano</strong>, per la stessa ragione di <code>colonna_numero</code>: un
+flag «gestisce la serie» messo su una famiglia la cui tabella non ce l'ha
+riporterebbe il difetto senza che nessuno se ne accorga; col nome, il controllo
+verifica che la colonna <strong>esista davvero</strong> — e la verifica salta gli assi
+dichiarati <code>NULL</code>, prima di comporre qualunque query.</p>
+<p>⛔ E un registro di una famiglia senza serie <strong>non può averne una</strong>: si rifiuta,
+non si ignora. Un campo editabile che non fa niente è esattamente il difetto
+della riga monca del §7.</p>
+<p>⚠️ <strong>Le famiglie senza billing account saltano</strong> nei lettori che ricostruiscono
+la storia di un cliente per emittente (<code>fn_ba_ha_storia_emittente</code>,
+<code>fn_get_storia_emittente_ba</code>): un documento senza cliente non può contribuire
+alla storia di nessun cliente. Il CRUD delle famiglie tratta la colonna come
+facoltativa, esattamente come la serie
+(<a href="../../backend/vendite/manual/api_famiglie_documento/">api_famiglie_documento</a>).</p>
+<h3 id="la-chiave-del-contatore-non-ha-un-asse-mese-ed-e-voluto">La chiave del contatore non ha un asse <code>mese</code>, ed è voluto<a class="headerlink" href="#la-chiave-del-contatore-non-ha-un-asse-mese-ed-e-voluto" title="Permanent link">&para;</a></h3>
+<p>La chiave è <code>(registro, anno, serie)</code>. Un asse <code>mese</code> <strong>non c'è</strong>, e non deve
+tornare senza la colonna sui documenti: ⛔ <strong>una dimensione dormiente in una
+chiave è ARMATA, non inutilizzata</strong> — il giorno che qualcuno accendesse un reset
+mensile senza che nessun documento porti il mese, colliderebbero <strong>tutti e
+cinque</strong> i documenti. Se un giorno servirà, l'asse torna <strong>insieme</strong> alla colonna
+sui documenti, dichiarato come lo è <code>colonna_serie</code>.</p>
+<h3 id="reset_policy-la-politica-del-contatore"><code>reset_policy</code> — la politica del contatore<a class="headerlink" href="#reset_policy-la-politica-del-contatore" title="Permanent link">&para;</a></h3>
+<p><code>fn_get_next_progressivo</code> la legge:</p>
+<table>
+<thead>
+<tr>
+<th><code>reset_policy</code></th>
+<th>L'anno del secchio</th>
+<th>Effetto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ANNUALE</code></td>
+<td>l'anno solare del documento</td>
+<td>il numero riparte da 1 a Capodanno</td>
+</tr>
+<tr>
+<td><code>NESSUNA</code></td>
+<td><code>0</code> — un secchio solo</td>
+<td>numerazione <strong>continua</strong> fra gli anni</td>
+</tr>
+</tbody>
+</table>
+<p>⛔ <strong><code>MENSILE</code> non è rientrata</strong>, ed è l'asimmetria della regola: accenderla
+sarebbe <strong>pericoloso</strong> (nessun documento porta il mese), mentre <code>NESSUNA</code> è
+<strong>sicura</strong> perché fa usare al contatore <strong>meno</strong> assi, non di più — e l'anno ce
+l'hanno tutti.</p>
+<p>⚠️ <strong>E due cose si chiamano «anno»</strong>: quello del <strong>secchio</strong> (<code>progressivi.anno</code>,
+che vale <code>0</code> sotto <code>NESSUNA</code>) e quello del <strong>documento</strong> (<code>fatture.anno</code>,
+<code>ddt.anno</code>, …), che è sempre l'anno solare. <code>fn_get_anno_registro</code> risponde alla
+seconda domanda, e per questo non è stata toccata.</p>
+<h4 id="e-cambiare-politica-su-un-registro-che-ha-gia-numerato">⚠️ E cambiare politica su un registro che ha già numerato<a class="headerlink" href="#e-cambiare-politica-su-un-registro-che-ha-gia-numerato" title="Permanent link">&para;</a></h4>
+<p>La politica si può cambiare anche su un registro che ha già numerato. Il
+contatore vive in un «secchio» identificato dall'anno: passando da <code>ANNUALE</code> a
+<code>NESSUNA</code> (o viceversa) la chiave del secchio cambia, quindi ne nasce uno nuovo
+— e <strong>un secchio nuovo nasce dal numero più alto di quelli con cui potrebbe
+scontrarsi</strong> (§6.7), quindi la numerazione prosegue e il cambio è un'operazione
+sicura, nei due versi. Un secchio che partisse da zero chiederebbe un numero che
+nell'anno del documento esiste già: scrittura respinta, contatore riportato
+indietro dal rollback, e al tentativo dopo di nuovo da capo — un numeratore
+piantato, con un errore che parla del numero e non nomina la causa.</p>
+<p>⛔ <strong>E non "dal numero più alto in assoluto"</strong>: sotto <code>ANNUALE</code> il primo documento
+dell'anno <strong>deve</strong> ripartire da 1, ed è tutto il senso della politica. Si guardano
+solo i secchi che possono davvero scontrarsi — cioè quelli i cui documenti
+condividono un anno di calendario.</p>
+<h3 id="il-controllo-automatico-che-il-8-chiedeva">Il controllo automatico che il §8 chiedeva<a class="headerlink" href="#il-controllo-automatico-che-il-8-chiedeva" title="Permanent link">&para;</a></h3>
+<p>Tre verifiche, tutte <strong>derivate</strong> — nessun elenco scritto a mano:</p>
+<ol>
+<li>ogni famiglia che dichiara una serie ha <strong>davvero</strong> quella colonna;</li>
+<li>...e quella colonna sta nel <strong>vincolo di unicità del numero</strong>;</li>
+<li>nessun registro di una famiglia senza serie porta un <code>serie_default</code>.</li>
+</ol>
+<p>Una famiglia nuova che entra sui registri senza la chiave completa fa <strong>rosso
+prima del merge</strong>, invece che in campo.</p>
+<h3 id="la-commessa-identita-a-stringa-assi-dichiarati-lo-stesso">La commessa: identità a stringa, assi dichiarati lo stesso<a class="headerlink" href="#la-commessa-identita-a-stringa-assi-dichiarati-lo-stesso" title="Permanent link">&para;</a></h3>
+<p><code>vendite.commesse</code> è <strong>l'unica delle cinque</strong> la cui identità è una stringa
+nuda, il codice. Dichiara di non avere una serie, e registro e anno — che
+stanno <em>dentro</em> il codice — li porta anche in <strong>due colonne</strong>, come gli altri
+quattro portano la stringa formattata nel campo «numero» accanto alle colonne
+di anno e registro. ⇒ L'invariante «il codice porta la sigla e l'anno che le
+colonne dichiarano» è <strong>verificata da un controllo automatico</strong>, non affidata a
+chi rilegge: se al contatore si aggiungesse un asse senza toccare la
+composizione della stringa, lo direbbe un test e non un errore di duplicato in
+mezzo a un'elaborazione che con la numerazione non c'entra. L'identità resta il
+codice — più stretta di quella degli altri quattro, perché porta la sigla
+dell'azienda e non si ripete mai fra registri diversi.</p>
+<hr />
+<h2 id="8-ter-lanno-dentro-il-numero">8-ter. ⭐ L'anno <strong>dentro</strong> il numero<a class="headerlink" href="#8-ter-lanno-dentro-il-numero" title="Permanent link">&para;</a></h2>
+<h3 id="perche-in-una-riga">Perché, in una riga<a class="headerlink" href="#perche-in-una-riga" title="Permanent link">&para;</a></h3>
+<p>Se la numerazione riparte ogni anno <strong>e</strong> il numero non porta l'anno, allora il
+1° gennaio la stessa identica stringa torna su un documento diverso. <code>ORD0000001</code>
+del 2026 e <code>ORD0000001</code> del 2027 sarebbero due ordini diversi con lo stesso
+numero scritto sopra.</p>
+<p>⚠️ <strong>Il database non se ne accorge</strong>, e questo è il punto: la sua regola di
+unicità l'anno ce l'ha in una colonna a parte, quindi nessuna scrittura fallisce.
+L'ambiguità non è nei dati — è <strong>nella stringa che una persona legge</strong>: in una
+lista, in una ricerca, o al telefono quando un cliente cita un numero.</p>
+<p>⭐ È la stessa regola del §8-bis, un piano più su: <em>tutto ciò che distingue il
+contatore deve poter distinguere anche il numero che si legge</em>.</p>
+<h3 id="la-cura-si-dichiara-non-si-assume">La cura: si dichiara, non si assume<a class="headerlink" href="#la-cura-si-dichiara-non-si-assume" title="Permanent link">&para;</a></h3>
+<p>Come per la serie, la scelta sta in due posti diversi e complementari:</p>
+<table>
+<thead>
+<tr>
+<th>Dove</th>
+<th>Cosa dice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>la famiglia</strong> (<code>anno_nel_numero_default</code>)</td>
+<td><em>«i documenti di questo tipo portano l'anno dentro il numero»</em> — è il default</td>
+</tr>
+<tr>
+<td><strong>il registro</strong> (<code>anno_nel_numero</code>)</td>
+<td><em>«questo sezionale lo fa»</em> — è l'effettivo, come il prefisso</td>
+</tr>
+</tbody>
+</table>
+<p>E alla nascita di un registro il valore <strong>si risolve da solo</strong>: un sezionale che
+azzera per anno, di una famiglia che espone l'anno, nasce già con l'anno nel
+numero. ⭐ <strong>Non è una domanda che si fa a chi crea il registro</strong>: è una
+conseguenza di due cose che ha già scelto — la politica e la famiglia.</p>
+<p>Il numero diventa così: <code>DDT</code> + <code>2026-</code> + <code>0023456</code> → <strong><code>DDT2026-0023456</code></strong>.</p>
+<h3 id="le-due-famiglie-che-non-lo-fanno-e-non-e-una-dimenticanza">⛔ Le due famiglie che non lo fanno, e non è una dimenticanza<a class="headerlink" href="#le-due-famiglie-che-non-lo-fanno-e-non-e-una-dimenticanza" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>La fattura</strong>: il suo numero è il progressivo <strong>nudo</strong> (<code>101</code>), e anno e serie
+  viaggiano in colonne a parte — è la convenzione fiscale, ed è la stampa a
+  ricomporli (<em>«N. 101 / Serie VX1 / 2026»</em>). Mettere l'anno dentro la stringa
+  cambierebbe il numero di una fattura.</li>
+<li>⭐ <strong>La commessa lo fa con lo stesso meccanismo degli altri</strong>:
+  <code>CMM-&lt;sigla&gt;-&lt;anno&gt;-&lt;9 cifre&gt;</code>, dove l'anno lo mette il registro
+  (<code>anno_nel_numero</code>) e non un pezzo di codice suo — la commessa è standard, con
+  gli stessi parametri degli altri documenti.</li>
+</ul>
+<h3 id="una-cosa-da-sapere-prima-di-chiederla-su-un-registro-vecchio">⚠️ Una cosa da sapere prima di chiederla su un registro vecchio<a class="headerlink" href="#una-cosa-da-sapere-prima-di-chiederla-su-un-registro-vecchio" title="Permanent link">&para;</a></h3>
+<p>L'anno nel numero è <strong>forma del numero</strong>, come il prefisso: su un sezionale che
+ha già consegnato dei numeri <strong>non si può aggiungere</strong>. Il motivo è lo stesso del
+§6.6 — il contatore non riparte quando cambia la forma, prosegue, e sullo stesso
+registro convivrebbero due forme con numeri consecutivi, senza modo di
+distinguerle.</p>
+<p>⇒ La scelta si fa <strong>alla nascita</strong> del registro. Su un sezionale già in uso
+l'alternativa è l'altra: se la sua numerazione non riparte (politica <code>NESSUNA</code>),
+il numero non si ripete e l'anno non serve.</p>
+<h2 id="9-il-presidio-nessuna-funzione-di-vendite-legge-il-catalogo-dei-formati">9. Il presidio: nessuna funzione di vendite legge il catalogo dei formati<a class="headerlink" href="#9-il-presidio-nessuna-funzione-di-vendite-legge-il-catalogo-dei-formati" title="Permanent link">&para;</a></h2>
+<p>Prefisso, suffisso e cifre dei cinque documenti stanno <strong>sul registro</strong> (§3). Una
+funzione che li cercasse ancora nel catalogo dei formati non troverebbe la riga e
+cadrebbe sul valore di ripiego — <strong>sette cifre</strong> — senza nessun errore:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>quante cifre vuole</th>
+<th>quante ne otterrebbe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDT, ordine, reso</td>
+<td>7</td>
+<td>7 — <strong>giusto per caso</strong></td>
+</tr>
+<tr>
+<td>Commessa</td>
+<td>9</td>
+<td><strong>7</strong></td>
+</tr>
+</tbody>
+</table>
+<p>⛔ Nessun vincolo violato: solo una commessa con un codice più corto —
+<code>CMM-ACME-2026-0000007</code> invece di <code>CMM-ACME-2026-000000007</code>. E la forma è proprio
+ciò che, secondo il §6.6, tiene separati i codici nuovi da quelli vecchi. ⚠️ Un
+valore di ripiego che coincide col valore giusto nasconde il difetto: tre
+famiglie su quattro passerebbero.</p>
+<p>⭐ Il presidio non guarda un documento: guarda il <strong>codice</strong>, e pretende che
+nessuna funzione dell'area vendite legga il catalogo dei formati. Copre da solo
+anche il generatore che qualcuno scrivesse domani.</p>
+<hr />
+<h2 id="10-dove-guardare">10. Dove guardare<a class="headerlink" href="#10-dove-guardare" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../dbzero/config/manual/sistema_codici/"><code>config.sistema_codici</code></a> — il catalogo dei
+  formati, con la checklist del trasloco</li>
+<li><a href="../../dbzero/vendite/manual/registri_fatturazione/"><code>vendite.registri_fatturazione</code></a> —
+  i registri di numerazione, con prefisso, suffisso e lunghezza</li>
+<li><a href="../../dbzero/vendite/manual/famiglie_documento/"><code>vendite.famiglie_documento</code></a> — quali
+  documenti si numerano su un registro, dove vivono e <strong>con quale forma nascono</strong>;
+  il CRUD: <a href="../../backend/vendite/manual/api_famiglie_documento/">api_famiglie_documento</a></li>
+<li><a href="../../dbzero/vendite/manual/fn_assegna_numero_documento/"><code>vendite.fn_assegna_numero_documento</code></a> —
+  i sei passi, in una sede sola</li>
+<li><a href="../../dbzero/vendite/manual/fn_componi_numero_documento/"><code>vendite.fn_componi_numero_documento</code></a> —
+  la composizione della stringa, pura e verificabile in una riga</li>
+<li><a href="../../dbzero/vendite/manual/fn_get_next_progressivo/"><code>vendite.fn_get_next_progressivo</code></a> —
+  il contatore: la politica di azzeramento e il seme del secchio nuovo</li>
+</ul>
+<p><strong>I cantieri che hanno prodotto queste regole</strong>, per chi cerca il <em>perché</em> con
+tutte le misure e le strade scartate:</p>
+<ul>
+<li>brief-db-registri-numerazione-chiave-del-contatore (<code>docs/it/dev/work-done/brief-db-registri-numerazione-chiave-del-contatore.md</code>)
+  — gli assi dichiarati (§8-bis), il passaggio di politica e l'anno dentro il
+  numero (§8-ter)</li>
+<li>brief-db-prefisso-sul-registro-e-allineamento-contatori (<code>docs/it/dev/work-done/brief-db-prefisso-sul-registro-e-allineamento-contatori.md</code>)
+  — la forma del numero sul registro</li>
+<li>brief-be-fe-crud-registri-di-numerazione (<code>docs/it/dev/work-done/brief-be-fe-crud-registri-di-numerazione.md</code>)
+  — la maschera e le regole di modifica</li>
+</ul>
+<hr />
+<div style="text-align: center; margin-top: 2rem;">
+  <img src="/assets/images/zeroerp-logo.png" alt="Zero ERP" width="80">
+  <br>
+  <strong>&copy; 2025-2026 Zero ERP</strong> <em><strong>&bull; powered by Tid &bull;</strong></em>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.indexes"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiato","clipboard.copy":"Copia","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 altro in questa pagina","search.result.more.other":"# altri in questa pagina","search.result.none":"Nessun documento trovato","search.result.one":"1 documento trovato","search.result.other":"# documenti trovati","search.result.placeholder":"Scrivi per iniziare a cercare","search.result.term.missing":"Non presente","select.version":"Seleziona la versione"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

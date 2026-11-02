@@ -1,0 +1,7707 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="prev" href="../documenti-e-stampe/">
+      
+      
+        <link rel="next" href="../integrazione-ai/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Gestione mail - Zero ERP Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Vai al contenuto
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../.." title="Zero ERP Documentation" class="md-header__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigazione</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestione mail
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Cerca</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Cerca">
+  <button type="button" class="md-search__button">
+    Cerca
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manifesto/" class="md-tabs__link">
+          
+  
+  Visione e Filosofia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installazione/" class="md-tabs__link">
+          
+  
+  Installazione
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architettura/" class="md-tabs__link">
+          
+  
+  Architettura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/" class="md-tabs__link">
+          
+  
+  DB Zero
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../backend/" class="md-tabs__link">
+          
+  
+  Backend (Django)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../soggetti-e-ruoli-anagrafici/" class="md-tabs__link">
+          
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/framework-automazione-db/" class="md-tabs__link">
+          
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/tools/gen_db_docs/" class="md-tabs__link">
+          
+  
+  Strumenti
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/sicurezza-e-qualita-statica/" class="md-tabs__link">
+          
+  
+  Qualità
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/api/" class="md-tabs__link">
+          
+  
+  Sviluppatori
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossario/glossario-utility/" class="md-tabs__link">
+          
+  
+  Glossario
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zero ERP Documentation" class="md-nav__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Zero ERP Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visione e Filosofia
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Visione e Filosofia
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manifesto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sviluppo-concentrico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppo Concentrico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduzione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cos’è Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perche-zeroerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Perchè Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Installazione
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Installazione
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Prerequisiti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurazione-iniziale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Preparare ZeroERP all'uso
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE-AGPL3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Licenza
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Architettura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architettura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura a colpo d'occhio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../liquibase-setup-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liquibase Setup & Workflow
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida SQL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida Trigger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Db PostgresSQL
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Db PostgresSQL
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Panoramica
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/aggiornamento-versione-postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aggiornamento versione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/parametri-personalizzati-(GUC)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Parametri personalizzati (GUC)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4_4" id="__nav_4_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estensioni
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Estensioni
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/estensioni-utilizzate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Utilizzate
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/dblink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  dblink
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgAgent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgAgent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgcrypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgcrypto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DB Zero
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  DB Zero
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Schemi
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Schemi
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/dbops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dbops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/public/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Public
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend (Django)
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend (Django)
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aree
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Aree
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ai-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ai Assistant
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/amm-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Amm. Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/contabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contabilita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guide
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guide
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Come funziona ZeroErp
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Come funziona ZeroErp
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soggetti-e-ruoli-anagrafici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Soggetti e ruoli anagrafici
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generazione-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generazione di un cliente
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-degli-indirizzi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione degli indirizzi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-contatti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei contatti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-conti-bancari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione conti bancari
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche-configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche — Configurazione e opzioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-commesse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione commesse
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-delle-istanze-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione delle Istanze Utility
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-listini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione listini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-preventivi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione preventivi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-offerte-commerciali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione offerte commerciali
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-contratti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione contratti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ordini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ordini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ddt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ddt
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fatturazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cruscotti-fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cruscotti fatturazione (le tre lenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../termini-di-pagamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Termini di pagamento
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenti-e-stampe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti e stampe
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione mail
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione mail
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduzione
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabelle-coinvolte" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabelle coinvolte
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-funziona" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Come funziona
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Come funziona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-flusso-di-invio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il flusso di invio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invio-diretto-vs-bozza-outbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Invio diretto vs bozza (outbox)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurare-un-account-smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configurare un account SMTP
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurare un account SMTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-di-sistema-obbligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Account di sistema (obbligatorio)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-per-reparto-opzionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Account per reparto (opzionale)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esempio-con-gmail-per-sviluppo-e-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Esempio con Gmail (per sviluppo e test)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modalita-console-sviluppo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modalita' console (sviluppo)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-se-debug-false-con-lhost-ancora-finto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ E se <code>DEBUG = False</code> con l'host ancora finto?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testare-la-connessione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Testare la connessione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizzare-i-template-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Personalizzare i template email
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personalizzare i template email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-di-sistema-seed" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Template di sistema (seed)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variabili-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Variabili template
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificare-un-template-esistente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modificare un template esistente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creare-un-override-per-reparto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creare un override per reparto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creare-un-override-per-tipo-pratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creare un override per tipo pratica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catena-di-risoluzione-5-livelli" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Catena di risoluzione (5 livelli)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambito-e-visibilita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ambito e visibilita'
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ambito e visibilita&#x27;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dal-06-09-2026-questa-tabella-non-e-piu-solo-una-regola-dellapplicazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ Dal 06-09-2026 questa tabella non è più solo una regola dell'applicazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-porta-per-i-percorsi-senza-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ La porta per i percorsi senza utente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allegati" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Allegati
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coda-email-e-retry" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Coda email e retry
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicurezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sicurezza
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confini-del-sistema-cosa-costruiamo-e-cosa-no" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Confini del sistema — cosa costruiamo e cosa no
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Confini del sistema — cosa costruiamo e cosa no">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosa-fa-il-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa fa il sistema
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosa-non-fa-il-sistema-e-perche" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa NON fa il sistema (e perche')
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategia-futura-integrazione-via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Strategia futura: integrazione via API
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Settings Django
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Endpoint API
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-amm-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Admin (Amm. Software)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Operatore
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        File Python
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrazione-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Integrazione Ai
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risorse-umane-e-accessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Risorse Umane e Accessi al Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-liste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e responsività delle liste
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numerazione-documenti-e-codici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sistema numerazione generico per codici e documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iva-risolutore-di-riga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il risolutore IVA di riga
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modello-documento-di-vendita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il modello del documento di vendita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sicurezza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza di ZeroErp
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Approfondimenti tecnici
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Approfondimenti tecnici
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-permessi-e-autorizzazioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura Permessi e Autorizzazioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-multi-face-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura multi face auth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contratto-guc-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contratto GUC APP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tx_id_implementation_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Implementazione Transaction ID
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storicizzazione-tabelle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storicizzazione Tabelle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit-e-tracciabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit e tracciabilità
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operazioni-che-non-si-ripetono/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Le operazioni che non si ripetono (Idempotency-Key)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presidi-e-registri-del-debito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Presidi e registri del debito
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sorgente-polimorfa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sorgente polimorfa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riclassificazione-vie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Riclassificazione vie
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-di-obsoleto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Mandare in pensione una voce di catalogo (obsoleto_dal)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-e-gestione-parametri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e gestione parametri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-automatici-classe-e-identita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  I lavori automatici (natura e identità)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-code-di-lavoro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione code di lavoro
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-pgagent-funzionali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi-pgagent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistiche-del-planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Statistiche del planner
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-che-resta-veloce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Un database che resta veloce
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_19" id="__nav_7_2_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Log
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_19_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Log
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messaggi-di-Errore-e-Generazione-Log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Errore
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaggi-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Audit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analisi-tracciamento-processi-e-job/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi e Job
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tutorial
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tutorial
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/framework-automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Framework automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Strumenti
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Strumenti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/tools/gen_db_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generatore Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Qualità
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/sicurezza-e-qualita-statica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza e qualità statica (gli strumenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-be-fe-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità BE/FE (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-db-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità del database (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppatori
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Sviluppatori
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ricette-dove-intervenire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ricette (dove intervenire)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/trappole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Trappole (cosa non fare)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/Policy-ricerca-e-paginazione(API-DB)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy ricerca e paginazione (API/DB)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/standard-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard delle guide (come si scrive)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_6" id="__nav_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Frontend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Frontend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard frontend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/catalogo-building-block-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block FE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7" id="__nav_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Server
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Server
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_1" id="__nav_11_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/backend-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guida backend-dev
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/play-book-operativo-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Playbook operativo backend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/servizi-zeroerp-comandi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Servizi ZeroERP (comandi)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/catalogo-building-block-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block BE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/piano-solidita-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Piano solidità Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/provisioning-db-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Provisioning ruoli DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/gunicorn-dev-autoreload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gunicorn dev autoreload
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/checklist-post-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Checklist post upgrade
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/configurazione-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_2" id="__nav_11_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/db/dbdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VM dbdev (PostgreSQL)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_3" id="__nav_11_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Infrastruttura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Infrastruttura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/infra/proxmox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Proxmox
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_4" id="__nav_11_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workstation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Workstation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/workstation-dev/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vm wrk1-dev (ubuntu)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GitHub
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  GitHub
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/github/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Glossario
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/glossario-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario di dominio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/devops%26db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dev&Ops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/process-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Process Analysis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduzione
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabelle-coinvolte" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabelle coinvolte
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-funziona" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Come funziona
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Come funziona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-flusso-di-invio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il flusso di invio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invio-diretto-vs-bozza-outbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Invio diretto vs bozza (outbox)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurare-un-account-smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configurare un account SMTP
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurare un account SMTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-di-sistema-obbligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Account di sistema (obbligatorio)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#account-per-reparto-opzionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Account per reparto (opzionale)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esempio-con-gmail-per-sviluppo-e-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Esempio con Gmail (per sviluppo e test)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modalita-console-sviluppo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modalita' console (sviluppo)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-se-debug-false-con-lhost-ancora-finto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ E se <code>DEBUG = False</code> con l'host ancora finto?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testare-la-connessione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Testare la connessione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizzare-i-template-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Personalizzare i template email
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personalizzare i template email">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-di-sistema-seed" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Template di sistema (seed)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variabili-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Variabili template
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificare-un-template-esistente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modificare un template esistente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creare-un-override-per-reparto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creare un override per reparto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creare-un-override-per-tipo-pratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creare un override per tipo pratica
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catena-di-risoluzione-5-livelli" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Catena di risoluzione (5 livelli)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambito-e-visibilita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ambito e visibilita'
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ambito e visibilita&#x27;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dal-06-09-2026-questa-tabella-non-e-piu-solo-una-regola-dellapplicazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ Dal 06-09-2026 questa tabella non è più solo una regola dell'applicazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-porta-per-i-percorsi-senza-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ La porta per i percorsi senza utente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allegati" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Allegati
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coda-email-e-retry" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Coda email e retry
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicurezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sicurezza
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#confini-del-sistema-cosa-costruiamo-e-cosa-no" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Confini del sistema — cosa costruiamo e cosa no
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Confini del sistema — cosa costruiamo e cosa no">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosa-fa-il-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa fa il sistema
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosa-non-fa-il-sistema-e-perche" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa NON fa il sistema (e perche')
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategia-futura-integrazione-via-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Strategia futura: integrazione via API
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Settings Django
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Endpoint API
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-amm-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Admin (Amm. Software)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Operatore
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        File Python
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="guida-gestione-mail">Guida – Gestione Mail<a class="headerlink" href="#guida-gestione-mail" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Ultimo aggiornamento</strong>: 1 novembre 2026</p>
+<p>Destinatari: amministratori di sistema, sviluppatori backend, analisti funzionali</p>
+<p>Vedi anche</p>
+<ul>
+<li><a href=".././risorse-umane-e-accessi/">Guida Risorse Umane e Accessi</a></li>
+<li><a href=".././gestione-pratiche/">Guida Gestione Pratiche</a></li>
+<li><a href="../../backend/core/manual/api_email/">API Email (doc backend)</a></li>
+<li><a href="../../backend/core/manual/api_invito_operatore/">API Invito Operatore</a></li>
+<li><a href="../../backend/core/manual/api_password_reset/">API Reset Password</a></li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="introduzione">Introduzione<a class="headerlink" href="#introduzione" title="Permanent link">&para;</a></h2>
+<p>Zero ERP integra un sistema di invio email pensato per coprire le esigenze operative
+di un ERP in produzione, senza diventare un client di posta. L'email e' un <strong>canale di uscita</strong>:
+il sistema compone, invia e traccia le comunicazioni, ma non riceve email ne' gestisce
+caselle di posta in ingresso.</p>
+<p>Ogni reparto (unita' organizzativa) puo' avere il proprio account SMTP e i propri template
+personalizzati. Il sistema risolve automaticamente quale account e quale template usare
+in base al contesto, con fallback sull'account di sistema.</p>
+<p><strong>Cosa troverai in questa guida:</strong></p>
+<ul>
+<li>Come funziona il modello email (account, template, outbox, log)</li>
+<li>Come configurare un account SMTP per reparto o per il sistema</li>
+<li>Come personalizzare i template email (variabili, override per reparto/tipo pratica)</li>
+<li>La modalita' console per sviluppo (senza SMTP reale)</li>
+<li>I confini architetturali: cosa il sistema fa e cosa no</li>
+<li>Come configurare Gmail per test reali</li>
+</ul>
+<hr />
+<h2 id="tabelle-coinvolte">Tabelle coinvolte<a class="headerlink" href="#tabelle-coinvolte" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../dbzero/config/tabelle/email_account/">config.email_account</a> — account SMTP per reparto</li>
+<li><a href="../../dbzero/config/tabelle/email_template/">config.email_template</a> — template parametrizzabili</li>
+<li><a href="../../dbzero/config/tabelle/email_log/">config.email_log</a> — log immutabile di ogni invio</li>
+<li><a href="../../dbzero/config/tabelle/email_outbox/">config.email_outbox</a> — bozze editabili prima dell'invio</li>
+<li><a href=".././processi-automatici-classe-e-identita/">I lavori automatici: che natura hanno e per conto di chi girano</a> — <code>send_pending_emails</code> è un lavoro <strong>di dominio</strong>: gira per conto di un'azienda, non in incognito</li>
+<li><a href="../../dbzero/config/tabelle/email_allegato/">config.email_allegato</a> — allegati per outbox e log</li>
+<li><a href="../../dbzero/config/tabelle/unita_organizzative/">config.unita_organizzative</a> — reparti</li>
+</ul>
+<p>Funzioni:</p>
+<ul>
+<li><code>config.fn_resolve_email_account(uo_id)</code> — risolve account SMTP con fallback</li>
+<li><code>config.fn_resolve_email_template(codice, uo_id, tipo_prest_id, lingua)</code> — risolve template con fallback 5 livelli</li>
+</ul>
+<hr />
+<h2 id="come-funziona">Come funziona<a class="headerlink" href="#come-funziona" title="Permanent link">&para;</a></h2>
+<h3 id="il-flusso-di-invio">Il flusso di invio<a class="headerlink" href="#il-flusso-di-invio" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>1. Qualcosa nel sistema chiede di inviare un'email
+   (invito operatore, reset password, notifica pratica, comunicazione manuale)
+   |
+2. EmailDispatchService risolve l'account SMTP:
+   → cerca account del reparto dell'operatore
+   → se non trovato, usa account SISTEMA (fallback)
+   |
+3. Risolve il template email:
+   → cerca template per reparto + tipo pratica + lingua
+   → fallback progressivo fino al template di sistema in italiano
+   |
+4. Renderizza oggetto e corpo sostituendo le variabili {{...}}
+   |
+5. Crea record in email_log con stato PENDING
+   |
+6. Invia via SMTP (o logga in console se in modalita' sviluppo)
+   |
+7. Aggiorna stato: **SENT** (spedita), **FAILED** (non spedita) o **SIMULATA**
+   (mostrata a video invece che spedita — modalita' console, dal 2026-09-11)
+</code></pre></div>
+<h3 id="invio-diretto-vs-bozza-outbox">Invio diretto vs bozza (outbox)<a class="headerlink" href="#invio-diretto-vs-bozza-outbox" title="Permanent link">&para;</a></h3>
+<p>Il sistema supporta due modalita':</p>
+<p><strong>Invio diretto</strong> — usato per email automatiche (inviti, reset, notifiche SLA):</p>
+<ul>
+<li><code>EmailDispatchService.send_email()</code> → risolve, renderizza, invia in un passo</li>
+<li>L'operatore non vede la bozza, l'email parte automaticamente</li>
+</ul>
+<p><strong>Bozza editabile</strong> — usato per comunicazioni manuali (da pratica, da reparto):</p>
+<ul>
+<li><code>EmailOutboxService.prepare_draft()</code> → crea bozza con corpo pre-compilato</li>
+<li>L'operatore puo' modificare oggetto, corpo, destinatari, allegati</li>
+<li>Alla conferma: <code>confirm_and_send()</code> → crea log + invia</li>
+<li>Se l'invio fallisce, la bozza torna a DRAFT e l'operatore puo' riprovare</li>
+</ul>
+<hr />
+<h2 id="configurare-un-account-smtp">Configurare un account SMTP<a class="headerlink" href="#configurare-un-account-smtp" title="Permanent link">&para;</a></h2>
+<h3 id="account-di-sistema-obbligatorio">Account di sistema (obbligatorio)<a class="headerlink" href="#account-di-sistema-obbligatorio" title="Permanent link">&para;</a></h3>
+<p>Il seed iniziale crea un account con codice <code>SISTEMA</code> e host placeholder.
+Per inviare email realmente, l'amministratore deve configurare un account SMTP valido.</p>
+<p>Da <strong>Amm. Software → Account Email</strong> (solo ADMIN):</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Esempio</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Codice</td>
+<td><code>SISTEMA</code></td>
+<td>Non modificare — e' il fallback di tutto il sistema</td>
+</tr>
+<tr>
+<td>Descrizione</td>
+<td>Account di sistema</td>
+<td>Libero</td>
+</tr>
+<tr>
+<td>SMTP Host</td>
+<td><code>smtp.gmail.com</code></td>
+<td>⚠️ Vuoto o <code>smtp.example.com</code> = l'account <strong>non spedisce</strong>: e' modalita' console solo in sviluppo, altrove e' configurazione che manca</td>
+</tr>
+<tr>
+<td>SMTP Port</td>
+<td><code>587</code></td>
+<td>587 per STARTTLS, 465 per SSL</td>
+</tr>
+<tr>
+<td>SMTP TLS</td>
+<td><code>true</code></td>
+<td>Abilitare per Gmail e la maggior parte dei provider</td>
+</tr>
+<tr>
+<td>SMTP SSL</td>
+<td><code>false</code></td>
+<td>Alternativo a TLS (non entrambi)</td>
+</tr>
+<tr>
+<td>SMTP Username</td>
+<td><code>utente@gmail.com</code></td>
+<td>Credenziali del provider</td>
+</tr>
+<tr>
+<td>SMTP Password</td>
+<td><code>xxxx-xxxx-xxxx-xxxx</code></td>
+<td>Accettata in chiaro, salvata crittografata (Fernet)</td>
+</tr>
+<tr>
+<td>Email From</td>
+<td><code>ZeroErp &lt;utente@gmail.com&gt;</code></td>
+<td>Indirizzo mittente visibile al destinatario</td>
+</tr>
+<tr>
+<td>Reply-To</td>
+<td>(opzionale)</td>
+<td>Se diverso da Email From</td>
+</tr>
+<tr>
+<td>Unita' Organizzativa</td>
+<td>(vuoto)</td>
+<td>NULL = account di sistema</td>
+</tr>
+<tr>
+<td>Attivo</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="account-per-reparto-opzionale">Account per reparto (opzionale)<a class="headerlink" href="#account-per-reparto-opzionale" title="Permanent link">&para;</a></h3>
+<p>Per far partire le email di un reparto con il proprio indirizzo mittente:</p>
+<ol>
+<li>Creare un nuovo account in <strong>Amm. Software → Account Email</strong></li>
+<li>Associare il campo <strong>Unita' Organizzativa</strong> al reparto desiderato</li>
+<li>Configurare le credenziali SMTP del reparto</li>
+</ol>
+<p>Quando il sistema invia un'email nel contesto di quel reparto, usa l'account
+del reparto. Se non ne trova uno, ricade sull'account SISTEMA.</p>
+<h3 id="esempio-con-gmail-per-sviluppo-e-test">Esempio con Gmail (per sviluppo e test)<a class="headerlink" href="#esempio-con-gmail-per-sviluppo-e-test" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Abilitare 2FA sull'account Google</li>
+<li>Generare una <strong>App Password</strong>: myaccount.google.com → Sicurezza → Password per le app</li>
+<li>Configurare l'account SISTEMA:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMTP Host</td>
+<td><code>smtp.gmail.com</code></td>
+</tr>
+<tr>
+<td>SMTP Port</td>
+<td><code>587</code></td>
+</tr>
+<tr>
+<td>SMTP TLS</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>SMTP SSL</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>SMTP Username</td>
+<td><code>tuaemail@gmail.com</code></td>
+</tr>
+<tr>
+<td>SMTP Password</td>
+<td>La App Password 16 caratteri</td>
+</tr>
+<tr>
+<td>Email From</td>
+<td><code>ZeroErp Dev &lt;tuaemail@gmail.com&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Limiti Gmail: 500 email/giorno, sufficiente per sviluppo e test.
+Per produzione: valutare servizio dedicato (SendGrid, Mailgun, Amazon SES, SMTP aziendale).</p>
+<h3 id="modalita-console-sviluppo">Modalita' console (sviluppo)<a class="headerlink" href="#modalita-console-sviluppo" title="Permanent link">&para;</a></h3>
+<p>Quando <code>DEBUG = True</code> le email <strong>non vengono inviate</strong> ma loggate nel terminale
+Django. ⚠️ Basta <code>DEBUG</code>: l'host non c'entra — anche con un SMTP reale
+configurato, in sviluppo non parte niente.</p>
+<div class="highlight"><pre><span></span><code>============================================================
+EMAIL (console mode)
+============================================================
+Da:       ZeroErp &lt;test@example.com&gt;
+A:        mario@azienda.it
+CC:       (nessuno)
+Oggetto:  Benvenuto Mario in ZeroErp
+------------------------------------------------------------
+Benvenuto Mario! Sei stato invitato ad accedere...
+============================================================
+</code></pre></div>
+<p>Il record viene comunque creato in <code>email_log</code>, cosi' si verifica il flusso
+completo senza SMTP reale — ma con stato <strong><code>SIMULATA</code></strong> e <code>inviato_at</code> <strong>vuoto</strong>.</p>
+<p>⛔ <strong>Fino al 2026-09-11 quello stato era <code>SENT</code></strong>, ed era un difetto vero: una
+mail stampata a video risultava <em>consegnata</em>, indistinguibile da una vera.
+Nessun errore, nessun allarme — la si scopriva solo non vedendo arrivare niente.</p>
+<h3 id="e-se-debug-false-con-lhost-ancora-finto">⛔ E se <code>DEBUG = False</code> con l'host ancora finto?<a class="headerlink" href="#e-se-debug-false-con-lhost-ancora-finto" title="Permanent link">&para;</a></h3>
+<p>Non e' console mode: e' <strong>configurazione che manca</strong>, e il programma lo dice.
+L'email <strong>non viene ne' spedita ne' stampata</strong>, e il giornale registra
+<strong><code>FAILED</code></strong> col motivo e la strada per rimediare. ⚠️ Anche il pulsante «prova
+connessione» risponde di no: prima diceva OK, ed e' cosi' che un'installazione
+e' rimasta senza posta senza che nessuno se ne accorgesse.</p>
+<h3 id="testare-la-connessione">Testare la connessione<a class="headerlink" href="#testare-la-connessione" title="Permanent link">&para;</a></h3>
+<p>Da <strong>Amm. Software → Account Email</strong>, bottone <strong>Test</strong> sull'account:</p>
+<ul>
+<li>Tenta login SMTP senza inviare email</li>
+<li>Ritorna successo/errore con dettaglio</li>
+<li>In modalita' console ritorna direttamente "Nessun test necessario"</li>
+</ul>
+<hr />
+<h2 id="personalizzare-i-template-email">Personalizzare i template email<a class="headerlink" href="#personalizzare-i-template-email" title="Permanent link">&para;</a></h2>
+<h3 id="template-di-sistema-seed">Template di sistema (seed)<a class="headerlink" href="#template-di-sistema-seed" title="Permanent link">&para;</a></h3>
+<p>Il seed iniziale crea 4 template in italiano:</p>
+<table>
+<thead>
+<tr>
+<th>Codice</th>
+<th>Scopo</th>
+<th>Variabili</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INVITO_OPERATORE</code></td>
+<td>Email di invito al primo accesso</td>
+<td><code>nome</code>, <code>cognome</code>, <code>azienda</code>, <code>link</code>, <code>scadenza_ore</code>, <code>invitato_da</code></td>
+</tr>
+<tr>
+<td><code>RESET_PASSWORD</code></td>
+<td>Email per reset password dimenticata</td>
+<td><code>nome</code>, <code>azienda</code>, <code>link</code>, <code>scadenza_ore</code></td>
+</tr>
+<tr>
+<td><code>CAMBIO_PASSWORD_CONFERMA</code></td>
+<td>Notifica cambio password avvenuto</td>
+<td><code>nome</code>, <code>azienda</code>, <code>data_cambio</code></td>
+</tr>
+<tr>
+<td><code>NOTIFICA_GENERICA</code></td>
+<td>Template generico per notifiche</td>
+<td><code>oggetto_custom</code>, <code>corpo_custom</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="variabili-template">Variabili template<a class="headerlink" href="#variabili-template" title="Permanent link">&para;</a></h3>
+<p>I template usano la sintassi <code>{{nome_variabile}}</code>. Le variabili vengono sostituite
+al momento dell'invio con i valori forniti dal codice chiamante.</p>
+<p>Esempio template:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Benvenuto {{nome}} {{cognome}}!<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sei stato invitato ad accedere al sistema <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>{{azienda}}<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Clicca sul link seguente per attivare il tuo account:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{{link}}"</span><span class="p">&gt;</span>Attiva il tuo account<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Il link scade tra {{scadenza_ore}} ore.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Se una variabile non viene fornita, resta invariata nel testo (es. <code>{{link}}</code>
+rimane se <code>link</code> non e' tra le variabili).</p>
+<h3 id="modificare-un-template-esistente">Modificare un template esistente<a class="headerlink" href="#modificare-un-template-esistente" title="Permanent link">&para;</a></h3>
+<p>Da <strong>Amm. Software → Template Email</strong> (solo ADMIN):</p>
+<ol>
+<li>Selezionare il template dalla lista</li>
+<li>Modificare <strong>Oggetto</strong>, <strong>Corpo HTML</strong> e/o <strong>Corpo Testo</strong></li>
+<li>Le variabili disponibili sono indicate nel campo <code>variabili_disponibili</code></li>
+<li>Usare il bottone <strong>Preview</strong> per verificare il risultato con dati di esempio</li>
+</ol>
+<h3 id="creare-un-override-per-reparto">Creare un override per reparto<a class="headerlink" href="#creare-un-override-per-reparto" title="Permanent link">&para;</a></h3>
+<p>Per far si' che il reparto Acquisti invii un testo diverso dal reparto Commerciale
+per la stessa azione:</p>
+<ol>
+<li>Creare un <strong>nuovo template</strong> con lo stesso codice (es. <code>INVITO_OPERATORE</code>)</li>
+<li>Associare il campo <strong>Unita' Organizzativa</strong> al reparto Acquisti</li>
+<li>Il sistema usera' automaticamente questo template quando l'email parte
+   nel contesto del reparto Acquisti</li>
+</ol>
+<p>Il template di sistema (senza reparto) resta il fallback per tutti gli altri reparti.</p>
+<h3 id="creare-un-override-per-tipo-pratica">Creare un override per tipo pratica<a class="headerlink" href="#creare-un-override-per-tipo-pratica" title="Permanent link">&para;</a></h3>
+<p>Per testi diversi in base al tipo di pratica (es. Reclamo vs Offerta):</p>
+<ol>
+<li>Creare un template con lo stesso codice</li>
+<li>Associare il campo <strong>Tipo Prestazione</strong> al tipo desiderato</li>
+<li>Opzionalmente associare anche il reparto per un override ancora piu' specifico</li>
+</ol>
+<h3 id="catena-di-risoluzione-5-livelli">Catena di risoluzione (5 livelli)<a class="headerlink" href="#catena-di-risoluzione-5-livelli" title="Permanent link">&para;</a></h3>
+<p>Quando il sistema cerca un template, prova nell'ordine:</p>
+<div class="highlight"><pre><span></span><code>1. Reparto + Tipo pratica + Lingua richiesta
+2. Reparto + Lingua richiesta (senza tipo pratica)
+3. Sistema + Tipo pratica + Lingua richiesta
+4. Sistema + Lingua richiesta (senza tipo pratica)
+5. Sistema + Lingua italiana (fallback finale)
+</code></pre></div>
+<p>Il primo template trovato e attivo viene utilizzato. Se nessuno viene trovato,
+l'invio fallisce con errore.</p>
+<hr />
+<h2 id="ambito-e-visibilita">Ambito e visibilita'<a class="headerlink" href="#ambito-e-visibilita" title="Permanent link">&para;</a></h2>
+<p>Ogni email (bozza e log) ha un <strong>ambito</strong> che determina chi puo' vederla:</p>
+<table>
+<thead>
+<tr>
+<th>Ambito</th>
+<th>Significato</th>
+<th>Chi vede</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SISTEMA</strong></td>
+<td>Email infrastrutturali (inviti, reset, notifiche automatiche)</td>
+<td>Solo ADMIN</td>
+</tr>
+<tr>
+<td><strong>REPARTO</strong></td>
+<td>Email del reparto (comunicazioni a clienti/fornitori)</td>
+<td>Operatori dell'unita' organizzativa + ADMIN</td>
+</tr>
+<tr>
+<td><strong>OPERATORE</strong></td>
+<td>Email personale dell'operatore</td>
+<td>Solo il creatore + ADMIN</td>
+</tr>
+</tbody>
+</table>
+<p>Le email collegate a una <strong>pratica</strong> (<code>pratica_id</code>) sono visibili anche dalla
+scheda pratica, indipendentemente dall'ambito. Questo permette di ricostruire
+la storia comunicativa di una pratica.</p>
+<h3 id="dal-06-09-2026-questa-tabella-non-e-piu-solo-una-regola-dellapplicazione">⭐ Dal 06-09-2026 questa tabella non è più solo una regola dell'applicazione<a class="headerlink" href="#dal-06-09-2026-questa-tabella-non-e-piu-solo-una-regola-dellapplicazione" title="Permanent link">&para;</a></h3>
+<p>Fino a settembre l'ambito era una convenzione: a farlo rispettare era il codice
+che leggeva le email. Ora lo fa <strong>il database</strong>, su tutte e due le tabelle — le
+bozze e il registro degli invii.</p>
+<p>Cambia poco per chi legge la tabella qui sopra, e cambia molto per chi scrive
+codice: non c'è più modo di dimenticarsi il filtro.</p>
+<p>⚠️ <strong>E si aggiunge una seconda dimensione: l'azienda.</strong> Le email che non sono di
+sistema appartengono a un'azienda, e si vedono solo se quell'azienda è fra
+quelle di chi guarda. Prima l'ambito diceva <em>quale gruppo di persone</em>; adesso
+dice anche <em>di chi è la posta</em>.</p>
+<p>⛔ Le email di <strong>sistema</strong> (reset password, inviti, alert) restano fuori da
+questa seconda regola, ed è voluto: non appartengono a nessuna azienda, e il
+loro contenuto vale quanto una password. Le legge solo un amministratore.</p>
+<h3 id="la-porta-per-i-percorsi-senza-utente">⚠️ La porta per i percorsi senza utente<a class="headerlink" href="#la-porta-per-i-percorsi-senza-utente" title="Permanent link">&para;</a></h3>
+<p>Un reset password parte <strong>prima</strong> che qualcuno abbia fatto l'accesso: in quel
+momento non c'è nessun utente in sessione. Con il filtro acceso, la scrittura
+dell'email verrebbe rifiutata — cioè il reset non partirebbe, e nessuno se ne
+accorgerebbe.</p>
+<p>Per questo esistono due funzioni dedicate, ed è l'unico modo previsto di
+scrivere una email di sistema da un percorso non autenticato:
+<a href="../../dbzero/config/funzioni/fn_accoda_email_sistema/">fn_accoda_email_sistema</a> la
+mette in coda, <a href="../../dbzero/config/funzioni/fn_chiudi_email_sistema/">fn_chiudi_email_sistema</a>
+ne registra l'esito.</p>
+<p>⛔ Non sono una scorciatoia da usare altrove: fanno una cosa sola, e solo per le
+email di sistema.</p>
+<hr />
+<h2 id="allegati">Allegati<a class="headerlink" href="#allegati" title="Permanent link">&para;</a></h2>
+<p>Le bozze email supportano allegati caricati dall'operatore:</p>
+<table>
+<thead>
+<tr>
+<th>Regola</th>
+<th>Valore default</th>
+<th>Configurabile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MIME types ammessi</td>
+<td>PDF, DOCX, XLSX, XLS, DOC, JPEG, PNG, GIF, TXT, CSV</td>
+<td><code>ALLOWED_MIME_TYPES</code> nel codice</td>
+</tr>
+<tr>
+<td>Dimensione massima per allegato</td>
+<td>10 MB</td>
+<td><code>EMAIL_ATTACHMENT_MAX_SIZE_MB</code> in settings</td>
+</tr>
+<tr>
+<td>Numero massimo per email</td>
+<td>10</td>
+<td><code>EMAIL_ATTACHMENT_MAX_COUNT</code> in settings</td>
+</tr>
+</tbody>
+</table>
+<p>Gli allegati sono salvati su filesystem in <code>{EMAIL_ATTACHMENTS_ROOT}/{anno}/{mese}/{uuid}.{ext}</code>.
+Quando un'email viene inviata, gli allegati vengono collegati anche al record log
+per consultazione storica.</p>
+<hr />
+<h2 id="coda-email-e-retry">Coda email e retry<a class="headerlink" href="#coda-email-e-retry" title="Permanent link">&para;</a></h2>
+<p>Le email in coda (stato <code>PENDING</code> o <code>FAILED</code> con tentativi residui) vengono
+processate dal management command:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Processa email in coda</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>send_pending_emails
+
+<span class="c1"># Preview senza invio</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>send_pending_emails<span class="w"> </span>--dry-run
+
+<span class="c1"># Limita a 10 email per esecuzione</span>
+python<span class="w"> </span>manage.py<span class="w"> </span>send_pending_emails<span class="w"> </span>--limit<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+<p>Schedulabile come cron job (pgAgent o crontab). Per ogni email il command
+usa l'account SMTP originale (quello con cui l'email era stata preparata).</p>
+<hr />
+<h2 id="sicurezza">Sicurezza<a class="headerlink" href="#sicurezza" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Filtro nel database</strong> su bozze e registro invii: l'ambito e l'azienda non sono più solo una regola applicativa — vedi <a href="#ambito-e-visibilita">Ambito e visibilità</a></li>
+<li><strong>Password SMTP crittografata</strong> con Fernet (chiavi <code>DJANGO_FIELD_ENCRYPTION_KEYS</code>, separate dalla <code>SECRET_KEY</code>) — mai in chiaro in DB o API</li>
+<li><strong>Ownership check</strong> su tutte le operazioni outbox e allegati — fail-closed se nessun outbox padre</li>
+<li><strong>Path traversal guard</strong> su download allegati</li>
+<li><strong>Whitelist colonne</strong> aggiornabili nei metodi UPDATE del repository</li>
+<li><strong>Connessione SMTP</strong> chiusa in <code>finally</code> (no connection leak)</li>
+<li><strong>Catch specifico</strong> <code>(SMTPException, OSError, ValueError)</code> — errori di programmazione non mascherati</li>
+</ul>
+<hr />
+<h2 id="confini-del-sistema-cosa-costruiamo-e-cosa-no">Confini del sistema — cosa costruiamo e cosa no<a class="headerlink" href="#confini-del-sistema-cosa-costruiamo-e-cosa-no" title="Permanent link">&para;</a></h2>
+<h3 id="cosa-fa-il-sistema">Cosa fa il sistema<a class="headerlink" href="#cosa-fa-il-sistema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Funzionalita'</th>
+<th>Esempio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Email transazionali di sistema</td>
+<td>Invito operatore, reset password, conferma</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Notifiche operative</td>
+<td>Pratica scaduta, SLA in allarme</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Log completo di ogni invio</td>
+<td>Corpo esatto inviato, allegati, esito</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Template per reparto/tipo pratica</td>
+<td>Testi diversi per "Reclamo Acquisti" vs "Offerta Commerciale"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Comunicazioni ad-hoc da pratica</td>
+<td>Operatore scrive al cliente con anteprima</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Storico comunicativo della pratica</td>
+<td>Dalla pratica si vedono tutte le email</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Allegati</td>
+<td>Documenti inviati insieme alla email</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cosa-non-fa-il-sistema-e-perche">Cosa NON fa il sistema (e perche')<a class="headerlink" href="#cosa-non-fa-il-sistema-e-perche" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Escluso</th>
+<th>Motivazione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Casella di posta in ingresso</td>
+<td>Complessita' enorme (IMAP, spam, dedup) per risultato mediocre vs strumenti dedicati</td>
+</tr>
+<tr>
+<td>Thread di conversazione</td>
+<td>Richiede matching In-Reply-To/References — logica di un mail client</td>
+</tr>
+<tr>
+<td>Ricezione email e associazione a pratiche</td>
+<td>Territorio CRM/ticketing (NLP, regole matching)</td>
+</tr>
+<tr>
+<td>Gestione completa CRM via email</td>
+<td>Zammad, FreeScout, Chatwoot fanno questo con anni di maturita'</td>
+</tr>
+</tbody>
+</table>
+<h3 id="strategia-futura-integrazione-via-api">Strategia futura: integrazione via API<a class="headerlink" href="#strategia-futura-integrazione-via-api" title="Permanent link">&para;</a></h3>
+<p>L'architettura lascia la porta aperta: <code>pratica_id</code> e <code>ambito</code> sulle email permettono
+a un sistema esterno (CRM/ticketing) di correlare le proprie conversazioni con le
+pratiche ZeroErp via API bidirezionale.</p>
+<hr />
+<h2 id="settings-django">Settings Django<a class="headerlink" href="#settings-django" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MAILERS&#91;'default'&#93;&#91;'BACKEND'&#93;</code></td>
+<td><code>console</code></td>
+<td>Mailer Django (non usato dal service, che parla SMTP per-account). Sostituisce <code>EMAIL_BACKEND</code>, deprecato da Django 6.1</td>
+</tr>
+<tr>
+<td><code>EMAIL_ATTACHMENTS_ROOT</code></td>
+<td><code>{BASE_DIR}/email_attachments</code></td>
+<td>Root storage allegati</td>
+</tr>
+<tr>
+<td><code>EMAIL_ATTACHMENT_MAX_SIZE_MB</code></td>
+<td><code>10</code></td>
+<td>Dimensione massima allegato in MB</td>
+</tr>
+<tr>
+<td><code>EMAIL_ATTACHMENT_MAX_COUNT</code></td>
+<td><code>10</code></td>
+<td>Numero massimo allegati per email</td>
+</tr>
+<tr>
+<td><code>FRONTEND_URL</code></td>
+<td>obbligatoria, nessun default (l'ingresso Nginx, es. <code>https://backend-dev.tailXXXX.ts.net</code>)</td>
+<td>Base URL per link nelle email (reset, invito, attivazione)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="endpoint-api">Endpoint API<a class="headerlink" href="#endpoint-api" title="Permanent link">&para;</a></h2>
+<h3 id="admin-amm-software">Admin (Amm. Software)<a class="headerlink" href="#admin-amm-software" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metodo</th>
+<th>Endpoint</th>
+<th>Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET/POST</td>
+<td><code>/api/v1/amm-software/email-accounts/</code></td>
+<td>Lista e crea account SMTP</td>
+</tr>
+<tr>
+<td>GET/PATCH/DELETE</td>
+<td><code>/api/v1/amm-software/email-accounts/{id}/</code></td>
+<td>Dettaglio, modifica, elimina</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/v1/amm-software/email-accounts/{id}/test/</code></td>
+<td>Test connessione SMTP</td>
+</tr>
+<tr>
+<td>GET/POST</td>
+<td><code>/api/v1/amm-software/email-templates/</code></td>
+<td>Lista e crea template</td>
+</tr>
+<tr>
+<td>GET/PATCH/DELETE</td>
+<td><code>/api/v1/amm-software/email-templates/{id}/</code></td>
+<td>Dettaglio, modifica, elimina</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/v1/amm-software/email-templates/{id}/preview/</code></td>
+<td>Preview template renderizzato</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/v1/amm-software/email-log/</code></td>
+<td>Consultazione log (admin vede tutto)</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/v1/amm-software/email-log/{id}/</code></td>
+<td>Dettaglio email inviata</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operatore">Operatore<a class="headerlink" href="#operatore" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metodo</th>
+<th>Endpoint</th>
+<th>Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/v1/core/email/prepare/</code></td>
+<td>Prepara bozza da template</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/v1/core/email/outbox/</code></td>
+<td>Lista bozze</td>
+</tr>
+<tr>
+<td>GET/PATCH</td>
+<td><code>/api/v1/core/email/outbox/{id}/</code></td>
+<td>Dettaglio e modifica bozza</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/v1/core/email/outbox/{id}/send/</code></td>
+<td>Conferma e invia</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/v1/core/email/outbox/{id}/cancel/</code></td>
+<td>Annulla bozza</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/v1/core/email/outbox/{id}/allegati/</code></td>
+<td>Upload allegato</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/v1/core/email/outbox/{id}/allegati/list/</code></td>
+<td>Lista allegati</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/api/v1/core/email/allegati/{id}/</code></td>
+<td>Elimina allegato</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/v1/core/email/allegati/{id}/download/</code></td>
+<td>Download allegato</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/v1/core/email/log/</code></td>
+<td>Consultazione log operatore</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="file-python">File Python<a class="headerlink" href="#file-python" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apps/core/services/crypto_service.py</code></td>
+<td>Fernet encrypt/decrypt per password SMTP</td>
+</tr>
+<tr>
+<td><code>apps/core/db/email_repository.py</code></td>
+<td>Repository: CRUD 5 tabelle + fn_resolve</td>
+</tr>
+<tr>
+<td><code>apps/core/services/email_service.py</code></td>
+<td>EmailDispatchService: resolve, render, send</td>
+</tr>
+<tr>
+<td><code>apps/core/services/email_outbox_service.py</code></td>
+<td>EmailOutboxService: bozze, allegati, conferma</td>
+</tr>
+<tr>
+<td><code>apps/amm_software/api/email_views.py</code></td>
+<td>API admin (account, template, log)</td>
+</tr>
+<tr>
+<td><code>apps/core/api/email_views.py</code></td>
+<td>API operatore (outbox, allegati, log)</td>
+</tr>
+<tr>
+<td><code>apps/core/management/commands/send_pending_emails.py</code></td>
+<td>Command coda email</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div style="text-align: center; margin-top: 2rem;">
+  <img src="/assets/images/zeroerp-logo.png" alt="Zero ERP" width="80">
+  <br>
+  <strong>&copy; 2025-2026 Zero ERP</strong> <em><strong>&bull; powered by Tid &bull;</strong></em>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.indexes"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiato","clipboard.copy":"Copia","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 altro in questa pagina","search.result.more.other":"# altri in questa pagina","search.result.none":"Nessun documento trovato","search.result.one":"1 documento trovato","search.result.other":"# documenti trovati","search.result.placeholder":"Scrivi per iniziare a cercare","search.result.term.missing":"Non presente","select.version":"Seleziona la versione"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

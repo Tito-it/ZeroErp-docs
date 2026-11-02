@@ -1,0 +1,7852 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="prev" href="../tx_id_implementation_guide/">
+      
+      
+        <link rel="next" href="../audit-e-tracciabilita/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Storicizzazione Tabelle - Zero ERP Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Vai al contenuto
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../.." title="Zero ERP Documentation" class="md-header__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigazione</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Storicizzazione Tabelle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Cerca</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Cerca">
+  <button type="button" class="md-search__button">
+    Cerca
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manifesto/" class="md-tabs__link">
+          
+  
+  Visione e Filosofia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installazione/" class="md-tabs__link">
+          
+  
+  Installazione
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architettura/" class="md-tabs__link">
+          
+  
+  Architettura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/" class="md-tabs__link">
+          
+  
+  DB Zero
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../backend/" class="md-tabs__link">
+          
+  
+  Backend (Django)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../soggetti-e-ruoli-anagrafici/" class="md-tabs__link">
+          
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/framework-automazione-db/" class="md-tabs__link">
+          
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/tools/gen_db_docs/" class="md-tabs__link">
+          
+  
+  Strumenti
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/sicurezza-e-qualita-statica/" class="md-tabs__link">
+          
+  
+  Qualità
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/api/" class="md-tabs__link">
+          
+  
+  Sviluppatori
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossario/glossario-utility/" class="md-tabs__link">
+          
+  
+  Glossario
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zero ERP Documentation" class="md-nav__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Zero ERP Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visione e Filosofia
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Visione e Filosofia
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manifesto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sviluppo-concentrico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppo Concentrico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduzione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cos’è Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perche-zeroerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Perchè Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Installazione
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Installazione
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Prerequisiti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurazione-iniziale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Preparare ZeroERP all'uso
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE-AGPL3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Licenza
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Architettura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architettura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura a colpo d'occhio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../liquibase-setup-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liquibase Setup & Workflow
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida SQL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida Trigger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Db PostgresSQL
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Db PostgresSQL
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Panoramica
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/aggiornamento-versione-postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aggiornamento versione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/parametri-personalizzati-(GUC)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Parametri personalizzati (GUC)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4_4" id="__nav_4_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estensioni
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Estensioni
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/estensioni-utilizzate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Utilizzate
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/dblink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  dblink
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgAgent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgAgent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgcrypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgcrypto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DB Zero
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  DB Zero
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Schemi
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Schemi
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/dbops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dbops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/public/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Public
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend (Django)
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend (Django)
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aree
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Aree
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ai-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ai Assistant
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/amm-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Amm. Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/contabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contabilita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guide
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guide
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Come funziona ZeroErp
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Come funziona ZeroErp
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soggetti-e-ruoli-anagrafici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Soggetti e ruoli anagrafici
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generazione-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generazione di un cliente
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-degli-indirizzi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione degli indirizzi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-contatti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei contatti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-conti-bancari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione conti bancari
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche-configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche — Configurazione e opzioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-commesse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione commesse
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-delle-istanze-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione delle Istanze Utility
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-listini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione listini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-preventivi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione preventivi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-offerte-commerciali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione offerte commerciali
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-contratti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione contratti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ordini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ordini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ddt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ddt
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fatturazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cruscotti-fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cruscotti fatturazione (le tre lenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../termini-di-pagamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Termini di pagamento
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenti-e-stampe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti e stampe
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-mail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione mail
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrazione-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Integrazione Ai
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risorse-umane-e-accessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Risorse Umane e Accessi al Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-liste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e responsività delle liste
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numerazione-documenti-e-codici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sistema numerazione generico per codici e documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iva-risolutore-di-riga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il risolutore IVA di riga
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modello-documento-di-vendita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il modello del documento di vendita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sicurezza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza di ZeroErp
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Approfondimenti tecnici
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Approfondimenti tecnici
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-permessi-e-autorizzazioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura Permessi e Autorizzazioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-multi-face-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura multi face auth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contratto-guc-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contratto GUC APP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tx_id_implementation_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Implementazione Transaction ID
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storicizzazione Tabelle
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storicizzazione Tabelle
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduzione
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-modello-in-sintesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il modello in sintesi
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struttura-standard-delle-tabelle-di-storico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Struttura standard delle tabelle di storico
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#di-chi-e-una-versione-lo-scope-congelato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Di chi è una versione — lo scope congelato
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Di chi è una versione — lo scope congelato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosa-sta-dentro-lo-schema-storico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa sta dentro lo schema <code>storico</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perche-jsonb-per-il-campo-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Perche JSONB per il campo <code>snapshot</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-colonna-storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La colonna <code>storicizza</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La colonna storicizza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelle-registrate-storicizzazione-permanente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabelle registrate (storicizzazione permanente)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabelle-non-registrate-storicizzazione-one-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabelle non registrate (storicizzazione one-shot)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controllo-per-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Controllo per-record
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabella-di-configurazione-storico_set_storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabella di configurazione: <code>storico_set_storicizza</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-function-trgfn_storico_generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trigger function: <code>trgfn_storico_generic</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger function: trgfn_storico_generic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-0-configurazione-e-controllo-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 0 — Configurazione e controllo flag
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-1-recupero-id-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 1 — Recupero ID record
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-2-creazione-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 2 — Creazione snapshot
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-3-chiusura-snapshot-aperti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 3 — Chiusura snapshot aperti
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-4-inserimento-nuovi-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 4 — Inserimento nuovi snapshot
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-5-reset-flag-storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 5 — Reset flag storicizza
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestione-errori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Gestione errori
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-di-consultazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Funzioni di consultazione
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni di consultazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fn_get_snapshot_as_of-snapshot-a-una-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fn_get_snapshot_as_of</code> — snapshot a una data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fn_get_record_id_as_of-id-record-storico-a-una-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fn_get_record_id_as_of</code> — ID record storico a una data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Provisioning automatico
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisioning automatico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-tabelle-fn_run_automations_storico_provision" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Provisioning tabelle: <code>fn_run_automations_storico_provision</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-ddl-fn_ensure_storico_table" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creazione DDL: <code>fn_ensure_storico_table</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-trigger-fn_run_automations_storico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Provisioning trigger: <code>fn_run_automations_storico</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-di-manutenzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Procedure di manutenzione
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procedure di manutenzione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sincronizzazione-catalogo-proc_sync_storico_set_storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sincronizzazione catalogo: <code>proc_sync_storico_set_storicizza</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applicazione-default-proc_apply_storicizza_defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Applicazione default: <code>proc_apply_storicizza_defaults</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-operativo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso operativo completo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regole-di-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Regole di dominio
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best practice
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrammi-er" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Diagrammi ER
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrammi ER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modello-di-storicizzazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modello di storicizzazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-di-automazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Framework di automazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-tecnica-esempi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Area tecnica — esempi
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Area tecnica — esempi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leggere-uno-snapshot-a-una-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Leggere uno snapshot a una data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit-e-tracciabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit e tracciabilità
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operazioni-che-non-si-ripetono/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Le operazioni che non si ripetono (Idempotency-Key)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presidi-e-registri-del-debito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Presidi e registri del debito
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sorgente-polimorfa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sorgente polimorfa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riclassificazione-vie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Riclassificazione vie
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-di-obsoleto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Mandare in pensione una voce di catalogo (obsoleto_dal)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-e-gestione-parametri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e gestione parametri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-automatici-classe-e-identita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  I lavori automatici (natura e identità)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-code-di-lavoro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione code di lavoro
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-pgagent-funzionali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi-pgagent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistiche-del-planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Statistiche del planner
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-che-resta-veloce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Un database che resta veloce
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_19" id="__nav_7_2_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Log
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_19_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Log
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messaggi-di-Errore-e-Generazione-Log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Errore
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaggi-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Audit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analisi-tracciamento-processi-e-job/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi e Job
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tutorial
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tutorial
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/framework-automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Framework automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Strumenti
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Strumenti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/tools/gen_db_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generatore Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Qualità
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/sicurezza-e-qualita-statica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza e qualità statica (gli strumenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-be-fe-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità BE/FE (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-db-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità del database (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppatori
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Sviluppatori
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ricette-dove-intervenire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ricette (dove intervenire)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/trappole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Trappole (cosa non fare)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/Policy-ricerca-e-paginazione(API-DB)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy ricerca e paginazione (API/DB)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/standard-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard delle guide (come si scrive)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_6" id="__nav_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Frontend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Frontend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard frontend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/catalogo-building-block-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block FE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7" id="__nav_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Server
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Server
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_1" id="__nav_11_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/backend-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guida backend-dev
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/play-book-operativo-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Playbook operativo backend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/servizi-zeroerp-comandi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Servizi ZeroERP (comandi)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/catalogo-building-block-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block BE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/piano-solidita-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Piano solidità Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/provisioning-db-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Provisioning ruoli DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/gunicorn-dev-autoreload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gunicorn dev autoreload
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/checklist-post-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Checklist post upgrade
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/configurazione-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_2" id="__nav_11_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/db/dbdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VM dbdev (PostgreSQL)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_3" id="__nav_11_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Infrastruttura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Infrastruttura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/infra/proxmox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Proxmox
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_4" id="__nav_11_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workstation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Workstation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/workstation-dev/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vm wrk1-dev (ubuntu)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GitHub
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  GitHub
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/github/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Glossario
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/glossario-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario di dominio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/devops%26db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dev&Ops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/process-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Process Analysis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduzione
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-modello-in-sintesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il modello in sintesi
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struttura-standard-delle-tabelle-di-storico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Struttura standard delle tabelle di storico
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#di-chi-e-una-versione-lo-scope-congelato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Di chi è una versione — lo scope congelato
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Di chi è una versione — lo scope congelato">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cosa-sta-dentro-lo-schema-storico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa sta dentro lo schema <code>storico</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perche-jsonb-per-il-campo-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Perche JSONB per il campo <code>snapshot</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-colonna-storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La colonna <code>storicizza</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La colonna storicizza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabelle-registrate-storicizzazione-permanente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabelle registrate (storicizzazione permanente)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabelle-non-registrate-storicizzazione-one-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabelle non registrate (storicizzazione one-shot)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controllo-per-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Controllo per-record
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabella-di-configurazione-storico_set_storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tabella di configurazione: <code>storico_set_storicizza</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-function-trgfn_storico_generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trigger function: <code>trgfn_storico_generic</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger function: trgfn_storico_generic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-0-configurazione-e-controllo-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 0 — Configurazione e controllo flag
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-1-recupero-id-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 1 — Recupero ID record
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-2-creazione-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 2 — Creazione snapshot
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-3-chiusura-snapshot-aperti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 3 — Chiusura snapshot aperti
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-4-inserimento-nuovi-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 4 — Inserimento nuovi snapshot
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-5-reset-flag-storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fase 5 — Reset flag storicizza
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestione-errori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Gestione errori
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-di-consultazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Funzioni di consultazione
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funzioni di consultazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fn_get_snapshot_as_of-snapshot-a-una-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fn_get_snapshot_as_of</code> — snapshot a una data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fn_get_record_id_as_of-id-record-storico-a-una-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>fn_get_record_id_as_of</code> — ID record storico a una data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-automatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Provisioning automatico
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisioning automatico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-tabelle-fn_run_automations_storico_provision" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Provisioning tabelle: <code>fn_run_automations_storico_provision</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-ddl-fn_ensure_storico_table" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Creazione DDL: <code>fn_ensure_storico_table</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-trigger-fn_run_automations_storico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Provisioning trigger: <code>fn_run_automations_storico</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-di-manutenzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Procedure di manutenzione
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procedure di manutenzione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sincronizzazione-catalogo-proc_sync_storico_set_storicizza" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sincronizzazione catalogo: <code>proc_sync_storico_set_storicizza</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applicazione-default-proc_apply_storicizza_defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Applicazione default: <code>proc_apply_storicizza_defaults</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-operativo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso operativo completo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regole-di-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Regole di dominio
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best practice
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrammi-er" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Diagrammi ER
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrammi ER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modello-di-storicizzazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modello di storicizzazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-di-automazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Framework di automazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-tecnica-esempi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Area tecnica — esempi
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Area tecnica — esempi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leggere-uno-snapshot-a-una-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Leggere uno snapshot a una data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="guida-storicizzazione-delle-tabelle">Guida — Storicizzazione delle Tabelle<a class="headerlink" href="#guida-storicizzazione-delle-tabelle" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Ultimo aggiornamento</strong>: 19 settembre 2026</p>
+<p><strong>Destinatari</strong>: sviluppatori database e backend</p>
+<p><strong>Vedi anche</strong> — schemi DB:</p>
+<ul>
+<li><code>storico.&lt;nome_tabella&gt;</code> — una tabella di storico per ogni tabella operativa storicizzata</li>
+<li><a href="../../dbzero/config/tabelle/storico_set_storicizza/">config.storico_set_storicizza</a> — il registro delle tabelle con storicizzazione permanente</li>
+<li><a href="../../dbzero/dbops/manual/storico_scope_policy/">dbops.storico_scope_policy</a> — la mappa da cui si ricava l'emittente di una versione</li>
+<li><a href="../../dbzero/dbops/manual/vw_storico_scope_da_dichiarare/">dbops.vw_storico_scope_da_dichiarare</a> — il debito della mappa: deve restare vuota</li>
+</ul>
+<p><strong>Vedi anche</strong> — funzioni e trigger DB:</p>
+<ul>
+<li><a href="../../dbzero/script/funzioni/trgfn_storico_generic/">script.trgfn_storico_generic</a> — il trigger generico BEFORE UPDATE/DELETE</li>
+<li><a href="../../dbzero/script/funzioni/fn_get_snapshot_as_of/">script.fn_get_snapshot_as_of</a> — lo snapshot JSONB a una data</li>
+<li><a href="../../dbzero/script/funzioni/fn_get_record_id_as_of/">script.fn_get_record_id_as_of</a> — l'ID del record storico a una data</li>
+<li><a href="../../dbzero/dbops/funzioni/fn_ensure_storico_table/">dbops.fn_ensure_storico_table</a> — il provisioning idempotente di una tabella</li>
+<li><a href="../../dbzero/dbops/manual/fn_storico_arma_scope/">dbops.fn_storico_arma_scope</a> / <a href="../../dbzero/dbops/manual/fn_storico_backfill_scope/">dbops.fn_storico_backfill_scope</a> — arma lo scope e converte il pregresso</li>
+<li><a href="../../dbzero/dbops/funzioni/fn_run_automations_storico/">dbops.fn_run_automations_storico</a> / <a href="../../dbzero/dbops/funzioni/fn_run_automations_storico_provision/">dbops.fn_run_automations_storico_provision</a> — creazione dei trigger e delle tabelle</li>
+<li><a href="../../dbzero/maintenance/funzioni/proc_sync_storico_set_storicizza/">maintenance.proc_sync_storico_set_storicizza</a> / <a href="../../dbzero/maintenance/funzioni/proc_apply_storicizza_defaults/">maintenance.proc_apply_storicizza_defaults</a> — sincronizzazione del catalogo e applicazione dei default</li>
+</ul>
+<p><strong>Vedi anche</strong> — guide correlate:</p>
+<ul>
+<li><a href=".././automazione-db/">Guida Automazione DB</a> — il framework che orchestra provisioning e manutenzione</li>
+<li><a href=".././audit-e-tracciabilita/">Audit e tracciabilità</a> — chi ha modificato la riga, e quando</li>
+<li><a href=".././tx_id_implementation_guide/">Guida Transaction ID</a> — la correlazione transazionale degli snapshot</li>
+<li><a href=".././processi-automatici-classe-e-identita/">I lavori automatici: che natura hanno e per conto di chi girano</a> — il registro dei lavori a orario</li>
+<li><a href="../../linee-guida-sql/">Linee Guida SQL</a> — convenzioni DDL e trigger</li>
+<li><a href="../../dev/backend/provisioning-db-roles/">Provisioning ruoli DB</a> — il passaggio da superuser sulle shadow</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="introduzione">Introduzione<a class="headerlink" href="#introduzione" title="Permanent link">&para;</a></h2>
+<p>Questa guida descrive il sistema di storicizzazione (versioning) delle tabelle in Zero
+ERP: come vengono registrate le modifiche, come si consultano gli snapshot storici e
+come funziona il provisioning automatico delle tabelle e dei trigger nello schema
+<code>storico</code>.</p>
+<p>In un ERP che gestisce anagrafiche, contratti, fatture e documenti fiscali, poter ricostruire lo stato di un record a una data specifica e un requisito fondamentale. La storicizzazione in Zero ERP risponde a questa esigenza con un modello unificato basato su snapshot JSONB.</p>
+<p>Ogni volta che un record viene modificato o cancellato, il trigger di storico cattura l'intero stato del record come oggetto JSONB e lo inserisce nella tabella corrispondente nello schema <code>storico</code>. Il risultato e una catena di snapshot con intervalli di validita (<code>valid_from</code> / <code>valid_to</code>) che permette di navigare la storia completa di qualsiasi entita.</p>
+<p>Il modello e completamente automatizzato: il framework di automazione DB crea sia le tabelle di storico sia i trigger necessari, senza intervento manuale.</p>
+<p><strong>Cosa troverai in questa guida:</strong></p>
+<ul>
+<li>La struttura standard delle tabelle di storico</li>
+<li>La colonna <code>storicizza</code> e il suo ciclo di vita</li>
+<li>Il trigger generico <code>trgfn_storico_generic</code> e il suo flusso dettagliato</li>
+<li>Le funzioni di consultazione snapshot</li>
+<li>Il provisioning automatico e le procedure di manutenzione</li>
+<li>La tabella di configurazione <code>storico_set_storicizza</code></li>
+</ul>
+<hr />
+<h2 id="il-modello-in-sintesi">Il modello in sintesi<a class="headerlink" href="#il-modello-in-sintesi" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Schema operativo (es. anagrafiche)
+└── soggetti                        -- tabella operativa
+    ├── colonna storicizza BOOLEAN  -- flag per-record (default true se configurato)
+    └── trigger trg_soggetti_z90_storico_upd_dlt
+        └── BEFORE UPDATE OR DELETE → script.trgfn_storico_generic('soggetto_id')
+
+Schema storico
+└── soggetti                        -- tabella di storico (stesso nome, schema diverso)
+    ├── id BIGSERIAL PK             -- PK indipendente dalla tabella operativa
+    ├── soggetto_id (FK logica)     -- riferimento al record operativo
+    ├── valid_from / valid_to       -- intervallo di validita dello snapshot
+    ├── snapshot JSONB              -- stato completo del record al momento dell'evento
+    ├── tipo_operazione SMALLINT    -- 1=iniziale, 2=UPDATE, 3=DELETE
+    ├── change_type CHAR(1)         -- classificazione rapida A/U/D
+    └── tx_id UUID                  -- correlazione transazionale
+
+config
+└── storico_set_storicizza          -- registro tabelle con storicizza permanente
+
+dbops
+├── automation_rules_tbl            -- regole STORICO e STORICO_PROVISION
+├── fn_run_automations_storico()    -- provisioning trigger
+├── fn_run_automations_storico_provision()  -- provisioning tabelle
+└── fn_ensure_storico_table()       -- creazione DDL idempotente
+</code></pre></div>
+<hr />
+<h2 id="struttura-standard-delle-tabelle-di-storico">Struttura standard delle tabelle di storico<a class="headerlink" href="#struttura-standard-delle-tabelle-di-storico" title="Permanent link">&para;</a></h2>
+<p>Ogni tabella nello schema <code>storico</code> segue una struttura rigida, creata automaticamente da <code>fn_ensure_storico_table</code>. Il campo <code>snapshot</code> JSONB contiene l'intero record serializzato, rendendo la tabella di storico indipendente dalle evoluzioni di schema della tabella operativa.</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Colonna</th>
+<th>Tipo</th>
+<th style="text-align: center;">Nullable</th>
+<th>Default</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>BIGSERIAL, PK</td>
+<td style="text-align: center;">no</td>
+<td>auto</td>
+<td>PK indipendente dalla tabella operativa</td>
+</tr>
+<tr>
+<td><code>&lt;entita&gt;_id</code></td>
+<td>stesso tipo della PK operativa</td>
+<td style="text-align: center;">no</td>
+<td>—</td>
+<td>Riferimento al record originale (FK logica, senza constraint)</td>
+</tr>
+<tr>
+<td><code>valid_from</code></td>
+<td>TIMESTAMPTZ</td>
+<td style="text-align: center;">no</td>
+<td><code>now()</code></td>
+<td>Inizio validita dello snapshot</td>
+</tr>
+<tr>
+<td><code>valid_to</code></td>
+<td>TIMESTAMPTZ</td>
+<td style="text-align: center;">si</td>
+<td>—</td>
+<td>Fine validita (NULL = snapshot corrente aperto)</td>
+</tr>
+<tr>
+<td><code>snapshot</code></td>
+<td>JSONB</td>
+<td style="text-align: center;">si</td>
+<td>—</td>
+<td>Stato completo del record al momento dell'evento</td>
+</tr>
+<tr>
+<td><code>tipo_operazione</code></td>
+<td>SMALLINT</td>
+<td style="text-align: center;">si</td>
+<td>—</td>
+<td>1=snapshot iniziale, 2=UPDATE, 3=DELETE</td>
+</tr>
+<tr>
+<td><code>change_type</code></td>
+<td>CHAR(1)</td>
+<td style="text-align: center;">si</td>
+<td><code>'A'</code></td>
+<td>Classificazione rapida: A (add), U (update), D (delete)</td>
+</tr>
+<tr>
+<td><code>user_insert</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">no</td>
+<td><code>CURRENT_USER</code></td>
+<td>Utente che ha generato lo snapshot</td>
+</tr>
+<tr>
+<td><code>data_insert</code></td>
+<td>TIMESTAMPTZ</td>
+<td style="text-align: center;">no</td>
+<td><code>now()</code></td>
+<td>Timestamp di creazione dello snapshot</td>
+</tr>
+<tr>
+<td><code>tx_id</code></td>
+<td>UUID</td>
+<td style="text-align: center;">si</td>
+<td>—</td>
+<td>Transaction ID (gestito da <code>trgfn_tx_id_managed</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Indici creati automaticamente:</strong></p>
+<ul>
+<li><code>ix_&lt;tabella&gt;_&lt;fk_col&gt;_fk</code> — indice sulla colonna FK per ricerche per record operativo</li>
+<li><code>ix_&lt;tabella&gt;_snapshot_gin</code> — indice GIN su snapshot (opzionale, se <code>create_gin_index=true</code>)</li>
+</ul>
+<p><strong>FK non creata intenzionalmente:</strong> la colonna <code>&lt;entita&gt;_id</code> non ha un vincolo FOREIGN KEY verso la tabella operativa. Questa scelta e deliberata per evitare che le operazioni di DELETE sulla tabella operativa vengano bloccate o richiedano CASCADE sulla tabella di storico.</p>
+<hr />
+<h2 id="di-chi-e-una-versione-lo-scope-congelato">Di chi è una versione — lo scope congelato<a class="headerlink" href="#di-chi-e-una-versione-lo-scope-congelato" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>⭐ <strong>La storia di una riga protetta è la stessa informazione della riga.</strong> Se una
+fattura si può vedere solo da certi operatori, lo stesso vale per ogni sua versione
+precedente. Per questo ogni tabella di storico porta con sé l'emittente <strong>congelato</strong>
+al momento in cui la riga è stata fotografata.</p>
+</blockquote>
+<p>Il disegno, in breve:</p>
+<ul>
+<li>ogni tabella di storico ha una colonna <strong><code>scope_emittente_fiscale_id</code></strong>, scritta dal
+  trigger <strong>nel momento in cui fotografa la riga</strong> e mai più ricalcolata — <em>un archivio
+  che cambia col presente non è un archivio</em>;</li>
+<li>ha anche <strong><code>origine_schema</code></strong>: il nome della tabella di storico è il nome nudo della
+  tabella madre, e <code>acquisti.ddt</code> e <code>vendite.ddt</code> scrivono nella stessa <code>storico.ddt</code> —
+  senza lo schema le due storie si mescolano;</li>
+<li><strong>da dove</strong> si prende l'emittente lo dice una mappa, non il codice:
+  <a href="../../dbzero/dbops/manual/storico_scope_policy/">dbops.storico_scope_policy</a> — una
+  riga per tabella storicizzata, con cinque modi (colonna in riga, soggetto-ruolo,
+  risalita al padre, billing account, nessuno). La legge
+  <a href="../../dbzero/dbops/manual/fn_storico_risolvi_scope/">dbops.fn_storico_risolvi_scope</a>;</li>
+<li>una sola regola di lettura, per l'operatore, sulla colonna congelata;</li>
+<li>se il padre di un satellite <strong>non è più vivo</strong> — succede in ogni <code>DELETE</code> a
+  cascata, dove il padre sparisce prima che il figlio scriva la sua versione
+  finale — l'emittente si legge dall'<strong>ultima versione del padre nello storico</strong>:
+  leggere l'archivio del padre è leggere il passato, non il presente.</li>
+</ul>
+<p>Le tabelle nuove nascono <strong>già armate</strong> dal generatore: lo scope si dichiara nella mappa
+(<a href="../../dbzero/dbops/manual/fn_storico_arma_scope/">dbops.fn_storico_arma_scope</a>) e il
+provisioning fa il resto. Il pregresso si converte con il backfill
+(<a href="../../dbzero/dbops/manual/fn_storico_backfill_scope/">dbops.fn_storico_backfill_scope</a>), e
+l'applicazione non cancella mai una versione: è un privilegio, non una convenzione.</p>
+<p><strong>Le tabelle di storico sono del proprietario.</strong> I lavori notturni girano come il
+proprietario del database, quindi le tabelle di storico che creano nascono sue, come
+tutto il resto, e le migrazioni possono modificarle. Se in un database qualcuno ne ha
+create da amministratore, <code>scripts/sql/provision_storico_scope.sql</code> le riporta al
+proprietario e le completa. Dettagli in <a href="../../dev/backend/provisioning-db-roles/">Provisioning ruoli DB</a>.</p>
+<p>Controlli: <code>db/pgtap/dbops/test-storico-scope-policy-v1.sql</code> (la mappa) e
+<code>db/pgtap/storico/test-storico-scope-congelato-v1.sql</code> (colonne, policy,
+congelamento, collisione fra omonime, cancellazione a cascata, lettura per
+operatore, privilegi, proprietario delle shadow).</p>
+<h3 id="cosa-sta-dentro-lo-schema-storico">Cosa sta dentro lo schema <code>storico</code><a class="headerlink" href="#cosa-sta-dentro-lo-schema-storico" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>La shadow è di chi possiede la madre.</strong> Il generatore, creata e armata una
+  tabella di storico, la <strong>cede al proprietario della madre</strong>: chiunque l'abbia
+  creata, resta del proprietario, e le migrazioni non la saltano. Dettagli in
+  <a href="../../dbzero/dbops/manual/fn_ensure_storico_table/">dbops.fn_ensure_storico_table</a>.</li>
+<li><strong>Il debito della mappa si vede anche fuori dalla CI.</strong>
+  <a href="../../dbzero/dbops/manual/vw_storico_scope_da_dichiarare/">dbops.vw_storico_scope_da_dichiarare</a>
+  porta nel digest settimanale i tre motivi che il controllo asserisce in CI: una
+  madre col trigger senza riga di mappa, una madre in RLS dichiarata <code>NESSUNO</code>, una
+  riga di mappa senza più madre. Deve restare vuota.</li>
+<li><strong>Non tutto ciò che sta in <code>storico</code> è una shadow.</strong> <code>comune_trasformazioni</code> e
+  <code>stradario_trasformazioni</code> sono i <strong>registri delle fusioni</strong> di comuni e vie
+  (scritti da <code>fn_admin_merge_*</code>, letti da <code>fn_get_vie_discendenti</code>): non hanno una
+  madre, non hanno il trigger e non entrano nella mappa. Una shadow orfana — una
+  tabella di storico la cui madre non esiste più — non è ammessa: va cancellata, e
+  con lei i suoi resti (trigger rimasti sul nome vecchio, righe di mappa,
+  <code>audit_sources</code>, <code>storico_set_storicizza</code>). Una <code>storicizza = true</code> dimenticata su
+  una tabella dismessa la farebbe ri-armare a ogni <code>ci_apply</code>.</li>
+<li>⚠️ <strong>L'ordine delle migrazioni non è un dettaglio.</strong> Il <code>DROP</code> di una tabella legacy
+  sta in <code>90_end</code>, non in <code>00_schema</code>: un changeSet di <code>90_end</code> può pretendere che
+  quella tabella esista ancora, e su un database ricostruito da zero <code>90_end</code> gira
+  <strong>dopo</strong> tutto <code>00_schema</code>. Anticipare il <code>DROP</code> lo farebbe fallire.</li>
+</ul>
+<hr />
+<h2 id="perche-jsonb-per-il-campo-snapshot">Perche JSONB per il campo <code>snapshot</code><a class="headerlink" href="#perche-jsonb-per-il-campo-snapshot" title="Permanent link">&para;</a></h2>
+<p>La scelta di usare JSONB per memorizzare lo stato del record, invece di replicare tutte le colonne della tabella operativa, ha tre motivazioni:</p>
+<ol>
+<li>
+<p><strong>Evoluzione dello schema</strong>: aggiunta o rimozione di colonne nella tabella sorgente non richiede modifiche alla tabella di storico. Lo snapshot cattura sempre tutti i campi presenti al momento dell'evento.</p>
+</li>
+<li>
+<p><strong>Integrita dei dati</strong>: garantisce che ogni snapshot rifletta esattamente lo stato dell'intero record, senza omissioni ne disallineamenti.</p>
+</li>
+<li>
+<p><strong>Query ad hoc</strong>: permette estrazioni puntuali con funzioni JSON SQL (es. <code>snapshot-&gt;&gt;'codice_fiscale'</code>).</p>
+</li>
+</ol>
+<p><strong>Trade-off:</strong></p>
+<ul>
+<li>Maggiore occupazione di spazio rispetto a colonne tipizzate</li>
+<li>Possibili impatti di performance per query su JSONB, mitigabili con indice GIN</li>
+</ul>
+<hr />
+<h2 id="la-colonna-storicizza">La colonna <code>storicizza</code><a class="headerlink" href="#la-colonna-storicizza" title="Permanent link">&para;</a></h2>
+<p>Ogni tabella operativa che partecipa alla storicizzazione ha una colonna <code>storicizza</code> di tipo <code>BOOLEAN</code>. Questa colonna controlla se il singolo record deve essere storicizzato al prossimo UPDATE o DELETE.</p>
+<p>Il comportamento dipende dalla registrazione della tabella in <code>config.storico_set_storicizza</code>:</p>
+<h3 id="tabelle-registrate-storicizzazione-permanente">Tabelle registrate (storicizzazione permanente)<a class="headerlink" href="#tabelle-registrate-storicizzazione-permanente" title="Permanent link">&para;</a></h3>
+<p>Se la tabella e presente in <code>storico_set_storicizza</code>, il flag <code>storicizza</code> non viene resettato dopo l'UPDATE. Il record continua a essere storicizzato a ogni modifica successiva. Questo e il comportamento standard per le tabelle anagrafiche e di configurazione.</p>
+<h3 id="tabelle-non-registrate-storicizzazione-one-shot">Tabelle non registrate (storicizzazione one-shot)<a class="headerlink" href="#tabelle-non-registrate-storicizzazione-one-shot" title="Permanent link">&para;</a></h3>
+<p>Se la tabella non e presente in <code>storico_set_storicizza</code>, dopo ogni UPDATE il trigger resetta <code>storicizza = FALSE</code>. Il record viene storicizzato una sola volta, poi richiede un'impostazione esplicita per essere storicizzato di nuovo. Utile per tabelle ad alto volume dove si vuole storicizzare solo su richiesta.</p>
+<h3 id="controllo-per-record">Controllo per-record<a class="headerlink" href="#controllo-per-record" title="Permanent link">&para;</a></h3>
+<p>Se <code>storicizza = FALSE</code> al momento dell'UPDATE o DELETE, il trigger non genera alcuno snapshot e restituisce il record senza modifiche. Questo permette di escludere singoli record dalla storicizzazione.</p>
+<hr />
+<h2 id="tabella-di-configurazione-storico_set_storicizza">Tabella di configurazione: <code>storico_set_storicizza</code><a class="headerlink" href="#tabella-di-configurazione-storico_set_storicizza" title="Permanent link">&para;</a></h2>
+<p>Questa tabella nello schema <code>config</code> registra le tabelle operative che devono mantenere il flag <code>storicizza</code> sempre attivo (non resettato dal trigger).</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Colonna</th>
+<th>Tipo</th>
+<th style="text-align: center;">Nullable</th>
+<th>Default</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>table_name</code></td>
+<td>TEXT, PK</td>
+<td style="text-align: center;">no</td>
+<td>—</td>
+<td>Nome della tabella operativa (senza schema)</td>
+</tr>
+<tr>
+<td><code>insert_manuale</code></td>
+<td>BOOLEAN</td>
+<td style="text-align: center;">no</td>
+<td>true</td>
+<td><code>true</code> = inserita manualmente, <code>false</code> = rilevata automaticamente</td>
+</tr>
+<tr>
+<td><code>data_insert</code></td>
+<td>TIMESTAMPTZ</td>
+<td style="text-align: center;">no</td>
+<td><code>now()</code></td>
+<td>Timestamp inserimento</td>
+</tr>
+<tr>
+<td><code>user_insert</code></td>
+<td>TEXT</td>
+<td style="text-align: center;">no</td>
+<td><code>CURRENT_USER</code></td>
+<td>Utente inserimento</td>
+</tr>
+</tbody>
+</table>
+<p>La procedura <code>proc_sync_storico_set_storicizza</code> popola automaticamente questa tabella rilevando dal catalogo PostgreSQL tutte le tabelle con colonna <code>storicizza</code> che hanno DEFAULT <code>true</code>. I record inseriti automaticamente hanno <code>insert_manuale = false</code>.</p>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/config/tabelle/storico_set_storicizza/">config.storico_set_storicizza</a></p>
+</blockquote>
+<hr />
+<h2 id="trigger-function-trgfn_storico_generic">Trigger function: <code>trgfn_storico_generic</code><a class="headerlink" href="#trigger-function-trgfn_storico_generic" title="Permanent link">&para;</a></h2>
+<p>Questa e la trigger function centrale del sistema di storicizzazione. Viene eseguita <code>BEFORE UPDATE OR DELETE</code> su ogni tabella storicizzata. Gestisce la chiusura degli snapshot precedenti, la creazione di nuovi snapshot e il reset opzionale del flag <code>storicizza</code>.</p>
+<p>Da un punto di vista tecnico:</p>
+<p><strong>Parametri (via <code>TG_ARGV</code>):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TG_ARGV&#91;0&#93;</code></td>
+<td>TEXT</td>
+<td>Nome della colonna FK nella tabella storica (es. <code>'soggetto_id'</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flusso di esecuzione completo:</strong></p>
+<h3 id="fase-0-configurazione-e-controllo-flag">Fase 0 — Configurazione e controllo flag<a class="headerlink" href="#fase-0-configurazione-e-controllo-flag" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Verifica se la tabella e registrata in <code>config.storico_set_storicizza</code><ul>
+<li>Se presente: <code>v_should_reset = FALSE</code> (non resettare il flag)</li>
+<li>Se assente: <code>v_should_reset = TRUE</code> (resettare dopo l'UPDATE)</li>
+</ul>
+</li>
+<li>Rileva il tipo della colonna PK nella tabella operativa (introspezione catalogo)</li>
+<li>Controlla il valore di <code>storicizza</code>:<ul>
+<li>UPDATE con <code>NEW.storicizza = FALSE</code> → restituisce <code>NEW</code> senza storicizzare</li>
+<li>DELETE con <code>OLD.storicizza = FALSE</code> → restituisce <code>OLD</code> senza storicizzare</li>
+</ul>
+</li>
+</ol>
+<h3 id="fase-1-recupero-id-record">Fase 1 — Recupero ID record<a class="headerlink" href="#fase-1-recupero-id-record" title="Permanent link">&para;</a></h3>
+<p>Ottiene l'ID del record: <code>OLD.id</code> per DELETE, <code>NEW.id</code> per UPDATE.</p>
+<h3 id="fase-2-creazione-snapshot">Fase 2 — Creazione snapshot<a class="headerlink" href="#fase-2-creazione-snapshot" title="Permanent link">&para;</a></h3>
+<p>Serializza il record come JSONB:</p>
+<ul>
+<li>UPDATE: <code>to_jsonb(NEW)</code> con <code>tipo_operazione = 2</code></li>
+<li>DELETE: <code>to_jsonb(OLD)</code> con <code>tipo_operazione = 3</code></li>
+</ul>
+<h3 id="fase-3-chiusura-snapshot-aperti">Fase 3 — Chiusura snapshot aperti<a class="headerlink" href="#fase-3-chiusura-snapshot-aperti" title="Permanent link">&para;</a></h3>
+<p>Aggiorna in <code>storico.&lt;tabella&gt;</code> tutti gli snapshot con <code>valid_to IS NULL</code> per lo stesso ID, impostando <code>valid_to = CURRENT_TIMESTAMP</code>. Usa SQL dinamico per la risoluzione tipo-sicura della colonna FK.</p>
+<h3 id="fase-4-inserimento-nuovi-snapshot">Fase 4 — Inserimento nuovi snapshot<a class="headerlink" href="#fase-4-inserimento-nuovi-snapshot" title="Permanent link">&para;</a></h3>
+<p><strong>4.1 — Snapshot iniziale (solo se non esistevano snapshot aperti):</strong></p>
+<p>Se nessuno snapshot era aperto (prima storicizzazione del record), inserisce un record con <code>valid_from = '1950-01-01'</code> e <code>valid_to = CURRENT_TIMESTAMP</code>, <code>tipo_operazione = 1</code>. Questo rappresenta lo stato "originale" del record prima della modifica corrente, con <code>to_jsonb(OLD)</code>.</p>
+<p><strong>4.2 — Snapshot finale (sempre):</strong></p>
+<p>Inserisce il nuovo stato con <code>valid_from = CURRENT_TIMESTAMP</code> e <code>valid_to = NULL</code>. Per UPDATE contiene <code>to_jsonb(NEW)</code>, per DELETE contiene <code>to_jsonb(OLD)</code>.</p>
+<h3 id="fase-5-reset-flag-storicizza">Fase 5 — Reset flag storicizza<a class="headerlink" href="#fase-5-reset-flag-storicizza" title="Permanent link">&para;</a></h3>
+<p>Se <code>v_should_reset = TRUE</code> e l'operazione e UPDATE: imposta <code>NEW.storicizza = FALSE</code>.</p>
+<h3 id="gestione-errori">Gestione errori<a class="headerlink" href="#gestione-errori" title="Permanent link">&para;</a></h3>
+<p>Ogni sezione ha un blocco EXCEPTION dedicato che logga via <code>script.fn_log_and_raise_error</code> con codici specifici:</p>
+<ul>
+<li><code>E_SNAPSHOT_ID_NOT_FOUND</code> — errore nel recupero dell'ID</li>
+<li><code>E_SNAPSHOT_CLOSE_ERROR</code> — errore nella chiusura degli snapshot aperti</li>
+<li><code>E_SNAPSHOT_INIT_INSERT_ERROR</code> — errore nell'inserimento dello snapshot iniziale</li>
+<li><code>E_SNAPSHOT_FINAL_INSERT_ERROR</code> — errore nell'inserimento dello snapshot finale</li>
+</ul>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/script/funzioni/trgfn_storico_generic/">script.trgfn_storico_generic</a></p>
+</blockquote>
+<hr />
+<h2 id="funzioni-di-consultazione">Funzioni di consultazione<a class="headerlink" href="#funzioni-di-consultazione" title="Permanent link">&para;</a></h2>
+<h3 id="fn_get_snapshot_as_of-snapshot-a-una-data"><code>fn_get_snapshot_as_of</code> — snapshot a una data<a class="headerlink" href="#fn_get_snapshot_as_of-snapshot-a-una-data" title="Permanent link">&para;</a></h3>
+<p>Restituisce lo snapshot JSONB di un record a un dato istante temporale. Se non trova snapshot nello storico, serializza la riga corrente dalla tabella operativa come fallback.</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_schema</code></td>
+<td>TEXT</td>
+<td>Schema della tabella originaria</td>
+</tr>
+<tr>
+<td><code>p_table</code></td>
+<td>TEXT</td>
+<td>Nome della tabella (uguale in operativo e storico)</td>
+</tr>
+<tr>
+<td><code>p_id</code></td>
+<td>TEXT</td>
+<td>PK del record originario (passato come TEXT)</td>
+</tr>
+<tr>
+<td><code>p_fk_col</code></td>
+<td>TEXT</td>
+<td>Nome della colonna FK in storico (es. <code>'soggetto_id'</code>)</td>
+</tr>
+<tr>
+<td><code>p_as_of</code></td>
+<td>TIMESTAMP</td>
+<td>Data/ora di validita desiderata</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Restituisce:</strong> <code>JSONB</code> — lo snapshot del record, o NULL se non trovato.</p>
+<p><strong>Logica:</strong></p>
+<ol>
+<li>Verifica l'esistenza della tabella storica e rileva il tipo della colonna FK</li>
+<li>Cerca in <code>storico.&lt;tabella&gt;</code> lo snapshot valido: <code>valid_from &lt;= p_as_of AND (valid_to &gt; p_as_of OR valid_to IS NULL)</code></li>
+<li>Se trovato: restituisce lo snapshot</li>
+<li>Se non trovato: serializza la riga corrente dalla tabella operativa (<code>to_jsonb(t)</code>)</li>
+</ol>
+<p><strong>Esempio:</strong> una riga sola, con lo snapshot risultante. Vedi
+<a href="#area-tecnica-esempi">Area tecnica</a>.</p>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/script/funzioni/fn_get_snapshot_as_of/">script.fn_get_snapshot_as_of</a></p>
+</blockquote>
+<hr />
+<h3 id="fn_get_record_id_as_of-id-record-storico-a-una-data"><code>fn_get_record_id_as_of</code> — ID record storico a una data<a class="headerlink" href="#fn_get_record_id_as_of-id-record-storico-a-una-data" title="Permanent link">&para;</a></h3>
+<p>Restituisce solo l'ID (come TEXT) del record di storico valido a un dato istante. A differenza di <code>fn_get_snapshot_as_of</code>, non ha fallback sulla tabella operativa: cerca esclusivamente nello storico.</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_schema</code></td>
+<td>TEXT</td>
+<td>Schema della tabella originaria</td>
+</tr>
+<tr>
+<td><code>p_table</code></td>
+<td>TEXT</td>
+<td>Nome della tabella</td>
+</tr>
+<tr>
+<td><code>p_id</code></td>
+<td>TEXT</td>
+<td>PK del record originario</td>
+</tr>
+<tr>
+<td><code>p_fk_col</code></td>
+<td>TEXT</td>
+<td>Nome della colonna FK in storico</td>
+</tr>
+<tr>
+<td><code>p_as_of</code></td>
+<td>TIMESTAMP</td>
+<td>Data/ora di validita desiderata</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Restituisce:</strong> <code>TEXT</code> — l'ID del record storico, o NULL se nessuno snapshot valido.</p>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/script/funzioni/fn_get_record_id_as_of/">script.fn_get_record_id_as_of</a></p>
+</blockquote>
+<hr />
+<h2 id="provisioning-automatico">Provisioning automatico<a class="headerlink" href="#provisioning-automatico" title="Permanent link">&para;</a></h2>
+<p>Il sistema di storicizzazione si integra con il framework di automazione DB tramite due tipi di regole in <code>dbops.automation_rules_tbl</code>.</p>
+<h3 id="provisioning-tabelle-fn_run_automations_storico_provision">Provisioning tabelle: <code>fn_run_automations_storico_provision</code><a class="headerlink" href="#provisioning-tabelle-fn_run_automations_storico_provision" title="Permanent link">&para;</a></h3>
+<p>Questa funzione scorre tutte le tabelle nell'ambito che hanno una colonna <code>storicizza</code> e crea automaticamente la corrispondente tabella nello schema <code>storico</code>.</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_exec_mode</code></td>
+<td>TEXT</td>
+<td>Modalita: <code>AUTO</code>, <code>SCHEDULED</code>, <code>FORCE</code></td>
+</tr>
+<tr>
+<td><code>p_schemas</code></td>
+<td>TEXT[]</td>
+<td>Schemi da processare (NULL = tutti)</td>
+</tr>
+<tr>
+<td><code>p_dry_run</code></td>
+<td>BOOLEAN</td>
+<td>Simulazione senza DDL</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flusso:</strong></p>
+<ol>
+<li>Risolve l'ambito (esclude lo schema <code>storico</code>)</li>
+<li>Filtra tabelle con colonna <code>storicizza</code> (nome configurabile via override <code>STORICIZZA_COL</code>)</li>
+<li>Applica regole <code>STORICO_PROVISION</code> da <code>automation_rules_tbl</code></li>
+<li>Per ogni tabella idonea: chiama <code>fn_ensure_storico_table</code></li>
+</ol>
+<h3 id="creazione-ddl-fn_ensure_storico_table">Creazione DDL: <code>fn_ensure_storico_table</code><a class="headerlink" href="#creazione-ddl-fn_ensure_storico_table" title="Permanent link">&para;</a></h3>
+<p>Funzione idempotente che crea la tabella di storico con la struttura standard se non esiste gia.</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_schema_base</code></td>
+<td>TEXT</td>
+<td>Schema della tabella operativa</td>
+</tr>
+<tr>
+<td><code>p_table_base</code></td>
+<td>TEXT</td>
+<td>Nome della tabella operativa</td>
+</tr>
+<tr>
+<td><code>p_fk_col</code></td>
+<td>TEXT</td>
+<td>Nome colonna FK nello storico</td>
+</tr>
+<tr>
+<td><code>p_create_gin_index</code></td>
+<td>BOOLEAN</td>
+<td>Creare indice GIN su snapshot</td>
+</tr>
+<tr>
+<td><code>p_dry_run</code></td>
+<td>BOOLEAN</td>
+<td>Simulazione</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Azioni:</strong></p>
+<ul>
+<li>Rileva la PK mono-colonna della tabella operativa e il suo tipo</li>
+<li>Crea <code>storico.&lt;tabella&gt;</code> con la struttura standard</li>
+<li>Crea indice su FK e opzionalmente indice GIN su snapshot</li>
+<li>Se la tabella esiste gia: return immediato (idempotente)</li>
+<li>Non crea FOREIGN KEY (scelta deliberata)</li>
+<li><strong>Arma lo scope</strong> (<code>origine_schema</code>, <code>scope_emittente_fiscale_id</code>, RLS se la mappa
+  dice che la madre è protetta) chiamando <code>fn_storico_arma_scope</code></li>
+<li><strong>Cede la shadow al proprietario della madre</strong>, se chi la crea può farlo;
+  altrimenti <code>WARN</code> nell'audit e nessun errore</li>
+</ul>
+<h3 id="provisioning-trigger-fn_run_automations_storico">Provisioning trigger: <code>fn_run_automations_storico</code><a class="headerlink" href="#provisioning-trigger-fn_run_automations_storico" title="Permanent link">&para;</a></h3>
+<p>Crea il trigger <code>BEFORE UPDATE OR DELETE</code> su tutte le tabelle operative che hanno una corrispondente tabella in <code>storico</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_exec_mode</code></td>
+<td>TEXT</td>
+<td>Modalita: <code>AUTO</code>, <code>SCHEDULED</code>, <code>FORCE</code></td>
+</tr>
+<tr>
+<td><code>p_schemas</code></td>
+<td>TEXT[]</td>
+<td>Schemi da processare (NULL = tutti)</td>
+</tr>
+<tr>
+<td><code>p_dry_run</code></td>
+<td>BOOLEAN</td>
+<td>Simulazione senza DDL</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flusso:</strong></p>
+<ol>
+<li>Risolve l'ambito (esclude <code>storico</code>)</li>
+<li>Per ogni tabella: verifica che <code>storico.&lt;tabella&gt;</code> esista</li>
+<li>Risolve la colonna FK (default <code>&lt;tabella&gt;_id</code>, override via <code>STORICO_FK</code>)</li>
+<li>Genera il nome trigger dal template (default: <code>trg_{table}_z90_storico_upd_dlt</code>)</li>
+<li>Verifica esistenza per strategia (<code>BY_NAME</code>, <code>BY_FUNCTION</code>, <code>BOTH</code>)</li>
+<li>Se non esiste: crea il trigger
+⛔ <strong>Il motore non rimuove i trigger legacy.</strong> Quel ramo esisteva e non ha mai
+funzionato: puntava a <code>trg_{table}_upd_storico</code> / <code>trg_{table}_dlt_storico</code>, mentre i
+trigger legacy davvero creati si chiamavano <code>trg_&lt;tab&gt;_upd_dlt_storico_&lt;tab&gt;</code> (e quelli
+di oggi <code>trg_&lt;tab&gt;_z90_storico_upd_dlt</code>): tre forme diverse, e un
+<code>DROP TRIGGER IF EXISTS</code> non poteva agganciare le altre due. È stato rimosso — se un
+giorno serve togliere un trigger legacy, si fa a mano.</li>
+</ol>
+<p><strong>Naming convention del trigger:</strong> la forma è <code>trg_&lt;tabella&gt;_z90_storico_upd_dlt</code>,
+e l'infisso <code>_z90_</code> garantisce che il trigger di storico venga eseguito per
+ultimo nell'ordine alfabetico PostgreSQL, dopo tutti i trigger di guard e
+validazione.</p>
+<blockquote>
+<p>⚠️ <strong>Non esiste nessun trigger che cominci per <code>trgx_</code></strong>: i trigger di
+storicizzazione usano tutti la forma qui sopra. Chi li cercasse per quel prefisso
+non ne troverebbe nemmeno uno.</p>
+</blockquote>
+<hr />
+<h2 id="procedure-di-manutenzione">Procedure di manutenzione<a class="headerlink" href="#procedure-di-manutenzione" title="Permanent link">&para;</a></h2>
+<h3 id="sincronizzazione-catalogo-proc_sync_storico_set_storicizza">Sincronizzazione catalogo: <code>proc_sync_storico_set_storicizza</code><a class="headerlink" href="#sincronizzazione-catalogo-proc_sync_storico_set_storicizza" title="Permanent link">&para;</a></h3>
+<p>Scansiona il catalogo PostgreSQL per rilevare automaticamente tutte le tabelle con colonna <code>storicizza</code> il cui DEFAULT e <code>true</code>, e le registra in <code>config.storico_set_storicizza</code> con <code>insert_manuale = false</code>.</p>
+<blockquote>
+<p>⭐ <strong>La sincronizzazione fa anche il contrario: POTA.</strong> Aggiungere non basta:
+quando una tabella viene ritirata, la sua riga resterebbe lì a puntare a niente,
+per sempre, finché qualcuno non la nota — e una riga che punta a una tabella
+inesistente fa fallire il lavoro notturno che la consuma.</p>
+<p>⚠️ Si pota <strong>solo</strong> ciò che la scansione ha smesso di produrre. Le righe inserite
+a mano (<code>insert_manuale = true</code>) non si toccano: quelle non sono un risultato della
+derivazione, sono una decisione di qualcuno.</p>
+</blockquote>
+<p><strong>Job wrapper:</strong> <code>proc_sync_storico_set_storicizza_job</code> — esecuzione schedulata con advisory lock e logging via <code>fn_run_and_log</code>.</p>
+<h3 id="applicazione-default-proc_apply_storicizza_defaults">Applicazione default: <code>proc_apply_storicizza_defaults</code><a class="headerlink" href="#applicazione-default-proc_apply_storicizza_defaults" title="Permanent link">&para;</a></h3>
+<p>Itera tutte le tabelle registrate in <code>config.storico_set_storicizza</code> e applica <code>ALTER TABLE ... ALTER COLUMN storicizza SET DEFAULT true</code>.</p>
+<blockquote>
+<p>⭐ <strong>Una riga guasta non ferma le altre.</strong> Una sola riga che punta a una tabella
+inesistente non deve interrompere il giro per tutte le altre.</p>
+<p>⚠️ E non è una conseguenza della potatura qui sopra: chi produce l'elenco e chi lo
+consuma sono <strong>due lavori distinti, su due orari diversi</strong>. Se l'applicazione gira
+prima della sincronizzazione — e prima o poi capita — la riga vecchia c'è ancora.
+Chi consuma un elenco costruito da altri non può morire perché una riga non è
+ancora stata ripulita.</p>
+</blockquote>
+<p><strong>Scheduling:</strong> ogni sabato alle 07:00 UTC tramite pgAgent job <code>apply_storicizza_weekly</code>.</p>
+<p><strong>Job wrapper:</strong> <code>proc_apply_storicizza_defaults_job</code> — esecuzione schedulata con advisory lock e logging.</p>
+<hr />
+<h2 id="flusso-operativo-completo">Flusso operativo completo<a class="headerlink" href="#flusso-operativo-completo" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    A\[Tabella operativa con colonna storicizza\] --&gt; B{Regola STORICO_PROVISION?}
+    B --&gt;|Si| C\[fn_ensure_storico_table&lt;br/&gt;crea storico.tabella\]
+    B --&gt;|No| D\[Creazione manuale DDL\]
+    C --&gt; E{Regola STORICO?}
+    D --&gt; E
+    E --&gt;|Si| F\[fn_run_automations_storico&lt;br/&gt;crea trigger BEFORE UPDATE/DELETE\]
+    E --&gt;|No| G\[Creazione manuale trigger\]
+    F --&gt; H\[Trigger attivo\]
+    G --&gt; H
+    H --&gt; I\[UPDATE o DELETE su record\]
+    I --&gt; J{storicizza = TRUE?}
+    J --&gt;|No| K\[Skip - nessuno snapshot\]
+    J --&gt;|Si| L\[trgfn_storico_generic\]
+    L --&gt; M\[Chiude snapshot aperti&lt;br/&gt;valid_to = CURRENT_TIMESTAMP\]
+    M --&gt; N{Primo snapshot?}
+    N --&gt;|Si| O\[INSERT snapshot iniziale&lt;br/&gt;1950-01-01 a now\]
+    N --&gt;|No| P\[Continua\]
+    O --&gt; P
+    P --&gt; Q\[INSERT snapshot finale&lt;br/&gt;now a NULL\]
+    Q --&gt; R{Tabella in storico_set_storicizza?}
+    R --&gt;|Si| S\[Mantieni storicizza = TRUE\]
+    R --&gt;|No| T\[Reset storicizza = FALSE\]</code></pre>
+<hr />
+<h2 id="regole-di-dominio">Regole di dominio<a class="headerlink" href="#regole-di-dominio" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Una tabella di storico per ogni tabella operativa</strong>: la tabella ha lo stesso nome ma vive nello schema <code>storico</code>. La PK e indipendente (BIGSERIAL), non collegata alla PK operativa.</p>
+</li>
+<li>
+<p><strong>Nessuna FK esplicita</strong>: la colonna <code>&lt;entita&gt;_id</code> nello storico non ha vincolo FOREIGN KEY verso la tabella operativa. Questo evita blocchi su DELETE e CASCADE indesiderati.</p>
+</li>
+<li>
+<p><strong>Snapshot immutabili</strong>: i record nello storico non vengono mai aggiornati nel contenuto. L'unica modifica e la chiusura dell'intervallo di validita (<code>valid_to</code>).</p>
+</li>
+<li>
+<p><strong>Trigger BEFORE, non AFTER</strong>: il trigger deve essere <code>BEFORE UPDATE OR DELETE</code> perche modifica <code>NEW.storicizza</code>. L'uso di AFTER impedirebbe il reset del flag.</p>
+</li>
+<li>
+<p><strong>Infisso <code>_z90_</code></strong> (forma <code>trg_&lt;tabella&gt;_z90_storico_upd_dlt</code>): garantisce l'esecuzione per ultima nell'ordine alfabetico, dopo tutti i trigger di guard e validazione.</p>
+</li>
+<li>
+<p><strong>Colonna <code>storicizza</code> obbligatoria</strong>: la tabella operativa deve avere la colonna <code>storicizza BOOLEAN</code> per poter usare il trigger generico. Se il flag e <code>FALSE</code>, il record non viene storicizzato.</p>
+</li>
+<li>
+<p><strong>Comportamento reset dipende dalla configurazione</strong>: tabelle registrate in <code>storico_set_storicizza</code> mantengono <code>storicizza = TRUE</code> dopo ogni UPDATE (storicizzazione permanente). Tabelle non registrate resettano a <code>FALSE</code> (one-shot).</p>
+</li>
+<li>
+<p><strong>Idempotenza del provisioning</strong>: sia <code>fn_ensure_storico_table</code> sia <code>fn_run_automations_storico</code> sono idempotenti — sicure da rieseguire.</p>
+</li>
+<li>
+<p><strong>Snapshot iniziale retrodatato</strong>: alla prima storicizzazione, viene creato un record con <code>valid_from = '1950-01-01'</code> che rappresenta lo stato "originale" del record prima di qualsiasi modifica tracciata.</p>
+</li>
+</ol>
+<hr />
+<h2 id="best-practice">Best practice<a class="headerlink" href="#best-practice" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Usare il provisioning automatico</strong> — non creare tabelle di storico e trigger manualmente. Le regole <code>STORICO_PROVISION</code> e <code>STORICO</code> in <code>automation_rules_tbl</code> garantiscono struttura e naming coerenti</li>
+<li><strong>Registrare le tabelle anagrafiche</strong> in <code>config.storico_set_storicizza</code> per garantire storicizzazione permanente (soggetti, indirizzi, contratti, ruoli)</li>
+<li><strong>Usare <code>fn_get_snapshot_as_of</code> per le query storiche</strong> — non interrogare direttamente le tabelle di storico salvo per analisi massive</li>
+<li><strong>Valutare l'indice GIN</strong> per tabelle con molti record storici e necessita di query su campi specifici dello snapshot (<code>snapshot-&gt;&gt;'campo'</code>)</li>
+<li><strong>Eseguire <code>proc_sync_storico_set_storicizza</code> dopo il deploy</strong> per aggiornare il registro di configurazione</li>
+<li><strong>Non creare FK tra storico e tabella operativa</strong> — la scelta e deliberata e non deve essere aggirata</li>
+<li><strong>Verificare con dry-run</strong> prima di applicare il provisioning in produzione: <code>SELECT dbops.fn_run_automations_storico_provision('AUTO', NULL, true);</code></li>
+</ul>
+<hr />
+<h2 id="diagrammi-er">Diagrammi ER<a class="headerlink" href="#diagrammi-er" title="Permanent link">&para;</a></h2>
+<h3 id="modello-di-storicizzazione">Modello di storicizzazione<a class="headerlink" href="#modello-di-storicizzazione" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>erDiagram
+    tabella_operativa {
+        bigint id PK
+        boolean storicizza
+        text campo_1
+        text campo_N
+    }
+
+    storico_tabella {
+        bigserial id PK
+        bigint entita_id
+        timestamptz valid_from
+        timestamptz valid_to
+        jsonb snapshot
+        smallint tipo_operazione
+        char change_type
+        text user_insert
+        timestamptz data_insert
+        uuid tx_id
+    }
+
+    storico_set_storicizza {
+        text table_name PK
+        boolean insert_manuale
+    }
+
+    tabella_operativa ||--o{ storico_tabella : "storicizzato in"
+    storico_set_storicizza ||--|| tabella_operativa : "configurazione reset"</code></pre>
+<h3 id="framework-di-automazione">Framework di automazione<a class="headerlink" href="#framework-di-automazione" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>erDiagram
+    automation_rules_tbl {
+        bigint id PK
+        text rule_type
+        text target_schema
+        text target_table
+        text name_template
+        text existence_strategy
+        jsonb params
+    }
+
+    fn_run_automations_storico_provision {
+        text crea_tabelle_storico
+    }
+
+    fn_run_automations_storico {
+        text crea_trigger_storico
+    }
+
+    fn_ensure_storico_table {
+        text DDL_idempotente
+    }
+
+    automation_rules_tbl ||--|{ fn_run_automations_storico_provision : "regole STORICO_PROVISION"
+    automation_rules_tbl ||--|{ fn_run_automations_storico : "regole STORICO"
+    fn_run_automations_storico_provision ||--|{ fn_ensure_storico_table : "chiama per ogni tabella"</code></pre>
+<hr />
+<h2 id="area-tecnica-esempi">Area tecnica — esempi<a class="headerlink" href="#area-tecnica-esempi" title="Permanent link">&para;</a></h2>
+<h3 id="leggere-uno-snapshot-a-una-data">Leggere uno snapshot a una data<a class="headerlink" href="#leggere-uno-snapshot-a-una-data" title="Permanent link">&para;</a></h3>
+<p>Una riga sola: l'oggetto JSONB del soggetto 123 come era il 15 giugno 2025.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">script</span><span class="p">.</span><span class="n">fn_get_snapshot_as_of</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">'anagrafiche'</span><span class="p">,</span><span class="w"> </span><span class="s1">'soggetti'</span><span class="p">,</span><span class="w"> </span><span class="s1">'123'</span><span class="p">,</span><span class="w"> </span><span class="s1">'soggetto_id'</span><span class="p">,</span><span class="w"> </span><span class="s1">'2025-06-15'</span><span class="p">::</span><span class="k">timestamp</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<div style="text-align: center; margin-top: 2rem;">
+  <img src="/assets/images/zeroerp-logo.png" alt="Zero ERP" width="80">
+  <br>
+  <strong>&copy; 2025-2026 Zero ERP</strong> <em><strong>&bull; powered by Tid &bull;</strong></em>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.indexes"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiato","clipboard.copy":"Copia","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 altro in questa pagina","search.result.more.other":"# altri in questa pagina","search.result.none":"Nessun documento trovato","search.result.one":"1 documento trovato","search.result.other":"# documenti trovati","search.result.placeholder":"Scrivi per iniziare a cercare","search.result.term.missing":"Non presente","select.version":"Seleziona la versione"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

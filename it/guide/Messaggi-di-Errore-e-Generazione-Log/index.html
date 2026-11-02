@@ -1,0 +1,8596 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="prev" href="../database-che-resta-veloce/">
+      
+      
+        <link rel="next" href="../messaggi-audit/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Messaggi di Errore - Zero ERP Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Vai al contenuto
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../.." title="Zero ERP Documentation" class="md-header__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigazione</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Messaggi di Errore
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Cerca</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Cerca">
+  <button type="button" class="md-search__button">
+    Cerca
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manifesto/" class="md-tabs__link">
+          
+  
+  Visione e Filosofia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installazione/" class="md-tabs__link">
+          
+  
+  Installazione
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architettura/" class="md-tabs__link">
+          
+  
+  Architettura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/" class="md-tabs__link">
+          
+  
+  DB Zero
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../backend/" class="md-tabs__link">
+          
+  
+  Backend (Django)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../soggetti-e-ruoli-anagrafici/" class="md-tabs__link">
+          
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/framework-automazione-db/" class="md-tabs__link">
+          
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/tools/gen_db_docs/" class="md-tabs__link">
+          
+  
+  Strumenti
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/sicurezza-e-qualita-statica/" class="md-tabs__link">
+          
+  
+  Qualità
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/api/" class="md-tabs__link">
+          
+  
+  Sviluppatori
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossario/glossario-utility/" class="md-tabs__link">
+          
+  
+  Glossario
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zero ERP Documentation" class="md-nav__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Zero ERP Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visione e Filosofia
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Visione e Filosofia
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manifesto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sviluppo-concentrico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppo Concentrico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduzione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cos’è Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perche-zeroerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Perchè Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Installazione
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Installazione
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Prerequisiti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurazione-iniziale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Preparare ZeroERP all'uso
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE-AGPL3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Licenza
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Architettura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architettura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura a colpo d'occhio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../liquibase-setup-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liquibase Setup & Workflow
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida SQL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida Trigger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Db PostgresSQL
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Db PostgresSQL
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Panoramica
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/aggiornamento-versione-postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aggiornamento versione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/parametri-personalizzati-(GUC)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Parametri personalizzati (GUC)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4_4" id="__nav_4_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estensioni
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Estensioni
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/estensioni-utilizzate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Utilizzate
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/dblink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  dblink
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgAgent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgAgent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgcrypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgcrypto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DB Zero
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  DB Zero
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Schemi
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Schemi
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/dbops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dbops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/public/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Public
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend (Django)
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend (Django)
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aree
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Aree
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ai-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ai Assistant
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/amm-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Amm. Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/contabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contabilita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guide
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guide
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Come funziona ZeroErp
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Come funziona ZeroErp
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soggetti-e-ruoli-anagrafici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Soggetti e ruoli anagrafici
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generazione-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generazione di un cliente
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-degli-indirizzi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione degli indirizzi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-contatti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei contatti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-conti-bancari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione conti bancari
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche-configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche — Configurazione e opzioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-commesse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione commesse
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-delle-istanze-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione delle Istanze Utility
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-listini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione listini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-preventivi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione preventivi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-offerte-commerciali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione offerte commerciali
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-contratti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione contratti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ordini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ordini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ddt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ddt
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fatturazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cruscotti-fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cruscotti fatturazione (le tre lenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../termini-di-pagamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Termini di pagamento
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenti-e-stampe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti e stampe
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-mail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione mail
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrazione-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Integrazione Ai
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risorse-umane-e-accessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Risorse Umane e Accessi al Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-liste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e responsività delle liste
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numerazione-documenti-e-codici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sistema numerazione generico per codici e documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iva-risolutore-di-riga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il risolutore IVA di riga
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modello-documento-di-vendita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il modello del documento di vendita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sicurezza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza di ZeroErp
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Approfondimenti tecnici
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Approfondimenti tecnici
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-permessi-e-autorizzazioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura Permessi e Autorizzazioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-multi-face-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura multi face auth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contratto-guc-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contratto GUC APP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tx_id_implementation_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Implementazione Transaction ID
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storicizzazione-tabelle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storicizzazione Tabelle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit-e-tracciabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit e tracciabilità
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operazioni-che-non-si-ripetono/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Le operazioni che non si ripetono (Idempotency-Key)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presidi-e-registri-del-debito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Presidi e registri del debito
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sorgente-polimorfa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sorgente polimorfa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riclassificazione-vie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Riclassificazione vie
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-di-obsoleto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Mandare in pensione una voce di catalogo (obsoleto_dal)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-e-gestione-parametri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e gestione parametri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-automatici-classe-e-identita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  I lavori automatici (natura e identità)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-code-di-lavoro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione code di lavoro
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-pgagent-funzionali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi-pgagent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistiche-del-planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Statistiche del planner
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-che-resta-veloce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Un database che resta veloce
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_19" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_19" id="__nav_7_2_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Log
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_19_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7_2_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Log
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Errore
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Errore
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduzione
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-modello-in-sintesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il modello in sintesi
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-classe-di-un-codice-cosa-e-un-errore-prima-di-cosa-dice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La classe di un codice — <em>cosa è</em> un errore, prima di cosa dice
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La classe di un codice — cosa è un errore, prima di cosa dice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-dieci-classi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Le dieci classi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-dove-la-prende-il-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Da dove la prende il backend
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ritirare-un-codice-non-cancellarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ritirare un codice, non cancellarlo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componenti-del-modello" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Componenti del modello
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componenti del modello">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-il-catalogo-messaggi-configmessaggi_errore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Il catalogo messaggi: <code>config.messaggi_errore</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-il-registro-errori-dbopserror_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Il registro errori: <code>dbops.error_log</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-le-funzioni-di-supporto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Le funzioni di supporto
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Le funzioni di supporto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scriptfn_get_messaggio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>script.fn_get_messaggio</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scriptfn_log_error_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>script.fn_log_error_only</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scriptfn_log_and_raise_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>script.fn_log_and_raise_error</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#due-funzioni-per-sollevare-e-a-scegliere-non-sei-tu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ Due funzioni per sollevare, e a scegliere non sei tu
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-di-gestione-degli-errori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso di gestione degli errori
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-esce-dalleccezione-oltre-al-testo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa esce dall'eccezione, oltre al testo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cosa esce dall&#x27;eccezione, oltre al testo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-nome-del-campo-non-si-scrive-si-dichiara" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il nome del campo: non si scrive, si dichiara
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-valori-del-messaggio-chi-li-mette-scrive-per-una-persona" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ I valori del messaggio: chi li mette <strong>scrive per una persona</strong>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⛔ I valori del messaggio: chi li mette scrive per una persona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perche-la-regola-sta-qui-e-non-altrove" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ Perché la regola sta qui e non altrove
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-il-valore-decide-anche-quale-codice-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ E il valore decide anche <strong>quale codice</strong> serve
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⭐ E il valore decide anche quale codice serve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-nella-seconda-riga-non-si-riusa-e_parametro_invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ E nella seconda riga NON si riusa <code>E_PARAMETRO_INVALIDO</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leccezione-che-non-e-una-violazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ L'eccezione che NON è una violazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quanto-e-diffuso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        📊 Quanto è diffuso
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#come-si-presidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Come si presidia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-tre-trappole-prese-sul-campo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Le tre trappole, prese sul campo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing-errori-di-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Routing errori di dominio
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing errori di dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-concetto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il concetto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing-attuale-vendite" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Routing attuale (vendite)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-di-dominio-stato-attuale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Funzioni di dominio (stato attuale)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contratto-standard-per-i-log-di-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Contratto standard per i log di dominio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best practice
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codici-errore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Codici errore
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Codici errore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-prefisso-dice-se-blocca-e_-e-w_" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il prefisso dice se blocca: <code>E_</code> e <code>W_</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Logging
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoraggio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monitoraggio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultare-i-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Consultare i log
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultare i log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quale-log-risponde-a-quale-domanda" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Quale log risponde a quale domanda
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-dove-si-arriva-nellapplicazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Da dove si arriva, nell'applicazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-applicativi-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Log applicativi Python
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-operativo-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Setup operativo (devops)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup operativo (devops)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisito-perche-serve-dblink" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Prerequisito: perche serve dblink
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-ruolo-di-logging-con-privilegi-minimi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Ruolo di logging con privilegi minimi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configurare-pg_serviceconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Configurare <code>pg_service.conf</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configurare-pgpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Configurare <code>.pgpass</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-impostare-la-guc-per-i-ruoli-applicativi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Impostare la GUC per i ruoli applicativi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-hardening-ownership-funzioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Hardening ownership funzioni
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifiche-e-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verifiche e troubleshooting
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramma-er" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Diagramma ER
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagramma ER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Registro tecnico
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-di-dominio-vendite" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Log di dominio (vendite)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-tecnica-esempi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Area tecnica — esempi
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Area tecnica — esempi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-del-logging-persistente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Setup del logging persistente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaggi-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Audit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analisi-tracciamento-processi-e-job/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi e Job
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tutorial
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tutorial
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/framework-automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Framework automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Strumenti
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Strumenti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/tools/gen_db_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generatore Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Qualità
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/sicurezza-e-qualita-statica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza e qualità statica (gli strumenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-be-fe-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità BE/FE (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-db-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità del database (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppatori
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Sviluppatori
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ricette-dove-intervenire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ricette (dove intervenire)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/trappole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Trappole (cosa non fare)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/Policy-ricerca-e-paginazione(API-DB)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy ricerca e paginazione (API/DB)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/standard-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard delle guide (come si scrive)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_6" id="__nav_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Frontend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Frontend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard frontend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/catalogo-building-block-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block FE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7" id="__nav_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Server
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Server
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_1" id="__nav_11_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/backend-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guida backend-dev
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/play-book-operativo-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Playbook operativo backend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/servizi-zeroerp-comandi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Servizi ZeroERP (comandi)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/catalogo-building-block-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block BE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/piano-solidita-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Piano solidità Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/provisioning-db-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Provisioning ruoli DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/gunicorn-dev-autoreload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gunicorn dev autoreload
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/checklist-post-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Checklist post upgrade
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/configurazione-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_2" id="__nav_11_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/db/dbdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VM dbdev (PostgreSQL)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_3" id="__nav_11_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Infrastruttura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Infrastruttura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/infra/proxmox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Proxmox
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_4" id="__nav_11_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workstation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Workstation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/workstation-dev/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vm wrk1-dev (ubuntu)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GitHub
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  GitHub
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/github/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Glossario
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/glossario-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario di dominio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/devops%26db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dev&Ops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/process-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Process Analysis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduzione
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-modello-in-sintesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il modello in sintesi
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-classe-di-un-codice-cosa-e-un-errore-prima-di-cosa-dice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La classe di un codice — <em>cosa è</em> un errore, prima di cosa dice
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La classe di un codice — cosa è un errore, prima di cosa dice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-dieci-classi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Le dieci classi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-dove-la-prende-il-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Da dove la prende il backend
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ritirare-un-codice-non-cancellarlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ritirare un codice, non cancellarlo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componenti-del-modello" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Componenti del modello
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componenti del modello">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-il-catalogo-messaggi-configmessaggi_errore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Il catalogo messaggi: <code>config.messaggi_errore</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-il-registro-errori-dbopserror_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Il registro errori: <code>dbops.error_log</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-le-funzioni-di-supporto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Le funzioni di supporto
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Le funzioni di supporto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scriptfn_get_messaggio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>script.fn_get_messaggio</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scriptfn_log_error_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>script.fn_log_error_only</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scriptfn_log_and_raise_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>script.fn_log_and_raise_error</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#due-funzioni-per-sollevare-e-a-scegliere-non-sei-tu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ Due funzioni per sollevare, e a scegliere non sei tu
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-di-gestione-degli-errori" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso di gestione degli errori
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-esce-dalleccezione-oltre-al-testo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cosa esce dall'eccezione, oltre al testo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cosa esce dall&#x27;eccezione, oltre al testo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-nome-del-campo-non-si-scrive-si-dichiara" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il nome del campo: non si scrive, si dichiara
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-valori-del-messaggio-chi-li-mette-scrive-per-una-persona" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ I valori del messaggio: chi li mette <strong>scrive per una persona</strong>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⛔ I valori del messaggio: chi li mette scrive per una persona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perche-la-regola-sta-qui-e-non-altrove" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ Perché la regola sta qui e non altrove
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-il-valore-decide-anche-quale-codice-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⭐ E il valore decide anche <strong>quale codice</strong> serve
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⭐ E il valore decide anche quale codice serve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#e-nella-seconda-riga-non-si-riusa-e_parametro_invalido" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⛔ E nella seconda riga NON si riusa <code>E_PARAMETRO_INVALIDO</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leccezione-che-non-e-una-violazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ L'eccezione che NON è una violazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quanto-e-diffuso" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        📊 Quanto è diffuso
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#come-si-presidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Come si presidia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-tre-trappole-prese-sul-campo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ Le tre trappole, prese sul campo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing-errori-di-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Routing errori di dominio
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing errori di dominio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-concetto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il concetto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routing-attuale-vendite" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Routing attuale (vendite)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzioni-di-dominio-stato-attuale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Funzioni di dominio (stato attuale)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contratto-standard-per-i-log-di-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Contratto standard per i log di dominio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Best practice
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codici-errore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Codici errore
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Codici errore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-prefisso-dice-se-blocca-e_-e-w_" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il prefisso dice se blocca: <code>E_</code> e <code>W_</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Logging
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoraggio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monitoraggio
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultare-i-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Consultare i log
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultare i log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quale-log-risponde-a-quale-domanda" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Quale log risponde a quale domanda
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-dove-si-arriva-nellapplicazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Da dove si arriva, nell'applicazione
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-applicativi-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Log applicativi Python
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-operativo-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Setup operativo (devops)
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup operativo (devops)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisito-perche-serve-dblink" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Prerequisito: perche serve dblink
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-ruolo-di-logging-con-privilegi-minimi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Ruolo di logging con privilegi minimi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configurare-pg_serviceconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. Configurare <code>pg_service.conf</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configurare-pgpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. Configurare <code>.pgpass</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-impostare-la-guc-per-i-ruoli-applicativi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Impostare la GUC per i ruoli applicativi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-hardening-ownership-funzioni" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. Hardening ownership funzioni
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifiche-e-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verifiche e troubleshooting
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramma-er" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Diagramma ER
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagramma ER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Registro tecnico
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-di-dominio-vendite" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Log di dominio (vendite)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-tecnica-esempi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Area tecnica — esempi
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Area tecnica — esempi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-del-logging-persistente" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Setup del logging persistente
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="guida-gestione-dei-messaggi-di-errore-e-generazione-log">Guida — Gestione dei Messaggi di Errore e Generazione Log<a class="headerlink" href="#guida-gestione-dei-messaggi-di-errore-e-generazione-log" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Ultimo aggiornamento</strong>: 19 settembre 2026</p>
+<p><strong>Destinatari</strong>: sviluppatori database, backend e devops</p>
+<p><strong>Vedi anche</strong> — schemi DB:</p>
+<ul>
+<li><a href="../../dbzero/config/tabelle/codici_errore/">config.codici_errore</a> — <strong>l'identità di un codice</strong>: una riga per codice, la sua classe, il suo eventuale ritiro</li>
+<li><a href="../../dbzero/config/tabelle/classi_errore/">config.classi_errore</a> — il vocabolario delle <strong>dieci classi</strong>: cosa <em>è</em> un errore, prima ancora di cosa dice</li>
+<li><a href="../../dbzero/config/tabelle/messaggi_errore/">config.messaggi_errore</a> — il catalogo multilingua delle <strong>frasi</strong>: una riga per <em>(codice, lingua)</em></li>
+<li><a href="../../dbzero/dbops/tabelle/error_log/">dbops.error_log</a> — il registro persistente di ogni occorrenza</li>
+<li><a href="../../dbzero/dbops/tabelle/sec_functions_owner/">dbops.sec_functions_owner</a> — il registry dell'ownership delle funzioni sensibili</li>
+<li><a href="../../dbzero/vendite/tabelle/fatturazione_lotti_log/">vendite.fatturazione_lotti_log</a> · <a href="../../dbzero/vendite/tabelle/fatture_log/">vendite.fatture_log</a> — i log di dominio</li>
+</ul>
+<p><strong>Vedi anche</strong> — funzioni e trigger DB:</p>
+<ul>
+<li><a href="../../dbzero/script/funzioni/fn_log_and_raise_error/">script.fn_log_and_raise_error</a> — registra e solleva</li>
+<li><a href="../../dbzero/script/funzioni/fn_log_error_only/">script.fn_log_error_only</a> — scrive nel registro <strong>senza</strong> sollevare, fuori transazione</li>
+<li><a href="../../dbzero/script/funzioni/fn_get_messaggio/">script.fn_get_messaggio</a> — la frase dal catalogo, nella lingua della sessione</li>
+<li><a href="../../dbzero/dbops/funzioni/fn_sync_functions_owner/">dbops.fn_sync_functions_owner</a> — chi riallinea l'owner delle funzioni sensibili</li>
+</ul>
+<p><strong>Vedi anche</strong> — guide correlate:</p>
+<ul>
+<li><a href=".././fatturazione/">Fatturazione</a> — pipeline vendite con log di dominio</li>
+<li><a href=".././messaggi-audit/">Sistema di Audit Logging</a> — l'altro registro: le attività, non gli errori</li>
+<li><a href="../../linee-guida-sql/">Linee guida SQL</a> — convenzioni di naming per funzioni e trigger</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="introduzione">Introduzione<a class="headerlink" href="#introduzione" title="Permanent link">&para;</a></h2>
+<p>Ogni sistema gestionale deve produrre messaggi di errore comprensibili e mantenere una traccia completa di cosa e andato storto, quando e in quale contesto. In Zero ERP questo obiettivo e realizzato con un modello a tre componenti:</p>
+<ul>
+<li>Un <strong>catalogo centralizzato</strong> di messaggi, multilingua, con template, causa e suggerimento di risoluzione</li>
+<li>Un <strong>registro persistente</strong> che archivia ogni occorrenza di errore con timestamp, area, funzione e contesto</li>
+<li>Un insieme di <strong>funzioni PL/pgSQL</strong> che collegano catalogo e registro, formattando il messaggio e sollevando l'eccezione in modo uniforme</li>
+</ul>
+<p>Il risultato: ogni errore nel sistema ha un codice stabile, un messaggio leggibile per l'utente, un dettaglio tecnico per lo sviluppatore, e un record di audit che sopravvive anche al rollback della transazione.</p>
+<p><strong>Cosa troverai in questa guida:</strong></p>
+<ul>
+<li>Come funziona il catalogo messaggi e il registro errori</li>
+<li>Le tre funzioni di supporto e il loro ruolo nel flusso</li>
+<li>Il meccanismo di logging persistente via dblink</li>
+<li>Il routing degli errori per processi di dominio (pipeline, pratiche)</li>
+<li>Il contratto standard per estendere il log a nuovi domini</li>
+<li>Il setup operativo per devops (dblink, permessi, hardening)</li>
+</ul>
+<hr />
+<h2 id="il-modello-in-sintesi">Il modello in sintesi<a class="headerlink" href="#il-modello-in-sintesi" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>config.classi_errore (vocabolario: 10 classi)
+    │
+    │  DATO_ERRATO · CONFLITTO_STATO · NON_TROVATO · TECNICO · …
+    │
+config.codici_errore (identità: 1 riga per codice)
+    │
+    │  codice → classe (NOT NULL) , obsoleto_dal , note
+    │
+config.messaggi_errore (frasi: 1 riga per codice+lingua)
+    │
+    │  codice + lingua → messaggio, causa, soluzione
+    │
+    ├── script.fn_get_messaggio()
+    │       recupera e formatta il messaggio con placeholder
+    │
+    ├── script.fn_log_error_only()
+    │       scrive su error_log via dblink (persiste anche in rollback)
+    │       usata internamente da fn_log_and_raise_error
+    │
+    └── script.fn_log_and_raise_error()
+            chiama fn_log_error_only + RAISE EXCEPTION
+            │
+            ├── dbops.error_log (registro tecnico — sempre)
+            │
+            └── log di dominio (routing per scope)
+                    vendite.fatturazione_lotti_log (scope LOTTO)
+                    vendite.fatture_log            (scope FATTURA)
+</code></pre></div>
+<ul>
+<li><strong>Identità</strong> = <em>cosa è</em> quel codice (la classe), da cui il backend deriva la risposta HTTP</li>
+<li><strong>Catalogo</strong> = i template dei messaggi, mantenuti in tabella e mai hard-coded nel codice</li>
+<li><strong>Registro</strong> = il log tecnico immutabile, scritto fuori transazione per sopravvivere ai rollback</li>
+<li><strong>Routing</strong> = i log di dominio specifici per processo, che si affiancano al registro tecnico</li>
+</ul>
+<hr />
+<h2 id="la-classe-di-un-codice-cosa-e-un-errore-prima-di-cosa-dice">La classe di un codice — <em>cosa è</em> un errore, prima di cosa dice<a class="headerlink" href="#la-classe-di-un-codice-cosa-e-un-errore-prima-di-cosa-dice" title="Permanent link">&para;</a></h2>
+<p>Un codice errore non è solo una <strong>frase</strong>. Chi legge il testo capisce cosa è
+successo, ma nessun programma saprebbe dire se quell'errore è un dato sbagliato,
+un conflitto di stato o un guasto tecnico — e quella conoscenza, se vivesse <strong>solo
+nel backend</strong> in un secondo elenco scritto a mano, si disallineerebbe dal catalogo
+senza che nulla protesti.</p>
+<p>Per questo ogni codice ha una <strong>classe</strong>, e la classe è <code>NOT NULL</code>.</p>
+<blockquote>
+<p>⭐ <strong>È questo il meccanismo, non l'adiacenza fra tabelle.</strong> Un codice senza
+semantica <strong>non può nascere</strong>: la colonna è obbligatoria, e chi crea un codice
+è obbligato a decidere <em>cosa sia</em> nel momento in cui ha in testa il ramo che lo
+solleva — che è l'unico momento in cui lo sa davvero.</p>
+</blockquote>
+<h3 id="le-dieci-classi">Le dieci classi<a class="headerlink" href="#le-dieci-classi" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Classe</th>
+<th>Risposta</th>
+<th>Quando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DATO_ERRATO</code></td>
+<td>400</td>
+<td>il valore che l'operatore ha scritto o scelto non va bene</td>
+</tr>
+<tr>
+<td><code>CONFLITTO_STATO</code></td>
+<td>409</td>
+<td>l'operazione non è ammessa <strong>adesso</strong>, per com'è il documento</td>
+</tr>
+<tr>
+<td><code>NON_TROVATO</code></td>
+<td>404</td>
+<td>la cosa indicata non esiste</td>
+</tr>
+<tr>
+<td><code>NON_PERMESSO</code></td>
+<td>403</td>
+<td>il diritto manca, e non dipende dallo stato</td>
+</tr>
+<tr>
+<td><code>NON_AUTENTICATO</code></td>
+<td>401</td>
+<td>non manca il diritto: manca <strong>chi sei</strong></td>
+</tr>
+<tr>
+<td><code>NON_ESEGUIBILE</code></td>
+<td>422</td>
+<td>la richiesta è comprensibile ma non si può portare a termine</td>
+</tr>
+<tr>
+<td><code>NON_DISPONIBILE</code></td>
+<td>501</td>
+<td>previsto dal disegno, non ancora costruito</td>
+</tr>
+<tr>
+<td><code>ERRORE_ESTERNO</code></td>
+<td>502</td>
+<td>ha fallito un sistema di terzi</td>
+</tr>
+<tr>
+<td><code>TECNICO</code></td>
+<td>500</td>
+<td>un guasto: l'operatore non può rimediare</td>
+</tr>
+<tr>
+<td><code>AVVISO</code></td>
+<td><em>nessuna</em></td>
+<td>si scrive nel diario e non si solleva (i codici <code>W_</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>La differenza che si sbaglia più spesso</strong> è fra <code>DATO_ERRATO</code> e
+<code>CONFLITTO_STATO</code>, e il criterio è pratico: <em>l'operatore può rimediare
+correggendo un campo?</em> Se sì è <code>DATO_ERRATO</code>, e la pagina può evidenziare quel
+campo. Se no è <code>CONFLITTO_STATO</code>, e l'unica cosa sensata è un messaggio.</p>
+<h3 id="da-dove-la-prende-il-backend">Da dove la prende il backend<a class="headerlink" href="#da-dove-la-prende-il-backend" title="Permanent link">&para;</a></h3>
+<p><strong>Da un file generato dal database.</strong> L'elenco <code>codice → classe</code> non si scrive
+più a mano: lo produce un comando che legge <code>config.vw_codici_errore_identita</code>, e
+un controllo in CI fallisce se il file committato non è più quello che il
+database produrrebbe adesso.</p>
+<p>⚠️ Il secondo elenco <strong>non è sparito</strong> — ha cambiato natura: da elenco <em>scritto</em>
+a elenco <em>generato</em>, cioè da qualcosa che può divergere in silenzio a qualcosa
+che diverge <strong>rumorosamente</strong>. È il massimo ottenibile senza spostare tutto sugli
+SQLSTATE, e la ragione sta nel brief del cantiere.</p>
+<h3 id="ritirare-un-codice-non-cancellarlo">Ritirare un codice, non cancellarlo<a class="headerlink" href="#ritirare-un-codice-non-cancellarlo" title="Permanent link">&para;</a></h3>
+<p><code>config.codici_errore.obsoleto_dal</code> è la data dalla quale un codice <strong>non si
+usa più per il nuovo</strong>. La riga resta, perché <code>dbops.error_log</code> ci punta e le
+occorrenze storiche devono continuare a leggersi.</p>
+<p>⚠️ <strong>Il ritiro sta sull'identità, non sulla frase.</strong> Metterlo su
+<code>config.messaggi_errore</code> sarebbe sbagliato di sostanza: quella tabella è chiavata
+<em>(codice, lingua)</em>, quindi si potrebbe ritirare un codice in italiano e lasciarlo
+vivo in inglese. <code>config.codici_errore</code> ha una riga per codice, ed è lì che la
+data appartiene.</p>
+<hr />
+<h2 id="componenti-del-modello">Componenti del modello<a class="headerlink" href="#componenti-del-modello" title="Permanent link">&para;</a></h2>
+<h3 id="1-il-catalogo-messaggi-configmessaggi_errore">1. Il catalogo messaggi: <code>config.messaggi_errore</code><a class="headerlink" href="#1-il-catalogo-messaggi-configmessaggi_errore" title="Permanent link">&para;</a></h3>
+<p>Il catalogo e il punto unico in cui si definiscono tutti i messaggi di errore del sistema. Ogni messaggio ha un codice stabile (es. <code>E_GENERICO</code>, <code>E_SOGGETTO_NO_CONTATTI</code>), un testo con eventuali placeholder, una causa e un suggerimento di risoluzione. La tabella supporta piu lingue: lo stesso codice puo avere template in italiano, inglese e altre lingue.</p>
+<p>Il vantaggio e duplice: lo sviluppatore usa solo il codice nel proprio codice PL/pgSQL, e il testo visualizzato puo essere modificato o tradotto senza toccare le funzioni.</p>
+<p>Da un punto di vista tecnico:</p>
+<ul>
+<li><code>id</code> (BIGINT, PK): chiave primaria</li>
+<li><code>codice</code> (TEXT): identificativo del messaggio — univoco per lingua tramite vincolo <code>UNIQUE (codice, lingua)</code></li>
+<li><code>lingua</code> (TEXT): lingua del template (<code>it</code>, <code>en</code>, ...), default <code>it</code></li>
+<li><code>messaggio</code> (TEXT): testo con placeholder <code>%s</code> sostituibili via <code>format()</code></li>
+<li><code>causa</code> (TEXT): descrizione della causa, usata come <code>DETAIL</code> nell'eccezione</li>
+<li><code>soluzione</code> (TEXT): suggerimento di risoluzione, usato come <code>HINT</code> nell'eccezione</li>
+</ul>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/config/tabelle/messaggi_errore/">config.messaggi_errore</a></p>
+</blockquote>
+<hr />
+<h3 id="2-il-registro-errori-dbopserror_log">2. Il registro errori: <code>dbops.error_log</code><a class="headerlink" href="#2-il-registro-errori-dbopserror_log" title="Permanent link">&para;</a></h3>
+<p>Il registro e l'archivio immutabile di tutte le occorrenze di errore nel sistema. Ogni volta che una funzione rileva un errore e chiama <code>fn_log_and_raise_error</code> o <code>fn_log_error_only</code>, viene creato un record con il timestamp, l'area funzionale, la funzione di origine, il codice errore e un contesto JSONB con i dati rilevanti per il debug.</p>
+<p>La caratteristica critica del registro e la <strong>persistenza fuori transazione</strong>: la scrittura avviene tramite dblink su una connessione separata, quindi il record sopravvive anche se la transazione principale viene annullata. Questo garantisce che nessun errore venga perso silenziosamente.</p>
+<p>Da un punto di vista tecnico:</p>
+<ul>
+<li><code>id</code> (BIGINT, PK): chiave primaria auto-incrementale</li>
+<li><code>occurred_at</code> (TIMESTAMPTZ): istante di logging, default <code>now()</code></li>
+<li><code>area</code> (TEXT): ambito funzionale (es. <code>vendite</code>, <code>anagrafiche</code>, <code>database</code>)</li>
+<li><code>function_name</code> (TEXT): nome della funzione che ha generato l'errore</li>
+<li><code>messaggio_errore_id</code> (BIGINT, NOT NULL): FK verso <code>config.messaggi_errore.id</code></li>
+<li><code>context</code> (JSONB): payload libero con variabili, parametri, ID coinvolti — default <code>{}</code></li>
+<li><code>tx_id</code> (UUID): identificativo della transazione correlata</li>
+<li><code>cleanup_at</code> (TIMESTAMPTZ): timestamp opzionale per retention automatica</li>
+</ul>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/dbops/tabelle/error_log/">dbops.error_log</a></p>
+</blockquote>
+<hr />
+<h3 id="3-le-funzioni-di-supporto">3. Le funzioni di supporto<a class="headerlink" href="#3-le-funzioni-di-supporto" title="Permanent link">&para;</a></h3>
+<p>Il modello di errore si appoggia su tre funzioni nello schema <code>script</code>, ciascuna con un ruolo distinto. L'ordine in cui sono presentate riflette la catena di dipendenza: <code>fn_get_messaggio</code> e la piu semplice (solo lettura), <code>fn_log_error_only</code> gestisce il logging persistente, e <code>fn_log_and_raise_error</code> le combina entrambe per il flusso completo errore + eccezione.</p>
+<h4 id="scriptfn_get_messaggio"><code>script.fn_get_messaggio</code><a class="headerlink" href="#scriptfn_get_messaggio" title="Permanent link">&para;</a></h4>
+<p>Recupera un messaggio dal catalogo e lo formatta con i valori forniti. E una funzione di pura lettura, marcata <code>IMMUTABLE</code>.</p>
+<p>La lingua viene risolta con una cascata: parametro esplicito → GUC <code>myapp.user_language</code> → fallback <code>it</code>. Se il codice non esiste nel catalogo, restituisce <code>&#91;MESSAGGIO NON DEFINITO: &lt;codice&gt;&#93;</code> invece di fallire.</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Default</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_codice</code></td>
+<td>TEXT</td>
+<td>—</td>
+<td>Codice del messaggio</td>
+</tr>
+<tr>
+<td><code>p_valore</code></td>
+<td>TEXT</td>
+<td>NULL</td>
+<td>Valore per il placeholder <code>%s</code></td>
+</tr>
+<tr>
+<td><code>p_lingua</code></td>
+<td>TEXT</td>
+<td>NULL</td>
+<td>Lingua esplicita (sovrascrive il GUC)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/script/funzioni/fn_get_messaggio/">script.fn_get_messaggio</a></p>
+</blockquote>
+<h4 id="scriptfn_log_error_only"><code>script.fn_log_error_only</code><a class="headerlink" href="#scriptfn_log_error_only" title="Permanent link">&para;</a></h4>
+<p>Scrive un record nel registro <code>dbops.error_log</code> senza sollevare eccezione. E la funzione su cui si basa l'intero meccanismo di logging persistente: usa dblink per scrivere su una connessione separata, garantendo che il log sopravviva al rollback.</p>
+<p>Questa e la funzione piu critica dal punto di vista operativo. Per funzionare correttamente <strong>deve essere <code>SECURITY DEFINER</code></strong> con <strong>owner superuser</strong> (<code>postgres</code>). La connessione dblink viene risolta dalla GUC <code>myapp.dblink_log_connection</code> (o <code>myapp.logconn</code>). Se la configurazione manca o e errata, la funzione emette un WARNING senza propagare errori al chiamante — il logging fallisce silenziosamente ma l'operazione principale non viene compromessa.</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Default</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_area</code></td>
+<td>TEXT</td>
+<td>—</td>
+<td>Area funzionale</td>
+</tr>
+<tr>
+<td><code>p_function_name</code></td>
+<td>TEXT</td>
+<td>—</td>
+<td>Funzione che origina l'errore</td>
+</tr>
+<tr>
+<td><code>p_error_code</code></td>
+<td>TEXT</td>
+<td>—</td>
+<td>Codice del messaggio in <code>messaggi_errore</code></td>
+</tr>
+<tr>
+<td><code>p_context</code></td>
+<td>JSONB</td>
+<td>—</td>
+<td>Contesto per il debug</td>
+</tr>
+<tr>
+<td><code>p_tx_id</code></td>
+<td>UUID</td>
+<td>—</td>
+<td>Transazione correlata</td>
+</tr>
+<tr>
+<td><code>VARIADIC p_valori</code></td>
+<td>TEXT[]</td>
+<td>—</td>
+<td>Valori per i placeholder</td>
+</tr>
+</tbody>
+</table>
+<p>Se il codice errore non esiste nel catalogo, la funzione usa il codice di ripiego <code>E_MESSAGGIO_NON_DEFINITO</code>. Se anche questo manca, il log viene saltato con WARNING.</p>
+<blockquote>
+<p>⚠️ <strong>Il nome del ripiego è scritto a mano in tre posti che non si derivano l'uno
+dall'altro</strong> — il corpo di <code>fn_log_error_only</code>, i CSV di seed e il pgTAP che
+verifica che il ripiego esista: rinominarlo vuol dire toccarli tutti e tre. La
+documentazione che lo chiama <code>MESSAGGIO_NON_DEFINITO</code>, senza prefisso, è
+anteriore al cambio di nome.</p>
+<p>Documentazione dettagliata: <a href="../../dbzero/script/funzioni/fn_log_error_only/">script.fn_log_error_only</a></p>
+</blockquote>
+<h4 id="scriptfn_log_and_raise_error"><code>script.fn_log_and_raise_error</code><a class="headerlink" href="#scriptfn_log_and_raise_error" title="Permanent link">&para;</a></h4>
+<p>E la funzione principale per il flusso completo: logging + eccezione. Internamente chiama <code>fn_log_error_only</code> per il logging persistente, poi recupera il template tramite <code>fn_get_messaggio</code>, applica i valori ai placeholder, e solleva un <code>RAISE EXCEPTION</code> con <code>DETAIL</code> (causa) e <code>HINT</code> (soluzione) estratti dal catalogo.</p>
+<p>L'applicazione riceve un errore formattato e comprensibile. Il database mantiene un record di audit completo.</p>
+<p>Da un punto di vista tecnico:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Tipo</th>
+<th>Default</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_area</code></td>
+<td>TEXT</td>
+<td>—</td>
+<td>Area funzionale</td>
+</tr>
+<tr>
+<td><code>p_function_name</code></td>
+<td>TEXT</td>
+<td>—</td>
+<td>Funzione che origina l'errore</td>
+</tr>
+<tr>
+<td><code>p_error_code</code></td>
+<td>TEXT</td>
+<td>—</td>
+<td>Codice del messaggio</td>
+</tr>
+<tr>
+<td><code>p_context</code></td>
+<td>JSONB</td>
+<td>—</td>
+<td>Contesto per il debug</td>
+</tr>
+<tr>
+<td><code>p_tx_id</code></td>
+<td>UUID</td>
+<td>—</td>
+<td>Transazione correlata</td>
+</tr>
+<tr>
+<td><code>VARIADIC p_valori</code></td>
+<td>TEXT[]</td>
+<td>—</td>
+<td>Valori per i placeholder del messaggio</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Documentazione dettagliata: <a href="../../dbzero/script/funzioni/fn_log_and_raise_error/">script.fn_log_and_raise_error</a></p>
+</blockquote>
+<hr />
+<h3 id="due-funzioni-per-sollevare-e-a-scegliere-non-sei-tu">⭐ Due funzioni per sollevare, e a scegliere non sei tu<a class="headerlink" href="#due-funzioni-per-sollevare-e-a-scegliere-non-sei-tu" title="Permanent link">&para;</a></h3>
+<p>I punti che sollevano il <strong>codice del primo motivo</strong> di una <code>script.fn_check_*</code> non
+compongono più la coda a mano: chiamano <code>script.fn_raise_primo_motivo_se_presente</code>. La domanda che decide e' <strong>una</strong>, e
+si vede nella riga che stai scrivendo:</p>
+<blockquote>
+<p><strong>Il codice che sollevo lo sto LEGGENDO da un array di motivi, o lo sto
+SCRIVENDO come letterale?</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Quello che scrivi</th>
+<th>Cosa chiami</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'E_QUALCOSA'</code> — un letterale</td>
+<td><code>script.fn_log_and_raise_error</code></td>
+</tr>
+<tr>
+<td><code>v_motivi -&gt; 0 -&gt;&gt; 'codice'</code></td>
+<td><code>script.fn_raise_primo_motivo_se_presente</code></td>
+</tr>
+</tbody>
+</table>
+<p>⭐ <strong>Sbagliare funzione non compila</strong>: i tipi non legano (<code>42883</code> in un verso,
+<code>22P02</code> nell'altro). L'unico modo di sbagliare e' <strong>non usarla</strong> — ricopiare la
+coda — e quello e' silenzioso: lo presidia <code>db/pgtap/script/test-rubinetto-primo-motivo-v1.sql</code>.</p>
+<p>⛔ <strong>L'array non lo costruisci tu.</strong> Se stai scrivendo
+<code>jsonb_build_array(jsonb_build_object('codice', 'E_X', ...))</code> per poter usare
+l'helper, stai usando l'attrezzo sbagliato: quel motivo lo conosci gia', e il
+<code>-&gt; 0</code> non sceglie niente.</p>
+<p>⚠️ <strong>E c'è un caso in cui l'helper NON si usa anche se hai i motivi</strong>: quando
+la <code>fn_check_*</code> <strong>non emette <code>valori</code></strong>. Lì la frase la compone il chiamante
+dai propri dati, e delegare la spezzerebbe — uscirebbero i <code>%s</code> grezzi a video.
+Sono <strong>sei</strong> siti, dichiarati come debito nel presidio
+(<code>test-rubinetto-primo-motivo-v1.sql</code>, test 4), a soglia che <strong>può solo calare</strong>.</p>
+<p>⭐ <strong>La domanda che viene PRIMA</strong>, quando scrivi un guard nuovo, non e' quale
+funzione chiamare: e' <strong>«questa regola deve anche accendere o spegnere un
+pulsante nel frontend?»</strong>. Se si', il predicato va in una <code>fn_check_*</code> e il
+guard la CHIAMA (§12.5.2) — e allora ti ritrovi i motivi in mano. Se no,
+valuti lì e sollevi il codice diretto.</p>
+<h2 id="flusso-di-gestione-degli-errori">Flusso di gestione degli errori<a class="headerlink" href="#flusso-di-gestione-degli-errori" title="Permanent link">&para;</a></h2>
+<p>Quando una funzione o un trigger rileva una condizione di errore, il flusso standard e:</p>
+<ol>
+<li><strong>Validazione</strong> — la funzione/trigger identifica l'anomalia (dato mancante, vincolo violato, stato incoerente)</li>
+<li><strong>Logging persistente</strong> — <code>fn_log_and_raise_error</code> chiama internamente <code>fn_log_error_only</code>, che scrive su <code>dbops.error_log</code> tramite una connessione dblink separata. Il record e gia persistito a questo punto</li>
+<li><strong>Formattazione messaggio</strong> — <code>fn_get_messaggio</code> recupera il template dal catalogo nella lingua corrente e sostituisce i placeholder</li>
+<li><strong>Eccezione</strong> — <code>RAISE EXCEPTION</code> con il messaggio formattato, <code>DETAIL</code> (causa) e <code>HINT</code> (soluzione)</li>
+</ol>
+<p>La transazione va in rollback, ma il record in <code>error_log</code> sopravvive perche e stato scritto fuori transazione.</p>
+<div class="highlight"><pre><span></span><code>Trigger / Funzione PL/pgSQL
+    │
+    │  rileva errore
+    │
+    └── fn_log_and_raise_error(area, funzione, codice, context, tx_id, valori...)
+            │
+            ├── fn_log_error_only()  ← dblink → INSERT INTO dbops.error_log
+            │                                     (persiste anche in rollback)
+            │
+            ├── fn_get_messaggio()   ← config.messaggi_errore
+            │                          (template + lingua + placeholder)
+            │
+            └── RAISE EXCEPTION      ← messaggio formattato
+                  DETAIL = causa       (da messaggi_errore.causa)
+                  HINT   = soluzione   (da messaggi_errore.soluzione)
+</code></pre></div>
+<hr />
+<h2 id="cosa-esce-dalleccezione-oltre-al-testo">Cosa esce dall'eccezione, oltre al testo<a class="headerlink" href="#cosa-esce-dalleccezione-oltre-al-testo" title="Permanent link">&para;</a></h2>
+<p><code>RAISE</code> di PostgreSQL ha campi strutturati oltre al messaggio, e il progetto ne
+usa <strong>due</strong>. Non sono decorazioni: sono l'unico modo che il backend ha di sapere
+cosa è successo <strong>senza fare parsing del testo</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Porta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CONSTRAINT</code></td>
+<td>il <strong>codice</strong> di dominio</td>
+</tr>
+<tr>
+<td><code>COLUMN</code></td>
+<td>il <strong>nome del campo</strong> che l'operatore deve correggere</td>
+</tr>
+</tbody>
+</table>
+<p>Il <code>RAISE</code> che li popola è in <a href="#area-tecnica-esempi">Area tecnica</a>:</p>
+<p>⚠️ <strong>Il contratto vale solo su <code>P0001</code></strong>, ed è essenziale: su una violazione di
+vincolo vera (classe <code>23xxx</code>) <code>constraint_name</code> contiene il nome del vincolo del
+database (<code>uq_…</code>, <code>fk_…</code>). Leggerlo come codice applicativo produrrebbe un codice
+inesistente, cioè un 500 al posto di un 409 parlante.</p>
+<h3 id="il-nome-del-campo-non-si-scrive-si-dichiara">Il nome del campo: non si scrive, si dichiara<a class="headerlink" href="#il-nome-del-campo-non-si-scrive-si-dichiara" title="Permanent link">&para;</a></h3>
+<p>Chi solleva <strong>non tocca il <code>RAISE</code></strong>: mette il nome nel contesto, e
+<code>fn_log_and_raise_error</code> fa il resto (<a href="#area-tecnica-esempi">esempio</a>).</p>
+<ul>
+<li><strong><code>campo</code></strong> — il nome esplicito, ed è la strada da usare quando si sa;</li>
+<li><strong><code>parametro</code></strong> — se <code>campo</code> manca si ripiega qui, togliendo il prefisso <code>p_</code>.
+  ⭐ È una convenzione <strong>già in uso da sempre</strong> (<code>'parametro','p_cognome'</code>) che non
+  veniva trasmessa: derivarla copre la maggior parte dei punti in cui il frontend
+  potrebbe accendere un campo, <strong>senza toccarne nessuno</strong>.</li>
+</ul>
+<p>⚠️ <strong>Esce il nome, mai il valore.</strong> Nei contesti c'è spesso anche quello che
+l'operatore ha scritto: non ha nessun motivo di tornare indietro, ce l'ha già
+davanti. E il nome deve <strong>sembrare un identificatore</strong>, altrimenti viene scartato.</p>
+<h3 id="i-valori-del-messaggio-chi-li-mette-scrive-per-una-persona">⛔ I valori del messaggio: chi li mette <strong>scrive per una persona</strong><a class="headerlink" href="#i-valori-del-messaggio-chi-li-mette-scrive-per-una-persona" title="Permanent link">&para;</a></h3>
+<p>I canali <code>CONSTRAINT</code> e <code>COLUMN</code> dicono al <strong>backend</strong> che cosa è successo e dove.
+Il <code>VARIADIC p_valori</code> è un'altra cosa: riempie i <code>%s</code> del template, cioè
+<strong>compone la frase che l'operatore leggerà</strong>. Non è debug, è interfaccia.</p>
+<blockquote>
+<p>⛔ <strong>Nel <code>VARIADIC</code> non entra mai il nome di un parametro PL/pgSQL, né il nome
+di una colonna.</strong> Entra la cosa che l'operatore riconosce.</p>
+</blockquote>
+<p>I due modi di scrivere la stessa chiamata — uno sbagliato e uno giusto, con la
+frase che l'operatore legge in entrambi i casi — sono in
+<a href="#area-tecnica-esempi">Area tecnica</a>. Nel primo il codice è registrato e la frase
+no: il messaggio è di qualità <code>E_GENERICO</code>, cioè generico per costruzione.</p>
+<h4 id="perche-la-regola-sta-qui-e-non-altrove">⭐ Perché la regola sta qui e non altrove<a class="headerlink" href="#perche-la-regola-sta-qui-e-non-altrove" title="Permanent link">&para;</a></h4>
+<p>Perché il difetto <strong>non si vede guardando il codice errore</strong>. Il primo esempio usa
+un codice registrato, con la sua classe, il suo <code>ui_action</code>, il suo campo sul
+canale <code>COLUMN</code>: passa tutti i cancelli — il guardrail dei codici, il rubinetto
+degli accumulatori, la rigenerazione delle policy. Eppure produce un messaggio di
+qualità <code>E_GENERICO</code>.</p>
+<blockquote>
+<p><strong>Un codice registrato non garantisce un messaggio leggibile: il codice sceglie
+la <em>frase</em>, ma il <em>valore</em> che ci si infila dentro lo sceglie chi solleva.</strong></p>
+</blockquote>
+<p>È lo stesso difetto che il refactor <code>E_GENERICO</code> ha tolto dal <strong>codice</strong>: qui
+rientra dal <strong>valore</strong>. Caso reale: sei guard di parametro bonificati «bene» —
+codici registrati, classi giuste, campo dichiarato — e messaggi comunque
+illeggibili.</p>
+<h4 id="e-il-valore-decide-anche-quale-codice-serve">⭐ E il valore decide anche <strong>quale codice</strong> serve<a class="headerlink" href="#e-il-valore-decide-anche-quale-codice-serve" title="Permanent link">&para;</a></h4>
+<p>La domanda «riuso un codice esistente o ne conio uno?» non si risponde guardando
+la <em>condizione</em> (<em>«è un guard di parametro»</em>), ma <strong>chi può rimediare</strong> — perché è
+quello che decide chi legge la frase.</p>
+<table>
+<thead>
+<tr>
+<th>Il dato lo fornisce…</th>
+<th>Chi legge il messaggio</th>
+<th>Codice</th>
+<th>Classe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>una <strong>persona</strong>, in un form</td>
+<td>una persona</td>
+<td>codice di dominio, frase in italiano che <strong>nomina il dato</strong></td>
+<td><code>DATO_ERRATO</code> (400)</td>
+</tr>
+<tr>
+<td>solo un <strong>chiamante rotto</strong> (<code>id &lt;= 0</code> dove il <code>NULL</code> è ammesso, enum vuoto)</td>
+<td>chi guarda <code>dbops.error_log</code></td>
+<td>codice di dominio, messaggio che <strong>nomina il parametro</strong></td>
+<td><code>TECNICO</code> (500)</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ Lo stesso guard può stare da una parte o dall'altra a seconda del parametro:
+in una funzione con otto parametri due possono essere di form e sei no. Si guarda
+<strong>parametro per parametro</strong>, non funzione per funzione.</p>
+<h5 id="e-nella-seconda-riga-non-si-riusa-e_parametro_invalido">⛔ E nella seconda riga NON si riusa <code>E_PARAMETRO_INVALIDO</code><a class="headerlink" href="#e-nella-seconda-riga-non-si-riusa-e_parametro_invalido" title="Permanent link">&para;</a></h5>
+<p>È la scelta che sembra ovvia, ed è sbagliata per una ragione che il codice da
+solo non mostra: <strong><code>E_PARAMETRO_INVALIDO</code> è un debito, non una sede.</strong></p>
+<ul>
+<li><strong>D11</strong> del cantiere codici-errore:
+  <em>«<code>E_VALIDAZIONE</code> si spezza prima del seed; <code>E_PARAMETRO_INVALIDO</code> <strong>no</strong> —
+  denominatore sicuro + <code>note</code>, e <strong>cantiere suo</strong>»</em>. È uno <strong>split rimandato</strong>,
+  con una classe di compromesso e la ragione scritta nel catalogo. Sopravvive
+  perché il backend deve poter ancora gestire le funzioni vecchie;</li>
+<li><strong>§9.1</strong> dello stesso cantiere: <em>«la regola che chiude il <strong>rubinetto</strong> — vietare
+  <strong>nuovi</strong> codici generici — resta in coda al lavoro: rincorrere gli esistenti
+  senza chiudere il rubinetto è la forma in cui questi registri non calano mai»</em>;</li>
+<li><strong><a href="../../dev/api/">api.md §Tassonomia errori</a></strong> lo dichiara <strong>candidato allo split</strong>
+  (113 funzioni, 111 con verità 400 e 2 con 404) e ne trae la regola <em>«un codice
+  usato per due cose si spezza a monte, non si rimappa a valle»</em>.</li>
+</ul>
+<p>⭐ <strong>Precedente da citare quando qualcuno riproporrà il riuso</strong>:
+<code>E_VENDITE_PRICING_ESITO_ASSENTE</code> (classe <code>TECNICO</code>) esiste perché il
+rubinetto respinse <code>E_PARAMETRO_INVALIDO</code> su un guard analogo — <em>«lì non c'è
+nessun parametro invalido, c'è un'invariante rotta»</em>.</p>
+<p>⚠️ <strong><code>TECNICO</code> non è una sfumatura: sposta lo status da 400 a 500</strong>, ed è il
+punto. <code>DATO_ERRATO</code> significa <em>«chi l'ha fatta può correggerlo e riprovare»</em>: su
+un bug del chiamante non c'è niente da correggere, e un 400 manda l'operatore a
+cercare un campo che non esiste.</p>
+<p>⚠️ <strong>E su un <code>TECNICO</code> la chiave <code>campo</code> esce dal contesto</strong>: su un 500 non c'è
+nessun campo da accendere, e lasciarla farebbe evidenziare un input che l'errore
+non ha causato.</p>
+<h4 id="leccezione-che-non-e-una-violazione">⚠️ L'eccezione che NON è una violazione<a class="headerlink" href="#leccezione-che-non-e-una-violazione" title="Permanent link">&para;</a></h4>
+<p>Un messaggio può nominare una colonna <strong>di proposito</strong>, quando il suo lettore è
+uno sviluppatore e la colonna è l'informazione utile (<a href="#area-tecnica-esempi">l'esempio</a>
+è il messaggio di <code>E_MOVIMENTO_RIFERIMENTO_INCOERENTE</code>).</p>
+<p>Qui <code>'fattura_id'</code> è <strong>il soggetto della frase</strong>, non un nome di parametro
+travestito da spiegazione: il messaggio esiste per dire <em>quale</em> dei tre
+riferimenti derivati è stato passato a mano sbagliato, e l'unico modo di dirlo è
+nominarlo. Il destinatario è chi ha scritto la chiamata, non chi compila un form.</p>
+<blockquote>
+<p><strong>La domanda non è «c'è un nome di colonna nel messaggio?» ma «l'ho messo perché
+serve a chi legge, o perché non avevo voglia di scrivere una frase?».</strong></p>
+</blockquote>
+<h4 id="quanto-e-diffuso">📊 Quanto è diffuso<a class="headerlink" href="#quanto-e-diffuso" title="Permanent link">&para;</a></h4>
+<p>⚠️ <strong>Questa non è una svista isolata: è lo stile in cui il progetto è cresciuto.</strong>
+In <code>pg_proc</code> — l'oggetto vivo, non gli YAML — i valori passati nel <code>VARIADIC</code> che
+<em>sembrano</em> un nome di parametro o di colonna sono <strong>centinaia</strong>, distribuiti su
+funzioni di quasi tutti gli schemi. La forma ricorrente è
+<code>'p_&lt;nome&gt;_id obbligatorio e &gt; 0'</code>.</p>
+<p>⛔ <strong>E per questo NON esiste un cancello bloccante, ed è una scelta.</strong> L'unico
+controllo automatico possibile è euristico, e sbaglierebbe proprio sul caso
+legittimo qui sopra — un messaggio che nomina una colonna perché è la sua
+ragione d'essere. Vale il criterio già scritto per il rubinetto degli accumulatori
+(<code>scripts/codici-errore-baseline.sh</code>): <em>un cancello che capisce un caso su cinque
+boccia a caso e passa a caso, e dopo due blocchi sbagliati qualcuno lo spegne — un
+presidio spento è peggio di uno assente</em>.</p>
+<p>Il presidio praticabile è quindi <strong>a valle e per caso</strong>: dove la frase è la posta
+in gioco, un <code>throws_like</code> nel pgTAP di quella funzione (vedi sotto). E la
+diffusione serve a sapere questo: quando si tocca una funzione vecchia, il
+messaggio va <strong>guardato</strong>, non dato per buono perché il codice è registrato.</p>
+<h4 id="come-si-presidia">Come si presidia<a class="headerlink" href="#come-si-presidia" title="Permanent link">&para;</a></h4>
+<p>Un <code>throws_ok(..., 'P0001', ...)</code> <strong>non</strong> protegge questa regola: <code>P0001</code> dice
+«errore di dominio», non <em>quale</em> e tanto meno <em>come è scritto</em>. Dove la frase è la
+posta in gioco si asserisce con <code>throws_like</code> su un frammento stabile — mai
+attraverso un segnaposto (<a href="#area-tecnica-esempi">esempio</a>).</p>
+<hr />
+<h3 id="le-tre-trappole-prese-sul-campo">⚠️ Le tre trappole, prese sul campo<a class="headerlink" href="#le-tre-trappole-prese-sul-campo" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Il codice dice <em>cosa</em> è andato storto, il contesto dice <em>dove</em>.</strong> Due punti
+   possono condividere il codice ed essere campi diversi — <code>E_PIVA_NON_VALIDA</code>
+   vale sia per <code>partita_iva</code> sia per <code>piva_gruppo_acquisto</code>. Chi assegna il nome
+   guardando il codice sbaglia campo;</li>
+<li><strong>la prima riga della guardia non è la guardia.</strong> In
+   <code>IF NEW.ritenuta_acconto = true AND (NEW.ritenuta_aliquota IS NULL …)</code> il campo
+   da correggere è sulla <strong>seconda</strong> riga: mandare il primo direbbe all'operatore
+   di togliere la spunta invece che di scrivere l'aliquota;</li>
+<li><strong>si ragiona per schermata, non per schema.</strong> Il CF <em>mancante</em> è validato in
+   <code>anagrafiche</code>, il CF <em>malformato</em> in <code>script</code>: coprire uno solo dei due lascia
+   la stessa pagina che si accende in un caso e non nel gemello — e insegna
+   all'operatore che il bordo rosso non è affidabile.</li>
+</ol>
+<p>⛔ <strong>Un solo mittente per canale</strong>, presidiato dai controlli (A) e (F) del
+guardrail. Un secondo mittente su <code>COLUMN</code> non farebbe fallire niente: farebbe
+<strong>evidenziare il campo sbagliato</strong>, che è peggio di non evidenziarne nessuno.
+Vedi <a href="../presidi-e-registri-del-debito/">Presidi e registri del debito</a> §3.3.</p>
+<hr />
+<h2 id="routing-errori-di-dominio">Routing errori di dominio<a class="headerlink" href="#routing-errori-di-dominio" title="Permanent link">&para;</a></h2>
+<h3 id="il-concetto">Il concetto<a class="headerlink" href="#il-concetto" title="Permanent link">&para;</a></h3>
+<p>Il registro tecnico <code>dbops.error_log</code> traccia ogni errore del sistema in modo uniforme. Ma i processi applicativi — come la pipeline di fatturazione o la gestione pratiche — hanno bisogno di log piu strutturati, con informazioni di dominio (quale lotto, quale fattura, quale fase del processo).</p>
+<p>Per questo motivo Zero ERP adotta un <strong>routing esplicito</strong>: ogni errore applicativo viene scritto sia nel registro tecnico standard sia nel log di dominio specifico. I due livelli convivono senza sostituirsi.</p>
+<h3 id="routing-attuale-vendite">Routing attuale (vendite)<a class="headerlink" href="#routing-attuale-vendite" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ambito</th>
+<th>Target log di dominio</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LOTTO</code></td>
+<td><code>vendite.fatturazione_lotti_log</code></td>
+<td>Avanzamento fasi pipeline, esito complessivo lotto</td>
+</tr>
+<tr>
+<td><code>FATTURA</code></td>
+<td><code>vendite.fatture_log</code></td>
+<td>Errori specifici sul singolo documento</td>
+</tr>
+</tbody>
+</table>
+<p>In entrambi i casi il registro tecnico <code>dbops.error_log</code> resta attivo per gli errori SQL/raise.</p>
+<h3 id="funzioni-di-dominio-stato-attuale">Funzioni di dominio (stato attuale)<a class="headerlink" href="#funzioni-di-dominio-stato-attuale" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>vendite.fn_log_pipeline_fase(...)</code> — scrive su <code>fatturazione_lotti_log</code> con fase, status e metadati denormalizzati dal lotto</li>
+<li><code>vendite.fn_log_lotto_esito_fatture(...)</code> — aggrega gli esiti dalle fatture del lotto (priorita: C &gt; W &gt; I) e scrive il risultato complessivo</li>
+</ul>
+<h3 id="contratto-standard-per-i-log-di-dominio">Contratto standard per i log di dominio<a class="headerlink" href="#contratto-standard-per-i-log-di-dominio" title="Permanent link">&para;</a></h3>
+<p>Questo contratto e pensato per essere riusabile quando si aggiungono nuovi domini (es. <code>ATTIVITA_FATTURABILI</code>, <code>PRATICHE</code>). Ogni nuovo dominio crea le proprie tabelle di log e le proprie funzioni, ma rispetta lo stesso schema di campi:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Obbligatorio</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scope</code></td>
+<td>TEXT</td>
+<td>si</td>
+<td>Identifica il contesto (<code>LOTTO</code>, <code>FATTURA</code>, <code>PRATICA</code>, ...)</td>
+</tr>
+<tr>
+<td><code>severity</code></td>
+<td>CHAR(1)</td>
+<td>si</td>
+<td><code>I</code> = info, <code>W</code> = warning, <code>C</code> = critico</td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td>TEXT</td>
+<td>si</td>
+<td>Codice errore stabile da <code>config.messaggi_errore</code></td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>TEXT</td>
+<td>si</td>
+<td>Messaggio sintetico</td>
+</tr>
+<tr>
+<td><code>detail</code></td>
+<td>TEXT</td>
+<td>no</td>
+<td>Dettaglio tecnico</td>
+</tr>
+<tr>
+<td><code>meta</code></td>
+<td>JSONB</td>
+<td>no</td>
+<td>Contesto libero (task, step, funzione, parametri)</td>
+</tr>
+<tr>
+<td>ID entita</td>
+<td>varia</td>
+<td>si</td>
+<td>ID dell'entita di dominio (es. <code>lotto_id</code>, <code>fattura_id</code>, <code>pratica_id</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>La severita segue una gerarchia a tre livelli: se almeno un errore critico (<code>C</code>) e presente, l'esito complessivo e critico. Altrimenti, se ci sono warning (<code>W</code>), l'esito e warning. Altrimenti e informativo (<code>I</code>).</p>
+<hr />
+<h2 id="best-practice">Best practice<a class="headerlink" href="#best-practice" title="Permanent link">&para;</a></h2>
+<h3 id="codici-errore">Codici errore<a class="headerlink" href="#codici-errore" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Centralizzare tutti i messaggi</strong> in <code>config.messaggi_errore</code> — mai hard-codare testi nelle funzioni</li>
+<li><strong>Usare nomi descrittivi</strong> che rendano il codice autoesplicativo senza consultare il catalogo</li>
+<li>Ogni codice deve essere registrato <strong>prima</strong> di essere usato: una riga in <code>config.codici_errore</code> (identità + classe) è <strong>obbligatoria</strong>, perché <code>config.messaggi_errore.codice</code> ha una chiave esterna verso di essa. Una frase senza identità non entra: non è una raccomandazione, è un vincolo</li>
+<li>Se il codice manca del tutto, <code>fn_log_error_only</code> ricade su <code>E_MESSAGGIO_NON_DEFINITO</code></li>
+</ul>
+<h4 id="il-prefisso-dice-se-blocca-e_-e-w_">Il prefisso dice se blocca: <code>E_</code> e <code>W_</code><a class="headerlink" href="#il-prefisso-dice-se-blocca-e_-e-w_" title="Permanent link">&para;</a></h4>
+<p>Il prefisso del codice <strong>non è decorativo</strong>: dichiara al lettore se l'operazione
+prosegue o si ferma. Deve corrispondere alla funzione che lo solleva.</p>
+<table>
+<thead>
+<tr>
+<th>Prefisso</th>
+<th>Significato</th>
+<th>Funzione da usare</th>
+<th>Effetto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E_</code></td>
+<td><strong>Errore bloccante</strong></td>
+<td><code>script.fn_log_and_raise_error</code></td>
+<td>logga <strong>e</strong> solleva: la transazione si ferma</td>
+</tr>
+<tr>
+<td><code>W_</code></td>
+<td><strong>Avvertimento</strong></td>
+<td><code>script.fn_log_error_only</code></td>
+<td>logga soltanto: l'esecuzione prosegue</td>
+</tr>
+</tbody>
+</table>
+<p>Esempi: <code>E_GENERICO</code>, <code>E_SOGGETTO_NO_CONTATTI</code>, <code>E_RUOLO_NATURA_NON_AMMESSA</code> da un
+lato; <code>W_TXID_NOT_REGISTERED</code> dall'altro.</p>
+<p><strong>Perché la regola conta.</strong> Un codice <code>W_</code> sollevato con <code>fn_log_and_raise_error</code>
+blocca pur dichiarandosi innocuo, e chi legge lo stack trace cerca la causa nel
+posto sbagliato. È successo davvero: <code>W_TXID_NOT_REGISTERED</code> bloccava le
+migrazioni in ogni ambiente senza canale di log, e il prefisso <code>W_</code> ha portato
+fuori strada la diagnosi.</p>
+<p><strong>Nel dubbio, guarda il chiamante, non il nome.</strong> Quando si aggiunge o si modifica
+un codice, la verifica è una sola riga: se passa per <code>fn_log_and_raise_error</code> deve
+iniziare per <code>E_</code>, se passa per <code>fn_log_error_only</code> per <code>W_</code>.</p>
+<p>✅ <strong>Nessun codice vivo è fuori convenzione.</strong> Il registro
+<code>dbops.messaggi_errore_codici_legacy</code> esiste per il debito <strong>ereditato</strong>: un nome
+storico che si trova ancora in giro si registra lì, invece di essere rinominato a
+forza. Oggi è <strong>vuoto</strong>, e non si droppa: un registro vuoto non è un registro
+inutile, è un registro <strong>in pari</strong>. La documentazione che cita
+<code>ERRORE_PARAMETRI_TABELLA</code> — senza prefisso — è anteriore al ritiro: il nome vivo
+è <code>E_ERRORE_PARAMETRI_TABELLA</code>.</p>
+<p>⛔ <strong>Ma il rubinetto è chiuso</strong>: il controllo (B) del guardrail rifiuta ogni
+codice <em>nuovo</em> fuori convenzione. Il registro è per il debito <strong>ereditato</strong>, non
+per i codici nuovi: quelli nascono giusti.</p>
+<h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Popolare il <code>context</code></strong> JSONB con dati rilevanti per il debug: ID coinvolti, parametri della chiamata, stato corrente</li>
+<li><strong>Non catturare errori generici</strong> nel backend: usare <code>ServiceError</code> nei service e lasciare il middleware di core gestire il fallback (vedi <code>apps/core/services/error_manager.py</code>)</li>
+<li><strong>Sfruttare la multilingua</strong> definendo template in piu lingue e usando il GUC <code>myapp.user_language</code></li>
+</ul>
+<h3 id="monitoraggio">Monitoraggio<a class="headerlink" href="#monitoraggio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creare viste o dashboard su <code>dbops.error_log</code> per alert e metriche di errore</li>
+<li>Il campo <code>cleanup_at</code> permette policy di retention automatica</li>
+<li>Il JSONB <code>context</code> e il modello di log separato preservano la flessibilita per colonne future</li>
+</ul>
+<hr />
+<h2 id="consultare-i-log">Consultare i log<a class="headerlink" href="#consultare-i-log" title="Permanent link">&para;</a></h2>
+<p>Le sezioni precedenti descrivono come i log si <strong>scrivono</strong>. Questa descrive come
+si <strong>leggono</strong>: quale registro risponde a quale domanda, e da dove ci si arriva
+nell'applicazione.</p>
+<blockquote>
+<p>Questa è la mappa <strong>stabile</strong>. Lo stato di avanzamento — quali strumenti
+mancano ancora, quali registri non sono esposti, il piano per colmarli — è
+materia di cantiere, non di guida: qui si dice <em>cosa esiste e come si usa</em>, non
+<em>cosa manca</em>. È la distinzione che tiene una guida leggibile a distanza di mesi.</p>
+</blockquote>
+<h3 id="quale-log-risponde-a-quale-domanda">Quale log risponde a quale domanda<a class="headerlink" href="#quale-log-risponde-a-quale-domanda" title="Permanent link">&para;</a></h3>
+<p>La prima scelta da fare non è «apro i log», è <strong>quale registro</strong>. Sbagliarla
+costa tempo, perché ognuno di questi risponde a una domanda diversa e in nessuno
+c'è la risposta dell'altro.</p>
+<table>
+<thead>
+<tr>
+<th>La domanda</th>
+<th>Il registro</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«Cosa è andato storto, tecnicamente?»</td>
+<td><code>dbops.error_log</code></td>
+<td>Registro universale. <strong>Sopravvive al rollback</strong> (scrittura via dblink): è l'unico posto dove resta traccia di un errore in una transazione annullata</td>
+</tr>
+<tr>
+<td>«Chi ha chiamato cosa, via HTTP?»</td>
+<td><code>dbops.request_log</code></td>
+<td>Utente, path, status, durata, <code>request_id</code>, <code>error_code</code></td>
+</tr>
+<tr>
+<td>«Quale funzione o automazione è stata eseguita?»</td>
+<td><code>dbops.audit_log</code></td>
+<td><code>params</code>/<code>result</code>, <code>dry_run</code>, <code>sqlstate</code>, <code>rows_affected</code></td>
+</tr>
+<tr>
+<td>«Il job notturno è girato? com'è finito?»</td>
+<td><code>maintenance.job_run_log</code></td>
+<td>Un record per esecuzione, pgAgent e headless; <code>run_uuid</code> per correlare col dominio</td>
+</tr>
+<tr>
+<td>«Cos'è successo a questo lotto/fattura, in ordine di tempo?»</td>
+<td><code>vendite.event_log</code></td>
+<td>Timeline append-only per dominio ed entità, con <code>severity</code></td>
+</tr>
+<tr>
+<td>«Perché questo lotto non avanza?»</td>
+<td><code>vendite.fatturazione_lotti_log</code> + <code>fatturazione_lotti_task_runs</code></td>
+<td>Il primo dà fase ed esito, il secondo il <strong>tentativo per tentativo</strong> con <code>error_code</code>/<code>error_message</code></td>
+</tr>
+<tr>
+<td>«Perché questa fattura è bloccata?»</td>
+<td><code>vendite.fatture_log</code></td>
+<td>Warning e critici del singolo documento. I critici <strong>bloccano numerazione e invio</strong> finché non sono disabilitati</td>
+</tr>
+<tr>
+<td>«Questo lotto è fermo? e quali lotti sono fermi adesso?»</td>
+<td><code>vendite.vw_lotti_segnalazioni_summary</code></td>
+<td>La <strong>sede unica</strong> del verdetto «fermo» (dal 19-09-2026): <code>fermo</code>, <code>fermo_motivo</code>, <code>fermo_da</code> su ogni lotto. La legge il backend per il banner e la legge il presidio <code>dbops.vw_lotti_fermi_da_guardare</code> (pre-fiscali fermi da oltre un'ora) per il digest e il pallino — una riga, tre lettori</td>
+</tr>
+<tr>
+<td>«Il lavoro che ho lanciato a che punto è?»</td>
+<td><code>dbops.coda_lavori</code></td>
+<td>Stato, tentativi, <code>ultimo_errore</code>, backoff</td>
+</tr>
+<tr>
+<td>«Com'era questo record prima?»</td>
+<td>schema <code>storico.*</code></td>
+<td>Snapshot JSONB completo a ogni UPDATE/DELETE — non è un log eventi, è la storia del dato</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Il filo che li lega.</strong> <code>tx_id</code> attraversa i registri scritti nella stessa
+transazione (dal 19-09-2026 <code>dbops.error_log</code> ha l'indice su <code>tx_id</code>: dal
+giornale di dominio agli appunti tecnici della stessa transazione si passa
+senza scandire il registro); <code>request_id</code> lega la richiesta HTTP a ciò che ne è seguito;
+<code>run_uuid</code> lega un job al suo dettaglio di dominio; <code>correlation_id</code> lega gli
+eventi di una stessa operazione in <code>event_log</code>. Quando si indaga, si parte da
+uno di questi quattro — non dal timestamp, che con più operazioni in parallelo
+non discrimina.</p>
+<h3 id="da-dove-si-arriva-nellapplicazione">Da dove si arriva, nell'applicazione<a class="headerlink" href="#da-dove-si-arriva-nellapplicazione" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Strumento</th>
+<th>Percorso</th>
+<th>Cosa mostra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Badge code + drawer rapido</strong></td>
+<td>topbar (sempre visibile)</td>
+<td>Job vivi delle due code e stato dei worker; da qui si scende al dettaglio</td>
+</tr>
+<tr>
+<td><strong>Code di lavoro</strong></td>
+<td>Strumenti → Code di lavoro</td>
+<td>Due schede (lavori e stampa): stato, tentativi, ultimo errore, timeline del job; azioni annulla/riaccoda. Il dettaglio di un job apre un drawer dedicato</td>
+</tr>
+<tr>
+<td><strong>Diagnostica del lotto</strong></td>
+<td>Vendite → Lotti → clic sulla riga</td>
+<td>Scheda <strong>Task-run</strong> (tentativo, esito, codice e messaggio d'errore) e scheda <strong>Segnalazioni</strong> con severità; da qui si fa ripartire uno step fallito</td>
+</tr>
+<tr>
+<td><strong>Errori vivi di fatturazione</strong></td>
+<td>Vendite → Dashboard competenza, pannello errori</td>
+<td>Task in errore non ancora superati da un ritentativo, più le fatture critiche; il codice del lotto è cliccabile e porta alla diagnostica</td>
+</tr>
+<tr>
+<td><strong>Esiti dei giri</strong></td>
+<td>Vendite → Lotti, pannello in fondo</td>
+<td>Riassunto delle esecuzioni per corsia e stato della coda di stampa</td>
+</tr>
+<tr>
+<td><strong>Giornale degli eventi</strong> (dal 19-09-2026)</td>
+<td>Vendite → Giornale eventi</td>
+<td>«Cosa è andato storto, su tutto, nell'ultimo periodo»: la Storia di tutte le entità insieme, filtrata per gravità (default solo <code>ERROR</code>, che include la gravità vuota), registro, tipo di entità, date e <strong>filo</strong> (<code>tx_id</code>/<code>correlation_id</code>). Dal kebab «Apri …» si salta al lotto o al documento, dove la scheda <strong>Storia</strong> ha anche gli appunti forensi che qui non ci sono. Sotto il perimetro emittente della vista: si vede quello che si può vedere, e il totale è quello visto</td>
+</tr>
+<tr>
+<td><strong>Audit delle modifiche</strong></td>
+<td>Strumenti → Diagnostica → Audit log</td>
+<td>Chi ha cambiato cosa (riservato agli amministratori)</td>
+</tr>
+<tr>
+<td><strong>Errori tecnici</strong> (dal 19-09-2026)</td>
+<td>Strumenti → Diagnostica → Errori tecnici</td>
+<td>La consultazione di <code>dbops.error_log</code>: quale funzione ha sollevato quale codice, quando, in quale transazione — con frase, causa, soluzione e <strong>classe</strong> dal catalogo (guasto o rifiuto legittimo) e il <code>context</code> <strong>com'è</strong> nel dettaglio. Filtri per area, funzione (prefisso), codice, <code>tx_id</code>, date; dal kebab «Giornale di questa transazione» si passa al giornale degli eventi con lo stesso <code>tx_id</code> (riservato agli amministratori)</td>
+</tr>
+<tr>
+<td><strong>Log email</strong></td>
+<td>Amm. Software → Email log</td>
+<td>Esiti di invio, tentativi, errore (riservato agli amministratori)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="log-applicativi-python">Log applicativi Python<a class="headerlink" href="#log-applicativi-python" title="Permanent link">&para;</a></h3>
+<p>Oltre ai registri su database, il backend scrive log su file
+(<code>RotatingFileHandler</code>, vedi <code>settings.py</code> → <code>LOGGING</code>). Servono per i
+traceback e per il comportamento interno del processo, e <strong>si consultano sul
+server</strong>, non dall'applicazione.</p>
+<p>⚠️ <strong>Non sono lo stesso piano dei registri DB</strong>, e la differenza conta quando
+si indaga: un errore di dominio finisce in <code>dbops.error_log</code> <strong>anche se la
+transazione fallisce</strong>, mentre un traceback Python resta solo nel file. Se una
+richiesta è andata storta e su <code>error_log</code> non c'è nulla, la traccia va cercata
+lì.</p>
+<hr />
+<h2 id="setup-operativo-devops">Setup operativo (devops)<a class="headerlink" href="#setup-operativo-devops" title="Permanent link">&para;</a></h2>
+<p>Questa sezione e destinata a devops e DBA. Descrive come configurare il logging persistente via dblink, che permette alla funzione <code>fn_log_error_only</code> di scrivere su <code>dbops.error_log</code> fuori transazione.</p>
+<h3 id="prerequisito-perche-serve-dblink">Prerequisito: perche serve dblink<a class="headerlink" href="#prerequisito-perche-serve-dblink" title="Permanent link">&para;</a></h3>
+<p>In PostgreSQL, quando una transazione va in rollback, tutti gli INSERT effettuati nella stessa transazione vengono annullati — inclusi eventuali log. Per garantire che il record di errore sopravviva, <code>fn_log_error_only</code> usa <code>dblink_exec</code> per aprire una connessione separata e scrivere il log in una transazione autonoma. Questo richiede:</p>
+<ul>
+<li>L'estensione <code>dblink</code> installata</li>
+<li>Un ruolo dedicato con permessi minimi</li>
+<li>La configurazione di <code>pg_service.conf</code> e <code>.pgpass</code> sul server</li>
+<li>Una GUC per indicare alla funzione quale connessione usare</li>
+</ul>
+<h3 id="1-ruolo-di-logging-con-privilegi-minimi">1. Ruolo di logging con privilegi minimi<a class="headerlink" href="#1-ruolo-di-logging-con-privilegi-minimi" title="Permanent link">&para;</a></h3>
+<p>Da eseguire da utente admin (es. <code>postgres</code>) <strong>sul database applicativo</strong>:
+l'estensione <code>dblink</code>, un ruolo dedicato che può solo fare <code>INSERT</code> sul registro e
+usare la sua sequence (<a href="#area-tecnica-esempi">comandi</a>).</p>
+<h3 id="2-configurare-pg_serviceconf">2. Configurare <code>pg_service.conf</code><a class="headerlink" href="#2-configurare-pg_serviceconf" title="Permanent link">&para;</a></h3>
+<p>I file vanno creati <strong>sul server DB</strong>, nella HOME dell'utente OS <code>postgres</code>
+(tipicamente <code>/var/lib/postgresql</code>): servono a dare alla funzione una connessione
+con un nome, <code>zeroerp_log</code>, invece che una stringa di connessione sparsa
+(<a href="#area-tecnica-esempi">contenuto</a>).</p>
+<h3 id="3-configurare-pgpass">3. Configurare <code>.pgpass</code><a class="headerlink" href="#3-configurare-pgpass" title="Permanent link">&para;</a></h3>
+<p>La password <strong>non sta nel servizio</strong>: sta qui, in una riga sola
+(<a href="#area-tecnica-esempi">contenuto</a>). I due file devono appartenere all'utente
+<code>postgres</code> e avere permessi <code>600</code>; se il servizio PostgreSQL non legge la HOME,
+i path si forzano con systemd e si riavvia <code>postgresql@&lt;versione&gt;-main</code>.</p>
+<h3 id="4-impostare-la-guc-per-i-ruoli-applicativi">4. Impostare la GUC per i ruoli applicativi<a class="headerlink" href="#4-impostare-la-guc-per-i-ruoli-applicativi" title="Permanent link">&para;</a></h3>
+<p>La GUC si imposta <strong>per ruolo, dentro il database</strong>: è quella che dice alla
+funzione quale connessione usare (<a href="#area-tecnica-esempi">comandi</a>).</p>
+<h3 id="5-hardening-ownership-funzioni">5. Hardening ownership funzioni<a class="headerlink" href="#5-hardening-ownership-funzioni" title="Permanent link">&para;</a></h3>
+<p>Per garantire che <code>fn_log_error_only</code> resti <code>SECURITY DEFINER</code> con owner <code>postgres</code>, il sistema usa una tabella di registry (<code>dbops.sec_functions_owner</code>) e una funzione di sincronizzazione (<code>dbops.fn_sync_functions_owner</code>).</p>
+<p>Il changeSet Liquibase in <code>migrations_v2/90_end/</code> esegue la sincronizzazione ad ogni
+aggiornamento (<a href="#area-tecnica-esempi">comando</a>).</p>
+<p>La funzione <code>script.fn_log_error_only</code> e registrata in <code>dbops.sec_functions_owner</code> e viene riallineata automaticamente a <code>postgres</code>.</p>
+<h3 id="verifiche-e-troubleshooting">Verifiche e troubleshooting<a class="headerlink" href="#verifiche-e-troubleshooting" title="Permanent link">&para;</a></h3>
+<p><strong>Test di funzionamento:</strong> si scrive una riga di prova con <code>fn_log_error_only</code> e la si
+ritrova nel registro (<a href="#area-tecnica-esempi">esempio</a>).</p>
+<p><strong>Errori tipici:</strong></p>
+<ul>
+<li><strong><code>2F003</code> (password/GSSAPI richiesti)</strong> — la funzione non e <code>SECURITY DEFINER</code> o non e owner superuser; oppure <code>pg_service.conf</code> / <code>.pgpass</code> non sono visibili al processo postgres</li>
+<li><strong>Log non presente ma nessun errore</strong> — verificare <code>myapp.dblink_log_connection</code>, <code>pg_service.conf</code> / <code>.pgpass</code>, e permessi del ruolo <code>zeroerp_log</code></li>
+</ul>
+<hr />
+<h2 id="diagramma-er">Diagramma ER<a class="headerlink" href="#diagramma-er" title="Permanent link">&para;</a></h2>
+<h3 id="registro-tecnico">Registro tecnico<a class="headerlink" href="#registro-tecnico" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>erDiagram
+    messaggi_errore {
+        bigint id PK
+        text codice
+        text lingua
+        text messaggio
+        text causa
+        text soluzione
+    }
+
+    error_log {
+        bigint id PK
+        timestamptz occurred_at
+        text area
+        text function_name
+        bigint messaggio_errore_id FK
+        jsonb context
+        uuid tx_id
+    }
+
+    messaggi_errore ||--o{ error_log : "referenziato da"</code></pre>
+<h3 id="log-di-dominio-vendite">Log di dominio (vendite)<a class="headerlink" href="#log-di-dominio-vendite" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>erDiagram
+    fatturazione_lotti {
+        bigint id PK
+    }
+
+    fatturazione_lotti_log {
+        bigint id PK
+        bigint lotto_id FK
+        timestamptz data_ora
+        text messaggio
+        char status
+        text fase
+        jsonb meta
+    }
+
+    fatture {
+        bigint id PK
+    }
+
+    fatture_log {
+        bigint id PK
+        bigint fattura_id FK
+        timestamptz data_ora
+        text messaggio
+        char status
+        jsonb meta
+    }
+
+    fatturazione_lotti ||--o{ fatturazione_lotti_log : "log"
+    fatture ||--o{ fatture_log : "log"</code></pre>
+<hr />
+<h2 id="area-tecnica-esempi">Area tecnica — esempi<a class="headerlink" href="#area-tecnica-esempi" title="Permanent link">&para;</a></h2>
+<p><strong>Il <code>RAISE</code> che porta il codice e il campo</strong> — la forma a basso livello: il codice
+di dominio viaggia in <code>CONSTRAINT</code>, il nome del campo in <code>COLUMN</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">RAISE</span><span class="w"> </span><span class="k">EXCEPTION</span><span class="w"> </span><span class="s1">'%'</span><span class="p">,</span><span class="w"> </span><span class="n">v_messaggio</span>
+<span class="w">  </span><span class="k">USING</span><span class="w"> </span><span class="n">ERRCODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'P0001'</span><span class="p">,</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_error_code</span><span class="p">,</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'partita_iva'</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Dichiarare il campo invece di scrivere il <code>RAISE</code></strong> — è la forma da usare nelle
+funzioni: il nome viaggia nel contesto, e <code>fn_log_and_raise_error</code> lo porta sul canale
+<code>COLUMN</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">PERFORM</span><span class="w"> </span><span class="n">script</span><span class="p">.</span><span class="n">fn_log_and_raise_error</span><span class="p">(</span>
+<span class="w">    </span><span class="s1">'database'</span><span class="p">,</span><span class="w"> </span><span class="s1">'anagrafiche.trgfn_soggetti_guard_cf_piva_obbligatori'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'E_CF_OBBLIGATORIO'</span><span class="p">,</span>
+<span class="w">    </span><span class="n">jsonb_build_object</span><span class="p">(</span><span class="s1">'campo'</span><span class="p">,</span><span class="w"> </span><span class="s1">'codice_fiscale'</span><span class="p">,</span><span class="w"> </span><span class="s1">'soggetto_id'</span><span class="p">,</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">),</span>
+<span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">tx_id</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><strong>Il <code>VARIADIC</code>: la stessa chiamata scritta nei due modi</strong> — sopra il nome del parametro
+(diffetto), sotto il dato che l'operatore riconosce. È la differenza fra un messaggio di
+qualità <code>E_GENERICO</code> e uno che si capisce:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- ⛔ NO — il codice è registrato, il messaggio no</span>
+<span class="n">PERFORM</span><span class="w"> </span><span class="n">script</span><span class="p">.</span><span class="n">fn_log_and_raise_error</span><span class="p">(</span>
+<span class="w">    </span><span class="s1">'database'</span><span class="p">,</span><span class="w"> </span><span class="s1">'pagamenti.fn_get_or_create_vendite_contabile'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'E_PARAMETRO_INVALIDO'</span><span class="p">,</span>
+<span class="w">    </span><span class="n">jsonb_build_object</span><span class="p">(</span><span class="s1">'campo'</span><span class="p">,</span><span class="w"> </span><span class="s1">'centro_riscossione_id'</span><span class="p">),</span>
+<span class="w">    </span><span class="k">NULL</span><span class="p">::</span><span class="n">uuid</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'p_centro_riscossione_id (obbligatorio, maggiore di zero)'</span>
+<span class="p">);</span>
+<span class="c1">--   l'operatore legge: «Parametro non valido: p_centro_riscossione_id (obbligatorio, &gt; 0)»</span>
+
+<span class="c1">-- ✅ SÌ — il messaggio nomina il dato, non il parametro</span>
+<span class="n">PERFORM</span><span class="w"> </span><span class="n">script</span><span class="p">.</span><span class="n">fn_log_and_raise_error</span><span class="p">(</span>
+<span class="w">    </span><span class="s1">'database'</span><span class="p">,</span><span class="w"> </span><span class="s1">'pagamenti.fn_get_or_create_vendite_contabile'</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'E_CONTABILE_DATI_OBBLIGATORI'</span><span class="p">,</span>
+<span class="w">    </span><span class="n">jsonb_build_object</span><span class="p">(</span><span class="s1">'campo'</span><span class="p">,</span><span class="w"> </span><span class="s1">'centro_riscossione_id'</span><span class="p">),</span>
+<span class="w">    </span><span class="k">NULL</span><span class="p">::</span><span class="n">uuid</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">'il centro di riscossione'</span>
+<span class="p">);</span>
+<span class="c1">--   l'operatore legge: «Per aprire una distinta contabile serve il centro di riscossione.»</span>
+</code></pre></div>
+<p><strong>Il caso in cui nominare una colonna è giusto</strong> — <code>E_MOVIMENTO_RIFERIMENTO_INCOERENTE</code>:
+qui la colonna <strong>è il soggetto della frase</strong>, e chi legge è chi ha scritto la chiamata:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- «Movimento incoerente con la riga contabile %s: %s vale %s, mentre la riga dice %s.»</span>
+<span class="err">…</span><span class="w"> </span><span class="k">NULL</span><span class="p">::</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">contabile_riga_id</span><span class="p">::</span><span class="nb">text</span><span class="p">,</span><span class="w"> </span><span class="s1">'fattura_id'</span><span class="p">,</span>
+<span class="w">  </span><span class="k">NEW</span><span class="p">.</span><span class="n">fattura_id</span><span class="p">::</span><span class="nb">text</span><span class="p">,</span><span class="w"> </span><span class="n">v_fattura_id_riga</span><span class="p">::</span><span class="nb">text</span>
+</code></pre></div>
+<p><strong>Il presidio di una frase</strong> — dove il testo del messaggio è la posta in gioco, si asserisce
+su un frammento stabile della frase (non sul segnaposto):</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">throws_like</span><span class="p">(</span>
+<span class="w">  </span><span class="err">$$</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">pagamenti</span><span class="p">.</span><span class="n">fn_get_or_create_vendite_contabile</span><span class="p">(</span><span class="n">p_centro_riscossione_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">)</span><span class="w"> </span><span class="err">$$</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'%distinta contabile%centro di riscossione%'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'Il rifiuto nomina il centro di riscossione, non il parametro PL/pgSQL'</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="setup-del-logging-persistente">Setup del logging persistente<a class="headerlink" href="#setup-del-logging-persistente" title="Permanent link">&para;</a></h3>
+<p><strong>1. Il ruolo di logging</strong> — da eseguire da admin sul database applicativo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dblink</span><span class="p">;</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">zeroerp_log</span><span class="w"> </span><span class="n">LOGIN</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">'PASSWORD_FORTE'</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">dbops</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">zeroerp_log</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">dbops</span><span class="p">.</span><span class="n">error_log</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">zeroerp_log</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">USAGE</span><span class="p">,</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="n">dbops</span><span class="p">.</span><span class="n">error_log_id_seq</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">zeroerp_log</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>2. Il servizio di connessione</strong> — <code>/var/lib/postgresql/.pg_service.conf</code> sul server DB:</p>
+<div class="highlight"><pre><span></span><code><span class="na">\[zeroerp_log\]</span>
+<span class="na">host</span><span class="o">=</span><span class="s">127.0.0.1</span>
+<span class="na">port</span><span class="o">=</span><span class="s">5432</span>
+<span class="na">dbname</span><span class="o">=</span><span class="s">zeroerp</span>
+<span class="na">user</span><span class="o">=</span><span class="s">zeroerp_log</span>
+</code></pre></div>
+<p><strong>3. La password e i permessi dei file</strong> — <code>/var/lib/postgresql/.pgpass</code>, più i permessi
+obbligatori. Se il servizio PostgreSQL non legge la HOME, i path si forzano con systemd e si
+riavvia <code>postgresql@&lt;versione&gt;-main</code>:</p>
+<div class="highlight"><pre><span></span><code>127.0.0.1:5432:zeroerp:zeroerp_log:PASSWORD_FORTE
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>chown<span class="w"> </span>postgres:postgres<span class="w"> </span>/var/lib/postgresql/.pg_service.conf<span class="w"> </span>/var/lib/postgresql/.pgpass
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>/var/lib/postgresql/.pg_service.conf<span class="w"> </span>/var/lib/postgresql/.pgpass
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="na">\[Service\]</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">PGSERVICEFILE=/var/lib/postgresql/.pg_service.conf</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">PGPASSFILE=/var/lib/postgresql/.pgpass</span>
+</code></pre></div>
+<p><strong>4. La GUC per i ruoli applicativi</strong> — da admin: dice alla funzione quale servizio usare.</p>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">zeroerp_owner</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">zeroerp</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">myapp</span><span class="p">.</span><span class="n">dblink_log_connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'service=zeroerp_log'</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">zeroerp_app</span><span class="w">   </span><span class="k">IN</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">zeroerp</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">myapp</span><span class="p">.</span><span class="n">dblink_log_connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'service=zeroerp_log'</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">ROLE</span><span class="w"> </span><span class="n">zeroerp_job</span><span class="w">   </span><span class="k">IN</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">zeroerp</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">myapp</span><span class="p">.</span><span class="n">dblink_log_connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'service=zeroerp_log'</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>5. Il riallineamento dell'owner</strong> — il changeSet che sincronizza le funzioni sensibili dal
+registry:</p>
+<div class="highlight"><pre><span></span><code>scripts/liquibase5.sh<span class="w"> </span>update<span class="w"> </span>--contexts<span class="o">=</span>provision<span class="w"> </span>--username<span class="o">=</span>postgres<span class="w"> </span>--password<span class="o">=</span>***
+</code></pre></div>
+<p><strong>Prova che il logging persistente funzioni</strong> — si scrive una riga con <code>fn_log_error_only</code> e la
+si ritrova nel registro:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">script</span><span class="p">.</span><span class="n">fn_log_error_only</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">'test'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'diag_log_only'</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">'E_GENERICO'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">jsonb_build_object</span><span class="p">(</span><span class="s1">'probe'</span><span class="p">,</span><span class="s1">'manual_test'</span><span class="p">,</span><span class="s1">'ts'</span><span class="p">,</span><span class="n">clock_timestamp</span><span class="p">()),</span>
+<span class="w">  </span><span class="k">NULL</span><span class="p">::</span><span class="n">uuid</span>
+<span class="p">);</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">dbops</span><span class="p">.</span><span class="n">error_log</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">occurred_at</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<div style="text-align: center; margin-top: 2rem;">
+  <img src="/assets/images/zeroerp-logo.png" alt="Zero ERP" width="80">
+  <br>
+  <strong>&copy; 2025-2026 Zero ERP</strong> <em><strong>&bull; powered by Tid &bull;</strong></em>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.indexes"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiato","clipboard.copy":"Copia","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 altro in questa pagina","search.result.more.other":"# altri in questa pagina","search.result.none":"Nessun documento trovato","search.result.one":"1 documento trovato","search.result.other":"# documenti trovati","search.result.placeholder":"Scrivi per iniziare a cercare","search.result.term.missing":"Non presente","select.version":"Seleziona la versione"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

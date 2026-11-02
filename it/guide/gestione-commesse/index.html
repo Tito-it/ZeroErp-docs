@@ -1,0 +1,8185 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="prev" href="../gestione-pratiche-configurazione/">
+      
+      
+        <link rel="next" href="../gestione-delle-istanze-utility/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Gestione commesse - Zero ERP Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Vai al contenuto
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../.." title="Zero ERP Documentation" class="md-header__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigazione</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zero ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestione commesse
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Cerca</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Cerca">
+  <button type="button" class="md-search__button">
+    Cerca
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manifesto/" class="md-tabs__link">
+          
+  
+  Visione e Filosofia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installazione/" class="md-tabs__link">
+          
+  
+  Installazione
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architettura/" class="md-tabs__link">
+          
+  
+  Architettura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/" class="md-tabs__link">
+          
+  
+  DB Zero
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../backend/" class="md-tabs__link">
+          
+  
+  Backend (Django)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../soggetti-e-ruoli-anagrafici/" class="md-tabs__link">
+          
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/framework-automazione-db/" class="md-tabs__link">
+          
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dbzero/tools/gen_db_docs/" class="md-tabs__link">
+          
+  
+  Strumenti
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/sicurezza-e-qualita-statica/" class="md-tabs__link">
+          
+  
+  Qualità
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/api/" class="md-tabs__link">
+          
+  
+  Sviluppatori
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossario/glossario-utility/" class="md-tabs__link">
+          
+  
+  Glossario
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Zero ERP Documentation" class="md-nav__button md-logo" aria-label="Zero ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+
+    </a>
+    Zero ERP Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tito-it/ZeroErp" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Tito-it/ZeroErp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visione e Filosofia
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Visione e Filosofia
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manifesto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Manifesto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sviluppo-concentrico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppo Concentrico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduzione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cos’è Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perche-zeroerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Perchè Zero ERP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Installazione
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Installazione
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Prerequisiti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurazione-iniziale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Preparare ZeroERP all'uso
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE-AGPL3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Licenza
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Architettura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architettura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura a colpo d'occhio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../liquibase-setup-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liquibase Setup & Workflow
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida SQL
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linee-guida-trigger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Linee Guida Trigger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Db PostgresSQL
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Db PostgresSQL
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Panoramica
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/aggiornamento-versione-postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aggiornamento versione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/parametri-personalizzati-(GUC)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Parametri personalizzati (GUC)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4_4" id="__nav_4_2_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Estensioni
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Estensioni
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/estensioni-utilizzate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Utilizzate
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/dblink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  dblink
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgAgent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgAgent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postgresql/pgcrypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  pgcrypto
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DB Zero
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  DB Zero
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dbzero/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Schemi
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Schemi
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/dbops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dbops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/maintenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/public/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Public
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Shop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend (Django)
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend (Django)
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../backend/acquisti/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Aree
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Aree
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ai-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ai Assistant
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/amm-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Amm. Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/anagrafiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Anagrafiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/contabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contabilita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/documenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/magazzino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Magazzino
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/storico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storico
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ui
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/vendite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendite
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guide
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guide
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Come funziona ZeroErp
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Come funziona ZeroErp
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soggetti-e-ruoli-anagrafici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Soggetti e ruoli anagrafici
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generazione-cliente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generazione di un cliente
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-degli-indirizzi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione degli indirizzi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-contatti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei contatti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-conti-bancari/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione conti bancari
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione pratiche
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-pratiche-configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pratiche — Configurazione e opzioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione commesse
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione commesse
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panoramica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Panoramica
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclo-di-vita-della-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ciclo di vita della commessa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ciclo di vita della commessa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stati" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Stati
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macchina-di-transizioni-data-driven" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Macchina di transizioni (data-driven)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annullare-una-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Annullare una commessa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annullare una commessa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leccezione-il-documento-con-righe-in-una-commessa-viva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        L'eccezione: il documento con righe in una commessa viva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#di-chi-e-una-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Di chi è una commessa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Di chi è una commessa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lemittente-non-e-un-attributo-e-la-chiave-di-perimetro" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        L'emittente non è un attributo: è la chiave di perimetro
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-dove-viene-il-valore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Da dove viene il valore
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-commessa-non-aggrega-due-emittenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Una commessa non aggrega due emittenti
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-il-cliente-non-cambia-emittente-a-piacere" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ E il cliente non cambia emittente a piacere
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-testata-leggibile" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La testata leggibile
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La testata leggibile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-si-leggono-e-si-scrivono" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Come si leggono e si scrivono
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-responsabile-deve-essere-una-persona-attiva-nei-due-versi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il responsabile deve essere una persona attiva — nei due versi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-funzioni-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        API — Funzioni DB
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API — Funzioni DB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fn_get_or_create_commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. <code>fn_get_or_create_commessa</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fn_upsert_commessa_attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. <code>fn_upsert_commessa_attivita</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-fn_get_commessa_stato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. <code>fn_get_commessa_stato</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fn_list_commessa_attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. <code>fn_list_commessa_attivita</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-fn_list_commesse_emittibili" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. <code>fn_list_commesse_emittibili</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-fn_emit_attivita_fatturabili_da_commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. <code>fn_emit_attivita_fatturabili_da_commessa</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-funzioni-di-supporto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Funzioni di supporto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-tipo-backend-step-pull_attivita_da_commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso tipo — Backend step <code>pull_attivita_da_commessa</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-tipo-push-sorgente-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso tipo — Push sorgente -&gt; commessa
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-prezzo-dal-preventivo-alla-fattura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle prezzo: dal preventivo alla fattura
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle prezzo: dal preventivo alla fattura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flusso-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso standard
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot-pricing-v5-8-colonne-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Snapshot pricing v5 — 8 colonne audit
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espansione-compositi-bom-v5-modello-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Espansione compositi BoM v5 (modello snapshot)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerarchia-prezzo-riassunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Gerarchia prezzo (riassunto)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casi-limite" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Casi limite
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Error handling
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-pgtap" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Test pgTAP
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-delle-istanze-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione delle Istanze Utility
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-listini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione listini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-preventivi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione preventivi
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-offerte-commerciali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione offerte commerciali
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-contratti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione contratti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ordini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ordini
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-ddt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione ddt
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fatturazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cruscotti-fatturazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Cruscotti fatturazione (le tre lenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-dei-pagamenti/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione dei pagamenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../termini-di-pagamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Termini di pagamento
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documenti-e-stampe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documenti e stampe
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-mail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione mail
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrazione-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Integrazione Ai
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../risorse-umane-e-accessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Risorse Umane e Accessi al Software
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-liste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e responsività delle liste
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numerazione-documenti-e-codici/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sistema numerazione generico per codici e documenti
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iva-risolutore-di-riga/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il risolutore IVA di riga
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modello-documento-di-vendita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Il modello del documento di vendita
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sicurezza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza di ZeroErp
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Approfondimenti tecnici
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Approfondimenti tecnici
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-permessi-e-autorizzazioni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura Permessi e Autorizzazioni
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architettura-multi-face-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Architettura multi face auth
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contratto-guc-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Contratto GUC APP
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tx_id_implementation_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Implementazione Transaction ID
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storicizzazione-tabelle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Storicizzazione Tabelle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit-e-tracciabilita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit e tracciabilità
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operazioni-che-non-si-ripetono/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Le operazioni che non si ripetono (Idempotency-Key)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presidi-e-registri-del-debito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Presidi e registri del debito
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sorgente-polimorfa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sorgente polimorfa
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../riclassificazione-vie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Riclassificazione vie
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-di-obsoleto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Mandare in pensione una voce di catalogo (obsoleto_dal)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configurazione-e-gestione-parametri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione e gestione parametri
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-automatici-classe-e-identita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  I lavori automatici (natura e identità)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestione-code-di-lavoro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gestione code di lavoro
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processi-pgagent-funzionali/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi-pgagent
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statistiche-del-planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Statistiche del planner
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database-che-resta-veloce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Un database che resta veloce
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_19" id="__nav_7_2_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Log
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_19_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_7_2_19">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Log
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messaggi-di-Errore-e-Generazione-Log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Errore
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaggi-audit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Messaggi di Audit
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analisi-tracciamento-processi-e-job/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Processi e Job
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tutorial
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Tutorial
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/framework-automazione-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Framework automazione DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Strumenti
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Strumenti
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dbzero/tools/gen_db_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Generatore Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Qualità
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/sicurezza-e-qualita-statica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sicurezza e qualità statica (gli strumenti)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-be-fe-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità BE/FE (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/qualita-db-indicatori/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Qualità del database (indicatori e lezioni)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sviluppatori
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Sviluppatori
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  API
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/ricette-dove-intervenire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ricette (dove intervenire)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/trappole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Trappole (cosa non fare)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/Policy-ricerca-e-paginazione(API-DB)/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Policy ricerca e paginazione (API/DB)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/standard-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard delle guide (come si scrive)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_6" id="__nav_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Frontend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Frontend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/frontend-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standard frontend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/frontend/catalogo-building-block-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block FE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7" id="__nav_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Server
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_7_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Server
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_1" id="__nav_11_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backend
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Backend
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/backend-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guida backend-dev
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/play-book-operativo-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Playbook operativo backend
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/servizi-zeroerp-comandi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Servizi ZeroERP (comandi)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/catalogo-building-block-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Catalogo Building Block BE
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/piano-solidita-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Piano solidità Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/provisioning-db-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Provisioning ruoli DB
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/gunicorn-dev-autoreload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Gunicorn dev autoreload
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/checklist-post-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Checklist post upgrade
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/backend/configurazione-django/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Configurazione Django
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_2" id="__nav_11_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Database
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/db/dbdev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  VM dbdev (PostgreSQL)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_3" id="__nav_11_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Infrastruttura
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Infrastruttura
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/infra/proxmox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Proxmox
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_7_4" id="__nav_11_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workstation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_7_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_7_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Workstation
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/workstation-dev/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vm wrk1-dev (ubuntu)
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_8" id="__nav_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  GitHub
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_8_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_11_8">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  GitHub
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/github/configurazione/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentazione
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_12">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Glossario
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/glossario-utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Glossario di dominio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/devops%26db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dev&Ops
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/process-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Process Analysis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panoramica" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Panoramica
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclo-di-vita-della-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ciclo di vita della commessa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ciclo di vita della commessa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stati" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Stati
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macchina-di-transizioni-data-driven" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Macchina di transizioni (data-driven)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annullare-una-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Annullare una commessa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annullare una commessa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leccezione-il-documento-con-righe-in-una-commessa-viva" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        L'eccezione: il documento con righe in una commessa viva
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#di-chi-e-una-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Di chi è una commessa
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Di chi è una commessa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lemittente-non-e-un-attributo-e-la-chiave-di-perimetro" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        L'emittente non è un attributo: è la chiave di perimetro
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-dove-viene-il-valore" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Da dove viene il valore
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-commessa-non-aggrega-due-emittenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Una commessa non aggrega due emittenti
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-il-cliente-non-cambia-emittente-a-piacere" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ⚠️ E il cliente non cambia emittente a piacere
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-testata-leggibile" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        La testata leggibile
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La testata leggibile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#come-si-leggono-e-si-scrivono" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Come si leggono e si scrivono
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#il-responsabile-deve-essere-una-persona-attiva-nei-due-versi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Il responsabile deve essere una persona attiva — nei due versi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-funzioni-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        API — Funzioni DB
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API — Funzioni DB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fn_get_or_create_commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. <code>fn_get_or_create_commessa</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fn_upsert_commessa_attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. <code>fn_upsert_commessa_attivita</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-fn_get_commessa_stato" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. <code>fn_get_commessa_stato</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fn_list_commessa_attivita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. <code>fn_list_commessa_attivita</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-fn_list_commesse_emittibili" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. <code>fn_list_commesse_emittibili</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-fn_emit_attivita_fatturabili_da_commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        6. <code>fn_emit_attivita_fatturabili_da_commessa</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-funzioni-di-supporto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        7. Funzioni di supporto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-tipo-backend-step-pull_attivita_da_commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso tipo — Backend step <code>pull_attivita_da_commessa</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flusso-tipo-push-sorgente-commessa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso tipo — Push sorgente -&gt; commessa
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-prezzo-dal-preventivo-alla-fattura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lifecycle prezzo: dal preventivo alla fattura
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lifecycle prezzo: dal preventivo alla fattura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flusso-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Flusso standard
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshot-pricing-v5-8-colonne-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Snapshot pricing v5 — 8 colonne audit
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#espansione-compositi-bom-v5-modello-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Espansione compositi BoM v5 (modello snapshot)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gerarchia-prezzo-riassunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Gerarchia prezzo (riassunto)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casi-limite" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Casi limite
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Error handling
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-pgtap" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Test pgTAP
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="guida-tecnica-api-commesse-db-layer">Guida Tecnica – API Commesse (DB layer)<a class="headerlink" href="#guida-tecnica-api-commesse-db-layer" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Ultimo aggiornamento</strong>: 26 ottobre 2026</p>
+<p>Destinatari: sviluppatori backend e database di Zero ERP</p>
+<p>👀 <strong>Vedi anche</strong></p>
+<ul>
+<li><a href=".././fatturazione/">Guida fatturazione</a></li>
+<li><a href=".././modello-documento-di-vendita/">Il modello del documento di vendita</a> — <strong>le regole comuni a tutti i documenti</strong>: nascita, cambio di stato, permesso sul passaggio, emissione, annullo</li>
+<li><a href=".././gestione-listini/">Gestione Listini e Pricing v5</a> — modello pricing che alimenta lo snapshot commesse</li>
+<li><a href="../../dbzero/vendite/manual/commesse/">vendite.commesse</a> — la tabella, con la testata leggibile</li>
+<li><a href="../../dbzero/vendite/tabelle/stati_commessa/">vendite.stati_commessa</a></li>
+<li><a href="../../dbzero/vendite/tabelle/commesse_attivita/">vendite.commesse_attivita</a></li>
+<li><a href="../../dbzero/vendite/tabelle/commesse_sorgenti/">vendite.commesse_sorgenti</a></li>
+<li><a href="../../backend/vendite/manual/api_commessa_stato/">API stato commessa</a> — <code>GET/POST …/stato/</code>, <code>GET …/legami/</code> e <code>PATCH /commesse/&lt;id&gt;/</code></li>
+<li><a href="../../backend/anagrafiche/manual/api_risorse_umane_lookup/">API lookup risorse umane</a> — il picker del responsabile</li>
+<li><a href="../../dev/backend/catalogo-building-block-backend/">BoMComponentExpander (catalogo BB backend)</a> — espansione compositi nella pipeline push</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="panoramica">Panoramica<a class="headerlink" href="#panoramica" title="Permanent link">&para;</a></h2>
+<p>Il modello commesse centralizza tutte le attività fatturabili prima della
+pipeline di fatturazione. Ogni sorgente (preventivo, ordine, contratto, DDT,
+consumi) transita per la commessa — nessun bypass diretto verso
+<code>attivita_fatturabili</code>.</p>
+<div class="highlight"><pre><span></span><code>SORGENTI (preventivi / ordini / consumi / ...)
+        |
+        v
+    COMMESSA  &lt;--- fn_get_or_create_commessa
+        |
+        | fn_upsert_commessa_attivita (righe)
+        v
+  COMMESSE_ATTIVITA
+        |
+        | fn_list_commesse_emittibili (discovery)
+        | fn_emit_attivita_fatturabili_da_commessa (pull)
+        v
+  ATTIVITA_FATTURABILI  ---&gt;  PIPELINE FATTURAZIONE
+</code></pre></div>
+<hr />
+<h2 id="ciclo-di-vita-della-commessa">Ciclo di vita della commessa<a class="headerlink" href="#ciclo-di-vita-della-commessa" title="Permanent link">&para;</a></h2>
+<p>⭐ Le regole comuni a tutti i documenti — in che stato si nasce, chi cambia lo stato, quale permesso chiede un passaggio, l'emissione, l'annullo — stanno nel <a href=".././modello-documento-di-vendita/">modello del documento di vendita</a>, che al §10 dice anche a che punto è la commessa rispetto al modello. Qui ci sono gli stati e i passaggi che sono suoi.</p>
+<h3 id="stati">Stati<a class="headerlink" href="#stati" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Codice</th>
+<th>chiude</th>
+<th>emittibile</th>
+<th>modificabile</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BOZZA</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>APERTA</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>IN_ESECUZIONE</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>⛔ ritirato il 2026-10-26 (spento)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>PRONTA_FATTURAZIONE</td>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>CHIUSA</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>ANNULLATA</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>I flag governano le operazioni:</p>
+<ul>
+<li><strong>modificabile</strong>: consente upsert righe (<code>fn_upsert_commessa_attivita</code>)</li>
+<li><strong>emittibile</strong>: consente il pull verso AF (<code>fn_list_commesse_emittibili</code>)</li>
+<li><strong>chiude_commessa</strong>: impedisce riuso da <code>fn_get_or_create_commessa</code></li>
+</ul>
+<h3 id="macchina-di-transizioni-data-driven">Macchina di transizioni (data-driven)<a class="headerlink" href="#macchina-di-transizioni-data-driven" title="Permanent link">&para;</a></h3>
+<p>Lo stato della testata vive <strong>solo</strong> nella FK <code>stato_commessa_id</code> (nessuna colonna
+<code>stato</code> testuale — rimossa). Ogni cambio stato è validato contro una matrice:</p>
+<ul>
+<li>matrice <a href="../../dbzero/vendite/tabelle/transizioni_stati_commessa/"><code>vendite.transizioni_stati_commessa</code></a>
+  (coppie <code>(stato_da, stato_a)</code> ammesse + <code>meta.manuale</code>);</li>
+<li>trigger <code>trgfn_commesse_guard_transizione</code> (BEFORE UPDATE OF <code>stato_commessa_id</code>):
+  se <code>(OLD, NEW)</code> non è in matrice → <code>E_COMMESSA_STATO_TRANSIZIONE_INVALIDA</code> (472); per
+  <code>→ PRONTA_FATTURAZIONE</code> richiede ≥1 riga APPROVATA+NON_EMESSA, altrimenti
+  <code>E_COMMESSA_NESSUNA_RIGA_APPROVATA</code> (473);</li>
+<li>il verbo <a href="../../dbzero/vendite/funzioni/fn_cambia_stato_commessa/"><code>fn_cambia_stato_commessa(p_commessa_id, p_stato)</code></a>,
+  sul verbo comune del modello (§5 della guida del modello): chiede l'azione del passaggio, rifiuta
+  i passaggi di processo chiesti a mano e lo stato che la commessa ha già, e scrive lo stato
+  attraverso la porta. Un aggiornamento diretto della colonna di stato è rifiutato.</li>
+</ul>
+<p>I passaggi (dal 2026-10-26, <code>brief-modello-documento-vendita</code> §14):</p>
+<table>
+<thead>
+<tr>
+<th>Da</th>
+<th>A</th>
+<th>Azione</th>
+<th>Chi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOZZA</td>
+<td>PRONTA_FATTURAZIONE</td>
+<td>«rendi pronta», <code>cambia_stato_commessa</code></td>
+<td>l'operatore; o la push, dopo un invio riuscito, senza l'azione</td>
+</tr>
+<tr>
+<td>BOZZA</td>
+<td>ANNULLATA</td>
+<td>«annulla», nessuna azione</td>
+<td>l'operatore</td>
+</tr>
+<tr>
+<td>PRONTA_FATTURAZIONE</td>
+<td>APERTA</td>
+<td>«riapri», <code>cambia_stato_commessa</code></td>
+<td>l'operatore</td>
+</tr>
+<tr>
+<td>PRONTA_FATTURAZIONE</td>
+<td>CHIUSA</td>
+<td>«chiudi», <code>cambia_stato_commessa</code></td>
+<td>l'operatore</td>
+</tr>
+<tr>
+<td>PRONTA_FATTURAZIONE</td>
+<td>ANNULLATA</td>
+<td>«annulla», <code>cambia_stato_commessa</code></td>
+<td>l'operatore</td>
+</tr>
+<tr>
+<td>APERTA</td>
+<td>PRONTA_FATTURAZIONE</td>
+<td>«rendi pronta», <code>cambia_stato_commessa</code></td>
+<td>l'operatore; o la push</td>
+</tr>
+<tr>
+<td>APERTA</td>
+<td>CHIUSA</td>
+<td>«chiudi», <code>cambia_stato_commessa</code></td>
+<td>l'operatore</td>
+</tr>
+<tr>
+<td>APERTA</td>
+<td>ANNULLATA</td>
+<td>«annulla», <code>cambia_stato_commessa</code></td>
+<td>l'operatore</td>
+</tr>
+</tbody>
+</table>
+<p>APERTA è la commessa <strong>riaperta</strong> dopo essere stata pronta. IN_ESECUZIONE è ritirato: «una
+lavorazione in corso» è lo stato del processo che lavora la commessa, non della commessa, e il giro
+della push lo registra già in <code>commesse_push_log</code>. Il passaggio della push a pronta lo scrive
+<a href="../../dbzero/vendite/funzioni/fn_commessa_proietta_stato_emittibile/"><code>fn_commessa_proietta_stato_emittibile</code></a>:
+è la conseguenza dell'invio, e il permesso è quello della push.</p>
+<p>Le <strong>azioni di stato utente</strong> (chiudi / riapri / annulla) sono <strong>esposte</strong>: le
+calcola
+<a href="../../dbzero/script/manual/fn_available_actions_commessa/">script.fn_available_actions_commessa</a>
+— mirror del pattern di ordini, offerte, contratti e preventivi, <strong>senza azioni
+applicative</strong> (il push è <em>verso</em> la commessa, non un'azione della commessa) — e le
+serve l'endpoint <a href="../../backend/vendite/manual/api_commessa_stato/"><code>GET/POST .../commesse/&lt;id&gt;/stato/</code></a>:
+il <code>GET</code> porta stato, contatori e capability, il <code>POST</code> applica l'azione.</p>
+<p>⭐ <strong>Le azioni sono data-driven, non un elenco nel codice</strong>: escono da
+<code>vendite.transizioni_stati_commessa</code> filtrando le transizioni <strong>manuali</strong>
+(<code>meta.manuale = true</code>) con <code>action_key</code> e <code>label_key</code> valorizzate. Le transizioni
+automatiche non compaiono fra le azioni utente. Sugli stati terminali (<code>CHIUSA</code>,
+<code>ANNULLATA</code>) l'elenco è vuoto e <code>can_change_state</code> è <code>false</code>.</p>
+<p>⚠️ <strong>La capability propone, il guard ammette</strong>: l'enforcement resta su
+<code>vendite.trgfn_commesse_guard_transizione</code> (via <code>fn_cambia_stato_commessa</code>). La
+funzione delle azioni è di <strong>sola lettura</strong> e non esegue niente — un client che
+non la legge prende il rifiuto del guard, e ha ragione lui.</p>
+<blockquote>
+<p>Le righe (<code>commesse_attivita</code>) hanno due assi indipendenti: <code>stato_approvazione</code>
+(BOZZA→APPROVATA) e <code>stato_emissione</code> (NON_EMESSA→EMESSA).</p>
+</blockquote>
+<h3 id="annullare-una-commessa">Annullare una commessa<a class="headerlink" href="#annullare-una-commessa" title="Permanent link">&para;</a></h3>
+<p>Fra due documenti collegati c'è un verso <strong>in avanti</strong> (a monte → a valle) e un verso
+<strong>all'indietro</strong>. La commessa sta a valle di tutto ciò che la riempie: preventivi,
+ordini, contratti, bolle, consumi, le rettifiche dei resi, gli oneri.</p>
+<ul>
+<li><strong>In avanti è bloccato.</strong> Una commessa con righe già <strong>emesse</strong> (in volo verso una
+  fattura) non si annulla: <code>E_COMMESSA_ANNULLA_CON_RIGHE_EMESSE</code>
+  (<a href="../../dbzero/script/funzioni/fn_check_commessa_annullabile/">script.fn_check_commessa_annullabile</a>),
+  e l'azione «Annulla commessa» è spenta col motivo. Si sistema prima il documento a
+  valle.</li>
+<li><strong>All'indietro riapre, con la segnalazione.</strong> Una commessa con righe <strong>non ancora
+  emesse</strong> si annulla con la <strong>conferma</strong>: chi annulla vede che cosa si riapre e dove,
+  e conferma.</li>
+</ul>
+<p>Che cosa succede a ogni riga non emessa (un <strong>legame</strong> per riga, letto da
+<a href="../../dbzero/vendite/funzioni/fn_documento_legami/">vendite.fn_documento_legami</a><code>('COMMESSA', id)</code>):</p>
+<table>
+<thead>
+<tr>
+<th>La riga viene da</th>
+<th>Annullando la commessa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>un preventivo, un ordine, un contratto, una bolla</td>
+<td>la riga esce dalla commessa (<code>ANNULLATA</code>, col registro) e il documento torna <strong>da mandare in commessa</strong>. Il preventivo <code>EVASO</code> torna <code>ACCETTATO</code></td>
+</tr>
+<tr>
+<td>un consumo</td>
+<td>il consumo torna da mandare in commessa</td>
+</tr>
+<tr>
+<td>la rettifica di un reso</td>
+<td>l'accredito si annulla: il reso torna <strong>da accreditare</strong>. ⚠️ Oggi il caso non si presenta: la rettifica sta nella commessa della riga fatturata che corregge, quella riga resta emessa finché l'accredito c'è (una fattura con un accredito non si disfa), e una commessa con righe emesse non si annulla. Prima si annulla l'accredito</td>
+</tr>
+<tr>
+<td>un onere</td>
+<td>non c'è niente a monte: l'onere <strong>si annulla</strong> con la commessa</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong>L'ordine non cambia stato.</strong> <code>EVASO</code> vuol dire «la merce è partita», e lo dicono
+solo le bolle: né l'invio in commessa né il suo annullo lo toccano. Le righe dell'ordine
+tornano semplicemente da mandare.</p>
+<p>⭐ <strong>Si torna indietro di un passo alla volta.</strong> Nella catena preventivo → ordine →
+commessa, annullare la commessa riapre solo l'ordine: il preventivo non si muove, le
+sue righe le usa ancora l'ordine.</p>
+<p>La strada è una sola, il verbo
+<a href="../../dbzero/vendite/funzioni/fn_annulla_commessa/">vendite.fn_annulla_commessa</a><code>(id, legami_confermati)</code>:
+prima ciò che vieta (righe emesse), poi la conferma — chi conferma <strong>dichiara quanti
+legami ha visto</strong>; se nel frattempo sono cambiati, il DB chiede di nuovo — poi il
+ritiro e lo stato <code>ANNULLATA</code>, in una transazione. Ogni altra strada che porta la
+commessa ad <code>ANNULLATA</code> con righe non emesse è rifiutata dall'avviso
+<code>E_DOC_ANNULLO_CON_LEGAMI</code> (guard <code>trg_commesse_m10_guard_annullo_con_legami_upd</code>): è
+lo stesso meccanismo di bolla, ordine, preventivo e contratto, e a video la stessa
+finestra di conferma. Per questo una commessa annullata non ha mai righe <code>NON_EMESSA</code>.</p>
+<p>⭐ <strong>Una riga ritirata non occupa il documento.</strong> Una riga di commessa <code>ANNULLATA</code> non
+conta come «già mandata» (<a href="../../dbzero/script/funzioni/fn_get_stato_push_segment/">script.fn_get_stato_push_segment</a>,
+la sede unica letta dai lister e dal pannello di smistamento): è ciò che fa tornare il
+documento da mandare.</p>
+<p>⭐ <strong>Il documento si rimanda in un'altra commessa.</strong> Il legame documento → commessa
+(<a href="../../dbzero/vendite/tabelle/commesse_sorgenti/">vendite.commesse_sorgenti</a>) <strong>resta come
+storia</strong> anche dopo l'annullo o la chiusura: il lineage del documento mostra tutte le sue
+commesse. La regola è che un documento sta in <strong>una sola commessa aperta alla volta</strong>
+(<code>E_COMMESSA_SORGENTE_ALTRA_COMMESSA</code>); quale sia la dice
+<a href="../../dbzero/vendite/funzioni/fn_commessa_viva_di_sorgente/">vendite.fn_commessa_viva_di_sorgente</a>.
+Il legame nasce insieme alla riga, dentro
+<a href="../../dbzero/vendite/funzioni/fn_upsert_commessa_attivita/">vendite.fn_upsert_commessa_attivita</a>:
+nessun invio può dimenticarlo.</p>
+<h4 id="leccezione-il-documento-con-righe-in-una-commessa-viva">L'eccezione: il documento con righe in una commessa viva<a class="headerlink" href="#leccezione-il-documento-con-righe-in-una-commessa-viva" title="Permanent link">&para;</a></h4>
+<p>L'inverso — annullare un <strong>preventivo, un ordine o una bolla</strong> che hanno righe in una
+commessa viva, non ancora emesse — <strong>non è bloccato</strong>: si annulla con la conferma, e le
+sue righe escono dalla commessa; le righe degli altri documenti restano. È voluto: la
+commessa raccoglie righe di più documenti dello stesso cliente, e il blocco
+costringerebbe ad annullare l'intera commessa o a togliere le righe una a una, che il
+modello vieta (<code>vendite.fn_annulla_commessa_attivita</code> rifiuta le righe con sorgente).
+Il blocco resta dove la riga è già emessa.</p>
+<hr />
+<h2 id="di-chi-e-una-commessa">Di chi è una commessa<a class="headerlink" href="#di-chi-e-una-commessa" title="Permanent link">&para;</a></h2>
+<h3 id="lemittente-non-e-un-attributo-e-la-chiave-di-perimetro">L'emittente non è un attributo: è la chiave di perimetro<a class="headerlink" href="#lemittente-non-e-un-attributo-e-la-chiave-di-perimetro" title="Permanent link">&para;</a></h3>
+<p><code>vendite.commesse.emittente_soggetto_ruolo_id</code> decide <strong>chi può vedere quella
+commessa</strong>. Ci si appoggiano la row security della tabella, il filtro di scope
+del cruscotto competenza e il giornale degli eventi.</p>
+<p>⛔ Con quella colonna vuota la commessa non compariva sbagliata: <strong>spariva</strong>. Il
+lavoro restava nel database, non lo vedeva nessuno e non veniva mai fatturato —
+e una lista che non mostra una riga ha lo stesso aspetto di una lista in cui
+quella riga non c'è. Da qui il <code>NOT NULL</code>.</p>
+<h3 id="da-dove-viene-il-valore">Da dove viene il valore<a class="headerlink" href="#da-dove-viene-il-valore" title="Permanent link">&para;</a></h3>
+<p><strong>Dal billing account, sempre.</strong> La commessa non la compila una persona in un
+form: nasce dal push, e l'emittente si ricava dal cliente del documento
+sorgente. Tre pezzi, tutti in <code>20_code</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Oggetto</th>
+<th>Cosa fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../dbzero/vendite/manual/trgfn_commesse_default_emittente/"><code>trgfn_commesse_default_emittente</code></a></td>
+<td>riempie la colonna quando arriva <code>NULL</code></td>
+</tr>
+<tr>
+<td><a href="../../dbzero/script/manual/trgfn_doc_guard_emittente_ba/"><code>script.trgfn_doc_guard_emittente_ba</code></a></td>
+<td>rifiuta un valore diverso da quello derivato</td>
+</tr>
+<tr>
+<td><a href="../../dbzero/vendite/manual/trgfn_commesse_sorgenti_guard_emittente/"><code>trgfn_commesse_sorgenti_guard_emittente</code></a></td>
+<td>vieta di collegare sorgenti di emittenti diversi</td>
+</tr>
+</tbody>
+</table>
+<p>⇒ <strong>Chi crea una commessa non deve sapere niente di emittenti.</strong> Se lo passa e
+coincide, è ridondante; se non coincide, viene respinto. Per questo il parametro
+è stato tolto dalla firma: <em>un parametro il cui unico valore ammesso è quello
+che la funzione calcola da sé non è un'opzione, è una trappola per il prossimo
+chiamante.</em></p>
+<h3 id="una-commessa-non-aggrega-due-emittenti">Una commessa non aggrega due emittenti<a class="headerlink" href="#una-commessa-non-aggrega-due-emittenti" title="Permanent link">&para;</a></h3>
+<p>Tutto il lavoro raccolto in una commessa deve uscire da <strong>un solo</strong> emittente: è
+l'emittente a decidere su quale registro la fattura verrà numerata, e con due
+emittenti nella stessa commessa quella scelta non sarebbe più vera per una parte
+delle righe.</p>
+<p>⚠️ Il criterio è l'<strong>emittente</strong>, non il cliente: più clienti possono stare sotto
+lo stesso emittente — è a questo che serve l'albero dei billing account — e
+vietare che il documento di un cliente «figlio» contribuisca alla commessa del
+«padre» sarebbe una regola più severa, che nessuno ha deciso.</p>
+<h3 id="e-il-cliente-non-cambia-emittente-a-piacere">⚠️ E il cliente non cambia emittente a piacere<a class="headerlink" href="#e-il-cliente-non-cambia-emittente-a-piacere" title="Permanent link">&para;</a></h3>
+<p>L'altra metà dell'invariante sta in anagrafica: un cliente che ha già fatture o
+commesse <strong>non si sposta</strong> su un altro emittente, perché i documenti già emessi
+resterebbero orfani. Vedi
+<a href="../../dbzero/anagrafiche/manual/fn_guard_ba_cambio_emittente/"><code>anagrafiche.fn_guard_ba_cambio_emittente</code></a>.</p>
+<hr />
+<h2 id="la-testata-leggibile">La testata leggibile<a class="headerlink" href="#la-testata-leggibile" title="Permanent link">&para;</a></h2>
+<p><code>vendite.commesse</code> porta, oltre al codice, tre colonne che dicono <strong>che cosa è</strong>
+una commessa a chi la legge in una lista o in un drawer:</p>
+<table>
+<thead>
+<tr>
+<th>Colonna</th>
+<th>Che cosa dice</th>
+<th style="text-align: center;">Null</th>
+<th>Chi la scrive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>descrizione</code></td>
+<td>l'oggetto della commessa, in parole (max 255)</td>
+<td style="text-align: center;">sì</td>
+<td>l'operatore, dal drawer</td>
+</tr>
+<tr>
+<td><code>data_apertura</code></td>
+<td>quando è stata aperta — per le commesse nuove è <strong>oggi nel fuso dell'azienda</strong> (<code>script.fn_data_operativa()</code>), mai l'orologio della sessione</td>
+<td style="text-align: center;"><strong>no</strong></td>
+<td>il default alla nascita; <strong>sola lettura</strong> dall'API</td>
+</tr>
+<tr>
+<td><code>responsabile_risorsa_umana_id</code></td>
+<td>chi la governa: una <strong>risorsa umana</strong> (<code>anagrafiche.risorse_umane</code>), come in <code>pratiche</code> — non un ruolo qualsiasi</td>
+<td style="text-align: center;">sì</td>
+<td>l'operatore, dal drawer</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ <strong><code>data_apertura</code> non è la competenza</strong>: <code>competenza_dal</code>/<code>competenza_al</code>
+restano la finestra fiscale del lavoro, e riusarle per «quando è nata» avrebbe
+fatto rispondere una colonna a due domande.</p>
+<h3 id="come-si-leggono-e-si-scrivono">Come si leggono e si scrivono<a class="headerlink" href="#come-si-leggono-e-si-scrivono" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lettura</strong>: nello stesso payload di <code>GET …/commesse/&lt;id&gt;/stato/</code> (<code>descrizione</code>,
+  <code>data_apertura</code> ISO, <code>responsabile_risorsa_umana_id</code>, <code>responsabile_display</code> —
+  il nome della persona dalla vista modello <code>anagrafiche.vw_risorse_umane_dettaglio</code>,
+  la stessa che serve il picker). ⚠️ Non escono da <code>fn_get_commessa_stato</code>: il
+  backend le fonde (§3 sotto).</li>
+<li><strong>Scrittura</strong>: <code>PATCH /commesse/&lt;id&gt;/</code> — parziale, <code>null</code> esplicito <strong>azzera</strong>
+  (togliere il responsabile è un gesto legittimo); <code>data_apertura</code> non si scrive
+  e una chiave estranea è un <code>400</code> (whitelist chiusa). Nessun guard di <strong>stato</strong>:
+  il database non ne mette, di proposito — la descrizione di una commessa chiusa
+  si può correggere.</li>
+<li><strong>Il picker del responsabile</strong> è <code>GET /anagrafiche/risorse-umane/lookup/</code>
+  (cross-dominio: <code>risorse_umane</code> non ha codice/descrizione, il lookup generico
+  non la può servire). Elenca le <strong>attive</strong>; una persona disattivata che è già
+  responsabile compare come voce non selezionabile, col nome che arriva dal
+  dettaglio.</li>
+</ul>
+<h3 id="il-responsabile-deve-essere-una-persona-attiva-nei-due-versi">Il responsabile deve essere una persona attiva — nei due versi<a class="headerlink" href="#il-responsabile-deve-essere-una-persona-attiva-nei-due-versi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Figlio → padre</strong>: una commessa non punta a una risorsa umana spenta. Lo
+  impone a DB il require generato dal framework ATTIVO
+  (<code>trg_commesse_a10_risorse_umane_require_attivo_ins_upd</code>), che però risponde
+  con <code>E_ATTIVO_REQUIRE</code> — classe <strong>TECNICO</strong>, la stessa del trigger montato
+  male. Per l'operatore è un dato sbagliato, non un guasto: il backend verifica
+  «persona attiva» <strong>prima</strong> dell'<code>UPDATE</code> e risponde <code>400</code> col campo; il guard
+  DB resta l'autorità.</li>
+<li><strong>Padre → figli</strong>: una persona responsabile di una commessa — <strong>anche
+  chiusa</strong>, perché <code>commesse</code> non ha <code>attivo</code> e il block conta tutti i figli —
+  <strong>non si disattiva</strong> (<code>trg_risorse_umane_a10_commesse_block_deact_upd</code>). È il
+  quarto block della sua specie su <code>risorse_umane</code>, accanto a <code>pratiche</code>,
+  <code>flussi</code> e <code>competenze_flussi</code>: per liberare una persona si cambia il
+  responsabile, non si spegne la persona.</li>
+</ul>
+<p>⚠️ <strong>Non esiste una lista configurata <code>vendite.commesse</code></strong>: in
+<code>ui.lista_definizione</code> ci sono <code>vendite.commesse_attivita</code> e il drill-down di
+dashboard, non la commessa. Le tre colonne hanno quindi come sola superficie il
+drawer e l'API, finché una lista non verrà configurata — e configurarla è dato,
+non un cantiere.</p>
+<hr />
+<h2 id="api-funzioni-db">API — Funzioni DB<a class="headerlink" href="#api-funzioni-db" title="Permanent link">&para;</a></h2>
+<h3 id="1-fn_get_or_create_commessa">1. <code>fn_get_or_create_commessa</code><a class="headerlink" href="#1-fn_get_or_create_commessa" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="../../dbzero/vendite/funzioni/fn_get_or_create_commessa/">Doc autogenerata</a> |
+<a href="../../dbzero/vendite/manual/fn_get_or_create_commessa/">Doc concettuale</a></p>
+</blockquote>
+<p><strong>Scopo</strong>: recupera una commessa riusabile o ne crea una nuova.</p>
+<p><strong>Parametri principali</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th style="text-align: center;">Obbligatorio</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_billing_account_id</code></td>
+<td style="text-align: center;">si</td>
+<td>FK anagrafiche.billing_account</td>
+</tr>
+<tr>
+<td><code>p_utility_id</code></td>
+<td style="text-align: center;">si</td>
+<td>Deve coincidere con utility del BA</td>
+</tr>
+<tr>
+<td><code>p_tipo_commessa</code></td>
+<td style="text-align: center;">no</td>
+<td>Default <code>AUTO</code></td>
+</tr>
+<tr>
+<td><code>p_policy_fatturazione</code></td>
+<td style="text-align: center;">no</td>
+<td>Default <code>DA_DOCUMENTO</code></td>
+</tr>
+<tr>
+<td><code>p_competenza_dal</code> / <code>_al</code></td>
+<td style="text-align: center;">no</td>
+<td>Range competenza testata</td>
+</tr>
+<tr>
+<td><code>p_force_new</code></td>
+<td style="text-align: center;">no</td>
+<td>Default <code>false</code> — forza nuova commessa</td>
+</tr>
+</tbody>
+</table>
+<p>⛔ <strong>Non esiste un parametro per l'emittente.</strong> L'emittente non si passa: <strong>si
+deriva dal billing account</strong>, sempre. Vedi
+<a href="#di-chi-e-una-commessa">§ Di chi è una commessa</a>.</p>
+<p><strong>Ritorna</strong>: <code>commessa_id</code> (nuova o riusata).</p>
+<p><strong>Regole chiave</strong>:</p>
+<ul>
+<li>Riuso solo su commesse con <code>chiude_commessa = false</code></li>
+<li>Advisory lock transazionale per evitare doppie create concorrenti</li>
+<li>Emittente <strong>derivato</strong> dal billing account (non è un parametro)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">vendite</span><span class="p">.</span><span class="n">fn_get_or_create_commessa</span><span class="p">(</span>
+<span class="w">  </span><span class="n">p_billing_account_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">1001</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_utility_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_force_new</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">false</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="2-fn_upsert_commessa_attivita">2. <code>fn_upsert_commessa_attivita</code><a class="headerlink" href="#2-fn_upsert_commessa_attivita" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="../../dbzero/vendite/funzioni/fn_upsert_commessa_attivita/">Doc autogenerata</a> |
+<a href="../../dbzero/vendite/manual/fn_upsert_commessa_attivita/">Doc concettuale</a></p>
+</blockquote>
+<p><strong>Scopo</strong>: inserisce o aggiorna una riga attività nella commessa.</p>
+<p><strong>Parametri principali</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th style="text-align: center;">Obbligatorio</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_commessa_id</code></td>
+<td style="text-align: center;">si</td>
+<td></td>
+</tr>
+<tr>
+<td><code>p_segment_key</code></td>
+<td style="text-align: center;">si</td>
+<td>Chiave idempotenza (unique con commessa_id)</td>
+</tr>
+<tr>
+<td><code>p_articolo_id</code></td>
+<td style="text-align: center;">si</td>
+<td>UUID catalogo.articoli</td>
+</tr>
+<tr>
+<td><code>p_istanza_utility_id</code></td>
+<td style="text-align: center;">si</td>
+<td></td>
+</tr>
+<tr>
+<td><code>p_uom_id</code></td>
+<td style="text-align: center;">si</td>
+<td></td>
+</tr>
+<tr>
+<td><code>p_quantita</code></td>
+<td style="text-align: center;">si</td>
+<td>Diversa da 0, negativi ammessi</td>
+</tr>
+<tr>
+<td><code>p_prezzo_snapshot</code></td>
+<td style="text-align: center;">si</td>
+<td>Negativi ammessi</td>
+</tr>
+<tr>
+<td><code>p_competenza_mese</code></td>
+<td style="text-align: center;">no</td>
+<td>Normalizzato al primo del mese</td>
+</tr>
+<tr>
+<td><code>p_stato_approvazione</code></td>
+<td style="text-align: center;">no</td>
+<td>Default <code>BOZZA</code></td>
+</tr>
+<tr>
+<td><code>p_stato_emissione</code></td>
+<td style="text-align: center;">no</td>
+<td>Default <code>NON_EMESSA</code></td>
+</tr>
+<tr>
+<td><code>p_tipo_movimento</code></td>
+<td style="text-align: center;">no</td>
+<td><code>NORMALE</code>, <code>RETTIFICA</code> o <code>ONERE</code> (colonna)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ritorna</strong>: <code>commessa_attivita_id</code>.</p>
+<p><strong>Guard</strong>: la commessa deve avere <code>stati_commessa.modificabile = true</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">vendite</span><span class="p">.</span><span class="n">fn_upsert_commessa_attivita</span><span class="p">(</span>
+<span class="w">  </span><span class="n">p_commessa_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_segment_key</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">'ORD-1001-RIGA-1'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_articolo_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">'8c5ce3a9-...'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_istanza_utility_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_data_attivita</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">'2026-02-01'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_uom_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_quantita</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_competenza_mese</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">'2026-02-01'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_competenza_dal</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">'2026-02-01'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_competenza_al</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">'2026-02-28'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_prezzo_snapshot</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">100</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="3-fn_get_commessa_stato">3. <code>fn_get_commessa_stato</code><a class="headerlink" href="#3-fn_get_commessa_stato" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="../../dbzero/vendite/funzioni/fn_get_commessa_stato/">Doc autogenerata</a> |
+<a href="../../dbzero/vendite/manual/fn_get_commessa_stato/">Doc concettuale</a></p>
+</blockquote>
+<p><strong>Scopo</strong>: restituisce stato operativo + contatori aggregati in una singola query.</p>
+<p><strong>Parametri</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th style="text-align: center;">Obbligatorio</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_commessa_id</code></td>
+<td style="text-align: center;">si</td>
+<td>Errore se non esiste</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ritorna</strong> (singola riga):</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stato_commessa_id</code></td>
+<td>FK stati_commessa</td>
+</tr>
+<tr>
+<td><code>stato_commessa</code></td>
+<td>Codice testuale (backward compat)</td>
+</tr>
+<tr>
+<td><code>chiude_commessa</code> / <code>emittibile</code> / <code>modificabile</code></td>
+<td>Flag operativi</td>
+</tr>
+<tr>
+<td><code>policy_fatturazione</code> / <code>fatturazione_immediata</code> / <code>priorita_operativa</code></td>
+<td>Config testata</td>
+</tr>
+<tr>
+<td><code>billing_account_id</code> / <code>utility_id</code> / <code>emittente_soggetto_ruolo_id</code></td>
+<td>Perimetro</td>
+</tr>
+<tr>
+<td><code>total_attivita</code></td>
+<td>Totale righe</td>
+</tr>
+<tr>
+<td><code>total_approvate</code> / <code>total_non_approvate</code></td>
+<td>Per stato approvazione</td>
+</tr>
+<tr>
+<td><code>total_emesse</code> / <code>total_non_emesse</code></td>
+<td>Per stato emissione</td>
+</tr>
+<tr>
+<td><code>total_prezzo_da_riallineare</code></td>
+<td>Righe con prezzo da aggiornare</td>
+</tr>
+<tr>
+<td><code>last_update</code></td>
+<td>Max tra testata e ultima riga</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">vendite</span><span class="p">.</span><span class="n">fn_get_commessa_stato</span><span class="p">(</span><span class="mi">12345</span><span class="p">);</span>
+</code></pre></div>
+<p>⚠️ <strong>La testata leggibile non esce da qui</strong>: <code>descrizione</code>, <code>data_apertura</code> e
+responsabile (§ <em>La testata leggibile</em>) li legge il backend da <code>vendite.commesse</code>
+e li fonde nello stesso payload del <code>GET …/stato/</code> — un secondo endpoint sarebbe
+una seconda chiamata per tre colonne della stessa riga.</p>
+<hr />
+<h3 id="4-fn_list_commessa_attivita">4. <code>fn_list_commessa_attivita</code><a class="headerlink" href="#4-fn_list_commessa_attivita" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="../../dbzero/vendite/funzioni/fn_list_commessa_attivita/">Doc autogenerata</a> |
+<a href="../../dbzero/vendite/manual/fn_list_commessa_attivita/">Doc concettuale</a></p>
+</blockquote>
+<p><strong>Scopo</strong>: elenca le righe <code>commesse_attivita</code> con filtri e paginazione (read-only).</p>
+<p><strong>Parametri</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th style="text-align: center;">Obbligatorio</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_commessa_id</code></td>
+<td style="text-align: center;">si</td>
+<td>Errore se non esiste</td>
+</tr>
+<tr>
+<td><code>p_stato_emissione</code></td>
+<td style="text-align: center;">no</td>
+<td>Es. <code>NON_EMESSA</code></td>
+</tr>
+<tr>
+<td><code>p_stato_approvazione</code></td>
+<td style="text-align: center;">no</td>
+<td>Es. <code>APPROVATA</code></td>
+</tr>
+<tr>
+<td><code>p_competenza_mese</code></td>
+<td style="text-align: center;">no</td>
+<td>Normalizzato al primo del mese</td>
+</tr>
+<tr>
+<td><code>p_limit</code></td>
+<td style="text-align: center;">no</td>
+<td>Default 1000, max 10000</td>
+</tr>
+<tr>
+<td><code>p_offset</code></td>
+<td style="text-align: center;">no</td>
+<td>Default 0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ritorna</strong>: elenco righe con JOIN <code>sorgente_codice</code> da <code>config.sorgenti</code>.</p>
+<p><strong>Indice utilizzato</strong>: <code>ix_commesse_attivita_commessa_stati (commessa_id, stato_approvazione, stato_emissione)</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vendite</span><span class="p">.</span><span class="n">fn_list_commessa_attivita</span><span class="p">(</span>
+<span class="w">  </span><span class="n">p_commessa_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_stato_emissione</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">'NON_EMESSA'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_competenza_mese</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">'2026-02-01'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_limit</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">200</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="5-fn_list_commesse_emittibili">5. <code>fn_list_commesse_emittibili</code><a class="headerlink" href="#5-fn_list_commesse_emittibili" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="../../dbzero/vendite/funzioni/fn_list_commesse_emittibili/">Doc autogenerata</a> |
+<a href="../../dbzero/vendite/manual/fn_list_commesse_emittibili/">Doc concettuale</a></p>
+</blockquote>
+<p><strong>Scopo</strong>: discovery delle commesse pronte per il pull verso AF (read-only).</p>
+<p><strong>Parametri</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th style="text-align: center;">Obbligatorio</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_competenza_mese</code></td>
+<td style="text-align: center;">no</td>
+<td>Normalizzato al primo del mese</td>
+</tr>
+<tr>
+<td><code>p_billing_account_id</code></td>
+<td style="text-align: center;">no</td>
+<td>Filtro perimetro</td>
+</tr>
+<tr>
+<td><code>p_utility_id</code></td>
+<td style="text-align: center;">no</td>
+<td>Filtro perimetro</td>
+</tr>
+<tr>
+<td><code>p_emittente_soggetto_ruolo_id</code></td>
+<td style="text-align: center;">no</td>
+<td>Filtro emittente</td>
+</tr>
+<tr>
+<td><code>p_limit</code></td>
+<td style="text-align: center;">no</td>
+<td>Default 1000, max 10000</td>
+</tr>
+<tr>
+<td><code>p_gruppi</code></td>
+<td style="text-align: center;">no</td>
+<td>Emissione mirata: solo le commesse con almeno una riga dei gruppi richiesti</td>
+</tr>
+<tr>
+<td><code>p_emit_batch_id</code></td>
+<td style="text-align: center;">no (⛔ <strong>sì</strong> per il pull)</td>
+<td>L'identità del giro (<code>fatturazione_lotti.lock_batch_id</code>), la stessa dell'emit. Con essa le righe trattenute <strong>dal lotto stesso</strong> contano come pronte: al rilancio di un pull fallito la commessa viene rivisitata. <code>NULL</code> = nessuna auto-esclusione</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Criteri di inclusione</strong>:</p>
+<ol>
+<li><code>stati_commessa.emittibile = true</code></li>
+<li>Almeno una riga <code>commesse_attivita</code> con classe <code>PRONTA</code>, <code>RIFIUTATA</code> o
+   <code>NON_APPROVATA</code> in <code>vw_commesse_attivita_emittibilita</code> — <strong>vista dal giro</strong>:
+   una riga <code>TRATTENUTA</code> soltanto dal lotto di <code>p_emit_batch_id</code> è <code>PRONTA</code>;
+   trattenuta da un <strong>altro</strong> lotto in gioco non conta</li>
+<li>Se <code>p_competenza_mese</code> fornito, filtra su <code>commesse_attivita.competenza_mese</code></li>
+</ol>
+<p><strong>Ritorna</strong>: lista commesse con <code>total_non_emesse</code> per ciascuna.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vendite</span><span class="p">.</span><span class="n">fn_list_commesse_emittibili</span><span class="p">(</span>
+<span class="w">  </span><span class="n">p_competenza_mese</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="s1">'2026-02-01'</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_limit</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">500</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="6-fn_emit_attivita_fatturabili_da_commessa">6. <code>fn_emit_attivita_fatturabili_da_commessa</code><a class="headerlink" href="#6-fn_emit_attivita_fatturabili_da_commessa" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><a href="../../dbzero/vendite/funzioni/fn_emit_attivita_fatturabili_da_commessa/">Doc autogenerata</a> |
+<a href="../../dbzero/vendite/manual/fn_emit_attivita_fatturabili_da_commessa/">Doc concettuale</a></p>
+</blockquote>
+<p><strong>Scopo</strong>: esegue il pull da <code>commesse_attivita</code> verso <code>attivita_fatturabili</code> (mutante).</p>
+<p><strong>Parametri</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th style="text-align: center;">Obbligatorio</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p_commessa_id</code></td>
+<td style="text-align: center;">si</td>
+<td></td>
+</tr>
+<tr>
+<td><code>p_only_approved</code></td>
+<td style="text-align: center;">no</td>
+<td>Default <code>true</code> — solo righe APPROVATA</td>
+</tr>
+<tr>
+<td><code>p_dry_run</code></td>
+<td style="text-align: center;">no</td>
+<td>Default <code>false</code> — simula senza scrivere</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ritorna</strong>: contatori (<code>total_candidate</code>, <code>inserted_rows</code>, <code>updated_rows</code>, <code>skipped_rows</code>).</p>
+<p><strong>Regole chiave</strong>:</p>
+<ul>
+<li>ROOT source obbligatoria sulla commessa</li>
+<li>Sorgente AF = <code>COMMESSA</code> + hash deterministico <code>segment_key</code> -&gt; UUID</li>
+<li>Idempotenza su chiave <code>(sorgente_tipo_id, sorgente_uid)</code></li>
+<li>Blocco se riga AF già fatturata</li>
+<li>Aggiorna <code>stato_emissione = EMESSA</code> sulle righe processate</li>
+<li>Propaga <code>sorgente_origine_tipo_id</code> (sorgente business originale)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">vendite</span><span class="p">.</span><span class="n">fn_emit_attivita_fatturabili_da_commessa</span><span class="p">(</span>
+<span class="w">  </span><span class="n">p_commessa_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_only_approved</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">true</span><span class="p">,</span>
+<span class="w">  </span><span class="n">p_dry_run</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">false</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="7-funzioni-di-supporto">7. Funzioni di supporto<a class="headerlink" href="#7-funzioni-di-supporto" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../dbzero/vendite/funzioni/fn_link_commessa_sorgente/"><code>fn_link_commessa_sorgente</code></a></td>
+<td>Collega una sorgente alla commessa. <strong>Ruolo auto-deciso a DB</strong> <code>ROOT</code>/<code>COLLEGATO</code>. La chiama la madre delle righe, non chi invia</td>
+</tr>
+<tr>
+<td><a href="../../dbzero/vendite/funzioni/fn_commessa_viva_di_sorgente/"><code>fn_commessa_viva_di_sorgente</code></a></td>
+<td>La commessa <strong>aperta</strong> di un documento, o <code>NULL</code> (i legami verso commesse chiuse o annullate restano come storia)</td>
+</tr>
+<tr>
+<td><a href="../../dbzero/vendite/funzioni/fn_start_commessa_push_run/"><code>fn_start_commessa_push_run</code></a></td>
+<td><strong>Apre</strong> il giro di push: la riga nasce in testa alla corsa, in stato <code>IN_ESECUZIONE</code></td>
+</tr>
+<tr>
+<td><a href="../../dbzero/vendite/funzioni/fn_close_commessa_push_run/"><code>fn_close_commessa_push_run</code></a></td>
+<td><strong>Chiude</strong> lo stesso giro con il suo esito, il risultato per handler e la durata</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⭐ <strong>Il giro di push si apre e si chiude, non si registra a cose fatte.</strong> Con
+la riga creata all'inizio, quella rimasta a <code>IN_ESECUZIONE</code> è la prova che
+qualcosa è partito e non è tornato: un push interrotto lascia traccia.</p>
+<p>⚠️ Il guadagno vale sul <strong>batch</strong>, che gira in autocommit. Il push singolo dal
+drawer avvolge tutta la corsa in una transazione unica: lì anche la riga
+d'apertura viene annullata insieme al resto.</p>
+</blockquote>
+<hr />
+<h2 id="flusso-tipo-backend-step-pull_attivita_da_commessa">Flusso tipo — Backend step <code>pull_attivita_da_commessa</code><a class="headerlink" href="#flusso-tipo-backend-step-pull_attivita_da_commessa" title="Permanent link">&para;</a></h2>
+<p>Lo step pipeline <code>pull_attivita_da_commessa</code> (handler in
+<a href="../../dev/backend/catalogo-building-block-backend/"><code>pipeline_step_executor.py</code></a>) esegue il
+ponte commessa → <code>attivita_fatturabili</code>. Il perimetro (competenza/emittente/utility,
+e <code>fatturazione_immediata</code>) arriva dal contesto del lotto (<code>LottoContext</code>), non
+cablato nell'handler:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Discovery commesse emittibili (filtrate per la corsia del lotto)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">call_fn</span><span class="p">(</span><span class="s2">"vendite.fn_list_commesse_emittibili"</span><span class="p">,</span>
+    <span class="n">p_competenza_mese</span><span class="o">=</span><span class="n">competenza_mese</span><span class="p">,</span>
+    <span class="n">p_emittente_soggetto_ruolo_id</span><span class="o">=</span><span class="n">emittente_id</span><span class="p">,</span>
+    <span class="n">p_fatturazione_immediata</span><span class="o">=</span><span class="n">fatturazione_immediata</span><span class="p">,</span>  <span class="c1"># True (immediata) / False (differita) / None</span>
+<span class="p">)</span>
+
+<span class="c1"># 2. Per ogni commessa, pull verso AF (idempotente, solo righe APPROVATE)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">call_fn</span><span class="p">(</span><span class="s2">"vendite.fn_emit_attivita_fatturabili_da_commessa"</span><span class="p">,</span>
+        <span class="n">p_commessa_id</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">commessa_id</span><span class="p">,</span>
+        <span class="n">p_only_approved</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">p_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Commessa </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">commessa_id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">inserted_rows</span><span class="si">}</span><span class="s2"> ins, "</span>
+             <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">updated_rows</span><span class="si">}</span><span class="s2"> upd"</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Nota</strong>: la firma di <code>fn_emit_attivita_fatturabili_da_commessa</code> è
+<code>(p_commessa_id, p_only_approved, p_dry_run)</code>; la funzione propaga anche le 8
+colonne snapshot audit pricing v5 da <code>commesse_attivita</code> ad
+<code>attivita_fatturabili</code>.</p>
+</blockquote>
+<p><strong>Catena pipeline</strong> (ordine dato dal seed <code>fn_list_fatturazione_pipeline_steps</code>,
+orchestrata in Python da <code>LottoPipelineRunner</code>):</p>
+<div class="highlight"><pre><span></span><code>pull_attivita_da_commessa --&gt; select_attivita --&gt; generate_fatture_righe
+  --&gt; ricalcola_iva_lotto --&gt; genera_fondi/applica_fondi
+  --&gt; prepare_sdi_payload_lotto --&gt; numera_fatture --&gt; close_lotto
+</code></pre></div>
+<hr />
+<h2 id="flusso-tipo-push-sorgente-commessa">Flusso tipo — Push sorgente -&gt; commessa<a class="headerlink" href="#flusso-tipo-push-sorgente-commessa" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Ottieni/crea commessa</span>
+<span class="n">commessa_id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">call_fn</span><span class="p">(</span><span class="s2">"vendite.fn_get_or_create_commessa"</span><span class="p">,</span>
+    <span class="n">p_billing_account_id</span><span class="o">=</span><span class="n">ba_id</span><span class="p">,</span>
+    <span class="n">p_utility_id</span><span class="o">=</span><span class="n">utility_id</span><span class="p">,</span>
+    <span class="n">p_competenza_dal</span><span class="o">=</span><span class="n">dal</span><span class="p">,</span>
+    <span class="n">p_competenza_al</span><span class="o">=</span><span class="n">al</span>
+<span class="p">)</span>
+
+<span class="c1"># 2. Upsert righe: per una riga con sorgente documento la madre scrive anche</span>
+<span class="c1">#    il legame documento -&gt; commessa (fn_link_commessa_sorgente), e rifiuta se</span>
+<span class="c1">#    il documento sta gia' in un'altra commessa aperta</span>
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">righe_documento</span><span class="p">:</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">call_fn</span><span class="p">(</span><span class="s2">"vendite.fn_upsert_commessa_attivita"</span><span class="p">,</span>
+        <span class="n">p_commessa_id</span><span class="o">=</span><span class="n">commessa_id</span><span class="p">,</span>
+        <span class="n">p_segment_key</span><span class="o">=</span><span class="n">riga</span><span class="o">.</span><span class="n">segment_key</span><span class="p">,</span>
+        <span class="n">p_articolo_id</span><span class="o">=</span><span class="n">riga</span><span class="o">.</span><span class="n">articolo_id</span><span class="p">,</span>
+        <span class="o">...</span>
+    <span class="p">)</span>
+
+<span class="c1"># 3. Chiusura del giro (aperto PRIMA del punto 1 con fn_start_commessa_push_run)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">call_fn</span><span class="p">(</span><span class="s2">"vendite.fn_close_commessa_push_run"</span><span class="p">,</span>
+    <span class="n">p_id</span><span class="o">=</span><span class="n">push_log_id</span><span class="p">,</span>          <span class="c1"># l'id restituito dall'apertura</span>
+    <span class="n">p_stato</span><span class="o">=</span><span class="s2">"COMPLETATO"</span><span class="p">,</span>      <span class="c1"># oppure PARZIALE / ERRORE</span>
+    <span class="n">p_risultato</span><span class="o">=</span><span class="n">esiti_per_handler</span><span class="p">,</span>
+    <span class="n">p_durata_ms</span><span class="o">=</span><span class="n">durata</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># 4. Giro COMPLETATO: per ogni commessa toccata, le righe di QUESTO invio</span>
+<span class="c1">#    approvate e la testata a PRONTA_FATTURAZIONE (gia' pronta: non si ritenta)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">call_fn</span><span class="p">(</span><span class="s2">"vendite.fn_rendi_commessa_emittibile"</span><span class="p">,</span>
+    <span class="n">p_commessa_id</span><span class="o">=</span><span class="n">commessa_id</span><span class="p">,</span>
+    <span class="n">p_righe_ids</span><span class="o">=</span><span class="n">righe_di_questo_invio</span><span class="p">,</span>   <span class="c1"># mai le righe di terzi in attesa</span>
+    <span class="n">p_user</span><span class="o">=</span><span class="n">utente</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>⭐ <strong>Il verso in avanti verso la commessa sta nel DB, come il ritorno.</strong> Il passo 4 è
+una madre DB: «le righe di questo invio» le conosce solo chi orchestra, quindi la
+chiama il backend. Il preventivo passa da <code>ACCETTATO</code> a <code>EVASO</code> da solo: il trigger
+delle righe di commessa lo riproietta dal residuo sulle due strade (merce da ordinare,
+servizi da mandare: <code>vendite.fn_preventivo_proietta_stato_smistamento</code>), lo stesso che
+lo riporta ad <code>ACCETTATO</code> quando una riga esce. L'ordine non cambia stato.</p>
+<p>⚠️ <strong>Il giro si apre prima, non si registra dopo.</strong> L'esempio sopra mostra solo
+la chiusura: l'apertura (<code>fn_start_commessa_push_run</code>) è la prima cosa che fa
+l'orchestratore, prima ancora della discovery, ed è ciò che dà un
+identificativo vero all'evento d'avvio. Se la corsa muore nel mezzo, quella
+riga resta a <code>IN_ESECUZIONE</code> — ed è tutto ciò che si ha per sapere che era
+partita.</p>
+</blockquote>
+<hr />
+<h2 id="lifecycle-prezzo-dal-preventivo-alla-fattura">Lifecycle prezzo: dal preventivo alla fattura<a class="headerlink" href="#lifecycle-prezzo-dal-preventivo-alla-fattura" title="Permanent link">&para;</a></h2>
+<p>Questa sezione documenta il flusso completo del prezzo dall'origine (preventivo o ordine) fino alla fattura, passando per la commessa.</p>
+<h3 id="flusso-standard">Flusso standard<a class="headerlink" href="#flusso-standard" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>1. Creazione preventivo (modello pricing v5)
+   L'operatore inserisce righe con prezzo. Il prezzo puo venire da:
+   - Resolver pricing v5 (fn_resolve_prezzo_listino_v2) - 3 stadi:
+       STADIO 0: PROMO overlay
+       STADIO 1: CONTRATTO (modalita A/B/C)
+       STADIO 2: CATEGORIA cliente via matrice
+   - Override manuale L1 (azione processo prezzo_override_manuale)
+   - Workflow L3 approvazione:
+       Se override viola L2 (limiti VENDITE_MAX_SCONTO/MAGGIORAZIONE_PCT)
+       e l'operatore richiede approvazione (richiesta_approvazione=true),
+       la riga e' salvata con stato_approvazione_prezzo='PENDING'.
+       Il preventivo NON puo' transitare a ACCETTATO finche' tutte le
+       righe PENDING sono APPROVED o REJECTED (trigger DB).
+       Solo i preventivi ACCETTATI transitano in commessa: quindi una
+       riga PENDING non arriva mai alla pipeline push commesse.
+
+2. Push in commessa
+   Il push (handler PREVENTIVO/ORDINE/CONTRATTO/DDT/CONSUMI) crea
+   commesse_attivita con:
+   - prezzo_snapshot = prezzo risolto o manuale
+   - listino_versione_id = versione usata dal resolver (NULL se manuale)
+   - listino_riga_id = riga usata dal resolver (NULL se manuale)
+   - prezzo_bloccato = TRUE se override manuale, FALSE se da resolver
+   - pricing_mode = 'FIXED' (v1)
+   - 8 colonne snapshot audit pricing v5 (vedi sezione dedicata sotto)
+
+3. Modifica preventivo post-push
+   Se il preventivo viene modificato dopo il push:
+   - commesse_attivita.prezzo_da_riallineare = TRUE (segnalazione, no update automatico)
+   - Il prezzo NON viene aggiornato silenziosamente
+   - L'operatore deve decidere se riallineare (N5) o ignorare
+
+4. Riallineamento su conferma esplicita (N5)
+   POST .../riallinea-prezzo/ ricalcola dal resolver alla data originale
+   - Se la versione listino e cambiata: richiede conferma esplicita
+   - Aggiorna prezzo_snapshot + prezzo_unitario su attivita_fatturabili,
+     e con il prezzo la sua provenienza (versione listino, origine, base)
+   - Azzera prezzo_da_riallineare
+   - prezzo_bloccato resta FALSE
+
+5. Variazione eccezionale (N7) — alternativa a N5
+   POST .../variazione-prezzo-eccezionale/ con prezzo manuale + motivo
+   - Imposta prezzo_bloccato = TRUE (il resolver non ricalcolera piu)
+   - Il prezzo manuale prevale su qualsiasi listino
+   - origine_prezzo = MANUALE, provenienza da listino azzerata
+
+6. Sblocco (N7-sblocco) — reversibilita di N7
+   POST .../sblocca-prezzo/ ricalcola dal resolver e sblocca
+   - Imposta prezzo_bloccato = FALSE e riscrive la provenienza dal resolver
+
+7. Conversione in ordine
+   Se il preventivo non e stato riallineato (prezzo_da_riallineare = TRUE),
+   il flag persiste sulla commessa. L'ordine non lo azzera automaticamente.
+   L'operatore puo riallineare in qualsiasi momento prima della fatturazione.
+
+8. Emissione fattura
+   La pipeline fatturazione legge SOLO da attivita_fatturabili:
+   - prezzo_unitario (snapshot gia propagato)
+   - prezzo_bloccato (informativo)
+   - NON rilegge mai il listino
+</code></pre></div>
+<h3 id="snapshot-pricing-v5-8-colonne-audit">Snapshot pricing v5 — 8 colonne audit<a class="headerlink" href="#snapshot-pricing-v5-8-colonne-audit" title="Permanent link">&para;</a></h3>
+<p>Ogni riga <code>commesse_attivita</code> registra l'audit completo del calcolo prezzo
+all'epoca del push. Queste colonne sono <strong>immutabili dopo emissione fattura</strong>
+e permettono ricostruzione storica del processo pricing senza dipendere da
+modifiche successive a listini/contratti/promo.</p>
+<table>
+<thead>
+<tr>
+<th>Colonna</th>
+<th>Valore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prezzo_base_snapshot</code></td>
+<td>Prezzo riga listino prima di qualunque variazione</td>
+</tr>
+<tr>
+<td><code>origine_prezzo</code></td>
+<td><code>PROMO</code> / <code>CONTRATTO_OVERRIDE</code> / <code>CONTRATTO_LISTINO</code> / <code>CATEGORIA</code> / <code>MANUALE</code></td>
+</tr>
+<tr>
+<td><code>tipo_variazione_applicata</code></td>
+<td><code>PERCENTUALE</code> / <code>VALORE_FISSO</code> / <code>PREZZO_FISSO</code> / <code>NESSUNA</code></td>
+</tr>
+<tr>
+<td><code>valore_variazione_applicata</code></td>
+<td>Valore firmato (negativo=sconto, positivo=maggiorazione)</td>
+</tr>
+<tr>
+<td><code>promo_id</code></td>
+<td>FK promo se origine=PROMO</td>
+</tr>
+<tr>
+<td><code>contratto_id</code></td>
+<td>FK contratto se origine CONTRATTO_*</td>
+</tr>
+<tr>
+<td><code>categoria_cliente_id_snapshot</code></td>
+<td>FK categoria cliente al momento dello snapshot (anche se categoria poi cambia)</td>
+</tr>
+<tr>
+<td><code>classe_utenza_id_snapshot</code></td>
+<td>FK classe utenza derivata da contratto/istanza</td>
+</tr>
+</tbody>
+</table>
+<p>Popolazione: <code>fn_upsert_commessa_attivita</code> riceve gli 8 campi dal
+chiamante Python (<code>CommessaAttivitaInput</code>). Al <strong>push</strong> li valorizza
+<code>BaseSourceHandler._resolve_pricing_audit</code> via <code>PricingService.resolve_prezzo</code>
+(<code>fn_resolve_prezzo_listino_v2</code>), <strong>senza sovrascrivere <code>prezzo_snapshot</code></strong> (negoziato,
+autoritativo): l'audit è diagnostico. Best-effort (errore resolver → audit NULL, push non
+si blocca), <code>origine_prezzo</code> filtrato contro il CHECK (valore fuori set → NULL). Per i
+componenti BoM l'<code>origine_prezzo</code> negoziato (in <code>meta</code>) prevale. La pull
+<code>fn_emit_attivita_fatturabili_da_commessa</code> propaga gli 8 campi anche su
+<code>attivita_fatturabili</code> (audit completo fino all'emissione).</p>
+<h3 id="espansione-compositi-bom-v5-modello-snapshot">Espansione compositi BoM v5 (modello snapshot)<a class="headerlink" href="#espansione-compositi-bom-v5-modello-snapshot" title="Permanent link">&para;</a></h3>
+<p>Quando una sorgente contiene un articolo composito
+(<code>catalogo.articoli.is_composito = true</code>), la pipeline push <strong>espande sempre</strong> la riga
+padre in N righe <code>commesse_attivita</code>, una per ogni componente <strong>attivo</strong> della BoM —
+l'<strong>esposizione in fattura</strong> del componente (<code>esposizione_in_fattura</code>: <code>NASCOSTO</code> |
+<code>DESCRITTIVO</code> | <code>VALORIZZATO</code>) <strong>non è gate di espansione</strong>: è solo una regola di
+<strong>presentazione</strong> in fattura (vedi sotto). Vale per <strong>tutte le sorgenti
+documento</strong> (preventivi, ordini, contratti, DDT) tramite lo stesso modello.</p>
+<p>Logica orchestrata da <code>BoMComponentExpander</code> + <code>_componenti_repo_factory</code> in
+<code>apps/vendite/services/commesse_source_handlers.py</code>:</p>
+<ul>
+<li>1 riga sorgente composito → N righe <code>commesse_attivita</code></li>
+<li>i componenti sono letti <strong>dallo snapshot negoziato</strong> della riga sorgente
+  (<code>&lt;sorgente&gt;_righe_componenti</code> via <code>ComponentiRepositoryMixin.list_componenti_riga</code>),
+  mai risolti di nuovo dal catalogo</li>
+<li><code>articolo_id</code> = <code>componente_id</code></li>
+<li><code>quantita</code> = <code>quantita_padre × coeff_qta</code> (no rounding sotto-componenti)</li>
+<li><code>prezzo_snapshot</code> = <code>prezzo_unitario</code> negoziato del componente (dallo snapshot)</li>
+<li><code>segment_key</code> = <code>{padre_segment_key}#CMP:{componente_id}</code> (idempotente per re-run)</li>
+<li><code>meta</code> arricchito con <code>componente_di</code>, l'esposizione del componente, <code>coeff_qta</code>, <code>origine_prezzo</code>.
+  ⚠️ La chiave dell'esposizione diventa <code>esposizione</code> (il codice del modo); fino al
+  2026-10-01 era <code>esposto_in_fattura</code> (booleano). Il passaggio lo fa il backend
+  (<code>BoMComponentExpander</code> che la scrive, <code>FattureRigheService</code> che la legge): richiesta
+  aperta nel brief <code>brief-db-esposizione-componenti-kit-in-fattura</code> §5</li>
+<li>Tutti gli altri campi (BA, utility, competenza, sorgente_uid, tipo_doc_fiscale) ereditati dal padre</li>
+</ul>
+<p><strong>Qualunque sia il modo, ogni componente è tracciato in <code>commesse_attivita</code> col suo
+prezzo</strong>: l'esposizione decide solo la <strong>presentazione</strong> a valle, e la applica la vista
+di rappresentazione della fattura
+(<a href="../../dbzero/vendite/views/vw_fattura_righe_esposte/">vendite.vw_fattura_righe_esposte</a>):
+nascosto = dentro il prezzo del kit, descrittivo = riga senza importo sotto il kit,
+valorizzato = riga con prezzo e importo suoi sotto il kit, fuori dal suo prezzo. Le
+regole sono nella <a href=".././fatturazione/">guida fatturazione § Come si espone un kit</a>.</p>
+<p><strong>Caso semplice (non composito, o senza loader/snapshot)</strong>: pass-through,
+1 riga sorgente → 1 riga <code>commesse_attivita</code>.</p>
+<p><strong>Consumi utility (gas/energia/acqua/…)</strong>: la decomposizione tariffaria è <strong>rimandata</strong>;
+un consumo entra in commessa come <strong>riga singola</strong> (nessun fan-out).</p>
+<p><strong>BoM immutabile</strong>: la struttura BoM non puo' essere modificata in place
+dopo essere stata pushata. Pattern admin: chiudi riga + duplica nuova
+versione (vedi <a href=".././gestione-listini/#53-immutabilita-della-bom-pattern-chiudi-nuova-versione">gestione-listini §5.3</a>).
+Garantisce che lo snapshot resti sempre ancorato alla struttura del momento.</p>
+<h3 id="gerarchia-prezzo-riassunto">Gerarchia prezzo (riassunto)<a class="headerlink" href="#gerarchia-prezzo-riassunto" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Priorita</th>
+<th>Fonte</th>
+<th>prezzo_bloccato dopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Override manuale su documento (N7)</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Prezzo da resolver listino (standard o N5)</td>
+<td>FALSE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="casi-limite">Casi limite<a class="headerlink" href="#casi-limite" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>Comportamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preventivo modificato, commessa non riallineata, fattura emessa</td>
+<td>La fattura usa il prezzo dello snapshot originale. Il flag <code>prezzo_da_riallineare</code> resta TRUE come segnalazione storica</td>
+</tr>
+<tr>
+<td>Versione listino cambiata dopo lo snapshot</td>
+<td>N5 detecta il cambio e richiede conferma. Senza conferma, non aggiorna</td>
+</tr>
+<tr>
+<td>Riga commessa gia fatturata</td>
+<td>N5/N7/N7-sblocco rifiutano con 409. Per correggere serve NDC/NDD (DB-L4)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="error-handling">Error handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<p>Tutte le funzioni usano <code>script.fn_log_and_raise_error</code> con:</p>
+<ul>
+<li>Ambito <code>COMMESSE</code></li>
+<li>Severity <code>C</code> (critico) per guard violations</li>
+<li>Context JSONB strutturato per diagnostica</li>
+</ul>
+<p>Errori comuni:</p>
+<table>
+<thead>
+<tr>
+<th>Errore</th>
+<th>Funzione</th>
+<th>Causa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commessa_id obbligatorio</td>
+<td>Tutte</td>
+<td>Parametro NULL o &lt;= 0</td>
+</tr>
+<tr>
+<td>commessa non trovata</td>
+<td>get_stato, list_attivita, emit</td>
+<td>ID inesistente</td>
+</tr>
+<tr>
+<td>commessa non modificabile</td>
+<td>upsert_attivita</td>
+<td>Stato CHIUSA/ANNULLATA</td>
+</tr>
+<tr>
+<td>riga AF già fatturata</td>
+<td>emit_da_commessa</td>
+<td>Tentativo update su riga fatturato=true</td>
+</tr>
+<tr>
+<td>ROOT source mancante</td>
+<td>emit_da_commessa</td>
+<td>Nessun link ROOT in commesse_sorgenti</td>
+</tr>
+<tr>
+<td>sorgente COMMESSA non attiva</td>
+<td>emit_da_commessa</td>
+<td>config.sorgenti COMMESSA disabilitata</td>
+</tr>
+<tr>
+<td>responsabile non attivo</td>
+<td><code>PATCH /commesse/&lt;id&gt;/</code></td>
+<td>il backend risponde <code>400</code> col campo (<code>E_COMMESSA_VALIDATION</code>) <strong>prima</strong> del require DB, che rifiuterebbe con <code>E_ATTIVO_REQUIRE</code> (classe TECNICO)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="test-pgtap">Test pgTAP<a class="headerlink" href="#test-pgtap" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File test</th>
+<th>Copertura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>test-commesse-stati-commessa-v1.sql</code></td>
+<td>DDL stati_commessa, flag, fn_get_commessa_stato, fn_upsert guard, fn_list_commesse_emittibili (20 test)</td>
+</tr>
+<tr>
+<td><code>test-fn-list-commessa-attivita-v1.sql</code></td>
+<td>fn_list_commessa_attivita: filtri, paginazione, guard (14 test)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div style="text-align: center; margin-top: 2rem;">
+  <img src="/assets/images/zeroerp-logo.png" alt="Zero ERP" width="80">
+  <br>
+  <strong>&copy; 2025-2026 Zero ERP</strong> <em><strong>&bull; powered by Tid &bull;</strong></em>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.sections","navigation.expand","navigation.indexes"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiato","clipboard.copy":"Copia","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 altro in questa pagina","search.result.more.other":"# altri in questa pagina","search.result.none":"Nessun documento trovato","search.result.one":"1 documento trovato","search.result.other":"# documenti trovati","search.result.placeholder":"Scrivi per iniziare a cercare","search.result.term.missing":"Non presente","select.version":"Seleziona la versione"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid.min.js"></script>
+      
+        <script src="../../../assets/javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
